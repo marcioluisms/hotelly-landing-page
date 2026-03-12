@@ -35,7 +35,7 @@ export default function App() {
               Apenas 5 vagas restantes para Parceiros Fundadores
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight text-white">
-              Sua pousada com IA: <span className="text-primary block mt-2">Reservas automáticas</span>, Follow-up persistente e FNRH sem papel.
+              Sua pousada com IA: <span className="text-primary">Reservas automáticas</span>, Follow-up persistente e FNRH sem papel.
             </h1>
             <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-xl">
               Enquanto outros sistemas só guardam dados, o Hotelly fecha vendas. Nossa IA atende no WhatsApp, faz o follow-up para você e automatiza toda a burocracia do Serpro.
