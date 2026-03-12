@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #38bdf8;
+  --color-secondary: #fbbf24;
+  --color-background-dark: #0b1120;
+  --color-card-dark: #1e293b;
+  --color-border-accent: rgba(56, 189, 248, 0.2);
+  --font-display: "Inter", sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background-dark);
+  color: #f1f5f9;
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+}
