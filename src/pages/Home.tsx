@@ -32,7 +32,7 @@ export default function Home() {
                   Enquanto outros sistemas só guardam dados, o Hotelly fecha vendas. Nossa IA atende no WhatsApp, faz o follow-up até o Pix cair e automatiza toda a burocracia do Serpro. <strong className="text-brand-amber">Tudo isso com Preço de Inauguração — enquanto durar.</strong>
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                  <a className="w-full sm:w-auto text-center bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-lg shadow-xl shadow-brand-amber/20" href="https://admin.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
+                  <a className="w-full sm:w-auto text-center bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-lg shadow-xl shadow-brand-amber/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
                     Garantir Preço de Inauguração
                   </a>
                   <a className="w-full sm:w-auto text-center bg-transparent border border-brand-sky text-brand-sky hover:bg-brand-sky/10 font-bold py-2.5 px-6 rounded-lg transition-all text-lg" href="#como-funciona">
@@ -365,7 +365,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Pacotes com estadia mínima e restrições de datas</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cobrança de extras e frigobar completos</li>
                 </ul>
-                <a href="https://admin.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Começar 14 dias grátis</a>
+                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Começar 14 dias grátis</a>
               </div>
 
               {/* Card 2: Maestro */}
@@ -399,7 +399,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte por chat prioritário</li>
                 </ul>
-                <a href="https://admin.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis</a>
+                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis</a>
               </div>
 
               {/* Card 3: Rede */}
@@ -555,7 +555,7 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-brand-navy/95 backdrop-blur-md border-t border-white/10 z-50">
-        <a className="block w-full text-center bg-brand-amber text-brand-navy font-bold py-2.5 px-6 rounded-lg shadow-lg" href="https://admin.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
+        <a className="block w-full text-center bg-brand-amber text-brand-navy font-bold py-2.5 px-6 rounded-lg shadow-lg" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
           Garantir Preço de Inauguração
         </a>
       </div>
