@@ -1,25 +1,25 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #38bdf8;
-  --color-secondary: #fbbf24;
-  --color-background-dark: #0b1120;
-  --color-card-dark: #1e293b;
-  --color-border-accent: rgba(56, 189, 248, 0.2);
-  --font-display: "Inter", sans-serif;
+  --color-brand-sky: #38bdf8;
+  --color-brand-amber: #fbbf24;
+  --color-brand-navy: #0b1120;
+  --color-brand-slate: #1e293b;
+  --color-brand-offwhite: #f1f5f9;
+  --color-brand-emerald: #2ecc71;
+  --color-brand-coral: #e74c3c;
+  
+  --animate-urgent: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes pulse-gold {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+  }
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--color-background-dark);
-  color: #f1f5f9;
-}
-
-.glass-card {
-  background: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(56, 189, 248, 0.1);
-}
-
-.hero-gradient {
-  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+  background-color: var(--color-brand-navy);
+  color: var(--color-brand-offwhite);
+  scroll-behavior: smooth;
 }
