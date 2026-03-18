@@ -26,14 +26,17 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2 text-center lg:text-left animate-in fade-in slide-in-from-bottom-8 duration-700">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-[720px]">
-                  Sua hospedagem com IA: Reservas automáticas, Follow-up persistente e <span className="text-brand-sky">FNRH sem papel.</span>
+                  Sua hospedagem vendendo enquanto você dorme.
                 </h1>
                 <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-[600px]">
-                  Enquanto outros sistemas só guardam dados, o Hotelly fecha vendas. Nossa IA atende no WhatsApp, faz o follow-up até o Pix cair e automatiza toda a burocracia do Serpro. <strong className="text-brand-amber">Tudo isso com Preço de Inauguração. Enquanto durar.</strong>
+                  O Hotelly é o parceiro de receita que fecha reservas no WhatsApp 24h, faz follow-up até o Pix cair e cuida de toda a burocracia do Serpro. Outros sistemas guardam dados. O Hotelly fecha vendas.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                  <a className="w-full sm:w-auto text-center bg-transparent border border-brand-sky text-brand-sky hover:bg-brand-sky/10 font-bold py-2.5 px-6 rounded-lg transition-all text-lg" href="#funcionalidades">
-                    Ver como o Hotelly funciona
+                  <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="w-full sm:w-auto text-center bg-brand-amber text-brand-navy hover:bg-amber-500 font-bold py-2.5 px-6 rounded-lg transition-all text-lg">
+                    Começar 14 dias grátis do Maestro
+                  </a>
+                  <a className="text-brand-sky hover:text-brand-sky/80 font-medium transition-colors underline decoration-brand-sky decoration-2 underline-offset-4 hover:decoration-4" href="#funcionalidades">
+                    Ver como funciona
                   </a>
                 </div>
               </div>
@@ -47,7 +50,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features (6 Pillars) */}
+        {/* Social Proof Section */}
+        <section className="py-16 bg-brand-slate/60 border-y border-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Junte-se aos 10 primeiros hoteleiros que garantiram o Preço de Inauguração</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* Testimonial Card 1 */}
+              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
+                  <span className="text-2xl font-bold text-brand-sky">?</span>
+                </div>
+                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
+                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
+              </div>
+
+              {/* Testimonial Card 2 */}
+              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
+                  <span className="text-2xl font-bold text-brand-sky">?</span>
+                </div>
+                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
+                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
+              </div>
+
+              {/* Testimonial Card 3 */}
+              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
+                  <span className="text-2xl font-bold text-brand-sky">?</span>
+                </div>
+                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
+                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
+              </div>
+            </div>
+            {/* TODO: Replace with real testimonials from founders */}
+          </div>
+        </section>
+
+        {/* Features (7 Pillars) */}
         <section className="py-24 bg-brand-slate" id="funcionalidades">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
@@ -130,14 +171,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-2">Segurança e Proteção dos Dados</h3>
                 <p className="text-brand-sky font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Proteção de dados já vem de fábrica. Seu sistema nasce em conformidade com a LGPD</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Proteção de dados integrada ao sistema. Projetado para suportar conformidade com a LGPD</li>
                   <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações. São 6 níveis de acesso</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Os dados pessoais dos hóspedes nunca ficam expostos. O sistema protege automaticamente</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Suas credenciais do Serpro ficam protegidas com o mesmo nível de segurança usado pelos bancos</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Os dados pessoais dos hóspedes são protegidos com criptografia e controle de acesso rigoroso</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Suas credenciais do Serpro ficam protegidas com criptografia AES-256-GCM</li>
                   <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Registro completo de quem fez o quê e quando. Rastreabilidade total para você e para a lei</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "A LGPD não é opcional. E no Hotelly, não é remendo. Cada membro da equipe vê apenas o que precisa, e os dados dos hóspedes estão blindados."
+                  "A LGPD não é opcional. No Hotelly, proteção de dados faz parte da arquitetura desde o primeiro dia."
                 </div>
               </div>
 
@@ -358,7 +399,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Pacotes com estadia mínima e restrições de datas</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cobrança de extras e frigobar completos</li>
                 </ul>
-                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Começar 14 dias grátis</a>
+                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Começar 14 dias grátis do Maestro</a>
               </div>
 
               {/* Card 2: Maestro */}
@@ -392,7 +433,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte por chat prioritário</li>
                 </ul>
-                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis</a>
+                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis do Maestro</a>
               </div>
 
               {/* Card 3: Rede */}
@@ -423,6 +464,9 @@ export default function Home() {
               Promoção válida apenas para as 10 primeiras hospedagens fundadoras.
             </div>
 
+            <div className="mt-6 text-center text-white/50 text-xs max-w-3xl mx-auto">
+              *Custos de WhatsApp e Meta para envio de mensagens são cobrados diretamente ao cliente de acordo com o volume de mensagens.
+            </div>
 
           </div>
         </section>
@@ -512,7 +556,7 @@ export default function Home() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-                  O período de testes é de 14 dias, sem necessidade de cartão de crédito. Você explora todas as ferramentas, vê a IA trabalhando por você e decide com clareza. Se optar por não continuar, você não gasta um centavo. E mesmo após se tornar cliente, você tem liberdade total: pode cancelar o plano a qualquer momento, sem taxas de fidelidade ou burocracia. Zero risco para o seu caixa.
+                  O período de testes é de 14 dias de acesso completo ao Maestro, sem necessidade de cartão de crédito. Você explora todas as ferramentas, vê a IA trabalhando por você e decide com clareza. Se optar por não continuar, você não gasta um centavo. E mesmo após se tornar cliente, você tem liberdade total: pode cancelar o plano a qualquer momento, sem taxas de fidelidade ou burocracia. Zero risco para o seu caixa.
                 </div>
               </details>
 

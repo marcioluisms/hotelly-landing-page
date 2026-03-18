@@ -48,7 +48,7 @@ export default function Privacidade() {
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">4. Proteção e Segurança dos Dados</h2>
             <p>Adotamos medidas de segurança de nível empresarial para proteger seus dados:</p>
             <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li><strong>Criptografia:</strong> Dados sensíveis de governo (FNRH) e credenciais são protegidos com criptografia de ponta a ponta de nível militar (AES-256-GCM).</li>
+              <li><strong>Criptografia:</strong> Dados sensíveis de governo (FNRH) e credenciais são protegidos com criptografia AES-256-GCM.</li>
               <li><strong>Controle de Acesso:</strong> Implementamos RBAC (Controle de Acesso Baseado em Perfis), garantindo que cada membro da equipe veja apenas o que precisa. Camareiras, por exemplo, não têm acesso a CPFs de hóspedes.</li>
               <li><strong>Redação de Logs:</strong> Dados PII (Informações Pessoalmente Identificáveis) são automaticamente omitidos de logs do sistema para evitar vazamentos acidentais.</li>
             </ul>
