@@ -23,9 +23,8 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-8 text-white/90 font-medium">
           {isHome ? (
             <>
-              <a className="hover:text-brand-sky transition-colors" href="#como-funciona">Como Funciona</a>
               <a className="hover:text-brand-sky transition-colors" href="#funcionalidades">Funcionalidades</a>
-              <a className="hover:text-brand-sky transition-colors" href="#precos">Preços</a>
+              <a className="hover:text-brand-sky transition-colors" href="#precos">Planos</a>
               <a className="hover:text-brand-sky transition-colors" href="#faq">FAQ</a>
             </>
           ) : (

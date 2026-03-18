@@ -29,18 +29,12 @@ export default function Home() {
                   Sua hospedagem com IA: Reservas automáticas, Follow-up persistente e <span className="text-brand-sky">FNRH sem papel.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-[600px]">
-                  Enquanto outros sistemas só guardam dados, o Hotelly fecha vendas. Nossa IA atende no WhatsApp, faz o follow-up até o Pix cair e automatiza toda a burocracia do Serpro. <strong className="text-brand-amber">Tudo isso com Preço de Inauguração — enquanto durar.</strong>
+                  Enquanto outros sistemas só guardam dados, o Hotelly fecha vendas. Nossa IA atende no WhatsApp, faz o follow-up até o Pix cair e automatiza toda a burocracia do Serpro. <strong className="text-brand-amber">Tudo isso com Preço de Inauguração. Enquanto durar.</strong>
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                  <a className="w-full sm:w-auto text-center bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-lg shadow-xl shadow-brand-amber/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
-                    Garantir Preço de Inauguração
-                  </a>
-                  <a className="w-full sm:w-auto text-center bg-transparent border border-brand-sky text-brand-sky hover:bg-brand-sky/10 font-bold py-2.5 px-6 rounded-lg transition-all text-lg" href="#como-funciona">
+                  <a className="w-full sm:w-auto text-center bg-transparent border border-brand-sky text-brand-sky hover:bg-brand-sky/10 font-bold py-2.5 px-6 rounded-lg transition-all text-lg" href="#funcionalidades">
                     Ver como o Hotelly funciona
                   </a>
-                </div>
-                <div className="mt-8 inline-flex items-center gap-2 bg-brand-coral/10 border border-brand-coral/20 text-brand-coral px-4 py-2 rounded-full text-sm font-semibold">
-                  <span className="animate-pulse">⏳</span> Preço de Inauguração encerra sem aviso. Quem entrar depois paga o valor da tabela.
                 </div>
               </div>
               <div className="w-full lg:w-1/2 relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
@@ -57,8 +51,8 @@ export default function Home() {
         <section className="py-24 bg-brand-slate" id="funcionalidades">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tudo o que o Hotelly faz por você</h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">Uma plataforma completa focada em aumentar sua receita e zerar sua burocracia.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">O que o Hotelly faz por você</h2>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">Reservas, financeiro, Serpro, atendimento ao cliente: tudo automatizado!</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,14 +62,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-2">Venda Automática 24/7</h3>
                 <p className="text-brand-sky font-medium mb-6">Sua pousada vendendo enquanto você dorme</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento inteligente por IA no WhatsApp — responde, tira dúvidas e encaminha a reserva</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento inteligente por IA no WhatsApp. Responde, tira dúvidas e encaminha a reserva</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cotação automática com período, tipo de quarto e número de hóspedes</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Link de pagamento do Mercado Pago enviado direto na conversa</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Follow-up persistente até o hóspede fechar a reserva</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> A IA nunca inventa informação — só responde o que você cadastrou</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> A IA nunca inventa informação. Só responde o que você cadastrou</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "A IA do Hotelly não é um chatbot genérico — ela conhece seus quartos, seus preços e suas regras. E quando não sabe a resposta, avisa e chama um humano."
+                  "A IA do Hotelly não é um chatbot genérico. Ela conhece seus quartos, seus preços e suas regras. E quando não sabe a resposta, avisa e chama um humano."
                 </div>
               </div>
 
@@ -86,13 +80,13 @@ export default function Home() {
                 <p className="text-brand-sky font-medium mb-6">Do primeiro interesse ao check-out</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Proteção contra overbooking: o sistema trava a data na hora — ninguém reserva o mesmo quarto duas vezes</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de reservas — veja quem chega e quem sai nos próximos 30 dias</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Proteção contra overbooking: o sistema trava a data na hora. Ninguém reserva o mesmo quarto duas vezes</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de reservas. Veja quem chega e quem sai nos próximos 30 dias</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cancelamento com cálculo automático de reembolso</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual que mostra os dias mais cheios e os mais vazios de cada tipo de quarto</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "Overbooking? Impossível — o sistema não permite. Você gerencia de verdade, sem planilha e sem improviso."
+                  "Overbooking? Impossível. O sistema não permite. Você gerencia de verdade, sem planilha e sem improviso."
                 </div>
               </div>
 
@@ -104,12 +98,12 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Ajuste automático de preços conforme a procura e a ocupação</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de preços para os próximos 120 dias</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Você define o menor e o maior preço aceitável — o sistema nunca ultrapassa</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Você define o menor e o maior preço aceitável. O sistema nunca ultrapassa</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> <span>Painel financeiro com os indicadores que importam: RevPAR <span className="text-xs text-white/50">(receita por quarto disponível)</span>, ADR <span className="text-xs text-white/50">(diária média)</span> e taxa de ocupação</span></li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Relatórios financeiros no padrão usado pelos melhores hotéis do mundo, com conferência automática do Mercado Pago</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "Pare de cobrar o mesmo preço no Carnaval e na segunda-feira de chuva. O sistema sugere ajustes baseados em dados reais — ocupação, temporada e demanda."
+                  "Pare de cobrar o mesmo preço no Carnaval e na segunda-feira de chuva. O sistema sugere ajustes baseados em dados reais. Ocupação, temporada e demanda."
                 </div>
               </div>
 
@@ -119,11 +113,11 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-2">Zero Burocracia</h3>
                 <p className="text-brand-sky font-medium mb-6">Nunca mais preencha uma ficha de papel</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in digital enviado por link — o hóspede preenche no celular, de qualquer lugar</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> FNRH automático integrado ao Serpro — os dados vão direto para o governo</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente dentro do painel — pergunte qualquer coisa sobre sua pousada e receba a resposta na hora</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> FNRH automático integrado ao Serpro. Os dados vão direto para o governo</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente dentro do painel. Pergunte qualquer coisa sobre sua pousada e receba a resposta na hora</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Painel de governança para organizar a limpeza dos quartos com prioridade</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Configuração inicial guiada — a IA te ajuda a cadastrar tudo em minutos</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Configuração inicial guiada, nossa equipe falará com você</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
                   "O hóspede preenche no celular. O governo recebe automaticamente. Você não digita, não persegue, não improvisa."
@@ -136,14 +130,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-2">Segurança e Proteção dos Dados</h3>
                 <p className="text-brand-sky font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Proteção de dados já vem de fábrica — seu sistema nasce em conformidade com a LGPD</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações — são 6 níveis de acesso</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Os dados pessoais dos hóspedes nunca ficam expostos — o sistema protege automaticamente</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Proteção de dados já vem de fábrica. Seu sistema nasce em conformidade com a LGPD</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações. São 6 níveis de acesso</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Os dados pessoais dos hóspedes nunca ficam expostos. O sistema protege automaticamente</li>
                   <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Suas credenciais do Serpro ficam protegidas com o mesmo nível de segurança usado pelos bancos</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Registro completo de quem fez o quê e quando — rastreabilidade total para você e para a lei</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-sky">🔒</span> Registro completo de quem fez o quê e quando. Rastreabilidade total para você e para a lei</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "A LGPD não é opcional — e no Hotelly, não é remendo. Cada membro da equipe vê apenas o que precisa, e os dados dos hóspedes estão blindados."
+                  "A LGPD não é opcional. E no Hotelly, não é remendo. Cada membro da equipe vê apenas o que precisa, e os dados dos hóspedes estão blindados."
                 </div>
               </div>
 
@@ -155,7 +149,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Um botão de reservas bonito e pronto para colocar no seu site</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Aceite reservas diretas sem pagar comissão para ninguém</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Disponibilidade atualizada em tempo real — sem risco de vender o que não tem</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Disponibilidade atualizada em tempo real. Sem risco de vender o que não tem</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Pagamento integrado no próprio checkout do site</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
@@ -176,7 +170,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-sky">⚡</span> Uma única tela para toda a sua distribuição</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-white/5 text-sm text-white/80 italic">
-                  "Em breve, o Hotelly será seu hub central. Booking, Airbnb, direto — tudo num único painel."
+                  "Em breve, o Hotelly será seu hub central. Booking, Airbnb, direto. Tudo num único painel."
                 </div>
               </div>
             </div>
@@ -197,7 +191,7 @@ export default function Home() {
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-brand-coral/20 border-2 border-brand-coral text-brand-coral rounded-full flex items-center justify-center font-bold text-xl">1</div>
                 <h3 className="text-xl font-bold text-brand-coral mb-3 uppercase tracking-wider text-sm">O Fardo</h3>
                 <blockquote className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
-                  Você se sente escravo da sua própria pousada? Paga caro por sistemas que ainda te obrigam a digitar FNRH manual e perder horas fazendo follow-up no WhatsApp?
+                  Você se sente escravo da sua própria pousada? Paga por sistemas que te obrigam a digitar as fichas de hóspedes manualmente e passar horas fazendo follow-up no WhatsApp?
                 </blockquote>
               </div>
               
@@ -222,30 +216,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Social Proof & Authority */}
+        {/* Innovation Promise */}
         <section className="py-20 bg-brand-slate border-y border-white/5">
-          <div className="container mx-auto px-4 text-center">
-            {/* Counter */}
-            <div className="mb-16">
-              <p className="text-3xl md:text-4xl font-bold text-white">
-                <span className="text-brand-amber text-5xl font-black">14</span> hoteleiros já garantiram o Preço de Inauguração.
-              </p>
-              <p className="text-white/60 mt-4 text-lg">Você ainda pode entrar antes que a fase inaugural encerre.</p>
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sua hospedagem sempre na fronteira da tecnologia</h2>
+              <p className="text-white/60 text-lg">No Hotelly, você não compra apenas um software; você ganha um parceiro de inovação perpétua.</p>
             </div>
 
-            {/* Authority Badges */}
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-              <div className="bg-brand-navy border border-brand-amber/30 px-6 py-3 rounded-lg flex items-center gap-3">
-                <span className="text-xl">🏛️</span> <span className="font-bold text-white/90 text-sm">Integrado ao Serpro</span>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
+                <div className="text-brand-emerald text-3xl mb-4">✅</div>
+                <h3 className="text-lg font-bold text-white mb-3">Acesso Vitalício à Inovação</h3>
+                <p className="text-white/70 text-sm">Sempre que uma nova tecnologia ou recurso de IA surgir para facilitar seu trabalho ou aumentar suas vendas, nós seremos os primeiros a implementá-la para você.</p>
               </div>
-              <div className="bg-brand-navy border border-brand-amber/30 px-6 py-3 rounded-lg flex items-center gap-3">
-                <span className="text-xl">🔒</span> <span className="font-bold text-white/90 text-sm">Dados protegidos por lei (LGPD)</span>
+              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
+                <div className="text-brand-emerald text-3xl mb-4">✅</div>
+                <h3 className="text-lg font-bold text-white mb-3">Evolução em Tempo Real</h3>
+                <p className="text-white/70 text-sm">Nossa equipe monitora as novidades do mercado diariamente. Se algo novo pode impulsionar seu negócio, o Hotelly trará essa facilidade para dentro do seu painel.</p>
               </div>
-              <div className="bg-brand-navy border border-brand-amber/30 px-6 py-3 rounded-lg flex items-center gap-3">
-                <span className="text-xl">💳</span> <span className="font-bold text-white/90 text-sm">Mercado Pago</span>
-              </div>
-              <div className="bg-brand-navy border border-brand-amber/30 px-6 py-3 rounded-lg flex items-center gap-3">
-                <span className="text-xl">🏨</span> <span className="font-bold text-white/90 text-sm">Fundador Hoteleiro</span>
+              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
+                <div className="text-brand-emerald text-3xl mb-4">✅</div>
+                <h3 className="text-lg font-bold text-white mb-3">Visão de Futuro</h3>
+                <p className="text-white/70 text-sm">Estar a bordo do Hotelly é ter a certeza de que sua hospedagem nunca ficará para trás.</p>
               </div>
             </div>
           </div>
@@ -305,7 +298,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-brand-coral mt-1">❌</span>
-                    <span><strong>Você busca apenas um centralizador de canais</strong> — por enquanto. (Em breve, seremos o hub completo.)</span>
+                    <span><strong>Você busca apenas um centralizador de canais</strong>. Por enquanto. (Em breve, seremos o hub completo.)</span>
                   </li>
                 </ul>
               </div>
@@ -318,14 +311,14 @@ export default function Home() {
           {/* Diagonal Banner Overlay */}
           <div className="absolute top-40 left-0 w-full z-20 pointer-events-none flex justify-center overflow-hidden">
             <div className="bg-gradient-to-r from-brand-coral to-brand-amber text-brand-navy font-black py-3 px-4 md:px-24 transform -rotate-3 shadow-2xl border-y-4 border-white/20 whitespace-nowrap opacity-95">
-              <span className="text-sm sm:text-lg md:text-2xl tracking-wider uppercase">🔥 Oferta de Inauguração — 50% OFF para Fundadores 🔥</span>
+              <span className="text-sm sm:text-lg md:text-2xl tracking-wider uppercase">🔥 Oferta de Inauguração. 50% OFF para Fundadores 🔥</span>
             </div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10 mt-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Planos e Preços</h2>
-              <p className="text-white/60 text-lg">Extraordinariamente, os primeiros parceiros entram pela metade do preço — enquanto durar o contrato.</p>
+              <p className="text-white/60 text-lg">Extraordinariamente, os primeiros parceiros entram pela metade do preço. Enquanto durar o contrato.</p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
@@ -350,12 +343,12 @@ export default function Home() {
                 </div>
 
                 <ul className="space-y-4 mb-10 flex-grow text-sm text-white/80">
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Gestão de Reservas completa — da cotação ao check-out, com histórico auditável</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Gestão de Reservas completa. Da cotação ao check-out, com histórico auditável</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Motor de Reservas para o seu site (sem comissão)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in e Check-out em um clique</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de reservas (30 dias)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> <span>Relatórios de desempenho: ocupação, ADR <span className="text-xs text-white/50">(diária média)</span>, RevPAR <span className="text-xs text-white/50">(receita por quarto disponível)</span> e receita total</span></li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual de demanda — veja quais dias e quartos têm mais procura</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual de demanda. Veja quais dias e quartos têm mais procura</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Financeiro básico e pagamentos integrados</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in digital e FNRH automático (Serpro)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
@@ -394,7 +387,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Painel de resultados: receita mensal, margem de lucro e taxa de retorno de hóspedes</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Histórico detalhado de ajustes e reembolsos</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Preços ajustados automaticamente conforme ocupação, temporada e demanda</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário de preços e feriados automático — sem precisar lembrar de cada data</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário de preços e feriados automático. Sem precisar lembrar de cada data</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente no painel (ilimitado)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte por chat prioritário</li>
@@ -417,7 +410,7 @@ export default function Home() {
 
                 <ul className="space-y-4 mb-10 flex-grow text-sm text-white/80">
                   <li className="flex items-start gap-2"><span className="text-brand-sky">✅</span> <strong>Tudo do Maestro, mais:</strong></li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Várias pousadas num só login — alterne entre unidades com um clique</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Várias pousadas num só login. Alterne entre unidades com um clique</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Painel geral da rede: veja todos os números em uma única tela</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte dedicado ao proprietário da rede</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Condições negociadas caso a caso</li>
@@ -426,8 +419,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-8 text-center text-white/50 text-xs max-w-3xl mx-auto">
-              *Custos da API Oficial da Meta pagos diretamente pela hospedagem. Uso ilimitado sujeito a Política de Uso Razoável.
+            <div className="mt-8 text-center text-brand-coral text-sm font-semibold max-w-3xl mx-auto">
+              Promoção válida apenas para as 10 primeiras hospedagens fundadoras.
             </div>
 
 
@@ -463,7 +456,7 @@ export default function Home() {
                    (Diária média de R$ 300 × 4 semanas. Esse é o preço de dormir sem um sistema que venda por você.)
                  </p>
                  <p className="text-lg text-white/80">
-                   O Hotelly Maestro no Preço de Inauguração custa R$449/mês. <strong className="text-white">Uma única reserva recuperada já paga o mês inteiro — e sobra troco.</strong>
+                   O Hotelly Maestro no Preço de Inauguração custa R$449/mês. <strong className="text-white">Uma única reserva recuperada já paga o mês inteiro. E sobra troco.</strong>
                  </p>
               </div>
             </div>
@@ -495,7 +488,7 @@ export default function Home() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-                  O atendimento por IA no WhatsApp é um 'superpoder' opcional. Você pode configurá-lo para trabalhar em tempo integral (24/7), desligá-lo completamente ou — a opção favorita dos nossos parceiros — configurá-lo para assumir apenas em horários específicos, como à noite ou nos fins de semana. Deixe a IA de plantão enquanto você descansa, e assuma o controle humano sempre que quiser. A decisão de como atender seu hóspede é sempre sua.
+                  O atendimento por IA no WhatsApp é um 'superpoder' opcional. Você pode configurá-lo para trabalhar em tempo integral (24/7), desligá-lo completamente ou, a opção favorita dos nossos parceiros, configurá-lo para assumir apenas em horários específicos, como à noite ou nos fins de semana. Deixe a IA de plantão enquanto você descansa, e assuma o controle humano sempre que quiser. A decisão de como atender seu hóspede é sempre sua.
                 </div>
               </details>
 
@@ -531,7 +524,7 @@ export default function Home() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-                  Hoje, nosso foco é maximizar sua venda direta — sem comissão de OTA. Mas o Hotelly está se tornando um hub completo de reservas. Em breve, você vai gerenciar Booking, Airbnb e centenas de OTAs direto do Hotelly, sem abrir uma aba a mais. Enquanto isso, o sistema já se paga recuperando os clientes que o Booking não atende no WhatsApp.
+                  Hoje, nosso foco é maximizar sua venda direta. Sem comissão de OTA. Mas o Hotelly está se tornando um hub completo de reservas. Em breve, você vai gerenciar Booking, Airbnb e centenas de OTAs direto do Hotelly, sem abrir uma aba a mais. Enquanto isso, o sistema já se paga recuperando os clientes que o Booking não atende no WhatsApp.
                 </div>
               </details>
 
@@ -543,7 +536,7 @@ export default function Home() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-                  Sim. Usamos integração oficial com o Serpro. Suas credenciais ficam protegidas com o mesmo nível de segurança usado por bancos — ninguém tem acesso a elas, nem mesmo nossa equipe. Você nunca mais vai precisar preencher uma ficha manual na vida. É liberdade total.
+                  Sim. Usamos integração oficial com o Serpro. Suas credenciais ficam protegidas com o mesmo nível de segurança usado por bancos. Ninguém tem acesso a elas, nem mesmo nossa equipe. Você nunca mais vai precisar preencher uma ficha manual na vida. É liberdade total.
                 </div>
               </details>
             </div>
