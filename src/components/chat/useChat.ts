@@ -94,13 +94,14 @@ export function useChat() {
 
         setMessages((prev) => [...prev, assistantMsg]);
         setTurnCount((prev) => prev + 1);
-      } catch (error) {
-        console.error('[Hotelly Mascote] Erro na chamada Gemini:', error);
+      } catch (error: any) {
+        const debugInfo = `[DEBUG] ${error?.message || error?.toString() || 'Unknown error'}`;
+        console.error('[Hotelly Mascote] Erro:', debugInfo);
 
         const errorMsg: ChatMessage = {
           id: `error-${Date.now()}`,
           role: 'assistant',
-          content: 'Ops, tive um problema t\u00e9cnico. Tenta de novo em alguns segundos? \u{1F64F}',
+          content: debugInfo,
           timestamp: Date.now(),
         };
         setMessages((prev) => [...prev, errorMsg]);
