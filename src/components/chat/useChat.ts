@@ -119,7 +119,16 @@ export function useChat() {
   // We pass an empty apiKey — the service worker handles authentication.
   const getOrCreateChat = useCallback(() => {
     if (!chatRef.current) {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
+      // @ts-ignore — injected by vite.config.ts define
+      const debug = typeof __ENV_DEBUG__ !== 'undefined' ? __ENV_DEBUG__ : {};
+      const apiKey = process.env.GEMINI_API_KEY || '';
+      console.log('[Hotelly Debug] env:', debug, 'keyLen:', apiKey.length);
+
+      if (!apiKey) {
+        throw new Error(`API key empty. Env debug: ${JSON.stringify(debug)}`);
+      }
+
+      const ai = new GoogleGenAI({ apiKey });
       chatRef.current = ai.chats.create({
         model: MODEL_ID,
         config: {
