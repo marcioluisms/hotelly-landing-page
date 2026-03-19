@@ -4,8 +4,17 @@ interface ChatMessageProps {
   message: ChatMessageType;
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/^[-•]\s/gm, '- ')
+    .replace(/^#{1,6}\s/gm, '');
+}
+
 export default function ChatMessage({ message }: ChatMessageProps) {
   const isAssistant = message.role === 'assistant';
+  const content = isAssistant ? stripMarkdown(message.content) : message.content;
 
   return (
     <div
@@ -27,7 +36,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
             : 'rounded-br-sm bg-brand-amber/90 font-medium text-brand-navy'
         }`}
       >
-        {message.content}
+        {content}
       </div>
     </div>
   );
