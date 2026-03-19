@@ -1,16 +1,16 @@
 import { useState, useRef, useCallback } from 'react';
-import { GoogleGenAI } from '@google/genai';
 import {
-  SYSTEM_PROMPT,
-  MODEL_ID,
-  GENERATION_CONFIG,
-  SAFETY_SETTINGS,
   MAX_TURNS,
   MAX_INPUT_LENGTH,
   DEBOUNCE_MS,
   WELCOME_TEXT,
 } from './chatConfig';
 import type { ChatMessage } from './types';
+
+interface GeminiHistoryEntry {
+  role: 'user' | 'model';
+  parts: { text: string }[];
+}
 
 function makeWelcome(): ChatMessage {
   return {
@@ -26,32 +26,8 @@ export function useChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [turnCount, setTurnCount] = useState(0);
 
-  const chatRef = useRef<ReturnType<GoogleGenAI['chats']['create']> | null>(null);
+  const historyRef = useRef<GeminiHistoryEntry[]>([]);
   const lastSendRef = useRef<number>(0);
-
-  const getOrCreateChat = useCallback(() => {
-    if (!chatRef.current) {
-      const apiKey = process.env.GEMINI_API_KEY;
-      if (!apiKey) {
-        console.error('[Hotelly Mascote] GEMINI_API_KEY not available');
-        throw new Error('API key not configured');
-      }
-      const ai = new GoogleGenAI({ apiKey });
-      chatRef.current = ai.chats.create({
-        model: MODEL_ID,
-        config: {
-          systemInstruction: SYSTEM_PROMPT,
-          temperature: GENERATION_CONFIG.temperature,
-          topP: GENERATION_CONFIG.topP,
-          topK: GENERATION_CONFIG.topK,
-          maxOutputTokens: GENERATION_CONFIG.maxOutputTokens,
-          safetySettings: SAFETY_SETTINGS,
-        },
-        history: [],
-      });
-    }
-    return chatRef.current;
-  }, []);
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -81,9 +57,29 @@ export function useChat() {
       setIsLoading(true);
 
       try {
-        const chat = getOrCreateChat();
-        const result = await chat.sendMessage({ message: sanitized });
-        const responseText = result.text ?? '';
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: sanitized,
+            history: historyRef.current,
+          }),
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || `HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+        const responseText = data.reply || '';
+
+        // Update history for next request
+        historyRef.current = [
+          ...historyRef.current,
+          { role: 'user', parts: [{ text: sanitized }] },
+          { role: 'model', parts: [{ text: responseText }] },
+        ];
 
         const assistantMsg: ChatMessage = {
           id: `assistant-${Date.now()}`,
@@ -95,13 +91,12 @@ export function useChat() {
         setMessages((prev) => [...prev, assistantMsg]);
         setTurnCount((prev) => prev + 1);
       } catch (error: any) {
-        const debugInfo = `[DEBUG] ${error?.message || error?.toString() || 'Unknown error'}`;
-        console.error('[Hotelly Mascote] Erro:', debugInfo);
+        console.error('[Hotelly Mascote] Erro:', error?.message);
 
         const errorMsg: ChatMessage = {
           id: `error-${Date.now()}`,
           role: 'assistant',
-          content: debugInfo,
+          content: 'Ops, tive um problema t\u00e9cnico. Tenta de novo em alguns segundos? \u{1F64F}',
           timestamp: Date.now(),
         };
         setMessages((prev) => [...prev, errorMsg]);
@@ -109,11 +104,11 @@ export function useChat() {
         setIsLoading(false);
       }
     },
-    [turnCount, getOrCreateChat],
+    [turnCount],
   );
 
   const resetSession = useCallback(() => {
-    chatRef.current = null;
+    historyRef.current = [];
     setMessages([makeWelcome()]);
     setTurnCount(0);
   }, []);
