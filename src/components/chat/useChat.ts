@@ -125,7 +125,7 @@ export function useChat() {
           temperature: 0.7,
           topP: 0.9,
           topK: 40,
-          maxOutputTokens: 300,
+          maxOutputTokens: 600,
           safetySettings: [
             { category: 'HARM_CATEGORY_HARASSMENT' as const, threshold: 'BLOCK_MEDIUM_AND_ABOVE' as const },
             { category: 'HARM_CATEGORY_HATE_SPEECH' as const, threshold: 'BLOCK_MEDIUM_AND_ABOVE' as const },
