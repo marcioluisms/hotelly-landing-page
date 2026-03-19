@@ -10,8 +10,8 @@ export default function ChatHeader({ onClose, onReset, turnCount }: ChatHeaderPr
   return (
     <div className="flex shrink-0 items-center justify-between border-b border-white/10 bg-brand-navy px-4 py-3">
       <div className="flex items-center gap-3">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-amber">
-          <img src="/icon.png" alt="Hotelly" className="h-5 w-5 object-contain" />
+        <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full">
+          <img src="/icon.png" alt="Hotelly" className="h-full w-full object-cover" />
         </div>
         <div className="flex items-center gap-2">
           <span className="text-sm font-semibold text-white">Hotelly</span>

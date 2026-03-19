@@ -16,8 +16,8 @@ export default function ChatMessage({ message }: ChatMessageProps) {
       aria-label={isAssistant ? 'Hotelly disse' : 'Voce disse'}
     >
       {isAssistant && (
-        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-amber">
-          <img src="/icon.png" alt="" className="h-5 w-5 object-contain" aria-hidden="true" />
+        <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full">
+          <img src="/icon.png" alt="" className="h-full w-full object-cover" aria-hidden="true" />
         </div>
       )}
       <div

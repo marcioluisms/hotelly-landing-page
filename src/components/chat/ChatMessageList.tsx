@@ -51,8 +51,8 @@ export default function ChatMessageList({ messages, isLoading, onSend }: ChatMes
 
       {isLoading && (
         <div className="flex max-w-[85%] items-end gap-2 self-start" aria-label="Hotelly esta digitando" role="status">
-          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-amber">
-            <img src="/icon.png" alt="" className="h-5 w-5 object-contain" aria-hidden="true" />
+          <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full">
+            <img src="/icon.png" alt="" className="h-full w-full object-cover" aria-hidden="true" />
           </div>
           <div className="rounded-2xl rounded-bl-sm border border-white/5 bg-brand-slate px-4 py-3">
             <div className="flex h-5 items-center gap-1.5">
