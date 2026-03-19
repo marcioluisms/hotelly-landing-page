@@ -21,7 +21,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
         </div>
       )}
       <div
-        className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+        className={`rounded-2xl px-4 py-3 text-sm leading-relaxed break-words overflow-hidden ${
           isAssistant
             ? 'rounded-bl-sm border border-white/5 bg-brand-slate text-white/90'
             : 'rounded-br-sm bg-brand-amber/90 font-medium text-brand-navy'
