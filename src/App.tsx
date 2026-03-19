@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
@@ -6,6 +6,8 @@ import Termos from './pages/Termos';
 import Privacidade from './pages/Privacidade';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+
+const ChatWidget = React.lazy(() => import('./components/chat/ChatWidget'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +32,9 @@ export default function App() {
           <Route path="/privacidade" element={<Privacidade />} />
         </Routes>
       </Router>
+      <Suspense fallback={null}>
+        <ChatWidget />
+      </Suspense>
     </HelmetProvider>
   );
 }
