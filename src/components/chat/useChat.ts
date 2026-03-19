@@ -119,7 +119,7 @@ export function useChat() {
   // We pass an empty apiKey — the service worker handles authentication.
   const getOrCreateChat = useCallback(() => {
     if (!chatRef.current) {
-      const ai = new GoogleGenAI({ apiKey: 'PLACEHOLDER' });
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
       chatRef.current = ai.chats.create({
         model: MODEL_ID,
         config: {
