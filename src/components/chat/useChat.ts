@@ -31,7 +31,12 @@ export function useChat() {
 
   const getOrCreateChat = useCallback(() => {
     if (!chatRef.current) {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        console.error('[Hotelly Mascote] GEMINI_API_KEY not available');
+        throw new Error('API key not configured');
+      }
+      const ai = new GoogleGenAI({ apiKey });
       chatRef.current = ai.chats.create({
         model: MODEL_ID,
         config: {
