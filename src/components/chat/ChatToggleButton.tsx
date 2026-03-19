@@ -29,7 +29,7 @@ export default function ChatToggleButton({ isOpen, onClick, hasUnread }: ChatTog
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 3 }}
-      className="fixed bottom-5 right-5 z-50 flex h-[60px] w-[60px] items-center justify-center rounded-full shadow-lg shadow-black/30 transition-all duration-300 hover:shadow-xl hover:shadow-black/40 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:ring-offset-2 focus:ring-offset-brand-navy md:bottom-6 md:right-6 md:h-14 md:w-14"
+      className="fixed bottom-5 right-5 z-50 flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full shadow-lg shadow-black/30 transition-all duration-300 hover:shadow-xl hover:shadow-black/40 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:ring-offset-2 focus:ring-offset-brand-navy md:bottom-6 md:right-6 md:h-14 md:w-14"
     >
       <img src="/icon.png" alt="Hotelly" className="h-full w-full rounded-full object-cover" />
       {hasUnread && (
