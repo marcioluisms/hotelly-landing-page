@@ -114,20 +114,9 @@ export function useChat() {
   const chatRef = useRef<ReturnType<GoogleGenAI['chats']['create']> | null>(null);
   const lastSendRef = useRef<number>(0);
 
-  // AI Studio's service worker intercepts requests to generativelanguage.googleapis.com
-  // and proxies them through /api-proxy, injecting the API key server-side.
-  // We pass an empty apiKey — the service worker handles authentication.
   const getOrCreateChat = useCallback(() => {
     if (!chatRef.current) {
-      // @ts-ignore — injected by vite.config.ts define
-      const debug = typeof __ENV_DEBUG__ !== 'undefined' ? __ENV_DEBUG__ : {};
       const apiKey = process.env.GEMINI_API_KEY || '';
-      console.log('[Hotelly Debug] env:', debug, 'keyLen:', apiKey.length);
-
-      if (!apiKey) {
-        throw new Error(`API key empty. Env debug: ${JSON.stringify(debug)}`);
-      }
-
       const ai = new GoogleGenAI({ apiKey });
       chatRef.current = ai.chats.create({
         model: MODEL_ID,
@@ -192,13 +181,12 @@ export function useChat() {
         setMessages((prev) => [...prev, assistantMsg]);
         setTurnCount((prev) => prev + 1);
       } catch (error: any) {
-        const debugMsg = `[DEBUG] ${error?.message || String(error)}`;
-        console.error('[Hotelly Mascote]', debugMsg);
+        console.error('[Hotelly Mascote] Erro:', error?.message);
 
         const errorMsg: ChatMessage = {
           id: `error-${Date.now()}`,
           role: 'assistant',
-          content: debugMsg,
+          content: 'Ops, tive um problema t\u00e9cnico. Tenta de novo em alguns segundos? \u{1F64F}',
           timestamp: Date.now(),
         };
         setMessages((prev) => [...prev, errorMsg]);
