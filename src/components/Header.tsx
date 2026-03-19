@@ -32,7 +32,10 @@ export default function Header() {
           )}
           <Link className="hover:text-brand-sky transition-colors" to="/blog">Blog</Link>
         </nav>
-        <div>
+        <div className="flex items-center gap-4">
+          <a className="text-white/90 hover:text-brand-sky transition-colors font-medium text-xs sm:text-sm md:text-base" href="https://adm.hotelly.ia.br/sign-in">
+            Entrar
+          </a>
           <a className="bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-4 sm:px-6 rounded-lg transition-all text-xs sm:text-sm md:text-base shadow-lg shadow-brand-amber/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
             Garantir Preço de Inauguração
           </a>
