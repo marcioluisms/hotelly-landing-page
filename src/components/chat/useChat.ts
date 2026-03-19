@@ -91,12 +91,13 @@ export function useChat() {
         setMessages((prev) => [...prev, assistantMsg]);
         setTurnCount((prev) => prev + 1);
       } catch (error: any) {
-        console.error('[Hotelly Mascote] Erro:', error?.message);
+        const debugMsg = `[DEBUG] ${error?.message || String(error)}`;
+        console.error('[Hotelly Mascote]', debugMsg);
 
         const errorMsg: ChatMessage = {
           id: `error-${Date.now()}`,
           role: 'assistant',
-          content: 'Ops, tive um problema t\u00e9cnico. Tenta de novo em alguns segundos? \u{1F64F}',
+          content: debugMsg,
           timestamp: Date.now(),
         };
         setMessages((prev) => [...prev, errorMsg]);
