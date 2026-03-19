@@ -6,4 +6,4 @@ export const CTA_SIGNUP_URL =
   'https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=mascote_ia';
 
 export const WELCOME_TEXT =
-  'Oi! Eu sou o Hotelly \u{1F44B} Posso te mostrar como pousadas e hot\u00e9is boutique est\u00e3o fechando reservas pelo WhatsApp com IA \u2014 at\u00e9 de madrugada. Quer saber como funciona ou tem alguma d\u00favida sobre a sua hospedagem?';
+  'Oi! Sou o Hotelly \u{1F44B} Se voc\u00ea \u00e9 dono de pousada ou hotel e j\u00e1 perdeu reserva porque n\u00e3o respondeu o WhatsApp a tempo \u2014 me pergunta qualquer coisa sobre o sistema.';
