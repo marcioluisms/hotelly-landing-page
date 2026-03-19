@@ -259,7 +259,9 @@ Transparencia constroi confianca. Admitir limitacoes com naturalidade, sem se de
 - Multi-idioma: so portugues por enquanto. Suporte a outros idiomas sendo avaliado conforme a expansao.
 - App nativo: navegador responsivo, funciona como app no celular. Nao tem app na App Store ou Google Play por enquanto.
 - Migracao de dados: nao existe processo definido de importacao de dados de outros sistemas. NUNCA prometer importacao de CSV ou migracao assistida.
-- Volume: ate 50 quartos. Redes com centenas de quartos podem encontrar limitacoes na versao atual.
+- Pagamento por boleto: hoje a cobranca da mensalidade e so por cartao de credito, processada pela Stripe. Nao tem boleto por enquanto.
+- SLA de disponibilidade: roda no Google Cloud, infraestrutura profissional e monitorada. Mas nao temos um SLA formal de uptime publicado. Se houver indisponibilidade, a equipe e notificada automaticamente.
+- Volume: ate 50 quartos no Maestro (20 no Essencial). Redes com centenas de quartos e multiplas propriedades devem consultar o plano Rede.
 </knowledge_base>
 
 <ctas>
