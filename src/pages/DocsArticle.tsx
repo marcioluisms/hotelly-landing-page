@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import DocsSidebar from '../components/docs/DocsSidebar';
 import DocsBreadcrumb from '../components/docs/DocsBreadcrumb';
 import { getDocBySlug, getRelatedDocs, getCategories } from '../utils/docs';
+import { useEmbed } from '../hooks/useEmbed';
 
 const CATEGORY_LABELS: Record<string, string> = {
   'primeiros-passos': 'Primeiros Passos',
@@ -25,19 +26,70 @@ const CATEGORY_LABELS: Record<string, string> = {
   'guias-por-perfil': 'Guias por Perfil',
 };
 
+/** Build a valid article ID from category + slug */
+function buildArticleId(categoria: string, slug: string): string {
+  return `${categoria}_${slug}`.slice(0, 64);
+}
+
+const PARENT_ORIGIN = 'https://adm.hotelly.ia.br';
+
 export default function DocsArticle() {
   const { categoria, slug } = useParams<{ categoria: string; slug: string }>();
+  const isEmbed = useEmbed();
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const doc = categoria && slug ? getDocBySlug(categoria, slug) : null;
+
+  const sendToParent = useCallback((msg: Record<string, unknown>) => {
+    if (!isEmbed) return;
+    window.parent.postMessage(msg, PARENT_ORIGIN);
+  }, [isEmbed]);
+
+  // Notify parent about article changes
+  useEffect(() => {
+    if (!isEmbed || !categoria || !slug || !doc) return;
+    sendToParent({
+      type: 'hotelly:help:articleChanged',
+      payload: {
+        helpArticleId: buildArticleId(categoria, slug),
+        articleTitle: doc.titulo.slice(0, 200),
+        articleUrl: `/ajuda/${categoria}/${slug}`,
+      },
+    });
+  }, [isEmbed, categoria, slug, doc, sendToParent]);
+
+  // Report content height to parent for dynamic iframe sizing
+  useEffect(() => {
+    if (!isEmbed || !contentRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        sendToParent({
+          type: 'hotelly:help:contentResized',
+          payload: { height: Math.ceil(entry.contentRect.height) },
+        });
+      }
+    });
+    observer.observe(contentRef.current);
+    return () => observer.disconnect();
+  }, [isEmbed, sendToParent]);
 
   if (!categoria || !slug) return <Navigate to="/ajuda" />;
-
-  const doc = getDocBySlug(categoria, slug);
-
   if (!doc) return <Navigate to={`/ajuda/${categoria}`} />;
 
   const categoryLabel = CATEGORY_LABELS[categoria] || categoria;
   const relatedDocs = getRelatedDocs(categoria, slug);
   const articleUrl = `https://hotelly.com.br/ajuda/${categoria}/${slug}`;
   const description = doc.descricao || doc.content.slice(0, 160).replace(/[#*>\n]/g, '').trim();
+
+  const handleOpenCopilot = () => {
+    sendToParent({
+      type: 'hotelly:help:openCopilot',
+      payload: {
+        helpArticleId: buildArticleId(categoria, slug),
+        articleTitle: doc.titulo.slice(0, 200),
+      },
+    });
+  };
 
   // JSON-LD: HowTo for "como-fazer", Article for everything else
   const jsonLd = doc.tipo === 'como-fazer'
@@ -66,7 +118,7 @@ export default function DocsArticle() {
       };
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-navy">
+    <div ref={contentRef} className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
         <title>{doc.titulo} | Ajuda Hotelly</title>
         <meta name="description" content={description} />
@@ -84,20 +136,22 @@ export default function DocsArticle() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <Header />
+      {!isEmbed && <Header />}
 
-      <main className="flex-grow pt-32 pb-20 px-4 md:px-8">
+      <main className={`flex-grow ${isEmbed ? 'pt-8' : 'pt-32'} pb-20 px-4 md:px-8`}>
         <div className="max-w-7xl mx-auto flex gap-8">
           {/* Sidebar */}
-          <DocsSidebar />
+          {!isEmbed && <DocsSidebar />}
 
           {/* Article */}
           <article className="flex-grow min-w-0 max-w-3xl">
-            <DocsBreadcrumb
-              categorySlug={categoria}
-              categoryLabel={categoryLabel}
-              articleTitle={doc.titulo}
-            />
+            {!isEmbed && (
+              <DocsBreadcrumb
+                categorySlug={categoria}
+                categoryLabel={categoryLabel}
+                articleTitle={doc.titulo}
+              />
+            )}
 
             <h1 className="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">
               {doc.titulo}
@@ -135,28 +189,34 @@ export default function DocsArticle() {
                 </div>
               )}
 
-              {/* CTA Copilot */}
-              <div className="bg-brand-slate/30 p-6 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div>
-                  <p className="text-white font-bold">Ainda tem dúvida?</p>
-                  <p className="text-white/50 text-sm">Nosso assistente IA pode ajudar.</p>
+              {/* CTA Ajuda */}
+              {isEmbed ? (
+                <div className="bg-brand-slate/30 p-6 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div>
+                    <p className="text-white font-bold">Precisa de ajuda específica?</p>
+                    <p className="text-white/50 text-sm">O Copilot pode te ajudar com dados reais da sua propriedade.</p>
+                  </div>
+                  <button
+                    onClick={handleOpenCopilot}
+                    className="bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-sm shadow-lg shadow-brand-amber/20 whitespace-nowrap"
+                  >
+                    Abrir Copilot &rarr;
+                  </button>
                 </div>
-                <button
-                  onClick={() => {
-                    const chatBtn = document.querySelector('[aria-label="Abrir chat"]') as HTMLButtonElement;
-                    if (chatBtn) chatBtn.click();
-                  }}
-                  className="bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-sm shadow-lg shadow-brand-amber/20 whitespace-nowrap"
-                >
-                  Pergunte ao Copilot
-                </button>
-              </div>
+              ) : (
+                <div className="bg-brand-slate/30 p-6 rounded-xl border border-white/5">
+                  <p className="text-white font-bold mb-1">Ainda tem dúvida?</p>
+                  <p className="text-white/50 text-sm">
+                    Assinantes têm acesso ao Copilot, o assistente Hotelly que te ajuda diretamente no dashboard.
+                  </p>
+                </div>
+              )}
             </footer>
           </article>
         </div>
       </main>
 
-      <Footer />
+      {!isEmbed && <Footer />}
     </div>
   );
 }

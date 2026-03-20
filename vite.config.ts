@@ -14,5 +14,10 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    server: {
+      headers: {
+        'Content-Security-Policy': "frame-ancestors 'self' https://adm.hotelly.ia.br",
+      },
+    },
   };
 });

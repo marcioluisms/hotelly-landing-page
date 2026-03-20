@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import DocsSidebar from '../components/docs/DocsSidebar';
 import DocsBreadcrumb from '../components/docs/DocsBreadcrumb';
 import { getDocsByCategory, getCategories } from '../utils/docs';
+import { useEmbed } from '../hooks/useEmbed';
 
 const TYPE_BADGES: Record<string, { label: string; color: string }> = {
   'como-fazer': { label: 'Como fazer', color: 'bg-brand-amber/20 text-brand-amber' },
@@ -34,6 +35,8 @@ export default function DocsCategory() {
     docs = docs.filter((d) => d.perfil.includes(perfilFilter));
   }
 
+  const isEmbed = useEmbed();
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
@@ -44,16 +47,16 @@ export default function DocsCategory() {
         <meta property="og:title" content={`${currentCat.label} | Ajuda Hotelly`} />
       </Helmet>
 
-      <Header />
+      {!isEmbed && <Header />}
 
-      <main className="flex-grow pt-32 pb-20 px-4 md:px-8">
+      <main className={`flex-grow ${isEmbed ? 'pt-8' : 'pt-32'} pb-20 px-4 md:px-8`}>
         <div className="max-w-7xl mx-auto flex gap-8">
           {/* Sidebar */}
-          <DocsSidebar />
+          {!isEmbed && <DocsSidebar />}
 
           {/* Content */}
           <div className="flex-grow min-w-0">
-            <DocsBreadcrumb categorySlug={categoria} categoryLabel={currentCat.label} />
+            {!isEmbed && <DocsBreadcrumb categorySlug={categoria} categoryLabel={currentCat.label} />}
 
             <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
               <h1 className="text-3xl md:text-4xl font-black text-white">
@@ -119,7 +122,7 @@ export default function DocsCategory() {
         </div>
       </main>
 
-      <Footer />
+      {!isEmbed && <Footer />}
     </div>
   );
 }

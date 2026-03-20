@@ -9,6 +9,7 @@ import BlogPost from './pages/BlogPost';
 import Docs from './pages/Docs';
 import DocsCategory from './pages/DocsCategory';
 import DocsArticle from './pages/DocsArticle';
+import { useEmbed } from './hooks/useEmbed';
 
 const ChatWidget = React.lazy(() => import('./components/chat/ChatWidget'));
 
@@ -23,6 +24,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const isEmbed = useEmbed();
+
   return (
     <HelmetProvider>
       <Router>
@@ -38,9 +41,11 @@ export default function App() {
           <Route path="/privacidade" element={<Privacidade />} />
         </Routes>
       </Router>
-      <Suspense fallback={null}>
-        <ChatWidget />
-      </Suspense>
+      {!isEmbed && (
+        <Suspense fallback={null}>
+          <ChatWidget />
+        </Suspense>
+      )}
     </HelmetProvider>
   );
 }

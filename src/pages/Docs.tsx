@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DocsSearch from '../components/docs/DocsSearch';
 import { getCategories, type DocCategory } from '../utils/docs';
+import { useEmbed } from '../hooks/useEmbed';
 
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
   'primeiros-passos': Rocket,
@@ -25,6 +26,7 @@ const CATEGORY_ICONS: Record<string, React.ElementType> = {
 
 export default function Docs() {
   const categories = getCategories();
+  const isEmbed = useEmbed();
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
@@ -39,9 +41,9 @@ export default function Docs() {
         <meta property="twitter:title" content="Central de Ajuda | Hotelly" />
       </Helmet>
 
-      <Header />
+      {!isEmbed && <Header />}
 
-      <main className="flex-grow pt-32 pb-20 px-4 md:px-8">
+      <main className={`flex-grow ${isEmbed ? 'pt-8' : 'pt-32'} pb-20 px-4 md:px-8`}>
         <div className="max-w-6xl mx-auto">
           {/* Title + Search */}
           <div className="text-center mb-16">
@@ -82,26 +84,22 @@ export default function Docs() {
             })}
           </div>
 
-          {/* CTA Copilot */}
+          {/* CTA Ajuda */}
           <div className="mt-16 text-center">
-            <p className="text-white/50 text-sm">
-              Não encontrou o que procura?{' '}
-              <button
-                onClick={() => {
-                  // Trigger ChatWidget open — it listens on a custom event or we click its toggle
-                  const chatBtn = document.querySelector('[aria-label="Abrir chat"]') as HTMLButtonElement;
-                  if (chatBtn) chatBtn.click();
-                }}
-                className="text-brand-amber hover:underline font-medium"
-              >
-                Pergunte ao Copilot
-              </button>
-            </p>
+            {isEmbed ? (
+              <p className="text-white/50 text-sm">
+                Não encontrou? Pergunte ao Copilot diretamente no dashboard.
+              </p>
+            ) : (
+              <p className="text-white/50 text-sm">
+                Não encontrou? Assinantes podem perguntar ao Copilot diretamente no dashboard.
+              </p>
+            )}
           </div>
         </div>
       </main>
 
-      <Footer />
+      {!isEmbed && <Footer />}
     </div>
   );
 }
