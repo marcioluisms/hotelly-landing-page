@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import VagasCounter from '../components/VagasCounter';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,9 +29,12 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-[720px]">
                   Sua hospedagem vendendo enquanto você dorme.
                 </h1>
-                <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-[600px]">
+                <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-[600px]">
                   O Hotelly é o parceiro de receita que fecha reservas no WhatsApp 24h, faz follow-up até o Pix cair e cuida de toda a burocracia do Serpro. Outros sistemas guardam dados. O Hotelly fecha vendas.
                 </p>
+                <div className="mb-8">
+                  <VagasCounter />
+                </div>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                   <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="w-full sm:w-auto text-center bg-brand-amber text-brand-navy hover:bg-amber-500 font-bold py-2.5 px-6 rounded-lg transition-all text-lg">
                     Começar 14 dias grátis do Maestro
@@ -47,44 +51,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Social Proof Section */}
-        <section className="py-16 bg-brand-slate/60 border-y border-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Junte-se aos 10 primeiros hoteleiros que garantiram o Preço de Inauguração</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {/* Testimonial Card 1 */}
-              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
-                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
-                  <span className="text-2xl font-bold text-brand-sky">?</span>
-                </div>
-                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
-                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
-              </div>
-
-              {/* Testimonial Card 2 */}
-              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
-                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
-                  <span className="text-2xl font-bold text-brand-sky">?</span>
-                </div>
-                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
-                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
-              </div>
-
-              {/* Testimonial Card 3 */}
-              <div className="bg-brand-navy rounded-2xl p-8 border border-white/10 text-center flex flex-col items-center">
-                <div className="w-16 h-16 bg-brand-sky/20 rounded-full flex items-center justify-center mb-4 border border-brand-sky/40">
-                  <span className="text-2xl font-bold text-brand-sky">?</span>
-                </div>
-                <p className="text-white/70 text-sm italic mb-4 flex-grow">Em breve: depoimento de fundador</p>
-                <p className="text-white/50 text-xs">Pousada • Cidade • X quartos</p>
-              </div>
-            </div>
-            {/* TODO: Replace with real testimonials from founders */}
           </div>
         </section>
 
@@ -156,7 +122,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> FNRH automático integrado ao Serpro. Os dados vão direto para o governo</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente dentro do painel. Pergunte qualquer coisa sobre sua pousada e receba a resposta na hora</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente dentro do painel — pergunte qualquer coisa sobre sua hospedagem e receba a resposta na hora. <span className="font-medium text-brand-amber/80">E evolui: cada mês, novas capacidades e conhecimento são adicionados automaticamente.</span></li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Painel de governança para organizar a limpeza dos quartos com prioridade</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Configuração inicial guiada, nossa equipe falará com você</li>
                 </ul>
@@ -257,34 +223,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Innovation Promise */}
-        <section className="py-20 bg-brand-slate border-y border-white/5">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sua hospedagem sempre na fronteira da tecnologia</h2>
-              <p className="text-white/60 text-lg">No Hotelly, você não compra apenas um software; você ganha um parceiro de inovação perpétua.</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
-                <div className="text-brand-emerald text-3xl mb-4">✅</div>
-                <h3 className="text-lg font-bold text-white mb-3">Acesso Vitalício à Inovação</h3>
-                <p className="text-white/70 text-sm">Sempre que uma nova tecnologia ou recurso de IA surgir para facilitar seu trabalho ou aumentar suas vendas, nós seremos os primeiros a implementá-la para você.</p>
-              </div>
-              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
-                <div className="text-brand-emerald text-3xl mb-4">✅</div>
-                <h3 className="text-lg font-bold text-white mb-3">Evolução em Tempo Real</h3>
-                <p className="text-white/70 text-sm">Nossa equipe monitora as novidades do mercado diariamente. Se algo novo pode impulsionar seu negócio, o Hotelly trará essa facilidade para dentro do seu painel.</p>
-              </div>
-              <div className="bg-brand-navy border border-white/10 rounded-2xl p-8 text-center hover:-translate-y-1 transition-transform">
-                <div className="text-brand-emerald text-3xl mb-4">✅</div>
-                <h3 className="text-lg font-bold text-white mb-3">Visão de Futuro</h3>
-                <p className="text-white/70 text-sm">Estar a bordo do Hotelly é ter a certeza de que sua hospedagem nunca ficará para trás.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Target Audience */}
         <section className="py-24 bg-brand-navy">
           <div className="container mx-auto px-4">
@@ -362,6 +300,10 @@ export default function Home() {
               <p className="text-white/60 text-lg">Extraordinariamente, os primeiros parceiros entram pela metade do preço. Enquanto durar o contrato.</p>
             </div>
 
+            <div className="flex justify-center mb-12">
+              <VagasCounter />
+            </div>
+
             <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
               {/* Card 1: Essencial */}
               <div className="bg-brand-navy rounded-3xl p-8 border border-white/10 flex flex-col h-full hover:-translate-y-2 transition-transform">
@@ -392,14 +334,17 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual de demanda. Veja quais dias e quartos têm mais procura</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Financeiro básico e pagamentos integrados</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in digital e FNRH automático (Serpro)</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)<a href="#whatsapp-api" className="text-brand-amber no-underline">*</a></li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Organização de limpeza de quartos por prioridade</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cadastro de hóspedes com perfil e histórico de reservas</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente no painel (30 consultas/mês)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Pacotes com estadia mínima e restrições de datas</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cobrança de extras e frigobar completos</li>
                 </ul>
-                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Começar 14 dias grátis do Maestro</a>
+                <div className="border-t border-white/10 pt-4 mb-6">
+                  <p className="text-xs text-gray-500 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
+                </div>
+                <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_essencial" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Testar Essencial por 14 dias</a>
               </div>
 
               {/* Card 2: Maestro */}
@@ -430,9 +375,12 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Preços ajustados automaticamente conforme ocupação, temporada e demanda</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário de preços e feriados automático. Sem precisar lembrar de cada data</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Assistente inteligente no painel (ilimitado)</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)*</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Atendimento por IA no WhatsApp (ilimitado)<a href="#whatsapp-api" className="text-brand-amber no-underline">*</a></li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte por chat prioritário</li>
                 </ul>
+                <div className="border-t border-white/10 pt-4 mb-6">
+                  <p className="text-xs text-gray-500 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
+                </div>
                 <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis do Maestro</a>
               </div>
 
@@ -460,12 +408,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-8 text-center text-brand-coral text-sm font-semibold max-w-3xl mx-auto">
-              Promoção válida apenas para as 10 primeiras hospedagens fundadoras.
-            </div>
-
-            <div className="mt-6 text-center text-white/50 text-xs max-w-3xl mx-auto">
-              *Custos de WhatsApp e Meta para envio de mensagens são cobrados diretamente ao cliente de acordo com o volume de mensagens.
+            {/* WhatsApp API disclaimer */}
+            <div id="whatsapp-api" className="mt-6 max-w-3xl mx-auto bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-lg mt-0.5">💰</span>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  <span className="text-brand-amber">*</span> Atendimento por IA ilimitado no WhatsApp: Você paga apenas pelos custos reais da Meta Ads (por mensagem enviada). Esses custos vêm de sua conta Meta, com zero markup nosso. Você vê tudo no relatório financeiro do Hotelly: quantas mensagens, quanto custou, tudo rastreável.
+                </p>
+              </div>
             </div>
 
           </div>
@@ -581,6 +531,46 @@ export default function Home() {
                 </summary>
                 <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
                   Sim. Usamos integração oficial com o Serpro. Suas credenciais ficam protegidas com o mesmo nível de segurança usado por bancos. Ninguém tem acesso a elas, nem mesmo nossa equipe. Você nunca mais vai precisar preencher uma ficha manual na vida. É liberdade total.
+                </div>
+              </details>
+
+              <details className="group bg-brand-navy rounded-2xl overflow-hidden border border-white/5">
+                <summary className="flex items-center justify-between p-6 text-white font-bold cursor-pointer list-none">
+                  <span>Qual a diferença entre Essencial e Maestro?</span>
+                  <span className="transition group-open:rotate-180 text-brand-sky">
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
+                  A diferença está na automação e no suporte. O <strong>Essencial</strong> tem tudo que você precisa para sair do improviso: gestão de reservas, check-in digital, atendimento por IA 24/7 no WhatsApp e relatórios básicos de ocupação e receita. É para quem quer o essencial funcionando bem.<br/><br/>
+                  O <strong>Maestro</strong> adiciona a mágica: Precificação Dinâmica (o sistema sugere preços baseado na procura, feriados e sazonalidade), Assistente IA ilimitado dentro do painel (em vez de 30 consultas/mês), relatórios avançados (RevPAR, ADR, margem de lucro) e suporte prioritário por chat.<br/><br/>
+                  Qual escolher? Comece com Essencial e evolua. Durante o teste gratuito de 14 dias, você tem acesso a <strong>todas as funções do Maestro</strong> — então você pode ver o Maestro funcionando antes de decidir.
+                </div>
+              </details>
+
+              <details className="group bg-brand-navy rounded-2xl overflow-hidden border border-white/5">
+                <summary className="flex items-center justify-between p-6 text-white font-bold cursor-pointer list-none">
+                  <span>Como funciona o onboarding? Preciso de experiência técnica?</span>
+                  <span className="transition group-open:rotate-180 text-brand-sky">
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
+                  Não precisa ser técnico. O onboarding é assistido pela equipe Hotelly — nós te ajudamos a cadastrar tudo em minutos. Você não está sozinho: a equipe senta com você (remotamente ou presencialmente, conforme sua hospedagem) e configura quartos, preços, políticas de cancelamento e integrações.<br/><br/>
+                  Durante a fase de Parceiro Fundador, você tem canal direto com o fundador para dúvidas. É como ter um parceiro te ajudando a botar o sistema para rodar.
+                </div>
+              </details>
+
+              <details className="group bg-brand-navy rounded-2xl overflow-hidden border border-white/5">
+                <summary className="flex items-center justify-between p-6 text-white font-bold cursor-pointer list-none">
+                  <span>Posso convidar minha equipe? Quantos usuários?</span>
+                  <span className="transition group-open:rotate-180 text-brand-sky">
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-white/80 border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
+                  Sim! Você convida quantas pessoas quiser conforme seu plano permite. O Essencial permite até 5 usuários (recepcionista, gerente, camareira). O Maestro permite até 15. Cada pessoa vê só o que precisa: a camareira só mexe com limpeza (não vê dados financeiros), o recepcionista cuida de check-in e reservas, e você vê tudo.<br/><br/>
+                  Mudar de plano é rápido e você paga a diferença apenas pelos dias restantes do mês. Zero complicação.
                 </div>
               </details>
             </div>
