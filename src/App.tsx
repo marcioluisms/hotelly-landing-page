@@ -6,6 +6,9 @@ import Termos from './pages/Termos';
 import Privacidade from './pages/Privacidade';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Docs from './pages/Docs';
+import DocsCategory from './pages/DocsCategory';
+import DocsArticle from './pages/DocsArticle';
 
 const ChatWidget = React.lazy(() => import('./components/chat/ChatWidget'));
 
@@ -28,6 +31,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/ajuda" element={<Docs />} />
+          <Route path="/ajuda/:categoria" element={<DocsCategory />} />
+          <Route path="/ajuda/:categoria/:slug" element={<DocsArticle />} />
           <Route path="/termos" element={<Termos />} />
           <Route path="/privacidade" element={<Privacidade />} />
         </Routes>

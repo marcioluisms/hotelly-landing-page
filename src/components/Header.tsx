@@ -31,6 +31,7 @@ export default function Header() {
             <Link className="hover:text-brand-sky transition-colors" to="/">Voltar ao Início</Link>
           )}
           <Link className="hover:text-brand-sky transition-colors" to="/blog">Blog</Link>
+          <Link className="hover:text-brand-sky transition-colors" to="/ajuda">Ajuda</Link>
         </nav>
         <div className="flex items-center gap-4">
           <a className="text-white/90 hover:text-brand-sky transition-colors font-medium text-xs sm:text-sm md:text-base" href="https://adm.hotelly.ia.br/sign-in">

@@ -22,6 +22,7 @@ export default function Footer() {
           <p>© 2026 Hotelly. Todos os direitos reservados.</p>
           <div className="flex gap-6">
             <Link className="hover:text-white transition-colors" to="/blog">Blog</Link>
+            <Link className="hover:text-white transition-colors" to="/ajuda">Ajuda</Link>
             <Link className="hover:text-white transition-colors" to="/termos">Termos de Uso</Link>
             <Link className="hover:text-white transition-colors" to="/privacidade">Privacidade</Link>
           </div>
