@@ -1,6 +1,9 @@
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+// Capture the pre-rendered <title> before React takes over the <head>
+const PRE_RENDERED_TITLE = typeof document !== 'undefined' ? document.title : '';
 import Home from './pages/Home';
 import Termos from './pages/Termos';
 import Privacidade from './pages/Privacidade';
@@ -28,6 +31,7 @@ export default function App() {
 
   return (
     <HelmetProvider>
+      <Helmet defaultTitle={PRE_RENDERED_TITLE} />
       <Router>
         <ScrollToTop />
         <Routes>
