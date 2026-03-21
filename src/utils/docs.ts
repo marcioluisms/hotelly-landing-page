@@ -86,7 +86,7 @@ export function getAllDocs(): DocArticle[] {
       tipo: attributes.tipo || 'conceito',
       helpArticleId: attributes.helpArticleId || '',
       descricao: attributes['descrição'] || attributes.descricao || '',
-      content: body,
+      content: body.replace(/^#\s+.+\n+/, ''),
     });
   }
 
