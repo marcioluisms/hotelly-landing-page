@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { Rocket, CalendarCheck, MessageCircle, Bot, DollarSign, BarChart3, Sparkles, Smartphone, Settings, BookOpen, HelpCircle, FileText, Users } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -28,10 +29,11 @@ export default function Docs() {
   const categories = getCategories();
   const isEmbed = useEmbed();
 
+  useDocumentTitle('Central de Ajuda | Hotelly');
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
-        <title>Central de Ajuda | Hotelly</title>
         <meta name="description" content="Encontre guias, tutoriais e respostas para todas as suas dúvidas sobre o Hotelly — o PMS completo para pousadas e hotéis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hotelly.com.br/ajuda" />

@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Helmet } from 'react-helmet-async';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { getPostBySlug, getRelatedPosts } from '../utils/blog';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -44,10 +45,11 @@ export default function BlogPost() {
     }
   };
 
+  useDocumentTitle(`${post.title} | Blog Hotelly`);
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
-        <title>{post.title} | Blog Hotelly</title>
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.tags.join(', ')} />
         

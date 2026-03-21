@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Helmet } from 'react-helmet-async';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DocsSidebar from '../components/docs/DocsSidebar';
@@ -117,10 +118,11 @@ export default function DocsArticle() {
         },
       };
 
+  useDocumentTitle(`${doc.titulo} | Ajuda Hotelly`);
+
   return (
     <div ref={contentRef} className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
-        <title>{doc.titulo} | Ajuda Hotelly</title>
         <meta name="description" content={description} />
 
         <meta property="og:type" content="article" />

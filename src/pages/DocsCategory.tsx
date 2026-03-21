@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DocsSidebar from '../components/docs/DocsSidebar';
@@ -37,10 +38,11 @@ export default function DocsCategory() {
 
   const isEmbed = useEmbed();
 
+  useDocumentTitle(`${currentCat.label} | Ajuda Hotelly`);
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
-        <title>{currentCat.label} | Ajuda Hotelly</title>
         <meta name="description" content={`Artigos de ajuda sobre ${currentCat.label} no Hotelly.`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://hotelly.com.br/ajuda/${categoria}`} />

@@ -109,13 +109,6 @@ function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitl
     );
   }
 
-  // Inject a tiny inline script that guards the pre-rendered <title> from
-  // being blanked by React 19's head management during initial mount.
-  // It watches the <title> element and restores the original value if it's
-  // ever cleared. Auto-disconnects after 5s to avoid permanent overhead.
-  const titleGuard = `<script>(function(){var t=document.title;if(!t)return;var e=document.querySelector("title");if(!e)return;var o=new MutationObserver(function(){if(!document.title||document.title==="")document.title=t});o.observe(e,{childList:true,characterData:true,subtree:true});setTimeout(function(){o.disconnect()},5000)})()</script>`;
-  html = html.replace('</head>', `${titleGuard}\n  </head>`);
-
   return html;
 }
 

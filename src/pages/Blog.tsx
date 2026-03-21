@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import { getAllPosts } from '../utils/blog';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,10 +9,11 @@ import Footer from '../components/Footer';
 export default function Blog() {
   const posts = getAllPosts();
 
+  useDocumentTitle('Blog Hotelly | Vendas Diretas e Gestão Hoteleira');
+
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy">
       <Helmet>
-        <title>Blog Hotelly | Vendas Diretas e Gestão Hoteleira</title>
         <meta name="description" content="Estratégias, tecnologia e insights para revolucionar a gestão e as vendas diretas do seu hotel ou pousada." />
         <meta property="og:title" content="Blog Hotelly | Vendas Diretas e Gestão Hoteleira" />
         <meta property="og:description" content="Estratégias, tecnologia e insights para revolucionar a gestão e as vendas diretas do seu hotel ou pousada." />
