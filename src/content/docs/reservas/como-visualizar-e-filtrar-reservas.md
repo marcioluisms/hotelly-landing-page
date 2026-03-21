@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Reservas** > **Reservas**.
+1. No menu lateral, clique em **Painel** > **Reservas**.
 2. A lista exibe todas as reservas com as colunas: **Hóspede** (nome, quarto, datas), **Status** (badge colorido), **Saldo** (valor em R$) e **Ações**.
 
 ### Filtrar por status

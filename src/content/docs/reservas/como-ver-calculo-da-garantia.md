@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Reservas** > **Reservas**.
+1. No menu lateral, clique em **Painel** > **Reservas**.
 2. Clique no nome do hóspede para abrir o detalhe da reserva.
 3. No card **"Ações"**, clique em **"Ver cálculo da garantia"**.
 4. O sistema exibe o detalhamento do cálculo: valor total da reserva, percentual de sinal aplicado e valor mínimo para confirmação.

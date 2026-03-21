@@ -20,7 +20,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Reservas** > **Reservas**.
+1. No menu lateral, clique em **Painel** > **Reservas**.
 2. Clique no nome do hóspede para abrir o detalhe da reserva.
 3. No card **"Ações"**, clique em **"Reenviar link"**.
 
@@ -34,7 +34,7 @@ revisado_por_engenharia: true
 
 | Problema | Solução |
 |---|---|
-| Hóspede diz que não recebeu o email | Verifique se o email do hóspede está cadastrado corretamente em **Reservas** > **Hóspedes**. Tente reenviar o link. Peça ao hóspede para verificar a caixa de spam. |
+| Hóspede diz que não recebeu o email | Verifique se o email do hóspede está cadastrado corretamente em **Painel** > **Hóspedes**. Tente reenviar o link. Peça ao hóspede para verificar a caixa de spam. |
 | Botão não aparece ou link não funciona | Confirme que o Mercado Pago está conectado (status **"Conectado"** em Configurações). Se estiver desconectado, reconecte a conta. |
 
 ---

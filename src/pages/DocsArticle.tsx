@@ -149,7 +149,6 @@ export default function DocsArticle() {
               <DocsBreadcrumb
                 categorySlug={categoria}
                 categoryLabel={categoryLabel}
-                articleTitle={doc.titulo}
               />
             )}
 

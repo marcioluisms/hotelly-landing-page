@@ -22,7 +22,7 @@ revisado_por_engenharia: true
 
 ### Opção 1: Pela lista de reservas
 
-1. No menu lateral, clique em **Reservas** > **Reservas**.
+1. No menu lateral, clique em **Painel** > **Reservas**.
 2. Encontre a reserva com status "Hospedado".
 3. Clique no botão **"Fazer Check-out"** na coluna de ações.
 

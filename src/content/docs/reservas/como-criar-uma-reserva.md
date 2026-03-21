@@ -21,7 +21,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Reservas** > **Reservas**.
+1. No menu lateral, clique em **Painel** > **Reservas**.
 2. Clique no botão **"Criar Reserva"** no canto superior direito.
 3. No campo **"Hóspede"**, busque pelo nome, email, telefone ou CPF. Se o hóspede não estiver cadastrado, clique em **"Cadastrar novo hóspede"** e preencha os dados básicos (nome é obrigatório; email, telefone e CPF são opcionais).
 4. Selecione as datas de **"Check-in"** e **"Check-out"**.

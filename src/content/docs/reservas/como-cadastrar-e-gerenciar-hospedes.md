@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Cadastrar um novo hóspede
 
-1. No menu lateral, clique em **Reservas** > **Hóspedes**.
+1. No menu lateral, clique em **Painel** > **Hóspedes**.
 2. Clique no botão **"Cadastrar Hóspede"**.
 3. Preencha os campos:
    - **"Nome"** (obrigatório)
