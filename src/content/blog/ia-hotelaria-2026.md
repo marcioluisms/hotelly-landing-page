@@ -9,7 +9,7 @@ author:
   avatar: "/images/authors/marcio.jpg"
 category: "Melhores"
 tags: ["IA", "Tecnologia", "Tendências", "Gestão"]
-coverImage: "/images/blog/ia-hotelaria-2026.jpg"
+coverImage: "/images/blog/ia-hotelaria-2026.webp"
 relatedPosts: ["custo-perder-reserva"]
 content_type: "educational"
 ---
@@ -86,5 +86,3 @@ Este guia não é indicado para grandes resorts que possuem departamentos de TI 
 ---
 
 **Gostou deste conteúdo?** Continue aprendendo sobre como otimizar sua gestão lendo nosso artigo sobre [o custo real de perder uma reserva por falta de atendimento](/blog/custo-perder-reserva).
-
-**Tem alguma dúvida sobre IA na sua pousada?** Deixe um comentário abaixo ou compartilhe sua experiência com automação!
