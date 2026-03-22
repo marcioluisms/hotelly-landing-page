@@ -46,9 +46,3 @@ A API do Serpro FNRH Digital V2 é **gratuita** para meios de hospedagem. Não h
 | Envio falhou | O sistema faz retry automático. Se persistir, abra um ticket de suporte. |
 | Hóspede estrangeiro sem CPF | O formulário aceita passaporte e RNE. O campo de documento se adapta ao tipo selecionado. |
 
-## Artigos relacionados
-
-- [O que é o check-in digital](o-que-e-o-checkin-digital.md)
-
----
-

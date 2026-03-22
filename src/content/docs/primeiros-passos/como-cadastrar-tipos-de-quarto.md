@@ -81,7 +81,7 @@ Repita o passo 2-4. Você pode criar quantos tipos precisar.
 **"Quero deletar um tipo que não uso mais."**
 Clique em **Remover**. O sistema bloqueia se houver quartos ativos vinculados ou reservas confirmadas/em andamento. Desative os quartos primeiro.
 
-## Exemplo: Pousada com 3 tipos
+## Exemplo: Hospedagem com 3 tipos
 
 | Nome | Capacidade Máxima |
 |---|---|
@@ -93,8 +93,3 @@ Clique em **Remover**. O sistema bloqueia se houver quartos ativos vinculados ou
 
 Quando terminar todos os tipos, vá para "Como cadastrar quartos" para vincular os quartos reais a estes tipos.
 
-## Artigos relacionados
-
-- Como cadastrar quartos
-- Como definir preços e tarifas
-- Bem-vindo ao Hotelly

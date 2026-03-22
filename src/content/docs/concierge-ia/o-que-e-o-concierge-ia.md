@@ -38,13 +38,5 @@ O Concierge IA é um atendente virtual conectado ao WhatsApp da sua hospedagem. 
 
 ## Exemplo prático
 
-São 23h de sexta-feira. Um casal pesquisa hospedagens no Google e encontra o WhatsApp da sua pousada. Eles mandam: "Oi, vocês têm disponibilidade para o próximo fim de semana, um quarto para casal?". O Concierge responde em segundos, verifica a disponibilidade, mostra as opções com preço e envia o link de pagamento. O casal paga ali mesmo. Você acorda sábado de manhã com a reserva confirmada e o pagamento já na conta.
-
-## Artigos relacionados
-
-- [Como configurar o horário comercial do Concierge](como-configurar-horario-comercial.md)
-- [Como ativar ou pausar o Concierge com override](como-usar-overrides.md)
-- [Como configurar a base de conhecimento do Concierge](como-configurar-base-conhecimento.md)
-
----
+São 23h de sexta-feira. Um casal pesquisa hospedagens no Google e encontra o WhatsApp da sua hospedagem. Eles mandam: "Oi, vocês têm disponibilidade para o próximo fim de semana, um quarto para casal?". O Concierge responde em segundos, verifica a disponibilidade, mostra as opções com preço e envia o link de pagamento. O casal paga ali mesmo. Você acorda sábado de manhã com a reserva confirmada e o pagamento já na conta.
 

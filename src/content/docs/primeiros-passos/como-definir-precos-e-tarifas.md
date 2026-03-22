@@ -62,9 +62,9 @@ Você pode:
 
 Exemplo: "Dias 1-10 do mês, todos os tipos, tarifa padrão R$ 200"
 
-## Exemplo: Estrutura de uma Pousada
+## Exemplo: Estrutura de uma Hospedagem
 
-Para uma pousada com 2 tipos ("Simples" e "Duplo"), o calendário ficaria assim:
+Para uma hospedagem com 2 tipos ("Simples" e "Duplo"), o calendário ficaria assim:
 
 | Data | Simples (Tarifa) | Simples (Adulto Extra) | Duplo (Tarifa) | Duplo (Adulto Extra) |
 |---|---|---|---|---|
@@ -110,8 +110,3 @@ Piso e teto são configurados em **Configurações > Propriedade > Pricing Dinâ
 
 Quando terminar, vá para "Como configurar políticas" para definir cancelamento, garantia e períodos sazonais.
 
-## Artigos relacionados
-
-- Como cadastrar tipos de quarto
-- Como configurar políticas
-- Checklist de configuração inicial

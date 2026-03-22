@@ -85,11 +85,3 @@ Não é obrigatório no início. Mas preencha antes de ativar o check-in digital
 
 Quando terminar, vá para "Como cadastrar tipos de quarto" para começar a definir seus quartos.
 
-## Artigos relacionados
-
-- Como cadastrar tipos de quarto
-- Como conectar o WhatsApp
-- Como conectar o Mercado Pago
-
----
-

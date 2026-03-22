@@ -6,7 +6,7 @@ nível: básico
 tipo: como-fazer
 helpArticleId: primeiros-passos-quartos
 última_revisão: 2026-03-20
-descrição: "Cadastre os quartos físicos da sua pousada vinculando cada um ao tipo de quarto correspondente."
+descrição: "Cadastre os quartos físicos da sua hospedagem vinculando cada um ao tipo de quarto correspondente."
 revisado_por_engenharia: true
 validacao_final: 2026-03-20
 ---
@@ -54,7 +54,7 @@ Pronto. O quarto aparece na sua lista.
 ### 5. Repita para TODOS os quartos
 Se sua hospedagem tem 10 quartos, você precisa cadastrar os 10. Faça lote por lote (ex: 5 de cada vez).
 
-## Exemplo: Pousada com 10 quartos
+## Exemplo: Hospedagem com 10 quartos
 
 Suponha que você tem 3 tipos e quer distribuir assim:
 
@@ -101,8 +101,3 @@ Sim, mas você pode fazer em lote. Abra a lista de quartos, clique **+ Novo Quar
 
 Quando terminar, vá para "Como definir preços e tarifas" para ajustar o preço de cada tipo.
 
-## Artigos relacionados
-
-- Como cadastrar tipos de quarto
-- Como definir preços e tarifas
-- Checklist de configuração inicial

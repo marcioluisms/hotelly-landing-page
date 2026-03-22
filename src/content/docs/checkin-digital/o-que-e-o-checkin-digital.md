@@ -39,9 +39,3 @@ O check-in presencial com ficha de papel é lento, propenso a erros e gera uma p
 
 Maria reservou a Suíte para o próximo sábado. Na quinta-feira, ela recebe um email: "Complete seu check-in antecipado". Pelo celular, preenche os dados em 3 minutos. No sábado, ao chegar, a recepcionista vê que os dados estão completos e a FNRH já foi enviada ao governo. Maria recebe a chave em 30 segundos.
 
-## Artigos relacionados
-
-- [Como funciona a FNRH no Hotelly](../08-checkin-digital/como-funciona-a-fnrh.md)
-
----
-

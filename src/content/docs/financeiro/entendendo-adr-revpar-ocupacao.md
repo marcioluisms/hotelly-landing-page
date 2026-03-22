@@ -51,10 +51,3 @@ O RevPAR é o indicador mais completo porque penaliza quartos vazios. Mesmo que 
 
 A promoção vendeu quase tudo (90%) mas com ADR baixo (R$ 300). O RevPAR (R$ 270) mostra que foi melhor que o dia de semana (R$ 160) mas pior que a alta temporada (R$ 500).
 
-## Artigos relacionados
-
-- [Como consultar relatórios de receita](como-consultar-relatorios-de-receita.md)
-- [Entendendo Caixa vs. Competência](entendendo-caixa-vs-competencia.md)
-
----
-

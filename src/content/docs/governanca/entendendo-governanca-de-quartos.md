@@ -52,13 +52,3 @@ A regra é simples: **nenhum check-in acontece em quarto que não está "Limpo"*
 | **Operação > Disponibilidade** | Heatmap de ocupação por tipo de quarto | Gerente, recepcionista |
 | **Operação > Café da Manhã** | Planejamento de hóspedes por dia | Cozinha, gerente |
 
-## Artigos relacionados
-
-- [Como gerenciar a limpeza de quartos](como-gerenciar-limpeza-de-quartos.md)
-- [Como usar o painel de Prioridades (Maestro)](como-usar-prioridades-maestro.md)
-- [Como bloquear um quarto para manutenção](como-bloquear-quarto-para-manutencao.md)
-- [Como usar o planejamento de Café da Manhã](como-usar-o-planejamento-cafe-da-manha.md)
-- [Como consultar a disponibilidade no heatmap](como-consultar-disponibilidade-heatmap.md)
-
----
-

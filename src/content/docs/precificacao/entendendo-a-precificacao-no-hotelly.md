@@ -36,10 +36,3 @@ O Calendário de Picos e Feriados permite cadastrar eventos especiais com fatore
 
 O calendário de tarifas é a base. O preço dinâmico ajusta essa base para cima ou para baixo conforme a demanda. Se você não ativar o preço dinâmico, os preços do calendário são usados como estão.
 
-## Artigos relacionados
-
-- [Como definir tarifas no calendário](como-definir-tarifas-no-calendario.md)
-- [Como usar o Preço Dinâmico](como-usar-preco-dinamico.md)
-
----
-

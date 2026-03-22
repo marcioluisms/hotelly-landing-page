@@ -48,13 +48,3 @@ A transição de "Ag. Pagamento" para "Confirmada" acontece automaticamente quan
 
 Imagine que Maria reserva a Suíte Master para o feriado. A reserva é criada como "Ag. Pagamento" e o link é enviado. Maria paga 50% via Pix pelo link do Mercado Pago. Como o mínimo configurado é 30%, o status muda automaticamente para "Confirmada". No dia do feriado, a recepcionista faz o check-in e o status passa para "Hospedado". Na data de saída, o check-out é feito e o status final é "Check-out".
 
-## Artigos relacionados
-
-- [Como criar uma reserva](como-criar-uma-reserva.md)
-- [Como fazer check-in de um hóspede](como-fazer-check-in.md)
-- [Como fazer check-out de um hóspede](como-fazer-check-out.md)
-- [Como garantir uma reserva manualmente](como-garantir-uma-reserva.md)
-- [Como cancelar uma reserva](como-cancelar-uma-reserva.md)
-
----
-

@@ -6,7 +6,7 @@ nível: básico
 tipo: como-fazer
 helpArticleId: primeiros-passos-conectar-whatsapp
 última_revisão: 2026-03-20
-descrição: "Conecte o WhatsApp da sua pousada ao Hotelly para que o Concierge IA atenda hóspedes automaticamente."
+descrição: "Conecte o WhatsApp da sua hospedagem ao Hotelly para que o Concierge IA atenda hóspedes automaticamente."
 revisado_por_engenharia: true
 validacao_final: 2026-03-20
 ---
@@ -67,8 +67,3 @@ A base de conhecimento pode estar desatualizada. Contacte a equipe Hotelly para 
 
 Quando conectar, vá para "Como configurar o Mercado Pago" para receber pagamentos automáticos.
 
-## Artigos relacionados
-
-- Como configurar o Mercado Pago
-- Como configurar seu estabelecimento
-- Checklist de configuração inicial

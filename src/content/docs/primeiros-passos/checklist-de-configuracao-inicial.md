@@ -263,14 +263,3 @@ Se marcou tudo como ✅, sua hospedagem está pronta. Agora:
 
 ---
 
-## Artigos relacionados
-
-- Bem-vindo ao Hotelly
-- Como configurar seu estabelecimento
-- Como cadastrar tipos de quarto
-- Como cadastrar quartos
-- Como definir preços e tarifas
-- Como configurar políticas
-- Como conectar o WhatsApp
-- Como configurar o Mercado Pago
-- Como convidar sua equipe

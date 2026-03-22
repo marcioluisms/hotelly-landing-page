@@ -40,11 +40,3 @@ Ao abrir o detalhe de qualquer reserva, o card **"Financeiro"** mostra:
 
 João reservou 3 noites na Suíte com tarifa de R$ 250/noite. O financeiro mostra: Hospedagem R$ 750. Ele adicionou café da manhã (R$ 35/hóspede × 2 adultos × 3 noites = R$ 210) e consumiu R$ 45 no frigobar. Total cobranças: R$ 1.005. João pagou R$ 500 via Pix e R$ 300 em dinheiro no check-in. Saldo devedor: R$ 205 — que precisa ser quitado antes do check-out.
 
-## Artigos relacionados
-
-- [Como registrar um pagamento na reserva](como-registrar-pagamento.md)
-- [Como adicionar extras e frigobar à reserva](como-adicionar-extras-e-frigobar.md)
-- [Como fazer check-out de um hóspede](como-fazer-check-out.md)
-
----
-

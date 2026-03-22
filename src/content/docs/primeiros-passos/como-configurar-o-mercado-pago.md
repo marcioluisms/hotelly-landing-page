@@ -109,8 +109,3 @@ Não. O Hotelly usa a integração com Mercado Pago, que já tem acesso à sua c
 
 Quando conectar, vá para "Como convidar sua equipe" para adicionar recepcionistas, gerentes e camareiras.
 
-## Artigos relacionados
-
-- Como conectar o WhatsApp
-- Como convidar sua equipe
-- Checklist de configuração inicial

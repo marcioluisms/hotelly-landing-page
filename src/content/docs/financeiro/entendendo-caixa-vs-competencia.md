@@ -47,10 +47,3 @@ Quando a estadia acontece, o valor migra de "adiantamento" para "receita de comp
 
 Note que na competência, o valor é distribuído pelas noites da estadia.
 
-## Artigos relacionados
-
-- [Como consultar relatórios de receita](como-consultar-relatorios-de-receita.md)
-- [Entendendo ADR, RevPAR e Ocupação](entendendo-adr-revpar-ocupacao.md)
-
----
-

@@ -47,10 +47,3 @@ O sistema decide o status nesta ordem de prioridade:
 
 Ou seja: um override sempre ganha do horário comercial, e desativar ganha de tudo.
 
-## Artigos relacionados
-
-- [Como configurar o horário comercial do Concierge](como-configurar-horario-comercial.md)
-- [Como ativar ou pausar o Concierge com override](como-usar-overrides.md)
-
----
-

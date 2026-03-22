@@ -76,7 +76,7 @@ Se sua hospedagem tem:
 
 Você faz 6 convites.
 
-## Exemplo: Estrutura de uma Pousada
+## Exemplo: Estrutura de uma Hospedagem
 
 | Nome | E-mail | Função |
 |---|---|---|
@@ -157,8 +157,3 @@ Isto acelera o aprendizado e reduz dúvidas.
 
 Quando terminar a equipe, vá para "Checklist de configuração inicial" para revisar tudo e confirmar que está pronto.
 
-## Artigos relacionados
-
-- Como configurar seu estabelecimento
-- Checklist de configuração inicial
-- Como conectar o WhatsApp

@@ -6,7 +6,7 @@ nível: básico
 tipo: conceito
 helpArticleId: primeiros-passos-bem-vindo
 última_revisão: 2026-03-20
-descrição: "Conheça o Hotelly: o que é, para quem serve e como o sistema ajuda sua pousada a vender mais e operar melhor."
+descrição: "Conheça o Hotelly: o que é, para quem serve e como o sistema ajuda sua hospedagem a vender mais e operar melhor."
 revisado_por_engenharia: true
 ---
 
@@ -75,9 +75,3 @@ Quando tudo estiver configurado:
 
 Clique no ícone de chat no canto inferior do seu dashboard (Copilot IA). Faça sua pergunta em português e a IA responde com instruções passo a passo.
 
-## Artigos relacionados
-
-- Como configurar seu estabelecimento
-- Como cadastrar tipos de quarto
-- Como convidar sua equipe
-- Checklist de configuração inicial

@@ -178,8 +178,3 @@ Preço fica em **Configurações > Tarifas** (calendário). Você define manualm
 
 Quando terminar, vá para "Como conectar o WhatsApp" para ativar o Concierge IA.
 
-## Artigos relacionados
-
-- Como definir preços e tarifas
-- Como conectar o WhatsApp
-- Checklist de configuração inicial
