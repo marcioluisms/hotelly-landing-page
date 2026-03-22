@@ -20,7 +20,7 @@ O Portal do Hóspede é uma página web onde o hóspede consulta os dados da sua
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Canais"**, clique em **Portal do Hóspede**.
 3. Ative o toggle **"Portal ativo"**.
 

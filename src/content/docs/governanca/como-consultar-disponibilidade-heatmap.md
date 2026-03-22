@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Operação** > **Disponibilidade**.
+1. No menu, clique em **Operação** > **Disponibilidade**.
 2. O heatmap exibe um grid com tipos de quarto nas linhas e datas nas colunas.
 
 ### Navegar no tempo

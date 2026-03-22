@@ -20,7 +20,7 @@ O Preço Dinâmico é o motor inteligente de precificação do Hotelly. Ele anal
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Receita** > **Preço Dinâmico**.
+1. No menu, clique em **Receita** > **Preço Dinâmico**.
 
 ### Visualizar sugestões
 

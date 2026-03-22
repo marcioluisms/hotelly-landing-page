@@ -20,7 +20,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Painel** > **Reservas**.
+1. No menu, clique em **Painel** > **Reservas**.
 2. Clique no nome do hóspede para abrir o detalhe da reserva.
 3. No card **"Ações"**, clique em **"Cancelar reserva"**.
 4. No dialog **"Cancelar reserva"**, informe o **motivo do cancelamento**.

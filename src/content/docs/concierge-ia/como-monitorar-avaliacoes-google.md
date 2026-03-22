@@ -25,7 +25,7 @@ O Monitor de Avaliações conecta sua propriedade ao Google Maps e exibe dentro 
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Canais"**, clique em **Avaliações**.
 3. Clique em **"Configurar monitor"**.
 4. Preencha:

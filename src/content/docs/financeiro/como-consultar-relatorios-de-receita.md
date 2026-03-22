@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Receita** > **Relatórios**.
+1. No menu, clique em **Receita** > **Relatórios**.
 2. A página mostra os indicadores financeiros do período selecionado.
 
 ### Escolher o regime contábil

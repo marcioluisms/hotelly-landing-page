@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Regras"**, clique em **Disponibilidade**.
 3. Selecione o **"Tipo de quarto"** no dropdown.
 4. Configure os campos:

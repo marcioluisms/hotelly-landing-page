@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Atendimento** > **Suporte**.
+1. No menu, clique em **Atendimento** > **Suporte**.
 2. Clique no botão **"+ Novo ticket"**.
 3. No dialog **"Novo ticket de suporte"**, preencha:
    - **"Assunto"** — título breve do problema ou dúvida

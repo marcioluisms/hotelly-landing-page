@@ -6,6 +6,7 @@ nível: básico
 tipo: conceito
 helpArticleId: "glossario-geral"
 última_revisão: 2026-03-19
+descrição: "Termos essenciais do setor hoteleiro e da plataforma Hotelly — de ADR a Walk-in, com definições práticas para quem opera hospedagens."
 revisado_por_engenharia: false
 ---
 

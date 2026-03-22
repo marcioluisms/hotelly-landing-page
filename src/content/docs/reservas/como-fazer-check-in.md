@@ -24,7 +24,7 @@ revisado_por_engenharia: true
 
 ### Opção 1: Pela lista de reservas
 
-1. No menu lateral, clique em **Painel** > **Reservas**.
+1. No menu, clique em **Painel** > **Reservas**.
 2. Encontre a reserva desejada na lista.
 3. Clique no botão **"Fazer Check-in"** na coluna de ações.
 

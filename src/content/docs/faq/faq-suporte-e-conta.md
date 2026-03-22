@@ -14,7 +14,7 @@ revisado_por_engenharia: true
 
 ## Como abro um ticket de suporte?
 
-No menu lateral, clique em **Atendimento** > **Suporte** e depois clique em **"Novo ticket"**. Escolha a categoria, descreva o assunto e envie. Você acompanha o andamento pelo mesmo painel.
+No menu, clique em **Atendimento** > **Suporte** e depois clique em **"Novo ticket"**. Escolha a categoria, descreva o assunto e envie. Você acompanha o andamento pelo mesmo painel.
 
 ## Qual o tempo de resposta do suporte?
 

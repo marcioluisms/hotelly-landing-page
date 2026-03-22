@@ -20,7 +20,7 @@ O Maestro é o painel inteligente de prioridades da governança. Enquanto a tela
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Operação** > **Prioridades**.
+1. No menu, clique em **Operação** > **Prioridades**.
 
 ### Cards de resumo
 

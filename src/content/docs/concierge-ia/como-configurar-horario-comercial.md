@@ -22,7 +22,7 @@ Se você não configurar nenhum horário, o status mostra **"Sem horários confi
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Canais"**, clique em **Concierge IA**.
 3. Localize o card **"Horário Comercial"**.
 4. Para cada dia da semana (Segunda a Domingo):

@@ -20,7 +20,7 @@ O Motor de Reservas é a página de reservas online do Hotelly. Quando ativado, 
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Canais"**, clique em **Motor de Reservas**.
 3. Ative o toggle **"Reservas online ativas"**.
 4. No campo **"Slug (URL)"**, defina o nome da sua página (ex: "pousada-sol"). O sistema mostra a URL completa abaixo.

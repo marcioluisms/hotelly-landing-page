@@ -20,7 +20,7 @@ A Trilha de Auditoria registra automaticamente toda ação relevante no Hotelly:
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Trilha de Auditoria**.
+1. No menu, clique em **Configurações** > **Trilha de Auditoria**.
 
 ### Filtrar registros
 

@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Painel** > **Mapa de Quartos**.
+1. No menu, clique em **Painel** > **Mapa de Quartos**.
 2. O mapa exibe um grid com todos os quartos na coluna da esquerda (**"Quarto"**) e os dias nas colunas superiores (formato: dia da semana abreviado + DD/MM).
 
 ### Navegar no tempo

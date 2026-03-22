@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Produtos"**, clique em **Frigobar**.
 3. A tabela mostra os itens cadastrados: Nome, Preço e ações.
 4. Para criar um novo item, preencha:

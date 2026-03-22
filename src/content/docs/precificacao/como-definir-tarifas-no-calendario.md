@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Tarifas**.
+1. No menu, clique em **Configurações** > **Tarifas**.
 2. O calendário exibe um grid com colunas por dia (formato: dia da semana + DD/MM) e linhas por tipo de quarto.
 
 ### Editar preço de um dia

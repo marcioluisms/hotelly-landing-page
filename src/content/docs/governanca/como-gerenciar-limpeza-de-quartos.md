@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Operação** > **Limpeza**.
+1. No menu, clique em **Operação** > **Limpeza**.
 2. A tela mostra todos os quartos ativos, agrupados por tipo de quarto.
 3. Cada quarto exibe botões coloridos de status:
 

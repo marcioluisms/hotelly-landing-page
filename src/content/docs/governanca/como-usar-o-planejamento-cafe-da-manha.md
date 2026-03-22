@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Operação** > **Café da Manhã**.
+1. No menu, clique em **Operação** > **Café da Manhã**.
 2. A tela mostra o planejamento para a data selecionada.
 
 ### Navegar entre datas

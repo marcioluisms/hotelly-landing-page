@@ -22,7 +22,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Quartos** > aba **"Quartos"**.
+1. No menu, clique em **Configurações** > **Quartos** > aba **"Quartos"**.
 2. Na linha do quarto desejado, clique no ícone de **manutenção** (ou acesse o dialog de manutenção).
 3. O dialog **"Manutenção — [nome do quarto]"** exibe os períodos já cadastrados (se houver).
 4. Na seção **"Adicionar Bloqueio"**, preencha:

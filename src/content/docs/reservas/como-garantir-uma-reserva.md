@@ -24,7 +24,7 @@ A confirmação automática acontece quando o hóspede paga o percentual mínimo
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Painel** > **Reservas**.
+1. No menu, clique em **Painel** > **Reservas**.
 2. Encontre a reserva com status **"Ag. Pagamento"**.
 3. Clique no botão **"Garantir reserva"** na coluna de ações da lista de reservas.
 4. No dialog **"Garantir Reserva"**, preencha a **justificativa** (campo obrigatório). Exemplo: "Hóspede recorrente, pagamento no check-in".

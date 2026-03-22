@@ -22,7 +22,7 @@ O Concierge IA só responde com base no que você cadastrou. Se a informação n
 
 A base de conhecimento do Concierge vem do **Perfil** da propriedade:
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Pousada"**, clique em **Perfil**.
 
 ## Campos a preencher

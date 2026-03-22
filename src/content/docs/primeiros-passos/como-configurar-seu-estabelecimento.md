@@ -24,7 +24,7 @@ Este é o primeiro passo. Você vai cadastrar as informações da sua hospedagem
 
 ### 1. Acesse as configurações
 
-No menu lateral esquerdo, clique em **Configurações**. Na aba **Propriedade**, localize a seção **Estabelecimento**.
+No menu esquerdo, clique em **Configurações**. Na aba **Propriedade**, localize a seção **Estabelecimento**.
 
 ### 2. Preencha o Endereço
 
@@ -70,7 +70,7 @@ Pronto. As informações ficam registradas e você pode editá-las a qualquer mo
 ## Se algo der errado
 
 **"Não consigo encontrar a seção Estabelecimento"**
-Ela fica dentro de **Configurações** > **Propriedade**. Se o menu lateral estiver recolhido, clique no ícone de três linhas (≡) para expandir.
+Ela fica dentro de **Configurações** > **Propriedade**. Se o menu estiver recolhido, clique no ícone de três linhas (≡) para expandir.
 
 **"O sistema não aceita meu CEP / telefone / CNPJ"**
 Verifique se o formato está correto. O sistema aplica máscara automática — basta digitar os números que a formatação aparece. Se o problema persistir, abra um ticket de suporte.

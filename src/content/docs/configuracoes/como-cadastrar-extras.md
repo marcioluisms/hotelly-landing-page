@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Passo a passo
 
-1. No menu lateral, clique em **Configurações** > **Propriedade**.
+1. No menu, clique em **Configurações** > **Propriedade**.
 2. Na seção **"Produtos"**, clique em **Extras**.
 3. A tabela mostra os extras cadastrados: Nome, Modo de cobrança, Preço e ações.
 4. Clique em **"Criar"** (ou no botão de adicionar).
