@@ -79,6 +79,15 @@ Alem do WhatsApp, o Hotelly tem um motor de reservas que voce coloca no seu site
 - Pagamento integrado — sem redirecionar para outro site
 - Sem taxa por booking (diferente de OTAs que cobram 15-20% de comissao)
 
+### Mapa de Quartos — gestao visual com drag-and-drop
+Sabe quando voce precisa trocar um hospede de quarto ou mudar a data de uma reserva? No Hotelly, e so arrastar. O Mapa de Quartos mostra 30 dias de ocupacao num unico painel. Voce ve todos os quartos na esquerda e os dias no topo — cada reserva e um bloco colorido pelo status.
+- Grade visual estilo Gantt com 30 dias de ocupacao
+- Drag-and-drop: arraste uma reserva para mudar de quarto ou de data
+- O sistema recalcula o valor automaticamente e mostra o preco antigo vs. novo antes de confirmar
+- Se o quarto de destino nao comporta os hospedes, o sistema bloqueia a movimentacao
+- Blocos coloridos por status: confirmada (azul), hospedado (verde), pendente (amarelo), cancelada (vermelho)
+- Indicadores de limpeza nos quartos (sujo, limpando, limpo, manutencao)
+
 ### Controle financeiro em tempo real
 Hoje, quanto entrou na sua pousada este mes? Qual quarto rendeu mais? Se voce precisa abrir tres planilhas pra responder, o Hotelly resolve isso com um painel que mostra tudo em tempo real.
 - Dashboard financeiro com receita total, diarias, extras

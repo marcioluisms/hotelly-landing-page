@@ -6,7 +6,7 @@ nível: básico
 tipo: como-fazer
 helpArticleId: "reservas-mapa-quartos"
 última_revisão: 2026-03-20
-descrição: "Use o Mapa de Quartos para visualizar ocupação, status de limpeza e disponibilidade em tempo real."
+descrição: "Use o Mapa de Quartos para visualizar ocupação, mover reservas com drag-and-drop e acompanhar status de limpeza em tempo real."
 revisado_por_engenharia: true
 ---
 

@@ -88,7 +88,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Proteção contra overbooking: o sistema trava a data na hora. Ninguém reserva o mesmo quarto duas vezes</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de reservas. Veja quem chega e quem sai nos próximos 30 dias</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa de Quartos interativo — veja 30 dias de ocupação e arraste reservas para mudar quarto ou data, com recálculo automático de preço</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cancelamento com cálculo automático de reembolso</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual que mostra os dias mais cheios e os mais vazios de cada tipo de quarto</li>
                 </ul>
@@ -329,7 +329,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Gestão de Reservas completa. Da cotação ao check-out, com histórico auditável</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Motor de Reservas para o seu site (sem comissão)</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Check-in e Check-out em um clique</li>
-                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Calendário visual de reservas (30 dias)</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa de Quartos com drag-and-drop (30 dias) — mova reservas arrastando, preço recalcula na hora</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> <span>Relatórios de desempenho: ocupação, ADR <span className="text-xs text-white/50">(diária média)</span>, RevPAR <span className="text-xs text-white/50">(receita por quarto disponível)</span> e receita total</span></li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Mapa visual de demanda. Veja quais dias e quartos têm mais procura</li>
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Financeiro básico e pagamentos integrados</li>
