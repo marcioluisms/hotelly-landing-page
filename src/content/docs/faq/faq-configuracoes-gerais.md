@@ -40,7 +40,7 @@ Sim. O painel funciona no navegador de qualquer dispositivo (computador, tablet 
 
 Os dados são preservados mesmo após o cancelamento da assinatura. A política de retenção garante que seu histórico de reservas, hóspedes e financeiro não é deletado.
 
-## O que acontece se a internet da pousada cair?
+## O que acontece se a internet da hospedagem cair?
 
 O Concierge IA continua funcionando (roda nos servidores do Hotelly). Apenas o acesso ao dashboard fica indisponível até a internet voltar. Dados não são perdidos — quando a conexão restabelecer, tudo estará atualizado.
 

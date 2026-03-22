@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Perguntas frequentes sobre Concierge IA e WhatsApp
 
-## O Concierge pode inventar informações sobre minha pousada?
+## O Concierge pode inventar informações sobre minha hospedagem?
 
 Não. O Concierge tem um mecanismo de segurança chamado "Hallucination Guard": ele só responde com base nas informações cadastradas no **Perfil** da propriedade (descrição, comodidades, localização) e nos dados do sistema (disponibilidade, preços). Se a resposta não está na base de conhecimento, ele informa ao hóspede que não sabe e sugere contato com a recepção.
 
@@ -40,9 +40,9 @@ Por padrão, não. O Concierge só responde **fora** do horário comercial confi
 
 A integração com WhatsApp está incluída no plano Hotelly. Custos de mensagens dependem do provedor (Evolution API ou Meta Cloud API / WhatsApp Business). A equipe Hotelly orienta sobre a melhor opção para você.
 
-## E se a internet da pousada cair?
+## E se a internet da hospedagem cair?
 
-O Concierge roda nos servidores do Hotelly, não na sua pousada. Se a internet da sua hospedagem cair, o Concierge continua respondendo normalmente pelo WhatsApp. Apenas o acesso ao dashboard fica indisponível até a internet voltar.
+O Concierge roda nos servidores do Hotelly, não na sua hospedagem. Se a internet cair, o Concierge continua respondendo normalmente pelo WhatsApp. Apenas o acesso ao dashboard fica indisponível até a internet voltar.
 
 ---
 

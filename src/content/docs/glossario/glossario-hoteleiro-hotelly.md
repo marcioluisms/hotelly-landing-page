@@ -51,7 +51,7 @@ Mudança do preço base de um tipo de quarto ou exceção de uma data específic
 ---
 
 ### Break-Even (Ponto de Equilíbrio)
-Número mínimo de clientes pagantes necessário para cobrir os custos fixos. No Hotelly, calculado internamente como ~4 pousadas ativas com uso mensal normal.
+Número mínimo de clientes pagantes necessário para cobrir os custos fixos. No Hotelly, calculado internamente como ~4 hospedagens ativas com uso mensal normal.
 
 ---
 

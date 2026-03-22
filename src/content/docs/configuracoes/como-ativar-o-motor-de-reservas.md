@@ -6,7 +6,7 @@ nível: básico
 tipo: como-fazer
 helpArticleId: "configuracoes-motor-reservas"
 última_revisão: 2026-03-20
-descrição: "Ative o Motor de Reservas para receber reservas diretas pelo site da sua pousada com pagamento integrado."
+descrição: "Ative o Motor de Reservas para receber reservas diretas pelo site da sua hospedagem com pagamento integrado."
 revisado_por_engenharia: true
 ---
 

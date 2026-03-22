@@ -94,7 +94,7 @@ export default function Docs() {
               </p>
             ) : (
               <p className="text-white/50 text-sm">
-                Não encontrou? Assinantes podem perguntar ao Copilot diretamente no dashboard.
+                Não encontrou? Assinantes contam com o Copilot, assistente inteligente do Hotelly, disponível diretamente no dashboard.
               </p>
             )}
           </div>

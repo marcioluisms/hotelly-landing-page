@@ -6,7 +6,7 @@ nível: básico
 tipo: como-fazer
 helpArticleId: "concierge-ia-base-conhecimento"
 última_revisão: 2026-03-20
-descrição: "Monte a knowledge base do Concierge IA com informações da sua pousada para respostas precisas."
+descrição: "Monte a knowledge base do Concierge IA com informações da sua hospedagem para respostas precisas."
 revisado_por_engenharia: true
 ---
 
@@ -28,7 +28,7 @@ A base de conhecimento do Concierge vem do **Perfil** da propriedade:
 ## Campos a preencher
 
 ### Descrição geral
-O texto principal sobre sua propriedade. O Concierge usa isso para responder perguntas como "me fale sobre a pousada" ou "o que vocês oferecem".
+O texto principal sobre sua propriedade. O Concierge usa isso para responder perguntas como "me fale sobre a hospedagem" ou "o que vocês oferecem".
 
 **Dica:** Escreva como se estivesse descrevendo a hospedagem para um amigo. Inclua: tipo de hospedagem, ambiente, público, diferenciais.
 

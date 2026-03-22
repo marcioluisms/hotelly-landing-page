@@ -218,7 +218,7 @@ Você revisa tudo e confirma que está pronto para "ir ao vivo".
 
 ### Próximos Passos
 - [ ] Compartilhe os links do Help Center com sua equipe (para dúvidas)
-- [ ] Configure notificações no Copilot (chat do sistema com ícone da logomarca Hotelly) para não esquecer de responder
+- [ ] Configure notificações no Copilot (assistente do sistema com ícone do Hotelly) para não esquecer de responder
 - [ ] Comece a monitorar reservas que chegam via WhatsApp
 
 ---
@@ -244,7 +244,7 @@ Imprima ou use esta tabela para acompanhar:
 
 ## Dúvidas durante os 7 dias?
 
-Clique no **ícone da logomarca Hotelly** (Copilot IA) no canto inferior do dashboard. Faça sua pergunta em português — a IA responde com instruções passo a passo.
+Clique no **ícone do Hotelly** no canto inferior do dashboard para abrir o Copilot IA. Faça sua pergunta e a IA responde com instruções passo a passo.
 
 Se a IA não conseguir resolver, ela oferecerá contato com a equipe Hotelly.
 

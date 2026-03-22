@@ -206,9 +206,9 @@ export default function DocsArticle() {
                 </div>
               ) : (
                 <div className="bg-brand-slate/30 p-6 rounded-xl border border-white/5">
-                  <p className="text-white font-bold mb-1">Ainda tem dúvida?</p>
+                  <p className="text-white font-bold mb-1">Ainda tem dúvidas?</p>
                   <p className="text-white/50 text-sm">
-                    Assinantes têm acesso ao Copilot, o assistente Hotelly que te ajuda diretamente no dashboard.
+                    Assinantes contam com o Copilot, assistente inteligente do Hotelly, disponível diretamente no dashboard da sua hospedagem. Ele está lá para garantir que você aproveite tudo que a plataforma oferece — desde o primeiro acesso.
                   </p>
                 </div>
               )}

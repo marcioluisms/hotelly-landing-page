@@ -73,5 +73,5 @@ Quando tudo estiver configurado:
 
 ## Se tiver dúvidas durante a configuração
 
-Clique no ícone de chat no canto inferior do seu dashboard (Copilot IA). Faça sua pergunta em português e a IA responde com instruções passo a passo.
+Clique no ícone do Hotelly no canto inferior do seu dashboard para abrir o Copilot IA. Faça sua pergunta e a IA responde com instruções passo a passo.
 
