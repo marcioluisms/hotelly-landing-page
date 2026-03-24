@@ -5,8 +5,8 @@ perfil: [owner, manager, front_desk]
 nível: básico
 tipo: como-fazer
 helpArticleId: "reservas-cadastrar-hospedes"
-última_revisão: 2026-03-20
-descrição: "Cadastre hóspedes no Hotelly e consulte o histórico de estadias vinculado a cada perfil."
+última_revisão: 2026-03-22
+descrição: "Cadastre hóspedes no Hotelly, consulte a ficha do hóspede com histórico de estadias e edite dados de contato."
 revisado_por_engenharia: true
 ---
 
@@ -32,22 +32,30 @@ Você também pode cadastrar um hóspede diretamente ao criar uma reserva — ba
 1. Na página **Hóspedes**, use a barra de busca com placeholder "Buscar por nome, email, telefone ou CPF...".
 2. Os resultados são filtrados em tempo real.
 
-## Ver ficha completa do hóspede
+## Ver ficha do hóspede
 
-1. Na lista de hóspedes, clique no **nome do hóspede** para abrir a ficha completa.
-2. A ficha mostra:
+1. Na lista de hóspedes, clique em qualquer lugar da linha do hóspede para abrir a ficha.
+2. A ficha do hóspede mostra:
    - **Cards de métricas:** número de estadias, receita total e data da última estadia
    - **Tags:** badges coloridos como "vip" (âmbar), "corporativo" (azul), "recorrente" (verde)
-   - **Dados pessoais:** email, telefone, documento, tipo, nacionalidade, nascimento, gênero, profissão
-   - **Endereço:** rua, número, complemento, bairro, cidade, estado, CEP, país
+   - **Dados pessoais:** nome, email, telefone, documento, nacionalidade, nascimento, gênero
    - **Notas internas:** observações da equipe com autor e data
-   - **Histórico de estadias:** tabela com check-in, check-out, quarto, status, hóspedes e valor
+   - **Histórico de estadias:** lista com check-in, check-out, quarto, status, hóspedes e valor — clique em uma estadia para abrir a reserva correspondente
+
+> **Dados da FNRH (ficha de registro):** Informações como endereço, profissão, motivo da viagem e placa do veículo são vinculadas à reserva, não ao hóspede — pois podem mudar a cada estadia. Para consultá-las, clique na estadia no histórico e acesse os dados na reserva.
 
 ## Editar dados do hóspede
 
-1. Na ficha do hóspede, clique em **"Editar Hóspede"**.
-2. Altere os campos desejados.
-3. Clique em **"Salvar"**.
+Você pode editar os dados de um hóspede de duas formas:
+
+1. **Pela ficha do hóspede:** abra a ficha e clique no botão **"Editar"** (ícone de lápis). Altere os campos desejados (nome, email, telefone, documento, nascimento) e clique em **"Salvar"**.
+2. **Pelo menu da lista:** na lista de hóspedes, clique no menu **⋮** da linha e selecione **"Editar"**. O mesmo formulário será aberto.
+
+## Arquivar um hóspede
+
+1. Na ficha do hóspede, clique no menu **⋮** e selecione **"Arquivar hóspede"**.
+2. O hóspede será movido para a aba **Arquivados** e não aparecerá mais na lista principal.
+3. Para reativar, acesse a aba **Arquivados**, abra a ficha e clique em **"Reativar"**.
 
 ## Adicionar notas internas
 

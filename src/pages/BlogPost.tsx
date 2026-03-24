@@ -40,7 +40,7 @@ export default function BlogPost() {
       "name": "Hotelly",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hotelly.com.br/hotelly.png"
+        "url": "https://hotelly.com.br/hotelly.webp"
       }
     }
   };

@@ -46,7 +46,7 @@ export default function Home() {
               </div>
               <div className="w-full lg:w-1/2 relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                  <img alt="Hotelly AI Receptionist" className="w-full h-auto object-cover" src="/hotelly-concierge.jpg?v=8" />
+                  <img alt="Hotelly AI Receptionist" className="w-full h-auto object-cover" src="/hotelly-concierge.webp?v=8" width="662" height="662" />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Pilar 1 */}
               <div className="bg-brand-navy border border-white/5 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
-                <img src="/icon.png" alt="Hotelly AI" className="w-[50px] h-[50px] mb-6 object-contain" />
+                <img src="/icon.webp" alt="Hotelly AI" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
                 <h3 className="text-xl font-bold text-white mb-2">Venda Automática 24/7</h3>
                 <p className="text-brand-sky font-medium mb-6">Sua pousada vendendo enquanto você dorme</p>
                 <ul className="space-y-3 mb-8 flex-grow text-white/70 text-sm">
@@ -342,7 +342,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Cobrança de extras e frigobar completos</li>
                 </ul>
                 <div className="border-t border-white/10 pt-4 mb-6">
-                  <p className="text-xs text-gray-500 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
+                  <p className="text-xs text-gray-300 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
                 </div>
                 <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_essencial" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-bold hover:bg-amber-500 transition-colors">Testar Essencial por 14 dias</a>
               </div>
@@ -379,7 +379,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-brand-emerald">✅</span> Suporte por chat prioritário</li>
                 </ul>
                 <div className="border-t border-white/10 pt-4 mb-6">
-                  <p className="text-xs text-gray-500 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
+                  <p className="text-xs text-gray-300 italic">🔄 Incluído em todos os planos: Você recebe acesso automático a novos recursos e atualizações conforme o Hotelly evolui — sem pagar mais.</p>
                 </div>
                 <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="block text-center w-full py-2.5 px-6 rounded-xl bg-brand-amber text-brand-navy font-black text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-brand-amber/20">Começar 14 dias grátis do Maestro</a>
               </div>

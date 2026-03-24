@@ -26,7 +26,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
     >
       {isAssistant && (
         <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full">
-          <img src="/icon.png" alt="" className="h-full w-full object-cover" aria-hidden="true" />
+          <img src="/icon.webp" alt="" className="h-full w-full object-cover" aria-hidden="true" width="105" height="105" />
         </div>
       )}
       <div

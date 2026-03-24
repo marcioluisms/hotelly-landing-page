@@ -18,7 +18,7 @@ export default function Header() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || !isHome ? 'bg-brand-navy/95 backdrop-blur-md border-b border-white/10 py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link className="flex items-center hover:opacity-80 transition-opacity" to="/">
-          <img alt="Hotelly Logo" className="h-10 md:h-12 w-auto object-contain" src="/hotelly.png?v=3" />
+          <img alt="Hotelly Logo" className="h-10 md:h-12 w-auto object-contain" src="/hotelly.webp?v=3" width="219" height="70" />
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-white/90 font-medium">
           {isHome ? (

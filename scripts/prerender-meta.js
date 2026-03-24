@@ -198,7 +198,7 @@ if (fs.existsSync(docsDir)) {
             'publisher': {
               '@type': 'Organization',
               'name': 'Hotelly',
-              'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.png` },
+              'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.webp` },
             },
           }
         : {
@@ -210,7 +210,7 @@ if (fs.existsSync(docsDir)) {
             'publisher': {
               '@type': 'Organization',
               'name': 'Hotelly',
-              'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.png` },
+              'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.webp` },
             },
           };
 
@@ -286,7 +286,7 @@ if (fs.existsSync(blogDir)) {
       'publisher': {
         '@type': 'Organization',
         'name': 'Hotelly',
-        'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.png` },
+        'logo': { '@type': 'ImageObject', 'url': `${BASE_URL}/hotelly.webp` },
       },
     };
 

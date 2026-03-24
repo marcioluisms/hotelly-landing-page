@@ -102,7 +102,7 @@ export default function DocsArticle() {
         'publisher': {
           '@type': 'Organization',
           'name': 'Hotelly',
-          'logo': { '@type': 'ImageObject', 'url': 'https://hotelly.com.br/hotelly.png' },
+          'logo': { '@type': 'ImageObject', 'url': 'https://hotelly.com.br/hotelly.webp' },
         },
       }
     : {
@@ -114,7 +114,7 @@ export default function DocsArticle() {
         'publisher': {
           '@type': 'Organization',
           'name': 'Hotelly',
-          'logo': { '@type': 'ImageObject', 'url': 'https://hotelly.com.br/hotelly.png' },
+          'logo': { '@type': 'ImageObject', 'url': 'https://hotelly.com.br/hotelly.webp' },
         },
       };
 

@@ -31,7 +31,7 @@ export default function ChatToggleButton({ isOpen, onClick, hasUnread }: ChatTog
       transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 3 }}
       className="fixed bottom-5 right-5 z-50 flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full shadow-lg shadow-black/30 transition-all duration-300 hover:shadow-xl hover:shadow-black/40 focus:outline-none focus:ring-2 focus:ring-brand-sky focus:ring-offset-2 focus:ring-offset-brand-navy md:bottom-6 md:right-6 md:h-14 md:w-14"
     >
-      <img src="/icon.png" alt="Hotelly" className="h-full w-full rounded-full object-cover" />
+      <img src="/icon.webp" alt="Hotelly" className="h-full w-full rounded-full object-cover" width="105" height="105" />
       {hasUnread && (
         <span className="absolute -top-1 -right-1 z-10 flex h-3.5 w-3.5">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-coral opacity-75" />
