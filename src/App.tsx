@@ -31,9 +31,14 @@ export default function App() {
     if (isEmbed) return;
 
     const initChat = () => {
-      setTimeout(() => {
-        setShowChat(true);
-      }, 2000);
+      const loadChat = () => setShowChat(true);
+
+      if ('requestIdleCallback' in window) {
+        // @ts-ignore - TS might not know requestIdleCallback on some environments
+        requestIdleCallback(() => setTimeout(loadChat, 4000));
+      } else {
+        setTimeout(loadChat, 4000);
+      }
     };
 
     if (document.readyState === 'complete') {
