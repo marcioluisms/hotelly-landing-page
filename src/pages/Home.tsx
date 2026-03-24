@@ -2,6 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import VagasCounter from '../components/VagasCounter';
+import LazySection from '../components/LazySection';
 
 const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
 const HomeFAQ = React.lazy(() => import('../components/home/HomeFAQ'));
@@ -226,15 +227,19 @@ export default function Home() {
           </div>
         </section>
 
-        <Suspense fallback={<div className="h-[50vh] bg-brand-navy"></div>}>
-          <HomePricing />
-          <HomeFAQ />
-        </Suspense>
+        <LazySection minHeight="50vh">
+          <Suspense fallback={<div className="h-[50vh] bg-brand-navy"></div>}>
+            <HomePricing />
+            <HomeFAQ />
+          </Suspense>
+        </LazySection>
       </main>
 
-      <Suspense fallback={null}>
-        <LazyFooter />
-      </Suspense>
+      <LazySection minHeight="20vh" rootMargin="500px">
+        <Suspense fallback={null}>
+          <LazyFooter />
+        </Suspense>
+      </LazySection>
       
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-brand-navy/95 backdrop-blur-md border-t border-white/10 z-50">
