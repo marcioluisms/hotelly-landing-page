@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
@@ -25,6 +25,24 @@ function ScrollToTop() {
 
 export default function App() {
   const isEmbed = useEmbed();
+  const [showChat, setShowChat] = useState(false);
+
+  useEffect(() => {
+    if (isEmbed) return;
+
+    const initChat = () => {
+      setTimeout(() => {
+        setShowChat(true);
+      }, 2000);
+    };
+
+    if (document.readyState === 'complete') {
+      initChat();
+    } else {
+      window.addEventListener('load', initChat);
+      return () => window.removeEventListener('load', initChat);
+    }
+  }, [isEmbed]);
 
   return (
     <HelmetProvider>
@@ -41,7 +59,7 @@ export default function App() {
           <Route path="/privacidade" element={<Privacidade />} />
         </Routes>
       </Router>
-      {!isEmbed && (
+      {!isEmbed && showChat && (
         <Suspense fallback={null}>
           <ChatWidget />
         </Suspense>
