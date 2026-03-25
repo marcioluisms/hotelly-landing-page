@@ -28,7 +28,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Não. O Hotelly foi desenvolvido para donos de hospedagem, não para técnicos. A configuração inicial é feita junto com o fundador na demo, e o sistema roda sozinho a partir daí.
+              Não. O Hotelly foi desenvolvido para donos de hospedagem, não para técnicos. A configuração inicial é feita com assistência direta da equipe Hotelly na demo, e o sistema roda sozinho a partir daí.
             </div>
           </details>
 
@@ -40,7 +40,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              O Concierge Virtual com IA responde dúvidas, verifica disponibilidade e fecha reservas pelo WhatsApp 24h por dia — sem intervenção humana. Para hospedagens com recepção presencial, ele complementa a equipe fora do horário comercial.
+              O Concierge Virtual com IA responde dúvidas, verifica disponibilidade e fecha reservas pelo WhatsApp 24h por dia, sem intervenção humana. Para hospedagens com recepção presencial, ele complementa a equipe fora do horário comercial.
             </div>
           </details>
 
@@ -52,7 +52,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              O sistema ajusta automaticamente os preços dos quartos com base na ocupação atual, feriados e calendário de eventos. Você define os limites mínimo e máximo — o Hotelly cuida do resto.
+              O sistema ajusta automaticamente os preços dos quartos com base na ocupação atual, feriados e calendário de eventos. Você define os limites mínimo e máximo, o Hotelly cuida do resto.
             </div>
           </details>
 

@@ -70,7 +70,7 @@ export default function Home() {
                   Sua hospedagem vendendo enquanto você dorme
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                  Todas as reservas — WhatsApp, site, Booking, Airbnb — chegam, se confirmam e se pagam em um lugar só. Com IA que trabalha 24h.
+                  Todas as reservas, WhatsApp, site, Booking, Airbnb, chegam, se confirmam e se pagam em um lugar só. Com IA que trabalha 24h.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" onClick={() => trackConversion('hero')}>
@@ -299,7 +299,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Proteção contra overbooking: o sistema trava a data na hora. Ninguém reserva o mesmo quarto duas vezes</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa de Quartos interativo — veja 30 dias de ocupação e arraste reservas para mudar quarto ou data, com recálculo automático de preço</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa de Quartos interativo, veja 30 dias de ocupação e arraste reservas para mudar quarto ou data, com recálculo automático de preço</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Cancelamento com cálculo automático de reembolso</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa visual que mostra os dias mais cheios e os mais vazios de cada tipo de quarto</li>
                 </ul>
@@ -333,7 +333,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> FNRH automático integrado ao Serpro. Os dados vão direto para o governo</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Assistente inteligente dentro do painel — pergunte qualquer coisa sobre sua hospedagem e receba a resposta na hora. <span className="font-medium text-amber/80">E evolui: cada mês, novas capacidades e conhecimento são adicionados automaticamente.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Assistente inteligente dentro do painel, pergunte qualquer coisa sobre sua hospedagem e receba a resposta na hora. <span className="font-medium text-amber/80">E evolui: cada mês, novas capacidades e conhecimento são adicionados automaticamente.</span></li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Painel de governança para organizar a limpeza dos quartos com prioridade</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Configuração inicial guiada, nossa equipe falará com você</li>
                 </ul>
@@ -391,7 +391,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Uma única tela para toda a sua distribuição</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "No plano Max, o Hotelly vira a sua central de distribuição: Booking, Airbnb, site próprio e WhatsApp — todos sincronizados em tempo real, num único painel."
+                  "No plano Max, o Hotelly vira a sua central de distribuição: Booking, Airbnb, site próprio e WhatsApp, todos sincronizados em tempo real, num único painel."
                 </div>
               </div>
             </div>

@@ -39,7 +39,7 @@ export default function Header() {
           <a className="text-center block border border-border-strong bg-card/50 text-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg hover:bg-popover transition-all text-xs sm:text-sm md:text-base" href="https://adm.hotelly.ia.br/sign-in">
             Entrar
           </a>
-          <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg transition-all text-xs sm:text-sm md:text-base shadow-lg shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao" onClick={() => trackConversion('header')}>
+          <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg transition-all text-xs sm:text-sm md:text-base shadow-lg shadow-primary/20" href="https://wa.me/5524993183300" onClick={() => trackConversion('header')}>
             Atendimento gratuito
           </a>
         </div>

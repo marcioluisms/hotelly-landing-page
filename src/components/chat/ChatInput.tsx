@@ -38,7 +38,7 @@ export default function ChatInput({ onSend, disabled, maxLength }: ChatInputProp
   const hasText = text.trim().length > 0;
 
   return (
-    <div className="shrink-0 border-t border-white/10 bg-brand-navy px-4 py-3">
+    <div className="shrink-0 border-t border-white/10 bg-background px-4 py-3">
       <div className="flex items-end gap-2 rounded-xl border border-white/10 bg-brand-slate/50 px-3 py-2 transition-all focus-within:border-brand-sky/40 focus-within:ring-1 focus-within:ring-brand-sky/20">
         <textarea
           ref={textareaRef}

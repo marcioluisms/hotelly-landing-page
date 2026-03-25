@@ -70,7 +70,7 @@ export default function ChatWindow({
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
             style={{ transformOrigin: 'bottom right' }}
-            className="fixed bottom-22 right-6 z-50 hidden h-[600px] w-[400px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-brand-navy shadow-2xl shadow-black/40 md:flex"
+            className="fixed bottom-22 right-6 z-50 hidden h-[600px] w-[400px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-background shadow-2xl shadow-black/40 md:flex"
             id="hotelly-chat-panel"
             role="dialog"
             aria-label="Chat com o assistente Hotelly"
@@ -100,7 +100,7 @@ export default function ChatWindow({
               paddingTop: 'env(safe-area-inset-top)',
               paddingBottom: 'env(safe-area-inset-bottom)',
             }}
-            className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-brand-navy md:hidden"
+            className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-background md:hidden"
             id="hotelly-chat-panel-mobile"
             role="dialog"
             aria-label="Chat com o assistente Hotelly"
