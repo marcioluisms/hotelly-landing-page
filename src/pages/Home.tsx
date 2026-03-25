@@ -46,7 +46,7 @@ export default function Home() {
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
-                <img alt="Hotelly Dashboard" className="rounded-xl w-full shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuKl0YWQyu78TTlR5BmqarqLp-5hD9NBtd7wzwxNs6dwzYkFNqq-EUBsygBgKdR0Nl9ti49ADwD9dyiR-5nrawUCYkJQOeFUc1gv5zkmjuOm6ol2U1RAUOFag17Ma3Oqp7wu"/>
+                <img alt="Hotelly Concierge" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg"/>
                 <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="material-symbols-outlined text-amber">smart_toy</span>
@@ -337,10 +337,9 @@ export default function Home() {
               </div>
 
               {/* Pilar 7 (Em breve) */}
-              <div className="bg-background border-2 border-dashed border-border rounded-2xl p-8 opacity-85 hover:opacity-100 transition-opacity flex flex-col relative">
-                <div className="absolute top-6 right-6 bg-amber text-amber-foreground text-xs font-bold px-3 py-1 rounded-full border border-brand-amber shadow-sm shadow-brand-amber/50">🔮 Em breve</div>
+              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col relative">
                 <div className="text-5xl mb-6">🌐</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Hub de Reservas (Em breve)</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Hub de Reservas</h3>
                 <p className="text-primary font-medium mb-6">O único lugar que você precisa olhar</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Conexão com Booking, Airbnb, Expedia e mais</li>
@@ -411,8 +410,8 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-background/95 backdrop-blur-md border-t border-border z-50">
-        <a className="block w-full text-center bg-brand-amber text-brand-navy font-bold py-2.5 px-6 rounded-lg shadow-lg" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
-          Garantir Preço de Inauguração
+        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
+          Começar teste grátis
         </a>
       </div>
     </div>
