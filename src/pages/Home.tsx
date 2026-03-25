@@ -200,19 +200,9 @@ export default function Home() {
         <section className="py-24 bg-card">
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="w-full max-w-sm aspect-[4/5] rounded-3xl bg-primary/10 mb-8 border border-primary/20 shadow-2xl overflow-hidden glass-card group hover:scale-105 transition-transform duration-500">
-                <img 
-                  alt="Mockup de chat real do Concierge Hotelly" 
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
-                  src="/real-chat-concierge.png"
-                />
-              </div>
-              <h2 className="text-4xl lg:text-5xl font-headline font-bold mb-6 text-foreground leading-snug">
-                O Concierge do Hotelly não apenas atende o seu cliente, ele vende e bloqueia o inventário.
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-lg mb-8 leading-relaxed">
-                Nossa IA não é apenas um robô de perguntas frequentes. Ela entende sua disponibilidade em tempo real e fecha reservas confirmadas direto no seu sistema.
-              </p>
+              <img alt="Concierge Virtual do Hotelly" className="w-48 h-48 rounded-full mb-8 border-4 border-primary/20 shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ7WPiFfUiTPlkloY0V0GJ8N1AY4d9CC7Lgq3HPhVvL3fzsSqIbFEVCgmvQNhzElHkKWq7WgE3W6pMNssljv6jC-VHwNHy99GLXD2Ea0XBaXzjSwG-iEm4Y8TG7xtd2jXvGxgRFivGGdVa7IVevv2zweL-ibzI2J60BeuPUp_HZ6ZRq5X7KBWIutGmeqE16eGfHUe3Cxk7x3fM_JSSGWPUnJWCMxvaIRzNYlxW6RZEu5e-7NFzqXpmgl68pAoGBCOqJ97omqKaJM"/>
+              <h2 className="text-4xl font-headline font-bold mb-6 text-foreground">Veja o Concierge em ação</h2>
+              <p className="text-muted-foreground text-lg max-w-lg mb-8">Nossa IA não apenas responde, ela vende. Teste agora simulando o atendimento de um hóspede real.</p>
             </div>
             <div className="bg-popover rounded-3xl p-8 shadow-2xl border border-border h-[500px] flex flex-col">
               <div className="flex-1 space-y-6 overflow-y-auto mb-6 pr-4">
