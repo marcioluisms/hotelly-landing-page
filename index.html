@@ -46,65 +46,143 @@
     </script>
 
     <!-- SEO Core -->
-    <title>Hotelly - Gestor de Hospedagens com IA</title>
-    <meta name="description" content="Sistema de gestão para pousadas com IA. Reservas automáticas pelo WhatsApp, FNRH digital, precificação inteligente e financeiro completo. Teste grátis 14 dias.">
+    <title>Hotelly — Central de Reservas Inteligente para Hospedagens</title>
+    <meta name="description" content="WhatsApp, Booking e Airbnb em um só lugar. IA que fecha reservas 24h, precificação dinâmica e gestão completa para hospedagens independentes. Garanta seu atendimento.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://hotelly.com.br/">
+    <meta name="language" content="pt-BR">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://hotelly.com.br">
 
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
-    <meta property="og:title" content="Hotelly - Gestor de Hospedagens com IA">
-    <meta property="og:description" content="Reservas automáticas pelo WhatsApp, FNRH digital, precificação inteligente e financeiro completo. Teste grátis 14 dias.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hotelly.com.br">
-    <meta property="og:image" content="https://hotelly.com.br/og-image.png">
+    <!-- Open Graph (compartilhamento em redes sociais) -->
+    <meta property="og:title" content="Hotelly — Central de Reservas Inteligente para Hospedagens">
+    <meta property="og:description" content="Todas as suas reservas chegam, confirmam e se pagam em um lugar só. IA 24h no WhatsApp, Booking, Airbnb e site direto.">
+    <meta property="og:image" content="https://hotelly.com.br/og-image-1200x630.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image:alt" content="Hotelly — Dashboard de gestão de reservas para hospedagens independentes">
+    <meta property="og:url" content="https://hotelly.com.br">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hotelly">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hotelly - Gestor de Hospedagens com IA">
-    <meta name="twitter:description" content="Sua pousada vendendo 24h com IA. FNRH automático, precificação dinâmica e controle financeiro em tempo real.">
-    <meta name="twitter:image" content="https://hotelly.com.br/og-image.png">
+    <meta name="twitter:site" content="@hotelly">
+    <meta name="twitter:title" content="Hotelly — Central de Reservas para Hospedagens Independentes">
+    <meta name="twitter:description" content="WhatsApp, Booking e Airbnb em um único painel. IA que fecha reservas enquanto você dorme.">
+    <meta name="twitter:image" content="https://hotelly.com.br/og-image-1200x630.png">
+    <meta name="twitter:image:alt" content="Dashboard do Hotelly com mapa de quartos e reservas em tempo real">
 
-    <!-- Técnico -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Técnico & Favicons -->
     <meta name="theme-color" content="#0B1120">
-    <link rel="icon" type="image/webp" href="/icon.webp">
-    <link rel="apple-touch-icon" href="/icon.webp">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema.org (Dados Estruturados) -->
+    <!-- Schema.org Markup (SoftwareApplication) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Hotelly",
+      "description": "Central de reservas inteligente para hospedagens independentes. WhatsApp, Booking, Airbnb e site direto em um só lugar — com IA que fecha reservas 24h.",
+      "url": "https://hotelly.com.br",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "Sistema de gestão para pousadas e hotéis boutique com inteligência artificial. Reservas automáticas via WhatsApp, FNRH digital, precificação dinâmica e financeiro completo.",
-      "url": "https://hotelly.com.br",
+      "inLanguage": "pt-BR",
       "offers": [
         {
           "@type": "Offer",
-          "name": "Hotelly Essencial",
-          "price": "498.00",
+          "name": "Hotelly Start",
+          "price": "349.00",
           "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
+          "description": "Plano de entrada: reservas pelo WhatsApp com IA, mapa de quartos, FNRH automático, financeiro básico.",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "BR"
+          }
         },
         {
           "@type": "Offer",
-          "name": "Hotelly Maestro",
-          "price": "898.00",
+          "name": "Hotelly Pro",
+          "price": "549.00",
           "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
+          "description": "Plano intermediário: tudo do Start + precificação dinâmica, relatórios avançados e site de reservas diretas.",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "BR"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Hotelly Max",
+          "price": "849.00",
+          "priceCurrency": "BRL",
+          "description": "Plano completo: tudo do Pro + integração com Booking e Airbnb via Channex (channel manager incluso).",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "BR"
+          }
         }
-      ],
-      "creator": {
-        "@type": "Organization",
-        "name": "Hotelly",
-        "url": "https://hotelly.com.br"
-      }
+      ]
+    }
+    </script>
+    <!-- Schema.org Markup (FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O Hotelly funciona com Booking e Airbnb?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, no plano Max. A integração é feita via Channex (channel manager), que sincroniza disponibilidade e preços em tempo real com Booking.com, Airbnb e outras OTAs. Nos planos Start e Pro, o foco é em reservas diretas pelo WhatsApp e site próprio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber de tecnologia para usar o Hotelly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O Hotelly foi desenvolvido para donos de hospedagem, não para técnicos. A configuração inicial é feita junto com o fundador na demo, e o sistema roda sozinho a partir daí."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O Hotelly substitui recepcionista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Concierge Virtual com IA responde dúvidas, verifica disponibilidade e fecha reservas pelo WhatsApp 24h por dia — sem intervenção humana. Para hospedagens com recepção presencial, ele complementa a equipe fora do horário comercial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a precificação dinâmica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O sistema ajusta automaticamente os preços dos quartos com base na ocupação atual, feriados e calendário de eventos. Você define os limites mínimo e máximo — o Hotelly cuida do resto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre os planos Start, Pro e Max?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start (R$349/mês): reservas automáticas pelo WhatsApp, IA 24h, mapa de quartos, FNRH e financeiro básico. Pro (R$549/mês): tudo do Start + precificação dinâmica, relatórios avançados e site de reservas diretas. Max (R$849/mês): tudo do Pro + integração com Booking, Airbnb e outras OTAs via channel manager."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O Hotelly emite o FNRH automaticamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O Hotelly integra com a API do Serpro e envia a Ficha Nacional de Registro de Hóspedes automaticamente após o check-in digital, sem intervenção manual."
+          }
+        }
+      ]
     }
     </script>
 

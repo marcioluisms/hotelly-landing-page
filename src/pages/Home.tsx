@@ -2,21 +2,59 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import LazySection from '../components/LazySection';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
 const HomeFAQ = React.lazy(() => import('../components/home/HomeFAQ'));
 const LazyFooter = React.lazy(() => import('../components/Footer'));
 
 export default function Home() {
+  const { trackEvent, trackConversion, trackSectionView } = useAnalytics();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    // Scroll depth tracking
+    let scrollDepths = new Set<number>();
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolledTo = (winScroll / height) * 100;
+      
+      [25, 50, 75, 90].forEach(depth => {
+        if (scrolledTo >= depth && !scrollDepths.has(depth)) {
+          scrollDepths.add(depth);
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'scroll_depth', { depth_percentage: depth });
+          }
+        }
+      });
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Section View Tracking
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.id) {
+          trackSectionView(entry.target.id);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    // Give components time to render
+    setTimeout(() => {
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+      });
+    }, 1000);
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
 
   return (
     <div className="bg-background text-foreground antialiased font-sans selection:bg-brand-sky/30">
@@ -35,8 +73,8 @@ export default function Home() {
                   Todas as reservas — WhatsApp, site, Booking, Airbnb — chegam, se confirmam e se pagam em um lugar só. Com IA que trabalha 24h.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20">
-                    Começar teste grátis
+                <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" onClick={() => trackConversion('hero')}>
+                    Garantir meu atendimento
                 </a>
                 <a href="#funcionalidades" className="text-center block border border-border-strong bg-card/50 text-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-popover transition-all">
                     Ver Demonstração
@@ -46,7 +84,7 @@ export default function Home() {
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
-                <img alt="Hotelly Concierge" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg"/>
+                <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg"/>
                 <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="material-symbols-outlined text-amber">smart_toy</span>
@@ -63,7 +101,7 @@ export default function Home() {
         <section className="py-24 bg-card" id="eficiencia">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Eficiência que se sente no bolso</h2>
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Por que hospedagens independentes escolhem o Hotelly</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">Automatize o que é repetitivo e foque no que realmente importa: a experiência do seu hóspede.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -102,7 +140,7 @@ export default function Home() {
         {/* Problem + Cost Analysis */}
         <section className="py-24 px-8 overflow-hidden bg-background">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-foreground">O custo invisível da desorganização</h2>
+            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-foreground">Quanto custa uma reserva que não chegou?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10 rounded-3xl overflow-hidden border border-border">
               {/* Fragmented */}
               <div className="bg-card p-12">
@@ -162,8 +200,8 @@ export default function Home() {
         <section className="py-24 bg-card">
           <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <img alt="AI Mascot" className="w-48 h-48 rounded-full mb-8 border-4 border-primary/20 shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ7WPiFfUiTPlkloY0V0GJ8N1AY4d9CC7Lgq3HPhVvL3fzsSqIbFEVCgmvQNhzElHkKWq7WgE3W6pMNssljv6jC-VHwNHy99GLXD2Ea0XBaXzjSwG-iEm4Y8TG7xtd2jXvGxgRFivGGdVa7IVevv2zweL-ibzI2J60BeuPUp_HZ6ZRq5X7KBWIutGmeqE16eGfHUe3Cxk7x3fM_JSSGWPUnJWCMxvaIRzNYlxW6RZEu5e-7NFzqXpmgl68pAoGBCOqJ97omqKaJM"/>
-              <h2 className="text-4xl font-headline font-bold mb-6 text-foreground">Conheça seu novo funcionário do mês</h2>
+              <img alt="Concierge Virtual do Hotelly" className="w-48 h-48 rounded-full mb-8 border-4 border-primary/20 shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ7WPiFfUiTPlkloY0V0GJ8N1AY4d9CC7Lgq3HPhVvL3fzsSqIbFEVCgmvQNhzElHkKWq7WgE3W6pMNssljv6jC-VHwNHy99GLXD2Ea0XBaXzjSwG-iEm4Y8TG7xtd2jXvGxgRFivGGdVa7IVevv2zweL-ibzI2J60BeuPUp_HZ6ZRq5X7KBWIutGmeqE16eGfHUe3Cxk7x3fM_JSSGWPUnJWCMxvaIRzNYlxW6RZEu5e-7NFzqXpmgl68pAoGBCOqJ97omqKaJM"/>
+              <h2 className="text-4xl font-headline font-bold mb-6 text-foreground">Veja o Concierge em ação</h2>
               <p className="text-muted-foreground text-lg max-w-lg mb-8">Nossa IA não apenas responde, ela vende. Teste agora simulando o atendimento de um hóspede real.</p>
             </div>
             <div className="bg-popover rounded-3xl p-8 shadow-2xl border border-border h-[500px] flex flex-col">
@@ -192,9 +230,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground">Verificar disponibilidade</button>
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground">Fazer uma reserva</button>
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground">Tirar dúvida</button>
+                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Verificar disponibilidade' })}>Verificar disponibilidade</button>
+                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Fazer uma reserva' })}>Fazer uma reserva</button>
+                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Tirar dúvida' })}>Tirar dúvida</button>
               </div>
             </div>
           </div>
@@ -203,24 +241,25 @@ export default function Home() {
         {/* Feature Pillars */}
         <section className="py-24 px-8 bg-background">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-foreground">Tudo que sua hospedagem precisa, num só lugar</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
                 <span className="material-symbols-outlined text-primary mb-6 text-4xl">grid_view</span>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">Mapa de Quartos</h3>
                 <p className="text-muted-foreground mb-8 flex-1">Grid interativa, Drag-and-drop e Heatmap de ocupação para gestão visual absoluta.</p>
-                <img alt="Mapa" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBhMAEFUF8Rj5sgbSvPhL6Pi7q2LP-tgO-YIMAbyPV3f6gmOC56c4Bd6godPizYRua3K2Fws3scD3VCPsArzW-aPouyEJ2rmEV2wAdXL9x924NLEfp7wfcJEpwJWJ0lggAoM5RWGv5UEIl4BuThHdd7dqxVG-RilvHNidP5WS6navWDfEdC5jDlX93oyD-o0v-PMCz_DHKwHVrzgjvL1EZZt3QRHZYcJzkMVrRfgC8_h3yPqI_wMw5FopG-a1YitUldZAyydBFw8"/>
+                <img alt="Mapa de quartos do Hotelly com controle visual de disponibilidade" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBhMAEFUF8Rj5sgbSvPhL6Pi7q2LP-tgO-YIMAbyPV3f6gmOC56c4Bd6godPizYRua3K2Fws3scD3VCPsArzW-aPouyEJ2rmEV2wAdXL9x924NLEfp7wfcJEpwJWJ0lggAoM5RWGv5UEIl4BuThHdd7dqxVG-RilvHNidP5WS6navWDfEdC5jDlX93oyD-o0v-PMCz_DHKwHVrzgjvL1EZZt3QRHZYcJzkMVrRfgC8_h3yPqI_wMw5FopG-a1YitUldZAyydBFw8"/>
               </div>
               <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
                 <span className="material-symbols-outlined text-amber mb-6 text-4xl">payments</span>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">Financeiro &amp; Receita</h3>
                 <p className="text-muted-foreground mb-8 flex-1">Métricas em tempo real: RevPAR, ADR e Taxa de Ocupação integradas ao seu fluxo de caixa.</p>
-                <img alt="Financeiro" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK0m_Sc9PkAV66WXkhS6j-MTfFcHpAiRRspK1NzhuSTAi6DN66GWvVbOhiMUyl372wqvW8SrW3KlrFAWpY-OVyruuVBs7qPbcEg9flGl_0MAaIsHtKAaWaN7og0mRdNv4YmgPPuzMym7XjQJrfOnG8tW7bNMU-doNgfktI8lpZZRmDV-l7k0JjYK9pWQZZ4JdHCgzO1_REoOk5AhphL542EjveXL7e5G9K08TuwwbwzDeQT55OloSHbMB7rFk4qiMmKM6xOzx-8FE"/>
+                <img alt="Dashboard financeiro com relatórios de receita por canal" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK0m_Sc9PkAV66WXkhS6j-MTfFcHpAiRRspK1NzhuSTAi6DN66GWvVbOhiMUyl372wqvW8SrW3KlrFAWpY-OVyruuVBs7qPbcEg9flGl_0MAaIsHtKAaWaN7og0mRdNv4YmgPPuzMym7XjQJrfOnG8tW7bNMU-doNgfktI8lpZZRmDV-l7k0JjYK9pWQZZ4JdHCgzO1_REoOk5AhphL542EjveXL7e5G9K08TuwwbwzDeQT55OloSHbMB7rFk4qiMmKM6xOzx-8FE"/>
               </div>
               <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
                 <span className="material-symbols-outlined text-primary mb-6 text-4xl">assignment_turned_in</span>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">Operação Limpa</h3>
                 <p className="text-muted-foreground mb-8 flex-1">Check-in Digital automatizado e envio de FNRH direto para o governo sem esforço manual.</p>
-                <img alt="Operação" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR4C9Ela2_alOHCEuk06pdmnS5By0A7hZkvw6UczbbCWNJzeMGWprQSwYY2fertjdZwPX2GkYTLXpfbevrkyTR613lGk8eh8AxG4XYjnkM_nh9Qg9kk9w3Nd8L2XNT-ZNmCkHfZPQ9EtLROPOj_7D-RwVACrH9Yo2xKedJX18MSr05NfQOEe8kMs-MqtRQOTy7d5PK21RAa5qQEN7DCvQ-srZ81VOQ3RLcWlI3LX3uO9iUsHZRBl2fhomg4JjZkibudI7LSyNk8XI"/>
+                <img alt="Check-in digital pelo WhatsApp com FNRH automático" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR4C9Ela2_alOHCEuk06pdmnS5By0A7hZkvw6UczbbCWNJzeMGWprQSwYY2fertjdZwPX2GkYTLXpfbevrkyTR613lGk8eh8AxG4XYjnkM_nh9Qg9kk9w3Nd8L2XNT-ZNmCkHfZPQ9EtLROPOj_7D-RwVACrH9Yo2xKedJX18MSr05NfQOEe8kMs-MqtRQOTy7d5PK21RAa5qQEN7DCvQ-srZ81VOQ3RLcWlI3LX3uO9iUsHZRBl2fhomg4JjZkibudI7LSyNk8XI"/>
               </div>
             </div>
           </div>
@@ -237,7 +276,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Pilar 1 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
-                <img src="/icon.webp" alt="Hotelly AI" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
+                <img src="/icon.webp" alt="" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
                 <h3 className="text-xl font-bold text-foreground mb-2">Venda Automática 24/7</h3>
                 <p className="text-primary font-medium mb-6">Sua pousada vendendo enquanto você dorme</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
@@ -336,19 +375,23 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Pilar 7 (Em breve) */}
+              {/* Pilar 7 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col relative">
                 <div className="text-5xl mb-6">🌐</div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Hub de Reservas</h3>
                 <p className="text-primary font-medium mb-6">O único lugar que você precisa olhar</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Conexão com Booking, Airbnb, Expedia e mais</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Atualização automática de disponibilidade em todos os canais</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Relatórios que mostram quanto cada canal vende</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Uma única tela para toda a sua distribuição</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber font-bold">★</span> 
+                    <span>Exclusivo do plano <strong>Max</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Conexão com Booking, Airbnb, Expedia e mais</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Atualização automática de disponibilidade em todos os canais</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Relatórios que mostram quanto cada canal vende</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Uma única tela para toda a sua distribuição</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "O Hotelly é o seu hub central de reservas. Booking, Airbnb, direto. Tudo num único painel."
+                  "No plano Max, o Hotelly vira a sua central de distribuição: Booking, Airbnb, site próprio e WhatsApp — todos sincronizados em tempo real, num único painel."
                 </div>
               </div>
             </div>
@@ -410,8 +453,8 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-background/95 backdrop-blur-md border-t border-border z-50">
-        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
-          Começar teste grátis
+        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao" onClick={() => trackConversion('mobile_sticky')}>
+          Atendimento gratuito
         </a>
       </div>
     </div>

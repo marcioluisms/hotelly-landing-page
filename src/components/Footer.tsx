@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 export default function Footer() {
+  const { trackConversion } = useAnalytics();
   return (
     <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 text-center md:text-left">
           <div>
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-              <img alt="Hotelly Logo" className="h-12 w-auto mb-2 mx-auto md:mx-0" src="/hotelly.webp?v=3" width="219" height="70" />
+              <img alt="Hotelly — Central de Reservas" className="h-12 w-auto mb-2 mx-auto md:mx-0" src="/hotelly.webp?v=3" width="219" height="70" />
             </Link>
             <p className="text-muted-foreground max-w-sm">Vendas Diretas. Gestão Completa.</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao">
-              Começar teste grátis
+            <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao" onClick={() => trackConversion('footer')}>
+              Garantir meu atendimento
             </a>
           </div>
         </div>
