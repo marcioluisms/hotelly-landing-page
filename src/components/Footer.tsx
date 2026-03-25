@@ -15,8 +15,8 @@ export default function Footer() {
             <p className="text-muted-foreground max-w-sm">Vendas Diretas. Gestão Completa.</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" href="https://wa.me/5524993183300" onClick={() => trackConversion('footer')}>
-              Garantir meu atendimento
+            <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up" onClick={() => trackConversion('footer')}>
+              Começar Agora
             </a>
           </div>
         </div>

@@ -74,7 +74,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" onClick={() => trackConversion('hero')}>
-                    Garantir meu atendimento
+                    Começar Agora
                 </a>
                 <a href="#funcionalidades" className="text-center block border border-border-strong bg-card/50 text-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-popover transition-all">
                     Como funciona
@@ -453,8 +453,8 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-background/95 backdrop-blur-md border-t border-border z-50">
-        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=preco_inauguracao" onClick={() => trackConversion('mobile_sticky')}>
-          Atendimento gratuito
+        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up" onClick={() => trackConversion('mobile_sticky')}>
+          Começar Agora
         </a>
       </div>
     </div>
