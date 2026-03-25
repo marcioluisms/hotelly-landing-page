@@ -2,67 +2,58 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-brand-sky: #38bdf8;
-  --color-brand-amber: #fbbf24;
-  --color-brand-navy: #0b1120;
-  --color-brand-slate: #1e293b;
-  --color-brand-offwhite: #f1f5f9;
-  --color-brand-emerald: #2ecc71;
-  --color-brand-coral: #e74c3c;
-  
-  /* New Model Theme Colors */
-  --color-surface-container-lowest: #030e20;
-  --color-surface-container-high: #1f2a3d;
-  --color-inverse-primary: #005ac2;
-  --color-tertiary-fixed-dim: #ffb95f;
-  --color-background: #071325;
-  --color-on-surface-variant: #c2c6d6;
-  --color-secondary-container: #3d4960;
-  --color-tertiary: #ffb95f;
-  --color-error-container: #93000a;
-  --color-on-primary-fixed: #001a42;
-  --color-on-tertiary-fixed-variant: #653e00;
-  --color-tertiary-container: #ca8100;
-  --color-primary-container: #4d8eff;
-  --color-surface-container: #142032;
-  --color-primary: #adc6ff;
-  --color-surface-variant: #2a3548;
-  --color-surface-container-highest: #2a3548;
-  --color-surface-dim: #071325;
-  --color-error: #ffb4ab;
-  --color-on-secondary-container: #acb9d4;
-  --color-inverse-on-surface: #253144;
-  --color-secondary-fixed: #d6e3ff;
-  --color-on-primary-container: #00285d;
-  --color-on-error: #690005;
-  --color-outline: #8c909f;
-  --color-inverse-surface: #d7e3fc;
-  --color-surface-bright: #2e394d;
-  --color-on-surface: #d7e3fc;
-  --color-primary-fixed: #d8e2ff;
-  --color-on-background: #d7e3fc;
-  --color-on-primary-fixed-variant: #004395;
-  --color-on-error-container: #ffdad6;
-  --color-surface-container-low: #101c2e;
-  --color-surface: #071325;
-  --color-secondary-fixed-dim: #bac7e3;
-  --color-on-tertiary: #472a00;
-  --color-on-tertiary-fixed: #2a1700;
-  --color-secondary: #bac7e3;
-  --color-on-secondary: #243147;
-  --color-on-secondary-fixed-variant: #3b475e;
-  --color-on-tertiary-container: #3e2400;
-  --color-primary-fixed-dim: #adc6ff;
-  --color-on-secondary-fixed: #0e1c31;
-  --color-surface-tint: #adc6ff;
-  --color-outline-variant: #424754;
-  --color-tertiary-fixed: #ffddb8;
-  --color-on-primary: #002e6a;
+  /* Surfaces */
+  --color-background: #0a1628;
+  --color-foreground: #e2e8f0;
+  --color-card: #111e33;
+  --color-card-foreground: #e2e8f0;
+  --color-popover: #152740;
+  --color-popover-foreground: #e2e8f0;
 
+  /* Brand / Primary */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-primary-foreground: #ffffff;
+
+  /* Accent / Amber */
+  --color-amber: #f59e0b;
+  --color-amber-hover: #fbbf24;
+  --color-amber-subtle: rgba(245, 158, 11, 0.15);
+  --color-amber-foreground: #0f172a;
+
+  /* Secondary / Muted */
+  --color-secondary: #162032;
+  --color-secondary-foreground: #e2e8f0;
+  --color-muted: #162032;
+  --color-muted-foreground: #94a3b8;
+  --color-accent: #162032;
+  --color-accent-foreground: #e2e8f0;
+
+  /* Semantics */
+  --color-destructive: #f87171;
+  --color-destructive-foreground: #ffffff;
+  --color-success: #34d399;
+  --color-success-subtle: rgba(16, 185, 129, 0.15);
+  --color-success-foreground: #34d399;
+  --color-warning: #fbbf24;
+  --color-warning-subtle: rgba(245, 158, 11, 0.15);
+  --color-warning-foreground: #fbbf24;
+  --color-info: #60a5fa;
+  --color-info-subtle: rgba(96, 165, 250, 0.12);
+  --color-info-foreground: #60a5fa;
+
+  /* Stroke */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-input: rgba(255, 255, 255, 0.16);
+  --color-ring: #3b82f6;
+
+  /* Fonts */
   --font-headline: "Manrope", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-label: "Inter", sans-serif;
 
+  /* Animations */
   --animate-urgent: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   @keyframes pulse-gold {
     0%, 100% { transform: scale(1); opacity: 1; }
@@ -76,9 +67,9 @@
     backdrop-filter: blur(12px);
   }
   .active-nav {
-    color: var(--color-blue-500, #3b82f6);
+    color: var(--color-primary);
     font-weight: 600;
-    border-bottom: 2px solid var(--color-blue-500, #3b82f6);
+    border-bottom: 2px solid var(--color-primary);
     padding-bottom: 0.25rem;
   }
   .material-symbols-outlined {
@@ -88,17 +79,15 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--color-brand-navy);
-  color: var(--color-brand-offwhite);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   scroll-behavior: smooth;
 }
 
-/* Chat widget — typing indicator */
 @keyframes typing-bounce {
   0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
   30% { transform: translateY(-4px); opacity: 0.9; }
 }
-
 .typing-dot:nth-child(1) { animation: typing-bounce 1.4s ease-in-out infinite 0s; }
 .typing-dot:nth-child(2) { animation: typing-bounce 1.4s ease-in-out infinite 0.2s; }
 .typing-dot:nth-child(3) { animation: typing-bounce 1.4s ease-in-out infinite 0.4s; }

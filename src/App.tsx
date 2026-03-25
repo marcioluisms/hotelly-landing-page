@@ -54,7 +54,7 @@ export default function App() {
     <HelmetProvider>
       <Router>
         <ScrollToTop />
-        <Suspense fallback={<div className="min-h-screen bg-brand-navy flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-brand-sky border-t-transparent animate-spin"></div></div>}>
+        <Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-brand-sky border-t-transparent animate-spin"></div></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />

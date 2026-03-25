@@ -22,7 +22,7 @@ export default function ChatCTABar({ variant, onClose }: ChatCTABarProps) {
         </a>
         <button
           onClick={handleBackToSite}
-          className="mt-2 block w-full text-center text-xs text-white/40 transition-colors hover:text-white/60"
+          className="mt-2 block w-full text-center text-xs text-foreground/40 transition-colors hover:text-muted-foreground"
         >
           Ou voltar ao site
         </button>
@@ -31,16 +31,16 @@ export default function ChatCTABar({ variant, onClose }: ChatCTABarProps) {
   }
 
   return (
-    <div className="shrink-0 border-t border-white/5 bg-brand-navy/80 px-4 py-2 backdrop-blur-sm">
+    <div className="shrink-0 border-t border-border bg-background/80 px-4 py-2 backdrop-blur-sm">
       <a
         href={CTA_SIGNUP_URL}
-        className="block w-full rounded-lg border border-brand-amber/30 bg-brand-amber/10 px-3 py-2 text-center text-xs font-medium text-brand-amber transition-all duration-200 hover:bg-brand-amber/20"
+        className="block w-full rounded-lg border border-brand-amber/30 bg-brand-amber/10 px-3 py-2 text-center text-xs font-medium text-amber transition-all duration-200 hover:bg-brand-amber/20"
       >
         Começar teste grátis
       </a>
       <button
         onClick={handleBackToSite}
-        className="mt-1.5 block w-full text-center text-[10px] text-white/30 transition-colors hover:text-white/50"
+        className="mt-1.5 block w-full text-center text-[10px] text-foreground/30 transition-colors hover:text-muted-foreground"
       >
         Voltar ao site
       </button>

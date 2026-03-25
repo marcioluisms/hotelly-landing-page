@@ -11,7 +11,7 @@ export default function LazySection({
   children, 
   minHeight = '50vh', 
   rootMargin = '300px',
-  fallback = <div className="bg-brand-navy" style={{ minHeight }} />
+  fallback = <div className="bg-background" style={{ minHeight }} />
 }: LazySectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
