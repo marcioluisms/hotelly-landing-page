@@ -28,7 +28,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Não. O Hotelly foi desenvolvido para donos de hospedagem, não para técnicos. A configuração inicial é feita com assistência direta da equipe Hotelly na demo, e o sistema roda sozinho a partir daí.
+              Não. O Hotelly foi desenvolvido para donos de hospedagem, não para técnicos. A configuração inicial é feita com assistência direta da equipe Hotelly e o sistema roda sozinho a partir daí.
             </div>
           </details>
 

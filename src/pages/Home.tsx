@@ -77,7 +77,7 @@ export default function Home() {
                     Garantir meu atendimento
                 </a>
                 <a href="#funcionalidades" className="text-center block border border-border-strong bg-card/50 text-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-popover transition-all">
-                    Ver Demonstração
+                    Como funciona
                 </a>
               </div>
             </div>
