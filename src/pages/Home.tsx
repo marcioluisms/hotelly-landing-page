@@ -437,12 +437,20 @@ export default function Home() {
           </div>
         </section>
 
-        <LazySection minHeight="50vh">
-          <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
-            <HomePricing />
-            <HomeFAQ />
-          </Suspense>
-        </LazySection>
+        <div id="planos" className="scroll-mt-24">
+          <LazySection minHeight="50vh">
+            <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
+              <HomePricing />
+            </Suspense>
+          </LazySection>
+        </div>
+        <div id="faq" className="scroll-mt-24">
+          <LazySection minHeight="50vh">
+            <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
+              <HomeFAQ />
+            </Suspense>
+          </LazySection>
+        </div>
       </main>
 
       <LazySection minHeight="20vh" rootMargin="500px">

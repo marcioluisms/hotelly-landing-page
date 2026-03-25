@@ -26,7 +26,7 @@ export default function Header() {
           {isHome ? (
             <>
               <a className="hover:text-primary transition-colors" href="#funcionalidades">Funcionalidades</a>
-              <a className="hover:text-primary transition-colors" href="#precos">Planos</a>
+              <a className="hover:text-primary transition-colors" href="#planos">Planos</a>
               <a className="hover:text-primary transition-colors" href="#faq">FAQ</a>
             </>
           ) : (
