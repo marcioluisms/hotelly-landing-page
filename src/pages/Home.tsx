@@ -348,7 +348,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-primary">⚡</span> Uma única tela para toda a sua distribuição</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Em breve, o Hotelly será seu hub central. Booking, Airbnb, direto. Tudo num único painel."
+                  "O Hotelly é o seu hub central de reservas. Booking, Airbnb, direto. Tudo num único painel."
                 </div>
               </div>
             </div>
