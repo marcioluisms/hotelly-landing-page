@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import VagasCounter from '../components/VagasCounter';
 import LazySection from '../components/LazySection';
 
 const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
@@ -24,34 +23,36 @@ export default function Home() {
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-brand-navy pt-32 pb-24 md:pt-40 md:pb-32 min-h-[90vh] flex items-center">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-sky/10 blur-[120px] rounded-full pointer-events-none"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              <div className="lg:w-1/2 text-center lg:text-left animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-[720px]">
-                  Sua hospedagem vendendo enquanto você dorme.
-                </h1>
-                <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-[600px]">
-                  O Hotelly é o parceiro de receita que fecha reservas no WhatsApp 24h, faz follow-up até o Pix cair e cuida de toda a burocracia do Serpro. Outros sistemas guardam dados. O Hotelly fecha vendas.
-                </p>
-                <div className="mb-8">
-                  <VagasCounter />
-                </div>
-                <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                  <a href="https://adm.hotelly.ia.br/sign-up?utm_source=landing_page&utm_medium=cta&utm_content=trial_gratis" className="w-full sm:w-auto text-center bg-brand-amber text-brand-navy hover:bg-amber-500 font-bold py-2.5 px-6 rounded-lg transition-all text-lg">
-                    Começar 14 dias grátis do Maestro
-                  </a>
-                  <a className="text-brand-sky hover:text-brand-sky/80 font-medium transition-colors underline decoration-brand-sky decoration-2 underline-offset-4 hover:decoration-4" href="#funcionalidades">
-                    Ver como funciona
-                  </a>
-                </div>
+        {/* Navbar padding offset added to Hero */}
+        <section className="relative px-8 pt-32 pb-32 overflow-hidden bg-background">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary font-label text-sm font-semibold tracking-wider mb-6">INTELIGÊNCIA HOTELEIRA 24H</span>
+              <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-on-surface leading-tight tracking-tight mb-8">
+                  Sua hospedagem vendendo enquanto você dorme
+              </h1>
+              <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                  Todas as reservas — WhatsApp, site, Booking, Airbnb — chegam, se confirmam e se pagam em um lugar só. Com IA que trabalha 24h.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-gradient-to-br from-primary-container to-primary text-on-primary text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-[0_0_30px_-5px_rgba(77,142,255,0.4)]">
+                    Começar teste grátis
+                </a>
+                <a href="#funcionalidades" className="text-center block border border-outline-variant bg-surface-container/50 text-on-surface text-lg font-bold px-8 py-4 rounded-xl hover:bg-surface-container-high transition-all">
+                    Ver Demonstração
+                </a>
               </div>
-              <div className="w-full lg:w-1/2 relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                  <img alt="Hotelly AI Receptionist" className="w-full h-auto object-cover" src="/hotelly-concierge.webp?v=8" width="662" height="662" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+            </div>
+            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
+              <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full"></div>
+              <div className="relative bg-surface-container-low p-4 rounded-2xl shadow-2xl border border-white/5">
+                <img alt="Hotelly Dashboard" className="rounded-xl w-full shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuKl0YWQyu78TTlR5BmqarqLp-5hD9NBtd7wzwxNs6dwzYkFNqq-EUBsygBgKdR0Nl9ti49ADwD9dyiR-5nrawUCYkJQOeFUc1gv5zkmjuOm6ol2U1RAUOFag17Ma3Oqp7wu"/>
+                <div className="absolute -bottom-6 -left-6 bg-surface-bright p-6 rounded-2xl shadow-2xl glass-card border border-white/10 max-w-xs animate-pulse">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="material-symbols-outlined text-tertiary">smart_toy</span>
+                    <p className="text-sm font-semibold text-white">Reserva Confirmada via IA</p>
+                  </div>
+                  <p className="text-xs text-on-surface-variant">O Concierge Hotelly acaba de fechar uma reserva de 3 noites via WhatsApp.</p>
                 </div>
               </div>
             </div>
@@ -188,6 +189,105 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Value Themes */}
+        <section className="py-24 bg-surface-container-low" id="eficiencia">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-white">Eficiência que se sente no bolso</h2>
+              <p className="text-on-surface-variant max-w-2xl mx-auto">Automatize o que é repetitivo e foque no que realmente importa: a experiência do seu hóspede.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Reservas que chegam sozinhas</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">Nossa IA atende o WhatsApp, tira dúvidas e fecha vendas 24/7 sem você tocar no celular.</p>
+              </div>
+              <div className="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-tertiary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-tertiary text-3xl">sync</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Todas as vitrines, um só controle</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">Booking, Airbnb e Expedia sincronizados em tempo real. Diga adeus ao overbooking para sempre.</p>
+              </div>
+              <div className="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Receita que cresce no automático</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">Precificação dinâmica que ajusta seus valores conforme a demanda da região e ocupação.</p>
+              </div>
+              <div className="p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all group">
+                <div className="w-14 h-14 rounded-xl bg-tertiary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined text-tertiary text-3xl">verified_user</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Operação limpa e legal</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">Check-in digital automatizado com envio direto para a FNRH. Segurança jurídica sem burocracia.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem + Cost Analysis */}
+        <section className="py-24 px-8 overflow-hidden bg-background">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-white">O custo invisível da desorganização</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10 rounded-3xl overflow-hidden border border-outline-variant/10">
+              {/* Fragmented */}
+              <div className="bg-surface-container p-12">
+                <h3 className="text-xl font-bold text-error mb-8 flex items-center gap-2">
+                  <span className="material-symbols-outlined">cancel</span>
+                  OPERANDO FRAGMENTADO
+                </h3>
+                <ul className="space-y-6 mb-12">
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">Comissões excessivas OTAs</span>
+                    <span className="font-mono text-error">R$ 2.400,00</span>
+                  </li>
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">Overbooking &amp; Cancelamentos</span>
+                    <span className="font-mono text-error">R$ 1.100,00</span>
+                  </li>
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">Tempo em tarefas manuais</span>
+                    <span className="font-mono text-error">R$ 1.700,00</span>
+                  </li>
+                </ul>
+                <div className="pt-6 border-t border-outline-variant/10">
+                  <p className="text-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Perda Mensal Estimada</p>
+                  <p className="text-4xl font-headline font-extrabold text-error">R$ 5.200,00</p>
+                </div>
+              </div>
+              {/* With Hotelly */}
+              <div className="bg-surface-bright p-12">
+                <h3 className="text-xl font-bold text-[#34d399] mb-8 flex items-center gap-2">
+                  <span className="material-symbols-outlined">check_circle</span>
+                  COM HOTELLY
+                </h3>
+                <ul className="space-y-6 mb-12">
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">Reservas Diretas (Sem taxas)</span>
+                    <span className="font-mono text-[#34d399]">+ R$ 3.800,00</span>
+                  </li>
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">Sincronização 100% Segura</span>
+                    <span className="font-mono text-[#34d399]">R$ 0,00 Risco</span>
+                  </li>
+                  <li className="flex justify-between items-center text-sm">
+                    <span className="text-on-surface-variant">IA Operacional 24h</span>
+                    <span className="font-mono text-[#34d399]">Incluso</span>
+                  </li>
+                </ul>
+                <div className="pt-6 border-t border-outline-variant/10">
+                  <p className="text-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Investimento Inicial</p>
+                  <p className="text-4xl font-headline font-extrabold text-[#34d399]">R$ 349,00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sales Story */}
         <section className="py-24 bg-brand-navy" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">
@@ -222,6 +322,74 @@ export default function Home() {
                 <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed">
                   O Hotelly é a sua Inteligência Ativa. Ele não apenas registra, ele age. Caça reservas através de follow-up automático e entrega o FNRH pronto para o Governo. Você recupera sua liberdade, enquanto o sistema garante que o Pix caia na conta. E no Preço de Inauguração, você entra pela metade do valor.
                 </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Concierge Interactive Demo */}
+        <section className="py-24 bg-surface-container-lowest">
+          <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+              <img alt="AI Mascot" className="w-48 h-48 rounded-full mb-8 border-4 border-primary/20 shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ7WPiFfUiTPlkloY0V0GJ8N1AY4d9CC7Lgq3HPhVvL3fzsSqIbFEVCgmvQNhzElHkKWq7WgE3W6pMNssljv6jC-VHwNHy99GLXD2Ea0XBaXzjSwG-iEm4Y8TG7xtd2jXvGxgRFivGGdVa7IVevv2zweL-ibzI2J60BeuPUp_HZ6ZRq5X7KBWIutGmeqE16eGfHUe3Cxk7x3fM_JSSGWPUnJWCMxvaIRzNYlxW6RZEu5e-7NFzqXpmgl68pAoGBCOqJ97omqKaJM"/>
+              <h2 className="text-4xl font-headline font-bold mb-6 text-white">Conheça seu novo funcionário do mês</h2>
+              <p className="text-on-surface-variant text-lg max-w-lg mb-8">Nossa IA não apenas responde, ela vende. Teste agora simulando o atendimento de um hóspede real.</p>
+            </div>
+            <div className="bg-[#111e33] rounded-3xl p-8 shadow-2xl border border-white/5 h-[500px] flex flex-col">
+              <div className="flex-1 space-y-6 overflow-y-auto mb-6 pr-4">
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-on-primary text-xs">smart_toy</span>
+                  </div>
+                  <div className="bg-surface-variant p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-white">
+                    Oi! Sou o Concierge do Hotelly. Como posso ajudar você hoje? Posso verificar disponibilidade ou tirar dúvidas sobre sua hospedagem.
+                  </div>
+                </div>
+                <div className="flex gap-4 flex-row-reverse">
+                  <div className="w-8 h-8 rounded-full bg-secondary flex-shrink-0 flex items-center justify-center text-xs font-bold text-on-secondary">HS</div>
+                  <div className="bg-primary/20 p-4 rounded-2xl rounded-tr-none text-sm leading-relaxed border border-primary/10 text-white">
+                    Vocês aceitam pets? E tem vaga para o próximo final de semana?
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-on-primary text-xs">smart_toy</span>
+                  </div>
+                  <div className="bg-surface-variant p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-white">
+                    Sim! Somos pet friendly 🐾 Para o próximo final de semana (15-17), ainda temos 2 Suítes Master disponíveis. Gostaria de ver as fotos ou prefere já garantir a reserva?
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button className="bg-surface-container-high hover:bg-surface-bright text-xs font-semibold py-3 px-2 rounded-xl border border-outline-variant/20 transition-colors text-white">Verificar disponibilidade</button>
+                <button className="bg-surface-container-high hover:bg-surface-bright text-xs font-semibold py-3 px-2 rounded-xl border border-outline-variant/20 transition-colors text-white">Fazer uma reserva</button>
+                <button className="bg-surface-container-high hover:bg-surface-bright text-xs font-semibold py-3 px-2 rounded-xl border border-outline-variant/20 transition-colors text-white">Tirar dúvida</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Pillars */}
+        <section className="py-24 px-8 bg-background">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-surface-container rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
+                <span className="material-symbols-outlined text-primary mb-6 text-4xl">grid_view</span>
+                <h3 className="text-2xl font-bold mb-4 text-white">Mapa de Quartos</h3>
+                <p className="text-on-surface-variant mb-8 flex-1">Grid interativa, Drag-and-drop e Heatmap de ocupação para gestão visual absoluta.</p>
+                <img alt="Mapa" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBhMAEFUF8Rj5sgbSvPhL6Pi7q2LP-tgO-YIMAbyPV3f6gmOC56c4Bd6godPizYRua3K2Fws3scD3VCPsArzW-aPouyEJ2rmEV2wAdXL9x924NLEfp7wfcJEpwJWJ0lggAoM5RWGv5UEIl4BuThHdd7dqxVG-RilvHNidP5WS6navWDfEdC5jDlX93oyD-o0v-PMCz_DHKwHVrzgjvL1EZZt3QRHZYcJzkMVrRfgC8_h3yPqI_wMw5FopG-a1YitUldZAyydBFw8"/>
+              </div>
+              <div className="bg-surface-container rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
+                <span className="material-symbols-outlined text-tertiary mb-6 text-4xl">payments</span>
+                <h3 className="text-2xl font-bold mb-4 text-white">Financeiro &amp; Receita</h3>
+                <p className="text-on-surface-variant mb-8 flex-1">Métricas em tempo real: RevPAR, ADR e Taxa de Ocupação integradas ao seu fluxo de caixa.</p>
+                <img alt="Financeiro" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK0m_Sc9PkAV66WXkhS6j-MTfFcHpAiRRspK1NzhuSTAi6DN66GWvVbOhiMUyl372wqvW8SrW3KlrFAWpY-OVyruuVBs7qPbcEg9flGl_0MAaIsHtKAaWaN7og0mRdNv4YmgPPuzMym7XjQJrfOnG8tW7bNMU-doNgfktI8lpZZRmDV-l7k0JjYK9pWQZZ4JdHCgzO1_REoOk5AhphL542EjveXL7e5G9K08TuwwbwzDeQT55OloSHbMB7rFk4qiMmKM6xOzx-8FE"/>
+              </div>
+              <div className="bg-surface-container rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
+                <span className="material-symbols-outlined text-primary mb-6 text-4xl">assignment_turned_in</span>
+                <h3 className="text-2xl font-bold mb-4 text-white">Operação Limpa</h3>
+                <p className="text-on-surface-variant mb-8 flex-1">Check-in Digital automatizado e envio de FNRH direto para o governo sem esforço manual.</p>
+                <img alt="Operação" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR4C9Ela2_alOHCEuk06pdmnS5By0A7hZkvw6UczbbCWNJzeMGWprQSwYY2fertjdZwPX2GkYTLXpfbevrkyTR613lGk8eh8AxG4XYjnkM_nh9Qg9kk9w3Nd8L2XNT-ZNmCkHfZPQ9EtLROPOj_7D-RwVACrH9Yo2xKedJX18MSr05NfQOEe8kMs-MqtRQOTy7d5PK21RAa5qQEN7DCvQ-srZ81VOQ3RLcWlI3LX3uO9iUsHZRBl2fhomg4JjZkibudI7LSyNk8XI"/>
               </div>
             </div>
           </div>
