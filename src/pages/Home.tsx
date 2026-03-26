@@ -430,7 +430,7 @@ export default function Home() {
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-success-subtle border-2 border-success text-success rounded-full flex items-center justify-center font-bold text-xl">3</div>
                 <h3 className="text-xl font-bold text-success mb-3 uppercase tracking-wider text-sm">A Inteligência</h3>
                 <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed">
-                  O Hotelly é a sua Inteligência Ativa. Ele não apenas registra, ele age. Caça reservas através de follow-up automático e entrega o FNRH pronto para o Governo. Você recupera sua liberdade, enquanto o sistema garante que o Pix caia na conta. E no Preço de Inauguração, você entra pela metade do valor.
+                  O Hotelly é a sua Inteligência Ativa. Ele não apenas registra, ele age. Caça reservas através de follow-up automático, sincroniza com as OTAs em tempo real e entrega o FNRH pronto para o Governo. Você recupera sua liberdade, enquanto o sistema garante que o Pix caia na conta.
                 </blockquote>
               </div>
             </div>
@@ -444,27 +444,4 @@ export default function Home() {
             </Suspense>
           </LazySection>
         </div>
-        <div id="faq" className="scroll-mt-24">
-          <LazySection minHeight="50vh">
-            <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
-              <HomeFAQ />
-            </Suspense>
-          </LazySection>
-        </div>
-      </main>
-
-      <LazySection minHeight="20vh" rootMargin="500px">
-        <Suspense fallback={null}>
-          <LazyFooter />
-        </Suspense>
-      </LazySection>
-      
-      {/* Sticky Mobile CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full p-4 bg-background/95 backdrop-blur-md border-t border-border z-50">
-        <a className="block w-full text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up" onClick={() => trackConversion('mobile_sticky')}>
-          Começar Agora
-        </a>
-      </div>
-    </div>
-  );
-}
+        <di
