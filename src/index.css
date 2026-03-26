@@ -10,6 +10,13 @@
   --color-popover: #152740;
   --color-popover-foreground: #e2e8f0;
 
+  /* Brand palette (used by Ajuda/Docs pages) */
+  --color-brand-sky: #38bdf8;
+  --color-brand-amber: #fbbf24;
+  --color-brand-navy: #0b1120;
+  --color-brand-slate: #1e293b;
+  --color-brand-offwhite: #f1f5f9;
+
   /* Brand / Primary */
   --color-primary: #3b82f6;
   --color-primary-hover: #60a5fa;
