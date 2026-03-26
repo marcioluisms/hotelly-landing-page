@@ -37,7 +37,7 @@ export default function HomePricing() {
                 className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
                 onClick={() => trackConversion('pricing_card', 'start')}
               >
-                Garantir meu atendimento
+                Começar Agora
               </a>
             </div>
 
@@ -64,7 +64,7 @@ export default function HomePricing() {
                 className="block text-center w-full py-4 rounded-xl bg-amber hover:bg-amber-hover text-amber-foreground font-bold hover:shadow-lg hover:shadow-amber/20 transition-all"
                 onClick={() => trackConversion('pricing_card', 'pro')}
               >
-                Garantir meu atendimento
+                Começar Agora
               </a>
             </div>
 
@@ -89,7 +89,7 @@ export default function HomePricing() {
                 className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
                 onClick={() => trackConversion('pricing_card', 'max')}
               >
-                Garantir meu atendimento
+                Começar Agora
               </a>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function HomePricing() {
               className="inline-block px-10 py-5 rounded-2xl bg-primary hover:bg-primary-hover text-primary-foreground font-bold text-lg hover:shadow-xl hover:shadow-primary/20 transition-all"
               onClick={() => trackConversion('pricing_bottom_cta')}
             >
-              Garantir meu atendimento
+              Começar Agora
             </a>
             <p className="text-muted-foreground text-sm mt-3">Atendimento gratuito · sem compromisso</p>
           </div>
