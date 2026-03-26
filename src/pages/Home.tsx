@@ -136,7 +136,7 @@ export default function Home() {
         </section>
 
         {/* Assistant CTA */}
-        <section className="py-20 bg-card">
+        <section className="py-20 bg-background">
           <div className="max-w-3xl mx-auto px-8 text-center">
             <div className="w-16 h-16 rounded-2xl bg-info-subtle flex items-center justify-center mx-auto mb-6">
               <span className="material-symbols-outlined text-primary text-3xl">forum</span>
