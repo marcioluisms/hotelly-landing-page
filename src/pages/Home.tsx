@@ -73,23 +73,10 @@ export default function Home() {
                   O Hotelly responde no WhatsApp às 23h, confirma a reserva, cobra o pagamento e envia o FNRH para o governo — enquanto você dorme. WhatsApp, site, Booking e Airbnb em um só lugar.
               </p>
               <div className="flex flex-col items-start gap-3">
-                <a
-                  href="#planos"
-                  className="w-full sm:w-auto text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20"
-                  onClick={() => trackConversion('hero')}
-                >
-                  Começar Agora →
-                </a>
-                <a
-                  href="https://wa.me/5524992021693?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20Hotelly%20antes%20de%20assinar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => trackConversion('hero_secondary')}
-                >
-                  Prefere conversar antes? Fale com o fundador.
-                </a>
-                <p className="text-xs text-muted-foreground">Sem fidelidade. Cancele quando quiser.</p>
+                <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
+                  🚀 Lançamento em Breve
+                </div>
+                <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
               </div>
             </div>
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
@@ -148,131 +135,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Problem + Cost Analysis */}
-        <section className="py-24 px-8 overflow-hidden bg-background">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-foreground">Quanto custa uma reserva que não chegou?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10 rounded-3xl overflow-hidden border border-border">
-              {/* Fragmented */}
-              <div className="bg-card p-12">
-                <h3 className="text-xl font-bold text-destructive mb-8 flex items-center gap-2">
-                  <span className="material-symbols-outlined">cancel</span>
-                  OPERANDO FRAGMENTADO
-                </h3>
-                <ul className="space-y-6 mb-12">
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Comissões excessivas OTAs</span>
-                    <span className="font-mono text-destructive">R$ 2.400,00</span>
-                  </li>
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Overbooking &amp; Cancelamentos</span>
-                    <span className="font-mono text-destructive">R$ 1.100,00</span>
-                  </li>
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Tempo em tarefas manuais</span>
-                    <span className="font-mono text-destructive">R$ 1.700,00</span>
-                  </li>
-                </ul>
-                <div className="pt-6 border-t border-border">
-                  <p className="text-label text-xs uppercase tracking-widest text-muted-foreground mb-2">Perda Mensal Estimada</p>
-                  <p className="text-4xl font-headline font-extrabold text-destructive">R$ 5.200,00</p>
-                </div>
-              </div>
-              {/* With Hotelly */}
-              <div className="bg-popover p-12">
-                <h3 className="text-xl font-bold text-success mb-8 flex items-center gap-2">
-                  <span className="material-symbols-outlined">check_circle</span>
-                  COM HOTELLY
-                </h3>
-                <ul className="space-y-6 mb-12">
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Reservas Diretas (Sem taxas)</span>
-                    <span className="font-mono text-success">+ R$ 3.800,00</span>
-                  </li>
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Sincronização 100% Segura</span>
-                    <span className="font-mono text-success">R$ 0,00 Risco</span>
-                  </li>
-                  <li className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">IA Operacional 24h</span>
-                    <span className="font-mono text-success">Incluso</span>
-                  </li>
-                </ul>
-                <div className="pt-6 border-t border-border">
-                  <p className="text-label text-xs uppercase tracking-widest text-muted-foreground mb-2">Investimento Inicial</p>
-                  <p className="text-4xl font-headline font-extrabold text-success">R$ 349,00</p>
-                </div>
-              </div>
+        {/* Assistant CTA */}
+        <section className="py-20 bg-card">
+          <div className="max-w-3xl mx-auto px-8 text-center">
+            <div className="w-16 h-16 rounded-2xl bg-info-subtle flex items-center justify-center mx-auto mb-6">
+              <span className="material-symbols-outlined text-primary text-3xl">forum</span>
             </div>
-          </div>
-        </section>
-
-        {/* AI Concierge Interactive Demo */}
-        <section className="py-24 bg-card">
-          <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <img alt="Concierge Virtual do Hotelly" className="w-48 h-48 rounded-full mb-8 border-4 border-primary/20 shadow-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ7WPiFfUiTPlkloY0V0GJ8N1AY4d9CC7Lgq3HPhVvL3fzsSqIbFEVCgmvQNhzElHkKWq7WgE3W6pMNssljv6jC-VHwNHy99GLXD2Ea0XBaXzjSwG-iEm4Y8TG7xtd2jXvGxgRFivGGdVa7IVevv2zweL-ibzI2J60BeuPUp_HZ6ZRq5X7KBWIutGmeqE16eGfHUe3Cxk7x3fM_JSSGWPUnJWCMxvaIRzNYlxW6RZEu5e-7NFzqXpmgl68pAoGBCOqJ97omqKaJM"/>
-              <h2 className="text-4xl font-headline font-bold mb-6 text-foreground">Veja o Concierge em ação</h2>
-              <p className="text-muted-foreground text-lg max-w-lg mb-8">Nossa IA não apenas responde, ela vende. Teste agora simulando o atendimento de um hóspede real.</p>
-            </div>
-            <div className="bg-popover rounded-3xl p-8 shadow-2xl border border-border h-[500px] flex flex-col">
-              <div className="flex-1 space-y-6 overflow-y-auto mb-6 pr-4">
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-primary-foreground text-xs">smart_toy</span>
-                  </div>
-                  <div className="bg-popover p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-foreground">
-                    Oi! Sou o Concierge do Hotelly. Como posso ajudar você hoje? Posso verificar disponibilidade ou tirar dúvidas sobre sua hospedagem.
-                  </div>
-                </div>
-                <div className="flex gap-4 flex-row-reverse">
-                  <div className="w-8 h-8 rounded-full bg-secondary flex-shrink-0 flex items-center justify-center text-xs font-bold text-on-secondary">HS</div>
-                  <div className="bg-info-subtle p-4 rounded-2xl rounded-tr-none text-sm leading-relaxed border border-primary/10 text-foreground">
-                    Vocês aceitam pets? E tem vaga para o próximo final de semana?
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-primary-foreground text-xs">smart_toy</span>
-                  </div>
-                  <div className="bg-popover p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-foreground">
-                    Sim! Somos pet friendly 🐾 Para o próximo final de semana (15-17), ainda temos 2 Suítes Master disponíveis. Gostaria de ver as fotos ou prefere já garantir a reserva?
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Verificar disponibilidade' })}>Verificar disponibilidade</button>
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Fazer uma reserva' })}>Fazer uma reserva</button>
-                <button className="bg-popover hover:bg-popover text-xs font-semibold py-3 px-2 rounded-xl border border-border transition-colors text-foreground" onClick={() => trackEvent('mascote_demo_click', { button_text: 'Tirar dúvida' })}>Tirar dúvida</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Feature Pillars */}
-        <section className="py-24 px-8 bg-background">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-16 text-center text-foreground">Tudo que sua hospedagem precisa, num só lugar</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
-                <span className="material-symbols-outlined text-primary mb-6 text-4xl">grid_view</span>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Mapa de Quartos</h3>
-                <p className="text-muted-foreground mb-8 flex-1">Grid interativa, Drag-and-drop e Heatmap de ocupação para gestão visual absoluta.</p>
-                <img alt="Mapa de quartos do Hotelly com controle visual de disponibilidade" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBhMAEFUF8Rj5sgbSvPhL6Pi7q2LP-tgO-YIMAbyPV3f6gmOC56c4Bd6godPizYRua3K2Fws3scD3VCPsArzW-aPouyEJ2rmEV2wAdXL9x924NLEfp7wfcJEpwJWJ0lggAoM5RWGv5UEIl4BuThHdd7dqxVG-RilvHNidP5WS6navWDfEdC5jDlX93oyD-o0v-PMCz_DHKwHVrzgjvL1EZZt3QRHZYcJzkMVrRfgC8_h3yPqI_wMw5FopG-a1YitUldZAyydBFw8"/>
-              </div>
-              <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
-                <span className="material-symbols-outlined text-amber mb-6 text-4xl">payments</span>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Financeiro &amp; Receita</h3>
-                <p className="text-muted-foreground mb-8 flex-1">Métricas em tempo real: RevPAR, ADR e Taxa de Ocupação integradas ao seu fluxo de caixa.</p>
-                <img alt="Dashboard financeiro com relatórios de receita por canal" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK0m_Sc9PkAV66WXkhS6j-MTfFcHpAiRRspK1NzhuSTAi6DN66GWvVbOhiMUyl372wqvW8SrW3KlrFAWpY-OVyruuVBs7qPbcEg9flGl_0MAaIsHtKAaWaN7og0mRdNv4YmgPPuzMym7XjQJrfOnG8tW7bNMU-doNgfktI8lpZZRmDV-l7k0JjYK9pWQZZ4JdHCgzO1_REoOk5AhphL542EjveXL7e5G9K08TuwwbwzDeQT55OloSHbMB7rFk4qiMmKM6xOzx-8FE"/>
-              </div>
-              <div className="bg-card rounded-3xl p-10 flex flex-col group transition-transform hover:-translate-y-2">
-                <span className="material-symbols-outlined text-primary mb-6 text-4xl">assignment_turned_in</span>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Operação Limpa</h3>
-                <p className="text-muted-foreground mb-8 flex-1">Check-in Digital automatizado e envio de FNRH direto para o governo sem esforço manual.</p>
-                <img alt="Check-in digital pelo WhatsApp com FNRH automático" className="rounded-xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR4C9Ela2_alOHCEuk06pdmnS5By0A7hZkvw6UczbbCWNJzeMGWprQSwYY2fertjdZwPX2GkYTLXpfbevrkyTR613lGk8eh8AxG4XYjnkM_nh9Qg9kk9w3Nd8L2XNT-ZNmCkHfZPQ9EtLROPOj_7D-RwVACrH9Yo2xKedJX18MSr05NfQOEe8kMs-MqtRQOTy7d5PK21RAa5qQEN7DCvQ-srZ81VOQ3RLcWlI3LX3uO9iUsHZRBl2fhomg4JjZkibudI7LSyNk8XI"/>
-              </div>
-            </div>
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold mb-4 text-foreground">Ficou com dúvidas sobre o Hotelly?</h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Nosso assistente está no canto da tela e pode te ajudar agora mesmo. Clique no ícone e pergunte o que quiser sobre planos, funcionalidades ou como funciona a implantação.</p>
           </div>
         </section>
 
@@ -423,7 +293,7 @@ export default function Home() {
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-destructive/20 border-2 border-destructive text-destructive rounded-full flex items-center justify-center font-bold text-xl">1</div>
                 <h3 className="text-xl font-bold text-destructive mb-3 uppercase tracking-wider text-sm">O Fardo</h3>
                 <blockquote className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  Você se sente escravo da sua própria pousada? Paga por sistemas que te obrigam a digitar as fichas de hóspedes manualmente e passar horas fazendo follow-up no WhatsApp?
+                  Você se sente escravo da sua própria hospedagem? Paga por sistemas que te obrigam a digitar as fichas de hóspedes manualmente e passar horas fazendo follow-up no WhatsApp?
                 </blockquote>
               </div>
               

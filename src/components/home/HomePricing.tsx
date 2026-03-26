@@ -1,8 +1,6 @@
 import React from 'react';
-import { useAnalytics } from '../../hooks/useAnalytics';
 
 export default function HomePricing() {
-  const { trackConversion } = useAnalytics();
   return (
     <>
       {/* Pricing Table */}
@@ -10,93 +8,83 @@ export default function HomePricing() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-headline font-bold mb-4 text-foreground">Planos e Preços</h2>
-            <p className="text-muted-foreground">Cancele quando quiser. Sem taxas de instalação.</p>
+            <p className="text-muted-foreground">Onboarding assistido pela equipe Hotelly. Sem fidelidade.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Start */}
             <div className="p-10 rounded-3xl bg-popover border border-border flex flex-col hover:-translate-y-2 transition-transform">
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Start</h3>
-              <p className="text-sm text-muted-foreground mb-4">Para hospedagens de até 10 UH dando os primeiros passos no digital</p>
+              <p className="text-sm text-muted-foreground mb-4">Organizar sua operação e parar de perder reservas</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 349</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <ul className="space-y-4 mb-10 flex-1">
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Até 10 unidades habitacionais</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Concierge IA no WhatsApp (ilimitado)</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Copilot IA no painel (ilimitado)</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Mapa de Quartos interativo</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Proteção contra overbooking</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Concierge IA no WhatsApp (até 300 msgs/mês)</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Copilot IA no painel (até 30 consultas/mês)</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Mapa de Quartos interativo (Grade de Ocupação)</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Proteção total contra overbooking</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Check-in Digital + FNRH automático (Serpro)</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Motor de Reservas (botão no seu site)</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Painel financeiro básico</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Suporte via e-mail</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Painel financeiro + Mercado Pago integrado</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Governança de limpeza (Dashboard Maestro)</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>CRM de hóspedes</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Até 5 usuários · Suporte via chat</li>
               </ul>
-              <a
-                href="https://adm.hotelly.ia.br/sign-up?plan=start"
-                className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
-                onClick={() => trackConversion('pricing_card', 'start')}
-              >
-                Começar com o Start →
-              </a>
+              <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
+                🚀 Lançamento em Breve
+              </div>
             </div>
 
             {/* Pro */}
             <div className="p-10 rounded-3xl bg-popover border-2 border-amber relative shadow-xl shadow-amber/10 flex flex-col scale-105 z-10 transition-transform hover:scale-110">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber text-amber-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Mais Popular</div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Pro</h3>
-              <p className="text-sm text-muted-foreground mb-4">Para hospedagens de até 30 UH que querem precificar melhor e crescer</p>
+              <p className="text-sm text-muted-foreground mb-4">Profissionalizar e maximizar receita com IA completa</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 549</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <ul className="space-y-4 mb-10 flex-1 text-sm">
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Tudo do Start</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Até 30 unidades habitacionais</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Precificação dinâmica automática</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Calendário de preços (120 dias)</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Relatórios avançados (RevPAR, ADR, ocupação)</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Gestão financeira completa</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Suporte prioritário</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Concierge IA ilimitado + Copilot ilimitado</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Precificação dinâmica automática (Revenue Management)</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Calendário de preços para os próximos 120 dias</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Relatórios avançados: RevPAR, ADR, taxa de ocupação</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Políticas avançadas: pacotes sazonais, estadia mínima</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Extras e frigobar completos</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Até 15 usuários · Suporte prioritário</li>
               </ul>
-              <a
-                href="https://adm.hotelly.ia.br/sign-up?plan=pro"
-                className="block text-center w-full py-4 rounded-xl bg-amber hover:bg-amber-hover text-amber-foreground font-bold hover:shadow-lg hover:shadow-amber/20 transition-all"
-                onClick={() => trackConversion('pricing_card', 'pro')}
-              >
-                Começar com o Pro →
-              </a>
+              <div className="block text-center w-full py-4 rounded-xl bg-amber/50 text-amber-foreground font-bold cursor-default select-none">
+                🚀 Lançamento em Breve
+              </div>
             </div>
 
             {/* Max */}
             <div className="p-10 rounded-3xl bg-popover border border-border flex flex-col hover:-translate-y-2 transition-transform">
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Max</h3>
-              <p className="text-sm text-muted-foreground mb-4">Para hospedagens que já usam OTAs e precisam de uma central única</p>
+              <p className="text-sm text-muted-foreground mb-4">Distribuir em OTAs e gerenciar tudo em um só lugar</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 849</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <ul className="space-y-4 mb-10 flex-1">
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Tudo do Pro</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Unidades ilimitadas</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Channel manager (Booking, Airbnb, Expedia)</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Sincronização de disponibilidade e preços em tempo real</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Tarifas diferenciadas por canal</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Suporte prioritário 24h</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Hub de OTAs: Booking.com, Airbnb, Expedia e mais</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Sincronização de disponibilidade e tarifas em tempo real</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Relatórios consolidados por canal de origem</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Zero overbooking entre plataformas — garantido</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Usuários ilimitados · Suporte dedicado</li>
               </ul>
-              <a
-                href="https://adm.hotelly.ia.br/sign-up?plan=max"
-                className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
-                onClick={() => trackConversion('pricing_card', 'max')}
-              >
-                Começar com o Max →
-              </a>
+              <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
+                🚀 Lançamento em Breve
+              </div>
             </div>
           </div>
 
           {/* Friction reducer */}
           <div className="text-center mt-10">
-            <p className="text-muted-foreground text-sm">Sem fidelidade. Cancele quando quiser.</p>
+            <p className="text-muted-foreground text-sm">Onboarding assistido pela equipe Hotelly. Sem fidelidade. Cancele quando quiser.</p>
           </div>
         </div>
       </section>
