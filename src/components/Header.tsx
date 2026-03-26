@@ -36,12 +36,12 @@ export default function Header() {
           <Link className="hover:text-primary transition-colors" to="/ajuda">Ajuda</Link>
         </nav>
         <div className="flex items-center gap-4">
-          <a className="text-center block border border-border-strong bg-card/50 text-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg hover:bg-popover transition-all text-xs sm:text-sm md:text-base" href="https://adm.hotelly.ia.br/sign-in">
+          <span className="text-center block border border-border bg-card/20 text-muted-foreground/50 font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-not-allowed select-none">
             Entrar
-          </a>
-          <a className="text-center bg-primary hover:bg-primary-hover text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg transition-all text-xs sm:text-sm md:text-base shadow-lg shadow-primary/20" href="https://adm.hotelly.ia.br/sign-up" onClick={() => trackConversion('header')}>
-            Começar Agora
-          </a>
+          </span>
+          <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-default select-none opacity-80">
+            🚀 Lançamento em Breve
+          </div>
         </div>
       </div>
     </header>
