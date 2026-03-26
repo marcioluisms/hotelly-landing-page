@@ -67,18 +67,29 @@ export default function Home() {
             <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
               <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary font-label text-sm font-semibold tracking-wider mb-6">INTELIGÊNCIA HOTELEIRA 24H</span>
               <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-foreground leading-tight tracking-tight mb-8">
-                  Sua hospedagem vendendo enquanto você dorme
+                  Quantas reservas você perdeu dormindo esta semana?
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                  Todas as reservas, WhatsApp, site, Booking, Airbnb, chegam, se confirmam e se pagam em um lugar só. Com IA que trabalha 24h.
+                  O Hotelly responde no WhatsApp às 23h, confirma a reserva, cobra o pagamento e envia o FNRH para o governo — enquanto você dorme. WhatsApp, site, Booking e Airbnb em um só lugar.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://adm.hotelly.ia.br/sign-up" className="text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20" onClick={() => trackConversion('hero')}>
-                    Começar Agora
+              <div className="flex flex-col items-start gap-3">
+                <a
+                  href="#planos"
+                  className="w-full sm:w-auto text-center bg-primary hover:bg-primary-hover text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg shadow-primary/20"
+                  onClick={() => trackConversion('hero')}
+                >
+                  Começar Agora →
                 </a>
-                <a href="#funcionalidades" className="text-center block border border-border-strong bg-card/50 text-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-popover transition-all">
-                    Como funciona
+                <a
+                  href="https://wa.me/5524992021693?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20Hotelly%20antes%20de%20assinar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => trackConversion('hero_secondary')}
+                >
+                  Prefere conversar antes? Fale com o fundador.
                 </a>
+                <p className="text-xs text-muted-foreground">Sem fidelidade. Cancele quando quiser.</p>
               </div>
             </div>
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
@@ -444,4 +455,20 @@ export default function Home() {
             </Suspense>
           </LazySection>
         </div>
-        <di
+        <div id="faq" className="scroll-mt-24">
+          <LazySection minHeight="40vh">
+            <Suspense fallback={<div className="h-[40vh] bg-background"></div>}>
+              <HomeFAQ />
+            </Suspense>
+          </LazySection>
+        </div>
+      </main>
+
+      <LazySection minHeight="20vh">
+        <Suspense fallback={<div className="h-[20vh] bg-background"></div>}>
+          <LazyFooter />
+        </Suspense>
+      </LazySection>
+    </div>
+  );
+}

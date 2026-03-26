@@ -33,11 +33,11 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Suporte via e-mail</li>
               </ul>
               <a
-                href="https://adm.hotelly.ia.br/sign-up"
+                href="https://adm.hotelly.ia.br/sign-up?plan=start"
                 className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
                 onClick={() => trackConversion('pricing_card', 'start')}
               >
-                Garantir meu atendimento
+                Começar com o Start →
               </a>
             </div>
 
@@ -60,11 +60,11 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Suporte prioritário</li>
               </ul>
               <a
-                href="https://adm.hotelly.ia.br/sign-up"
+                href="https://adm.hotelly.ia.br/sign-up?plan=pro"
                 className="block text-center w-full py-4 rounded-xl bg-amber hover:bg-amber-hover text-amber-foreground font-bold hover:shadow-lg hover:shadow-amber/20 transition-all"
                 onClick={() => trackConversion('pricing_card', 'pro')}
               >
-                Garantir meu atendimento
+                Começar com o Pro →
               </a>
             </div>
 
@@ -85,25 +85,18 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Suporte prioritário 24h</li>
               </ul>
               <a
-                href="https://adm.hotelly.ia.br/sign-up"
+                href="https://adm.hotelly.ia.br/sign-up?plan=max"
                 className="block text-center w-full py-4 rounded-xl border border-border-strong font-bold hover:bg-popover text-foreground transition-colors"
                 onClick={() => trackConversion('pricing_card', 'max')}
               >
-                Garantir meu atendimento
+                Começar com o Max →
               </a>
             </div>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <a
-              href="https://adm.hotelly.ia.br/sign-up"
-              className="inline-block px-10 py-5 rounded-2xl bg-primary hover:bg-primary-hover text-primary-foreground font-bold text-lg hover:shadow-xl hover:shadow-primary/20 transition-all"
-              onClick={() => trackConversion('pricing_bottom_cta')}
-            >
-              Garantir meu atendimento
-            </a>
-            <p className="text-muted-foreground text-sm mt-3">Atendimento gratuito · sem compromisso</p>
+          {/* Friction reducer */}
+          <div className="text-center mt-10">
+            <p className="text-muted-foreground text-sm">Sem fidelidade. Cancele quando quiser.</p>
           </div>
         </div>
       </section>
