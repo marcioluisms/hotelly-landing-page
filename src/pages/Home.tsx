@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="material-symbols-outlined text-amber">smart_toy</span>
-                    <p className="text-sm font-semibold text-foreground">Reserva Confirmada via IA</p>
+                    <p className="text-sm font-semibold text-foreground">Reserva Confirmada</p>
                   </div>
                   <p className="text-xs text-muted-foreground">O Concierge Hotelly acaba de fechar uma reserva de 3 noites via WhatsApp.</p>
                 </div>
