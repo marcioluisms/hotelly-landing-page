@@ -20,8 +20,8 @@ export default function HomePricing() {
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <ul className="space-y-4 mb-10 flex-1">
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Concierge IA no WhatsApp (até 300 msgs/mês)</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Copilot IA no painel (até 30 consultas/mês)</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Concierge IA no WhatsApp</li>
+                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Copilot IA no painel</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Mapa de Quartos interativo (Grade de Ocupação)</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Proteção total contra overbooking</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Check-in Digital + FNRH automático (Serpro)</li>
