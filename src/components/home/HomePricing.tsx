@@ -47,8 +47,7 @@ export default function HomePricing() {
               </div>
               <ul className="space-y-4 mb-10 flex-1 text-sm">
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Tudo do Start</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Concierge IA ilimitado + Copilot ilimitado</li>
-                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Precificação dinâmica automática (Revenue Management)</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Precificação dinâmica (Revenue Management)</li>
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Calendário de preços para os próximos 120 dias</li>
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Relatórios avançados: RevPAR, ADR, taxa de ocupação</li>
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Políticas avançadas: pacotes sazonais, estadia mínima</li>
