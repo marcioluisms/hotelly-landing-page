@@ -4,7 +4,7 @@ import { useAnalytics } from '../../hooks/useAnalytics';
 export default function HomeFAQ() {
   const { trackFAQExpand } = useAnalytics();
   return (
-    <section className="py-24 bg-card border-t border-border">
+    <section className="py-24 bg-background border-t border-border">
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Perguntas Frequentes</h2>
         <div className="space-y-4">
