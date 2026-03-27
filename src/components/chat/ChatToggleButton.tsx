@@ -34,7 +34,7 @@ export default function ChatToggleButton({ isOpen, onClick, hasUnread }: ChatTog
       <img src="/icon.webp" alt="Hotelly" className="h-full w-full rounded-full object-cover" width="105" height="105" />
       {hasUnread && (
         <span className="absolute -top-1 -right-1 z-10 flex h-3.5 w-3.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-coral opacity-75" />
+          <span className="absolute inset-0 animate-ping rounded-full bg-brand-coral opacity-75" />
           <span className="relative inline-flex h-3.5 w-3.5 rounded-full bg-brand-coral" />
         </span>
       )}
