@@ -79,6 +79,18 @@ export default function HomeFAQ() {
               Sim. O Hotelly integra com a API do Serpro e envia a Ficha Nacional de Registro de Hóspedes automaticamente após o check-in digital, sem intervenção manual.
             </div>
           </details>
+
+          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+            <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Qual plano é o certo para minha hospedagem?')}>
+              <h3 className="text-base font-bold text-inherit m-0 p-0">Qual plano é o certo para minha hospedagem?</h3>
+              <span className="transition group-open:rotate-180 text-primary">
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+              </span>
+            </summary>
+            <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
+              Depende do seu momento. Se você ainda gerencia tudo no WhatsApp e planilha, o <strong className="text-foreground">Start</strong> resolve o essencial: IA 24h, mapa de quartos, check-in digital e FNRH — tudo por R$ 349/mês. Se você quer precificação automática e relatórios para crescer com mais inteligência, o <strong className="text-foreground">Pro</strong> é o próximo passo. E se você já vende no Booking, Airbnb ou Expedia e quer unificar tudo num painel só, o <strong className="text-foreground">Max</strong> é feito para você.
+            </div>
+          </details>
         </div>
       </div>
     </section>

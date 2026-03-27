@@ -30,7 +30,7 @@ São limites de segurança. O **piso** é o preço mínimo — o motor nunca sug
 
 ## Preciso usar o preço dinâmico?
 
-Não. Se você prefere definir preços manualmente no calendário de tarifas, funciona perfeitamente. O preço dinâmico é uma ferramenta opcional para quem quer otimizar receita automaticamente.
+Não. Se você prefere definir preços manualmente no calendário de tarifas, funciona perfeitamente. O preço dinâmico é uma ferramenta opcional para quem quer receber sugestões de otimização baseadas na ocupação e no seu calendário de eventos.
 
 ## Como funciona o preço de crianças?
 

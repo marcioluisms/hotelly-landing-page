@@ -6,7 +6,7 @@ nível: básico
 tipo: conceito
 helpArticleId: "faq-suporte-conta"
 última_revisão: 2026-03-20
-descrição: "Perguntas sobre suporte e conta: como abrir ticket, alterar senha, trial gratuito e mais."
+descrição: "Perguntas sobre suporte e conta: como abrir ticket, alterar senha, planos e mais."
 revisado_por_engenharia: true
 ---
 
@@ -18,7 +18,7 @@ No menu, clique em **Atendimento** > **Suporte** e depois clique em **"Novo tick
 
 ## Qual o tempo de resposta do suporte?
 
-Durante a fase de Parceiros Fundadores, o canal é direto com o fundador — o tempo de resposta costuma ser rápido, geralmente no mesmo dia. O SLA formal será definido para o lançamento público.
+Na fase atual (clientes VIP), o canal é direto com o fundador — o tempo de resposta costuma ser rápido, geralmente no mesmo dia. O SLA formal será definido para o lançamento público.
 
 ## Posso usar o Copilot em vez de abrir ticket?
 
@@ -32,9 +32,9 @@ No menu do usuário (canto superior direito), acesse **Minha Conta** e use a op�
 
 Entre em contato com o suporte. A alteração de email é feita pela equipe por questões de segurança, já que o email é usado como identificador de acesso.
 
-## O Hotelly tem período de teste gratuito?
+## Como funciona a entrada no Hotelly?
 
-Sim. O Free Trial dura 14 dias, sem necessidade de cartão de crédito. O onboarding é assistido pela equipe Hotelly — não é self-service.
+O Hotelly opera por modelo VIP: não há free trial público nem auto-cadastro ativo. O processo começa com uma conversa com o fundador, que conduz o onboarding diretamente. Isso garante que cada hospedagem seja configurada corretamente antes de operar.
 
 ## Posso ter mais de uma propriedade na mesma conta?
 
