@@ -12,6 +12,7 @@ const Docs = React.lazy(() => import('./pages/Docs'));
 const DocsCategory = React.lazy(() => import('./pages/DocsCategory'));
 const DocsArticle = React.lazy(() => import('./pages/DocsArticle'));
 
+const ThankYou = React.lazy(() => import('./pages/ThankYou'));
 const ChatWidget = React.lazy(() => import('./components/chat/ChatWidget'));
 
 function ScrollToTop() {
@@ -62,6 +63,7 @@ export default function App() {
             <Route path="/ajuda" element={<Docs />} />
             <Route path="/ajuda/:categoria" element={<DocsCategory />} />
             <Route path="/ajuda/:categoria/:slug" element={<DocsArticle />} />
+            <Route path="/obrigado" element={<ThankYou />} />
             <Route path="/termos" element={<Termos />} />
             <Route path="/privacidade" element={<Privacidade />} />
           </Routes>

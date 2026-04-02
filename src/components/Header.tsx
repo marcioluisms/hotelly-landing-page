@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAnalytics } from '../hooks/useAnalytics';
 
-export default function Header() {
+interface HeaderProps {
+  onCtaClick?: () => void;
+}
+
+export default function Header({ onCtaClick }: HeaderProps) {
   const { trackConversion } = useAnalytics();
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -39,9 +43,18 @@ export default function Header() {
           <span className="text-center block border border-border bg-card/20 text-muted-foreground/50 font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-not-allowed select-none">
             Entrar
           </span>
-          <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-default select-none opacity-80">
-            🚀 Lançamento em Breve
-          </div>
+          {onCtaClick ? (
+            <button
+              onClick={onCtaClick}
+              className="text-center bg-primary text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base hover:bg-primary/90 transition-colors cursor-pointer"
+            >
+              Assinar agora
+            </button>
+          ) : (
+            <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-default select-none opacity-80">
+              🚀 Lançamento em Breve
+            </div>
+          )}
         </div>
       </div>
     </header>

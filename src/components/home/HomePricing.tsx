@@ -1,6 +1,11 @@
 import React from 'react';
+import type { PlanSlug } from '../checkout/checkout.types';
 
-export default function HomePricing() {
+interface HomePricingProps {
+  onPlanSelect?: (plan: PlanSlug) => void;
+}
+
+export default function HomePricing({ onPlanSelect }: HomePricingProps) {
   return (
     <>
       {/* Pricing Table */}
@@ -31,9 +36,18 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>CRM de hóspedes</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Até 5 usuários · Suporte via chat</li>
               </ul>
-              <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
-                🚀 Lançamento em Breve
-              </div>
+              {onPlanSelect ? (
+                <button
+                  onClick={() => onPlanSelect('starter')}
+                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                >
+                  Assinar Hotelly Start →
+                </button>
+              ) : (
+                <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
+                  🚀 Lançamento em Breve
+                </div>
+              )}
             </div>
 
             {/* Pro */}
@@ -54,9 +68,18 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Extras e frigobar completos</li>
                 <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-amber" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Até 15 usuários · Suporte prioritário</li>
               </ul>
-              <div className="block text-center w-full py-4 rounded-xl bg-amber/50 text-amber-foreground font-bold cursor-default select-none">
-                🚀 Lançamento em Breve
-              </div>
+              {onPlanSelect ? (
+                <button
+                  onClick={() => onPlanSelect('professional')}
+                  className="block text-center w-full py-4 rounded-xl bg-amber text-amber-foreground font-bold hover:bg-amber/90 transition-colors cursor-pointer"
+                >
+                  Assinar Hotelly Pro →
+                </button>
+              ) : (
+                <div className="block text-center w-full py-4 rounded-xl bg-amber/50 text-amber-foreground font-bold cursor-default select-none">
+                  🚀 Lançamento em Breve
+                </div>
+              )}
             </div>
 
             {/* Max */}
@@ -75,9 +98,18 @@ export default function HomePricing() {
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Zero overbooking entre plataformas — garantido</li>
                 <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Usuários ilimitados · Suporte dedicado</li>
               </ul>
-              <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
-                🚀 Lançamento em Breve
-              </div>
+              {onPlanSelect ? (
+                <button
+                  onClick={() => onPlanSelect('enterprise')}
+                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                >
+                  Assinar Hotelly Max →
+                </button>
+              ) : (
+                <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
+                  🚀 Lançamento em Breve
+                </div>
+              )}
             </div>
           </div>
 

@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAnalytics } from '../hooks/useAnalytics';
 
-export default function Footer() {
+interface FooterProps {
+  onCtaClick?: () => void;
+}
+
+export default function Footer({ onCtaClick }: FooterProps) {
   const { trackConversion } = useAnalytics();
   return (
     <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
@@ -15,9 +19,18 @@ export default function Footer() {
             <p className="text-muted-foreground max-w-sm">Vendas Diretas. Gestão Completa.</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            <div className="text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
-              🚀 Lançamento em Breve
-            </div>
+            {onCtaClick ? (
+              <button
+                onClick={onCtaClick}
+                className="text-center bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors cursor-pointer"
+              >
+                Começar agora →
+              </button>
+            ) : (
+              <div className="text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
+                🚀 Lançamento em Breve
+              </div>
+            )}
           </div>
         </div>
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground gap-4">

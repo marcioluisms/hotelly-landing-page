@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import LazySection from '../components/LazySection';
 import { useAnalytics } from '../hooks/useAnalytics';
+import { useCheckoutModal } from '../hooks/useCheckoutModal';
+import CheckoutConfirmModal from '../components/checkout/CheckoutConfirmModal';
+import CheckoutModalContent from '../components/checkout/CheckoutModalContent';
 
 const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
 const HomeFAQ = React.lazy(() => import('../components/home/HomeFAQ'));
@@ -10,6 +13,7 @@ const LazyFooter = React.lazy(() => import('../components/Footer'));
 
 export default function Home() {
   const { trackEvent, trackConversion, trackSectionView } = useAnalytics();
+  const checkout = useCheckoutModal();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -58,7 +62,7 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground antialiased font-sans selection:bg-brand-sky/30">
-      <Header />
+      <Header onCtaClick={checkout.isEnabled ? () => checkout.openModal('starter', 'header') : undefined} />
 
       <main>
         {/* Navbar padding offset added to Hero */}
@@ -73,10 +77,23 @@ export default function Home() {
                   O Hotelly responde no WhatsApp às 23h, confirma a reserva, cobra o pagamento e envia o FNRH para o governo — enquanto você dorme. WhatsApp, site, Booking e Airbnb em um só lugar.
               </p>
               <div className="flex flex-col items-start gap-3">
-                <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
-                  🚀 Lançamento em Breve
-                </div>
-                <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
+                {checkout.isEnabled ? (
+                  <button
+                    onClick={() => checkout.openModal('starter', 'hero')}
+                    className="w-full sm:w-auto text-center bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors cursor-pointer"
+                  >
+                    Começar agora →
+                  </button>
+                ) : (
+                  <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
+                    🚀 Lançamento em Breve
+                  </div>
+                )}
+                <p className="text-xs text-muted-foreground">
+                  {checkout.isEnabled
+                    ? 'Onboarding assistido pela equipe Hotelly. Sem fidelidade.'
+                    : 'Estamos finalizando os últimos detalhes. Em breve você poderá começar.'}
+                </p>
               </div>
             </div>
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
@@ -321,7 +338,7 @@ export default function Home() {
         <div id="planos" className="scroll-mt-24">
           <LazySection minHeight="50vh">
             <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
-              <HomePricing />
+              <HomePricing onPlanSelect={checkout.isEnabled ? (plan) => checkout.openModal(plan, 'pricing') : undefined} />
             </Suspense>
           </LazySection>
         </div>
@@ -336,9 +353,23 @@ export default function Home() {
 
       <LazySection minHeight="20vh">
         <Suspense fallback={<div className="h-[20vh] bg-background"></div>}>
-          <LazyFooter />
+          <LazyFooter onCtaClick={checkout.isEnabled ? () => checkout.openModal('starter', 'footer') : undefined} />
         </Suspense>
       </LazySection>
+
+      {/* Checkout confirmation modal */}
+      <CheckoutConfirmModal
+        isOpen={checkout.isOpen}
+        onClose={() => checkout.closeModal('backdrop')}
+      >
+        <CheckoutModalContent
+          plan={checkout.plan}
+          status={checkout.status}
+          errorMessage={checkout.errorMessage}
+          onSubmit={checkout.submitCheckout}
+          onClose={() => checkout.closeModal('button')}
+        />
+      </CheckoutConfirmModal>
     </div>
   );
 }
