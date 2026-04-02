@@ -1114,7 +1114,7 @@ in_house        → checked_out
 
 | Valor backend | Descricao |
 |---|---|
-| trialing | Trial gratuito |
+| trialing | Período de avaliação (não utilizado) |
 | active | Assinatura ativa |
 | past_due | Pagamento atrasado |
 | canceled | Cancelada |

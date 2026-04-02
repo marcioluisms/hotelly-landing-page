@@ -34,7 +34,7 @@ Entre em contato com o suporte. A alteração de email é feita pela equipe por 
 
 ## Como funciona a entrada no Hotelly?
 
-O Hotelly opera por modelo VIP: não há free trial público nem auto-cadastro ativo. O processo começa com uma conversa com o fundador, que conduz o onboarding diretamente. Isso garante que cada hospedagem seja configurada corretamente antes de operar.
+O Hotelly opera por assinatura mensal direta. Você escolhe seu plano, assina pelo site e nossa equipe entra em contato em até 24h para o onboarding completo — configurando quartos, preços, políticas e a IA no WhatsApp da sua hospedagem.
 
 ## Posso ter mais de uma propriedade na mesma conta?
 

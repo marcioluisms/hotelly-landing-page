@@ -159,8 +159,6 @@ Este comparativo foi escrito para donos e gestores de hospedagens independentes 
 
 ---
 
-**Quer ver como funciona um PMS na nuvem na prática?** O Hotelly oferece 14 dias grátis do plano completo, sem cartão de crédito. [Experimente grátis por 14 dias](https://app.hotelly.app/sign-in) e compare com sua operação atual.
-
-Se preferir, [veja como funciona](https://hotelly.com.br) antes de testar.
+**Quer ver como funciona um PMS na nuvem na prática?** Conheça o Hotelly — o PMS com IA que automatiza vendas, check-in e gestão da sua hospedagem. [Veja os planos e comece agora](https://hotelly.com.br/#planos).
 
 **Leitura relacionada:** Se você está considerando como a tecnologia pode transformar sua operação além do PMS, veja nosso artigo sobre [IA na Hotelaria 2026: 5 tendências práticas e reais](/blog/ia-hotelaria-2026).

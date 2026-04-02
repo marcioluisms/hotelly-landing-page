@@ -33,7 +33,7 @@ Número mínimo de dias antes da data de check-in que uma reserva pode ser feita
 ---
 
 ### Ativação (No funil de cliente)
-Momento em que o trial começou a ser usado de forma significativa — primeira ação relevante no sistema. No Hotelly, ativação ocorre quando o cliente recebe a primeira reserva via Concierge ou Booking Engine.
+Momento em que o cliente começou a usar o sistema de forma significativa — primeira ação relevante após a assinatura. No Hotelly, ativação ocorre quando o cliente recebe a primeira reserva via Concierge ou Booking Engine.
 
 ---
 
@@ -111,8 +111,8 @@ Estado em que a reserva saiu do "hold" temporário e virou permanente após paga
 
 ---
 
-### Conversão (Demo → Pagante)
-Percentual de prospects que fizeram uma demo e depois assinaram o plano. Meta Hotelly: 25% de conversão do trial para pagante.
+### Conversão (Prospect → Pagante)
+Percentual de prospects que conheceram o produto e assinaram o plano. Métrica de acompanhamento do funil comercial.
 
 ---
 
@@ -381,7 +381,7 @@ Oferta especial para um período específico com restrições (estadia mínima, 
 ---
 
 ### Pagante (Cliente)
-Hóspede que completou o pagamento da reserva. No contexto do Hotelly, "cliente pagante" = hospedagem subscrita ao plano (trial virou paga).
+Hóspede que completou o pagamento da reserva. No contexto do Hotelly, "cliente pagante" = hospedagem com assinatura ativa.
 
 ---
 
@@ -393,7 +393,7 @@ Funil de vendas com prospects mapeados e em diferentes estágios: novo → conta
 ---
 
 ### PMF (Product-Market Fit)
-Indicador de que o produto atende bem as necessidades do mercado-alvo. Síntoma: retenção acima de 60% na semana 4, NPS ≥ 7, conversão trial→pago ≥ 25%.
+Indicador de que o produto atende bem as necessidades do mercado-alvo. Sintomas: retenção acima de 60% na semana 4, NPS ≥ 7, baixo churn nos primeiros 90 dias.
 
 ---
 
@@ -536,9 +536,9 @@ Categoria: solteiro, duplo, suíte, etc. Cada uma com capacidade, preço base e 
 ---
 
 ### Trial (Período de Teste)
-Período grátis ou com desconto para o cliente testar o produto antes de pagar.
+Período grátis ou com desconto para o cliente testar o produto antes de pagar. Comum em SaaS.
 
-**No Hotelly:** 14 dias gratuitos sem cartão. Objetivo: ativar, gerar aha! moment, converter em pagante.
+**No Hotelly:** Não utilizamos trial. O acesso é via assinatura mensal direta com onboarding assistido pela equipe.
 
 ---
 
