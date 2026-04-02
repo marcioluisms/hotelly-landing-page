@@ -5,7 +5,7 @@ import type { ChatMessage as ChatMessageType } from './types';
 const QUICK_QUESTIONS = [
   'Como funciona?',
   'Quanto custa?',
-  'Tem teste gratis?',
+  'Como faço para assinar?',
   'Funciona pra pousada pequena?',
 ];
 

@@ -18,7 +18,7 @@ interface ChatWindowProps {
   onReset: () => void;
 }
 
-const CTA_KEYWORDS = /teste gr[aá]tis|criar sua conta|14 dias/i;
+const CTA_KEYWORDS = /como (assino|assinar|come[cç]o|come[cç]ar)|quero assinar|garantir meu acesso/i;
 
 export default function ChatWindow({
   isOpen,
