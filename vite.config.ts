@@ -31,6 +31,7 @@ export default defineConfig(() => {
         'Content-Security-Policy': "frame-ancestors 'self' https://adm.hotelly.ia.br",
       },
     },
+    envDir: path.resolve(__dirname),
     build: {
       sourcemap: false,
     },
