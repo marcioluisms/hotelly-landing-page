@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig(() => {
   const preloadCssPlugin = () => {
     return {
@@ -17,7 +19,7 @@ export default defineConfig(() => {
   };
 
   return {
-    plugins: [react(), tailwindcss(), preloadCssPlugin()],
+    plugins: [react(), tailwindcss(), preloadCssPlugin(), cloudflare()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(process.env.GEMINI_API_KEY || ''),
     },
