@@ -62,7 +62,7 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground antialiased font-sans selection:bg-brand-sky/30">
-      <Header onCtaClick={checkout.isEnabled ? () => checkout.openModal('starter', 'header') : undefined} />
+      <Header onCtaClick={checkout.isEnabled ? () => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' }) : undefined} />
 
       <main>
         {/* Navbar padding offset added to Hero */}
@@ -79,7 +79,7 @@ export default function Home() {
               <div className="flex flex-col items-start gap-3">
                 {checkout.isEnabled ? (
                   <button
-                    onClick={() => checkout.openModal('starter', 'hero')}
+                    onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
                     className="w-full sm:w-auto text-center bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors cursor-pointer"
                   >
                     Começar agora →
@@ -353,7 +353,7 @@ export default function Home() {
 
       <LazySection minHeight="20vh">
         <Suspense fallback={<div className="h-[20vh] bg-background"></div>}>
-          <LazyFooter onCtaClick={checkout.isEnabled ? () => checkout.openModal('starter', 'footer') : undefined} />
+          <LazyFooter onCtaClick={checkout.isEnabled ? () => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' }) : undefined} />
         </Suspense>
       </LazySection>
 
