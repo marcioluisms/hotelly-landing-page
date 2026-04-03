@@ -4,17 +4,7 @@ import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({ mode }) => {
-  // Explicitly load .env files so vars are available in define{}
-  const envDir = path.resolve(__dirname);
-  const env = loadEnv(mode, envDir, 'VITE_');
-
-  // Debug: log env vars during build to diagnose CI injection
-  console.log('[vite.config] mode:', mode);
-  console.log('[vite.config] envDir:', envDir);
-  console.log('[vite.config] VITE_ENABLE_CHECKOUT_MODAL from loadEnv:', env.VITE_ENABLE_CHECKOUT_MODAL);
-  console.log('[vite.config] VITE_ENABLE_CHECKOUT_MODAL from process.env:', process.env.VITE_ENABLE_CHECKOUT_MODAL);
-  console.log('[vite.config] VITE_HOTELLY_API_URL from loadEnv:', env.VITE_HOTELLY_API_URL);
-  console.log('[vite.config] .env.production exists:', require('fs').existsSync(path.join(envDir, '.env.production')));
+  const env = loadEnv(mode, path.resolve(__dirname), 'VITE_');
   const preloadCssPlugin = () => {
     return {
       name: 'preload-css',
