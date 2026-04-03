@@ -116,7 +116,7 @@ export default function Home() {
         <section className="py-24 bg-card" id="eficiencia">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Por que hospedagens independentes escolhem o Hotelly</h2>
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Por que hospedagens escolhem o Hotelly</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">Automatize o que é repetitivo e foque no que realmente importa: a experiência do seu hóspede.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
