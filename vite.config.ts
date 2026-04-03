@@ -1,9 +1,11 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, loadEnv} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+  // Explicitly load .env files so vars are available in define{}
+  const env = loadEnv(mode, path.resolve(__dirname), 'VITE_');
   const preloadCssPlugin = () => {
     return {
       name: 'preload-css',
@@ -20,10 +22,10 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss(), preloadCssPlugin()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(process.env.GEMINI_API_KEY || ''),
-      'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(process.env.VITE_ENABLE_CHECKOUT_MODAL || ''),
-      'import.meta.env.VITE_HOTELLY_API_URL': JSON.stringify(process.env.VITE_HOTELLY_API_URL || ''),
-      'import.meta.env.VITE_TURNSTILE_SITE_KEY': JSON.stringify(process.env.VITE_TURNSTILE_SITE_KEY || ''),
-      'import.meta.env.VITE_VAGAS_PREENCHIDAS': JSON.stringify(process.env.VITE_VAGAS_PREENCHIDAS || '0'),
+      'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(env.VITE_ENABLE_CHECKOUT_MODAL || process.env.VITE_ENABLE_CHECKOUT_MODAL || ''),
+      'import.meta.env.VITE_HOTELLY_API_URL': JSON.stringify(env.VITE_HOTELLY_API_URL || process.env.VITE_HOTELLY_API_URL || ''),
+      'import.meta.env.VITE_TURNSTILE_SITE_KEY': JSON.stringify(env.VITE_TURNSTILE_SITE_KEY || process.env.VITE_TURNSTILE_SITE_KEY || ''),
+      'import.meta.env.VITE_VAGAS_PREENCHIDAS': JSON.stringify(env.VITE_VAGAS_PREENCHIDAS || process.env.VITE_VAGAS_PREENCHIDAS || '0'),
     },
     resolve: {
       alias: {
