@@ -51,8 +51,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
             </div>
 
             {/* Pro */}
-            <div className="p-10 rounded-3xl bg-popover border-2 border-amber relative shadow-xl shadow-amber/10 flex flex-col scale-105 z-10 transition-transform hover:scale-110">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber text-amber-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Mais Popular</div>
+            <div className="p-10 rounded-3xl bg-popover border border-border flex flex-col hover:-translate-y-2 transition-transform">
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Pro</h3>
               <p className="text-sm text-muted-foreground mb-4">Profissionalizar e maximizar receita com IA completa</p>
               <div className="flex items-baseline gap-1 mb-6">
@@ -71,42 +70,43 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
               {onPlanSelect ? (
                 <button
                   onClick={() => onPlanSelect('professional')}
-                  className="block text-center w-full py-4 rounded-xl bg-amber text-amber-foreground font-bold hover:bg-amber/90 transition-colors cursor-pointer"
+                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
                 >
                   Assinar Hotelly Pro →
                 </button>
               ) : (
-                <div className="block text-center w-full py-4 rounded-xl bg-amber/50 text-amber-foreground font-bold cursor-default select-none">
+                <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
                   🚀 Lançamento em Breve
                 </div>
               )}
             </div>
 
             {/* Max */}
-            <div className="p-10 rounded-3xl bg-popover border border-border flex flex-col hover:-translate-y-2 transition-transform">
+            <div className="p-10 rounded-3xl bg-popover border-2 border-brand-emerald relative shadow-xl shadow-brand-emerald/10 flex flex-col scale-105 z-10 transition-transform hover:scale-110">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-emerald text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Recomendado</div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Max</h3>
-              <p className="text-sm text-muted-foreground mb-4">Distribuir em OTAs e gerenciar tudo em um só lugar</p>
+              <p className="text-sm text-muted-foreground mb-4">Substitua seu channel manager e gerencie tudo em um só lugar</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 849</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
-              <ul className="space-y-4 mb-10 flex-1">
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Tudo do Pro</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Hub de OTAs: Booking.com, Airbnb, Expedia e mais</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Sincronização de disponibilidade e tarifas em tempo real</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Relatórios consolidados por canal de origem</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Zero overbooking entre plataformas — garantido</li>
-                <li className="flex gap-3 text-sm text-muted-foreground"><span className="material-symbols-outlined text-primary text-sm">check</span>Usuários ilimitados · Suporte dedicado</li>
+              <ul className="space-y-4 mb-10 flex-1 text-sm">
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Tudo do Pro</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Hub de OTAs: Booking.com, Airbnb, Expedia e mais</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Sincronização de disponibilidade e tarifas em tempo real</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Relatórios consolidados por canal de origem</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Zero overbooking entre plataformas — garantido</li>
+                <li className="flex gap-3 text-foreground"><span className="material-symbols-outlined text-brand-emerald" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>Usuários ilimitados · Suporte dedicado</li>
               </ul>
               {onPlanSelect ? (
                 <button
                   onClick={() => onPlanSelect('enterprise')}
-                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                  className="block text-center w-full py-4 rounded-xl bg-brand-emerald text-white font-bold hover:bg-brand-emerald/90 transition-colors cursor-pointer"
                 >
                   Assinar Hotelly Max →
                 </button>
               ) : (
-                <div className="block text-center w-full py-4 rounded-xl border border-border font-bold text-muted-foreground bg-popover/50 cursor-default select-none">
+                <div className="block text-center w-full py-4 rounded-xl bg-brand-emerald/50 text-white font-bold cursor-default select-none">
                   🚀 Lançamento em Breve
                 </div>
               )}
