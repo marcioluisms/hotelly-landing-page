@@ -8,6 +8,7 @@ const FEATURE_ENABLED = import.meta.env.VITE_ENABLE_CHECKOUT_MODAL === 'true';
 interface CheckoutForm {
   email: string;
   propertyName: string;
+  turnstileToken: string;
 }
 
 interface UseCheckoutModalReturn {
@@ -82,6 +83,7 @@ export function useCheckoutModal(): UseCheckoutModalReturn {
           plan,
           email: form.email.trim().toLowerCase(),
           property_name: form.propertyName.trim(),
+          turnstile_token: form.turnstileToken,
           utm: {
             source: 'landing_page',
             medium: 'cta',

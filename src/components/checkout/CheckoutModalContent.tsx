@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { PLAN_MAP } from './checkout.types';
+import TurnstileWidget from './TurnstileWidget';
 import type { PlanSlug, ModalStatus } from './checkout.types';
 
 interface CheckoutModalContentProps {
   plan: PlanSlug;
   status: ModalStatus;
   errorMessage: string;
-  onSubmit: (form: { email: string; propertyName: string }) => void;
+  onSubmit: (form: { email: string; propertyName: string; turnstileToken: string }) => void;
   onClose: () => void;
 }
 
@@ -19,13 +20,23 @@ export default function CheckoutModalContent({
 }: CheckoutModalContentProps) {
   const [email, setEmail] = useState('');
   const [propertyName, setPropertyName] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
   const info = PLAN_MAP[plan];
   const isLoading = status === 'validating' || status === 'submitting';
+  const canSubmit = turnstileToken.length > 0 && !isLoading;
+
+  const handleTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
+
+  const handleTurnstileExpire = useCallback(() => {
+    setTurnstileToken('');
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (isLoading) return;
-    onSubmit({ email, propertyName });
+    if (!canSubmit) return;
+    onSubmit({ email, propertyName, turnstileToken });
   };
 
   return (
@@ -94,6 +105,12 @@ export default function CheckoutModalContent({
           />
         </div>
 
+        {/* Turnstile widget */}
+        <TurnstileWidget
+          onVerify={handleTurnstileVerify}
+          onExpire={handleTurnstileExpire}
+        />
+
         {/* Error message */}
         {status === 'error' && errorMessage && (
           <div className="p-3 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm">
@@ -105,7 +122,7 @@ export default function CheckoutModalContent({
         <div className="flex flex-col gap-3 pt-2">
           <button
             type="submit"
-            disabled={isLoading}
+            disabled={!canSubmit}
             className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-base hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {status === 'submitting' ? (
