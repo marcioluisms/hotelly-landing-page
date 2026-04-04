@@ -16,7 +16,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Sim, no plano Max. Booking.com, Airbnb, Expedia e centenas de outros canais ficam sincronizados em tempo real com o Hotelly: disponibilidade, tarifas e reservas, tudo atualizado automaticamente. Chega de abrir cada plataforma para fechar uma janela de disponibilidade ou ajustar preço. No Max, você faz tudo de um lugar só — e ainda tem WhatsApp, site próprio e IA de atendimento inclusos no mesmo plano.
+              Sim, no plano Max. Booking.com, Airbnb, Expedia e centenas de outros canais ficam sincronizados em tempo real com o Hotelly: disponibilidade, tarifas e reservas, tudo atualizado automaticamente. Chega de abrir cada plataforma para fechar uma janela de disponibilidade ou ajustar preço. No Max, você faz tudo de um lugar só, e ainda tem WhatsApp, site próprio e IA de atendimento inclusos no mesmo plano.
             </div>
           </details>
 
@@ -40,7 +40,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Para o WhatsApp, sim. O Concierge IA responde perguntas, verifica disponibilidade, envia link de pagamento e confirma a reserva — 24 horas por dia, sem ninguém na recepção. Para hospedagens que têm equipe presencial, o Concierge assume fora do horário comercial, nos fins de semana e em períodos de sobrecarga. Sua equipe foca no atendimento ao vivo. A IA cuida do que chegava depois das 22h e não era respondido.
+              Para o WhatsApp, sim. O Concierge IA responde perguntas, verifica disponibilidade, envia link de pagamento e confirma a reserva, 24 horas por dia, sem ninguém na recepção. Para hospedagens que têm equipe presencial, o Concierge assume fora do horário comercial, nos fins de semana e em períodos de sobrecarga. Sua equipe foca no atendimento ao vivo. A IA cuida do que chegava depois das 22h e não era respondido.
             </div>
           </details>
 
@@ -52,7 +52,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Disponível nos planos Pro e Max. O motor analisa sua ocupação atual, feriados e eventos cadastrados e sugere o preço ideal para cada dia nos próximos 120 dias. Você define o piso e o teto — o Hotelly trabalha dentro desses limites. A decisão final é sempre sua: o sistema recomenda, você aplica. Na prática, significa cobrar mais no Carnaval e no réveillon, e ajustar o preço para baixo quando a semana está parada, sem precisar fazer isso manualmente todo dia.
+              Disponível nos planos Pro e Max. O motor analisa sua ocupação atual, feriados e eventos cadastrados e sugere o preço ideal para cada dia nos próximos 120 dias. Você define o piso e o teto: o Hotelly trabalha dentro desses limites. A decisão final é sempre sua: o sistema recomenda, você aplica. Na prática, significa cobrar mais no Carnaval e no réveillon, e ajustar o preço para baixo quando a semana está parada, sem precisar fazer isso manualmente todo dia.
             </div>
           </details>
 
@@ -112,7 +112,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Sendo direto: o <strong className="text-foreground">Max</strong> é o melhor plano para qualquer hospedagem. Por R$ 849/mês, menos de meio salário mínimo, você tem IA ilimitada, gestão completa, precificação dinâmica, relatórios avançados e todos os seus canais de venda, incluindo Booking, Airbnb e Expedia, sincronizados em tempo real. Nenhum cliente que chegou ao Max voltou atrás. Se você quer começar pelo <strong className="text-foreground">Start</strong> ou pelo <strong className="text-foreground">Pro</strong> para conhecer o sistema primeiro, faz todo sentido: a migração para o Max é simples e você não perde nada do que configurou. Mas o destino é o mesmo para todo mundo.
+              Sendo direto: o <strong className="text-foreground">Max</strong> é o melhor plano para qualquer hospedagem. Por R$ 849/mês, cerca de meio salário mínimo, você tem IA ilimitada, gestão completa, precificação dinâmica, relatórios avançados e todos os seus canais de venda, incluindo Booking, Airbnb e Expedia, sincronizados em tempo real. Nenhum cliente que chegou ao Max voltou atrás. Se você quer começar pelo <strong className="text-foreground">Start</strong> ou pelo <strong className="text-foreground">Pro</strong> para conhecer o sistema primeiro, faz todo sentido: a migração para o Max é simples e você não perde nada do que configurou. Mas o destino é o mesmo para todo mundo.
             </div>
           </details>
         </div>
