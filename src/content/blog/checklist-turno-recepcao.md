@@ -24,7 +24,7 @@ A recepção é o sistema nervoso central de qualquer hospedagem. É onde as inf
 
 Este guia entrega três checklists completos (manhã, tarde e noite), explica o que registrar no log book e mostra como fazer a passagem de turno em 5 minutos de forma que funcione com qualquer pessoa de plantão.
 
-<a href="/downloads/checklist-turno-recepcao.pdf" target="_blank" rel="noopener noreferrer">📥 Baixar checklist em PDF, pronto para imprimir</a>
+[📥 Baixar checklist em PDF, pronto para imprimir](/downloads/checklist-turno-recepcao.pdf)
 
 ---
 

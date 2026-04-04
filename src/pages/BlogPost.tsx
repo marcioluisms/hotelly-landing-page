@@ -120,7 +120,20 @@ export default function BlogPost() {
 
           {/* Content */}
           <div className="prose prose-invert prose-lg prose-amber max-w-none">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ href, children }) => (
+                  <a
+                    href={href}
+                    target={href?.startsWith('/downloads/') ? '_blank' : undefined}
+                    rel={href?.startsWith('/downloads/') ? 'noopener noreferrer' : undefined}
+                  >
+                    {children}
+                  </a>
+                ),
+              }}
+            >
               {post.content}
             </ReactMarkdown>
           </div>
