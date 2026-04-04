@@ -22,7 +22,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
             {onCtaClick ? (
               <button
                 onClick={onCtaClick}
-                className="text-center bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors cursor-pointer"
+                className="text-center bg-primary-dark text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary-dark/90 transition-colors cursor-pointer"
               >
                 Começar agora →
               </button>

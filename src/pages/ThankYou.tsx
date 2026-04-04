@@ -63,7 +63,7 @@ export default function ThankYou() {
           {/* CTA to admin */}
           <a
             href="https://adm.hotelly.ia.br"
-            className="inline-block w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-base hover:bg-primary/90 transition-colors mb-4"
+            className="inline-block w-full py-4 rounded-xl bg-primary-dark text-primary-foreground font-bold text-base hover:bg-primary-dark/90 transition-colors mb-4"
           >
             Acessar painel administrativo
           </a>

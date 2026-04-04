@@ -123,7 +123,7 @@ export default function CheckoutModalContent({
           <button
             type="submit"
             disabled={!canSubmit}
-            className="w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold text-base hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full py-4 rounded-xl bg-primary-dark text-primary-foreground font-bold text-base hover:bg-primary-dark/90 focus:outline-none focus:ring-2 focus:ring-primary-dark/50 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {status === 'submitting' ? (
               <span className="flex items-center justify-center gap-2">

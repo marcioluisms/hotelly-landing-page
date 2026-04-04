@@ -4,10 +4,9 @@ import Header from '../components/Header';
 import LazySection from '../components/LazySection';
 import { useAnalytics } from '../hooks/useAnalytics';
 import { useCheckoutModal } from '../hooks/useCheckoutModal';
-import CheckoutConfirmModal from '../components/checkout/CheckoutConfirmModal';
-import CheckoutModalContent from '../components/checkout/CheckoutModalContent';
-
 const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
+const CheckoutConfirmModal = React.lazy(() => import('../components/checkout/CheckoutConfirmModal'));
+const CheckoutModalContent = React.lazy(() => import('../components/checkout/CheckoutModalContent'));
 const HomeFAQ = React.lazy(() => import('../components/home/HomeFAQ'));
 const LazyFooter = React.lazy(() => import('../components/Footer'));
 
@@ -69,7 +68,7 @@ export default function Home() {
         <section className="relative px-8 pt-32 pb-32 overflow-hidden bg-background">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary font-label text-sm font-semibold tracking-wider mb-6">INTELIGÊNCIA HOTELEIRA 24H</span>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">INTELIGÊNCIA HOTELEIRA 24H</span>
               <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-foreground leading-tight tracking-tight mb-8">
                   Quantas reservas você perdeu dormindo esta semana?
               </h1>
@@ -80,7 +79,7 @@ export default function Home() {
                 {checkout.isEnabled ? (
                   <button
                     onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="w-full sm:w-auto text-center bg-primary text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors cursor-pointer"
+                    className="w-full sm:w-auto text-center bg-primary-dark text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary-dark/90 transition-colors cursor-pointer"
                   >
                     Começar agora →
                   </button>
@@ -96,10 +95,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0">
+            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 min-h-[550px]">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
-                <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg"/>
+                <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg" fetchPriority="high" width={550} height={550}/>
                 <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="material-symbols-outlined text-amber">smart_toy</span>
@@ -375,18 +374,20 @@ export default function Home() {
       </LazySection>
 
       {/* Checkout confirmation modal */}
-      <CheckoutConfirmModal
-        isOpen={checkout.isOpen}
-        onClose={() => checkout.closeModal('backdrop')}
-      >
-        <CheckoutModalContent
-          plan={checkout.plan}
-          status={checkout.status}
-          errorMessage={checkout.errorMessage}
-          onSubmit={checkout.submitCheckout}
-          onClose={() => checkout.closeModal('button')}
-        />
-      </CheckoutConfirmModal>
+      <Suspense fallback={null}>
+        <CheckoutConfirmModal
+          isOpen={checkout.isOpen}
+          onClose={() => checkout.closeModal('backdrop')}
+        >
+          <CheckoutModalContent
+            plan={checkout.plan}
+            status={checkout.status}
+            errorMessage={checkout.errorMessage}
+            onSubmit={checkout.submitCheckout}
+            onClose={() => checkout.closeModal('button')}
+          />
+        </CheckoutConfirmModal>
+      </Suspense>
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           {onCtaClick ? (
             <button
               onClick={onCtaClick}
-              className="text-center bg-primary text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base hover:bg-primary/90 transition-colors cursor-pointer"
+              className="text-center bg-primary-dark text-primary-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base hover:bg-primary-dark/90 transition-colors cursor-pointer"
             >
               Assinar agora
             </button>

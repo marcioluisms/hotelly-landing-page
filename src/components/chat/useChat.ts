@@ -1,5 +1,4 @@
 import { useState, useRef, useCallback } from 'react';
-import { GoogleGenAI } from '@google/genai';
 import {
   MAX_TURNS,
   MAX_INPUT_LENGTH,
@@ -421,12 +420,13 @@ export function useChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [turnCount, setTurnCount] = useState(0);
 
-  const chatRef = useRef<ReturnType<GoogleGenAI['chats']['create']> | null>(null);
+  const chatRef = useRef<any>(null);
   const lastSendRef = useRef<number>(0);
 
-  const getOrCreateChat = useCallback(() => {
+  const getOrCreateChat = useCallback(async () => {
     if (!chatRef.current) {
       const apiKey = process.env.GEMINI_API_KEY || '';
+      const { GoogleGenAI } = await import('@google/genai');
       const ai = new GoogleGenAI({ apiKey });
       chatRef.current = ai.chats.create({
         model: MODEL_ID,
@@ -477,7 +477,7 @@ export function useChat() {
       setIsLoading(true);
 
       try {
-        const chat = getOrCreateChat();
+        const chat = await getOrCreateChat();
         const result = await chat.sendMessage({ message: sanitized });
         const responseText = result.text ?? '';
 

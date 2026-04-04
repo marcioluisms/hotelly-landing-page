@@ -26,6 +26,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hotelly.com.br/blog/checklist-turno-recepcao</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/blog/como-responder-avaliacao-negativa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://hotelly.com.br/blog/ia-hotelaria-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -177,6 +187,11 @@
   </url>
   <url>
     <loc>https://hotelly.com.br/ajuda/faq/faq-governanca-e-limpeza</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/faq/faq-log-book-e-passagem-de-turno</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -347,6 +362,31 @@
   </url>
   <url>
     <loc>https://hotelly.com.br/ajuda/legal-compliance/politicas-cancelamento-e-reembolso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/log-book</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/log-book/como-fazer-a-passagem-de-turno</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/log-book/como-registrar-uma-entrada-no-log-book</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/log-book/entendendo-as-categorias-do-log-book</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hotelly.com.br/ajuda/log-book/o-que-e-o-log-book-digital</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -39,7 +39,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
               {onPlanSelect ? (
                 <button
                   onClick={() => onPlanSelect('starter')}
-                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                  className="block text-center w-full py-4 rounded-xl bg-primary-dark text-primary-foreground font-bold hover:bg-primary-dark/90 transition-colors cursor-pointer"
                 >
                   Assinar Hotelly Start →
                 </button>
@@ -70,7 +70,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
               {onPlanSelect ? (
                 <button
                   onClick={() => onPlanSelect('professional')}
-                  className="block text-center w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                  className="block text-center w-full py-4 rounded-xl bg-primary-dark text-primary-foreground font-bold hover:bg-primary-dark/90 transition-colors cursor-pointer"
                 >
                   Assinar Hotelly Pro →
                 </button>
