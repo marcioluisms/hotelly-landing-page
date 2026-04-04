@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Entendendo os status do Concierge IA
 
-> **Em uma frase:** O Concierge IA tem 7 estados possíveis que indicam se ele está ativo, inativo e por quê — entender cada um permite agir rápido quando algo não está como esperado.
+> **Em uma frase:** O Concierge IA tem 7 estados possíveis que indicam se ele está ativo, inativo e por quê. Entender cada um permite agir rápido quando algo não está como esperado.
 
 ## Por que isso importa para você
 

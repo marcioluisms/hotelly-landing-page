@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## O que é
 
-O Portal do Hóspede é uma página web onde o hóspede consulta os dados da sua reserva: datas, quarto, valores, status e comprovantes. O acesso é feito por magic link enviado por email — o hóspede não precisa criar conta.
+O Portal do Hóspede é uma página web onde o hóspede consulta os dados da sua reserva: datas, quarto, valores, status e comprovantes. O acesso é feito por magic link enviado por email, sem necessidade de criar conta.
 
 ## Passo a passo
 

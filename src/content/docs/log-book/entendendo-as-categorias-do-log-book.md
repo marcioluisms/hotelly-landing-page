@@ -16,7 +16,7 @@ Cada entrada no Log Book Digital precisa ser classificada. As categorias ajudam 
 
 ## 1. Manutenção
 
-**O que registrar:** Problemas técnicos, equipamentos quebrados, infiltrações, vazamentos, questões elétricas, estruturais — tudo que precisa de reparo.
+**O que registrar:** Problemas técnicos, equipamentos quebrados, infiltrações, vazamentos, questões elétricas, estruturais, tudo que precisa de reparo.
 
 **Exemplos:**
 - "Chuveiro do quarto 5 com pressão baixa"
@@ -39,10 +39,10 @@ Cada entrada no Log Book Digital precisa ser classificada. As categorias ajudam 
 
 **Exemplos:**
 - "Hóspede do 12 solicitou berço para amanhã"
-- "Quarto 8 reclamou de barulho à noite — avisar vizinhos"
-- "Hóspede do 4 faz aniversário amanhã — combinar com recepção"
+- "Quarto 8 reclamou de barulho à noite, avisar vizinhos"
+- "Hóspede do 4 faz aniversário amanhã, combinar com recepção"
 - "Casal do 15 pediu garrafa de espumante para celebração"
-- "Cliente do 6 é alérgico a nozes — avisar cozinha"
+- "Cliente do 6 é alérgico a nozes, avisar cozinha"
 
 **Quem pode registrar:** Owner, Manager, Front Desk
 
@@ -57,10 +57,10 @@ Cada entrada no Log Book Digital precisa ser classificada. As categorias ajudam 
 **O que registrar:** Avisos de turno, tarefas pendentes, visitas de fornecedores, problemas de abastecimento, fluxo de pessoas, bloqueios de quarto.
 
 **Exemplos:**
-- "Lavanderia retira enxoval às 14h — avisar camareira"
+- "Lavanderia retira enxoval às 14h, avisar camareira"
 - "Entrega de alimentos às 9h da manhã, portaria deve avisar"
-- "Quarto 3 bloqueado para desinfecção — não fazer check-in"
-- "Internet do 2º andar com problema — técnico vindo por volta de 16h"
+- "Quarto 3 bloqueado para desinfecção, não fazer check-in"
+- "Internet do 2º andar com problema, técnico vindo por volta de 16h"
 - "Reunião de equipe às 15h na sala de funcionários"
 
 **Quem pode registrar:** Owner, Manager, Front Desk
@@ -76,10 +76,10 @@ Cada entrada no Log Book Digital precisa ser classificada. As categorias ajudam 
 **O que registrar:** Discrepâncias de caixa, cobranças pendentes, erros de pagamento, taxas extras autorizadas, reembolsos pendentes.
 
 **Exemplos:**
-- "Hóspede do 8 pagará a diferença no check-out — mini bar não processado"
+- "Hóspede do 8 pagará a diferença no check-out, mini bar não processado"
 - "Caixa do turno anterior fechou R$ 50 abaixo"
 - "Autorizar cortesia de frigobar para hóspede do 5 por problema no quarto"
-- "Boleto pendente de fornecedor — contabilidade avisar"
+- "Boleto pendente de fornecedor, contabilidade avisar"
 
 **Quem pode registrar:** Owner, Manager
 
@@ -91,19 +91,19 @@ Cada entrada no Log Book Digital precisa ser classificada. As categorias ajudam 
 
 ## 5. Geral
 
-**O que registrar:** Tudo que não cabe nas 4 categorias acima. Use com moderação — tente encaixar em uma categoria específica sempre que possível.
+**O que registrar:** Tudo que não cabe nas 4 categorias acima. Use com moderação, tentando encaixar em uma categoria específica sempre que possível.
 
 **Exemplos:**
-- "Portão da entrada com travamento intermitente — revisar chave"
+- "Portão da entrada com travamento intermitente, revisar chave"
 - "Caixa de documentos do proprietário deixada na recepção"
-- "Visitante pediu para usar wi-fi — autorizado"
-- "Encontrado óculos no sofá da sala — guardado na recepção"
+- "Visitante pediu para usar wi-fi, autorizado"
+- "Encontrado óculos no sofá da sala, guardado na recepção"
 
 **Quem pode registrar:** Owner, Manager, Front Desk
 
 **Por que:** Nem tudo se encaixa perfeitamente. **Geral** é o catch-all, mas use com bom senso.
 
-**Regra importante:** Se duvida entre categorias, escolha **Geral** do que ficar confuso. Mas tente ser específico — informação vaga não ajuda ninguém.
+**Regra importante:** Se duvida entre categorias, escolha **Geral** do que ficar confuso. Mas tente ser específico, pois informação vaga não ajuda ninguém.
 
 ---
 

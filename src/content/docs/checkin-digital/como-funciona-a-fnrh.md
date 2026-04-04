@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Como funciona a FNRH no Hotelly
 
-> **Em uma frase:** A FNRH (Ficha Nacional de Registro de Hóspedes) é uma obrigação legal para meios de hospedagem no Brasil, e o Hotelly envia os dados automaticamente ao governo após o check-in digital — sem papel, sem digitação manual.
+> **Em uma frase:** A FNRH (Ficha Nacional de Registro de Hóspedes) é uma obrigação legal para meios de hospedagem no Brasil, e o Hotelly envia os dados automaticamente ao governo após o check-in digital, sem papel, sem digitação manual.
 
 ## Por que isso importa para você
 

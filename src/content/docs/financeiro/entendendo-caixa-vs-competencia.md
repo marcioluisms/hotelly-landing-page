@@ -12,11 +12,11 @@ revisado_por_engenharia: true
 
 # Entendendo Caixa vs. Competência
 
-> **Em uma frase:** Caixa mostra quando o dinheiro entrou; Competência mostra quando o serviço foi prestado — os dois regimes existem no Hotelly para você ter controle total.
+> **Em uma frase:** Caixa mostra quando o dinheiro entrou; Competência mostra quando o serviço foi prestado. Os dois regimes existem no Hotelly para você ter controle total.
 
 ## Por que isso importa para você
 
-Se um hóspede paga R$ 1.000 em março para se hospedar em abril, esse valor aparece em meses diferentes dependendo do regime. Confundir os dois pode levar a decisões erradas: você acha que março foi ótimo (recebeu muito), mas na verdade a ocupação de março foi baixa — o dinheiro era de abril.
+Se um hóspede paga R$ 1.000 em março para se hospedar em abril, esse valor aparece em meses diferentes dependendo do regime. Confundir os dois pode levar a decisões erradas: você acha que março foi ótimo (recebeu muito), mas na verdade a ocupação de março foi baixa: o dinheiro era de abril.
 
 ## Como funciona no Hotelly
 

@@ -217,11 +217,11 @@ Este guia é para quem tem equipe, tem trocas de turno, e percebe que o padrão 
 
 ## Do checklist impresso ao Log Book Digital
 
-O checklist físico resolve o problema da memória individual — mas ainda depende de papel, prancheta e alguém que lembre de preencher.
+O checklist físico resolve o problema da memória individual, mas ainda depende de papel, prancheta e alguém que lembre de preencher.
 
 O próximo passo natural é o registro digital: ao invés de anotar em papel ou mandar mensagem no grupo do WhatsApp, a equipe registra as ocorrências diretamente no sistema, com carimbo automático de data, hora e nome do responsável. O turno seguinte lê, confirma e começa com contexto completo.
 
-Se a sua hospedagem já opera com um sistema de gestão, verifique se ele oferece alguma funcionalidade de log de turno ou passagem de turno digital. O checklist físico é um ótimo ponto de partida — mas o registro digital elimina as lacunas que o papel não consegue fechar.
+Se a sua hospedagem já opera com um sistema de gestão, verifique se ele oferece alguma funcionalidade de log de turno ou passagem de turno digital. O checklist físico é um ótimo ponto de partida, mas o registro digital elimina as lacunas que o papel não consegue fechar.
 
 ---
 

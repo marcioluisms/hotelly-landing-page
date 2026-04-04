@@ -33,11 +33,11 @@ Este guia resume o que você pode fazer no Hotelly como Governança (Housekeeper
 
 ## Fluxo típico do dia
 
-**Início do turno:** Abra a tela de **Limpeza**. Os quartos que precisam de atenção já aparecem listados — organizados por prioridade pelo Maestro.
+**Início do turno:** Abra a tela de **Limpeza**. Os quartos que precisam de atenção já aparecem listados, organizados por prioridade pelo Maestro.
 
 **Ordem de prioridade:** Comece pelos quartos com badge vermelho (**SLA** estourado ou **P1 — Crítico**). Depois siga para P2 (hóspede chegando hoje), P3 (turnover normal) e P4 (sem chegada prevista).
 
-**Durante a limpeza:** Ao iniciar um quarto, marque como **"Limpando"**. Verifique o frigobar — se houver itens consumidos, registre pelo ícone de taça na tela de Limpeza. Os valores vão direto para o folio da reserva.
+**Durante a limpeza:** Ao iniciar um quarto, marque como **"Limpando"**. Verifique o frigobar: se houver itens consumidos, registre pelo ícone de taça na tela de Limpeza. Os valores vão direto para o folio da reserva.
 
 **Ao finalizar:** Marque o quarto como **"Limpo"**. A recepção é notificada automaticamente e o quarto fica liberado para o próximo check-in.
 
@@ -57,7 +57,7 @@ Como Governança, você tem acesso limitado ao Log Book para registrar informaç
 
 ## Dica
 
-Você pode acessar a tela de Limpeza pelo celular — não precisa de computador. Basta abrir o Hotelly no navegador do celular e usar normalmente.
+Você pode acessar a tela de Limpeza pelo celular, sem precisar de computador. Basta abrir o Hotelly no navegador do celular e usar normalmente.
 
 ---
 

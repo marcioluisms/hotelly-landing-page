@@ -38,11 +38,11 @@ Este guia resume o que você pode fazer no Hotelly como Recepcionista (Front Des
 
 **Início do turno:** Abra o Dashboard e confira as chegadas do dia. Verifique se os quartos estão liberados pela governança (status "Limpo"). Consulte o Mapa de Quartos para ter visão geral da ocupação.
 
-**Chegada de hóspede:** Localize a reserva pela busca ou pela lista de chegadas. Confirme os dados (o check-in digital pode já ter sido preenchido). Atribua o quarto se ainda não estiver definido. Faça o check-in — o status muda para "Hospedado".
+**Chegada de hóspede:** Localize a reserva pela busca ou pela lista de chegadas. Confirme os dados (o check-in digital pode já ter sido preenchido). Atribua o quarto se ainda não estiver definido. Faça o check-in: o status muda para "Hospedado".
 
 **Durante o dia:** Registre pagamentos conforme recebidos. Adicione extras ou consumo de frigobar se solicitado. Crie novas reservas (balcão, telefone) quando necessário.
 
-**Saída de hóspede:** Confira o folio da reserva — verifique se todos os pagamentos estão registrados e se há saldo pendente. Faça o check-out — o quarto muda automaticamente para "Sujo" na fila de limpeza.
+**Saída de hóspede:** Confira o folio da reserva, verifique se todos os pagamentos estão registrados e se há saldo pendente. Faça o check-out: o quarto muda automaticamente para "Sujo" na fila de limpeza.
 
 ## Log Book — Passagem de Turno
 

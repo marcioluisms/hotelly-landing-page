@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## O que é
 
-O Monitor de Avaliações conecta sua propriedade ao Google Maps e exibe dentro do Hotelly: sua nota atual, total de avaliações e data da última verificação. Além disso, os temas dos depoimentos (pontos fortes e pontos de atenção) são extraídos automaticamente e ficam visíveis no **Perfil** da propriedade — o Concierge IA pode usar essas informações para responder hóspedes.
+O Monitor de Avaliações conecta sua propriedade ao Google Maps e exibe dentro do Hotelly: sua nota atual, total de avaliações e data da última verificação. Além disso, os temas dos depoimentos (pontos fortes e pontos de atenção) são extraídos automaticamente e ficam visíveis no **Perfil** da propriedade, e o Concierge IA pode usar essas informações para responder hóspedes.
 
 ## Pré-requisitos
 

@@ -16,7 +16,7 @@ revisado_por_engenharia: true
 
 ## Por que isso importa para você
 
-O check-in presencial com ficha de papel é lento, propenso a erros e gera uma primeira impressão ruim. Com o check-in digital, o hóspede já chega com tudo preenchido — a recepção só confirma e entrega a chave. Além disso, os dados são enviados automaticamente para a FNRH (obrigação legal), sem digitação manual.
+O check-in presencial com ficha de papel é lento, propenso a erros e gera uma primeira impressão ruim. Com o check-in digital, o hóspede já chega com tudo preenchido: a recepção só confirma e entrega a chave. Além disso, os dados são enviados automaticamente para a FNRH (obrigação legal), sem digitação manual.
 
 ## Como funciona no Hotelly
 

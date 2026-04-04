@@ -12,7 +12,7 @@ revisado_por_engenharia: false
 
 # Glossário Hoteleiro + Hotelly
 
-Um guia prático com os principais termos do setor hoteleiro e da plataforma Hotelly. Cada definição é rápida e direto ao ponto — pensado para proprietários, gerentes, recepcionistas e equipe de limpeza que usam o sistema.
+Um guia prático com os principais termos do setor hoteleiro e da plataforma Hotelly. Cada definição é rápida e direto ao ponto, pensado para proprietários, gerentes, recepcionistas e equipe de limpeza que usam o sistema.
 
 ---
 
@@ -33,12 +33,12 @@ Número mínimo de dias antes da data de check-in que uma reserva pode ser feita
 ---
 
 ### Ativação (No funil de cliente)
-Momento em que o cliente começou a usar o sistema de forma significativa — primeira ação relevante após a assinatura. No Hotelly, ativação ocorre quando o cliente recebe a primeira reserva via Concierge ou Booking Engine.
+Momento em que o cliente começou a usar o sistema de forma significativa, ou seja, a primeira ação relevante após a assinatura. No Hotelly, ativação ocorre quando o cliente recebe a primeira reserva via Concierge ou Booking Engine.
 
 ---
 
 ### Atualização de Preço
-Mudança do preço base de um tipo de quarto ou exceção de uma data específica. Diferente da Precificação Dinâmica — aqui você muda manualmente ou a IA recomenda.
+Mudança do preço base de um tipo de quarto ou exceção de uma data específica. Diferente da Precificação Dinâmica: aqui você muda manualmente ou a IA recomenda.
 
 ---
 

@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # O que é o Log Book Digital
 
-> **Em uma frase:** Log Book Digital é o caderno eletrônico de turno onde a equipe registra ocorrências, tarefas pendentes e observações — sem papel, sem WhatsApp, tudo centralizado e acessível.
+> **Em uma frase:** Log Book Digital é o caderno eletrônico de turno onde a equipe registra ocorrências, tarefas pendentes e observações, sem papel, sem WhatsApp, tudo centralizado e acessível.
 
 ## Por que isso importa para você
 
@@ -60,7 +60,7 @@ O próximo funcionário, ao chegar:
 2. **Confirma** que entendeu (clica em "Confirmar leitura")
 3. **Continua** resolvendo os itens pendentes
 
-Se não confirmar a leitura, o sistema bloqueia a abertura de um novo turno — isso garante que ninguém "perde" informação.
+Se não confirmar a leitura, o sistema bloqueia a abertura de um novo turno, garantindo que ninguém "perde" informação.
 
 ## O resumo de turno (shift summary)
 

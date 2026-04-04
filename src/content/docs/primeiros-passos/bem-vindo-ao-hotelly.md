@@ -17,17 +17,17 @@ O Hotelly é um sistema de gestão completo para sua hospedagem. Em um único lu
 ## O que você consegue fazer com o Hotelly
 
 ### Reservas que chegam sozinhas
-Seu WhatsApp vira uma máquina de vendas. O Concierge Virtual com IA responde hóspedes à noite e nos fins de semana, confirma disponibilidade e envia link de pagamento — sem você estar presente.
+Seu WhatsApp vira uma máquina de vendas. O Concierge Virtual com IA responde hóspedes à noite e nos fins de semana, confirma disponibilidade e envia link de pagamento, sem você estar presente.
 
 **Resultado:** Nenhuma reserva perdida por falta de resposta.
 
 ### Pagamentos automáticos
-Integrado com Mercado Pago. O hóspede pagador recebe o link, paga direto e a reserva confirma automaticamente. Você não mexe em nada — tudo acontece sozinho.
+Integrado com Mercado Pago. O hóspede pagador recebe o link, paga direto e a reserva confirma automaticamente. Você não mexe em nada, tudo acontece sozinho.
 
 **Resultado:** Sem atraso de pagamento, sem cobranças manuais.
 
 ### Check-in digital
-O hóspede preenche seus dados pelo celular antes de chegar. O sistema envia automaticamente para o governo (FNRH) — sem papel, sem fila, sem multa.
+O hóspede preenche seus dados pelo celular antes de chegar. O sistema envia automaticamente para o governo (FNRH), sem papel, sem fila, sem multa.
 
 **Resultado:** Recepção mais rápida, operação legal.
 
@@ -50,13 +50,13 @@ A equipe de camareiras vê exatamente qual quarto limpar primeiro, em que ordem 
 
 Você está aqui. Ótimo. Siga esta sequência para deixar tudo pronto em 7 dias:
 
-1. **Dia 1:** Leia "Como configurar seu estabelecimento" — cadastro básico do seu hotel
+1. **Dia 1:** Leia "Como configurar seu estabelecimento" (cadastro básico do seu hotel)
 2. **Dia 1-2:** Siga "Como cadastrar tipos de quarto" e "Como cadastrar quartos"
 3. **Dia 2-3:** Configure "Como definir preços e tarifas"
-4. **Dia 3:** Revise "Como configurar políticas" — cancelamento, garantia, pacotes
-5. **Dia 3-4:** Integre "Como conectar o WhatsApp" — seu Concierge Virtual
-6. **Dia 4:** Configure "Como conectar o Mercado Pago" — pagamentos automáticos
-7. **Dia 5-7:** Conheça sua equipe — "Como convidar sua equipe"
+4. **Dia 3:** Revise "Como configurar políticas" (cancelamento, garantia, pacotes)
+5. **Dia 3-4:** Integre "Como conectar o WhatsApp" (seu Concierge Virtual)
+6. **Dia 4:** Configure "Como conectar o Mercado Pago" (pagamentos automáticos)
+7. **Dia 5-7:** Conheça sua equipe em "Como convidar sua equipe"
 8. **Dia 7:** Revise o "Checklist de configuração inicial" para não esquecer nada
 
 Cada tarefa leva 15-30 minutos. Ao final, sua hospedagem estará funcionando.

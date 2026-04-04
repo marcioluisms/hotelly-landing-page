@@ -35,7 +35,7 @@ A passagem de turno é o processo de transmissão de informações entre um turn
 
 ## A confirmação de leitura significa que o problema foi resolvido?
 
-Não. Confirmar leitura apenas significa que você **leu e entendeu** o que está registrado. Resolver o problema é uma ação separada. Cada item no log tem seu próprio status: você pode marcar como "resolvido" quando a ação for completada, mas a confirmação de leitura é apenas o primeiro passo — aceitar a responsabilidade de conhecer os itens abertos.
+Não. Confirmar leitura apenas significa que você **leu e entendeu** o que está registrado. Resolver o problema é uma ação separada. Cada item no log tem seu próprio status: você pode marcar como "resolvido" quando a ação for completada, mas a confirmação de leitura é apenas o primeiro passo: aceitar a responsabilidade de conhecer os itens abertos.
 
 ## Quais categorias a camareira (housekeeper) pode usar?
 
@@ -68,7 +68,7 @@ Sim. O Copilot IA do Hotelly pode acessar informações do Log Book como context
 
 ## As entradas do Log Book ficam gravadas para sempre?
 
-Não. Entradas do Log Book seguem a mesma política de retenção que dados de hospedados: **90 dias**. Após 90 dias, as entradas são automaticamente arquivadas. Isso equilibra a necessidade de manter um histórico útil com a proteção de privacidade (LGPD). Se você precisar de registros mais antigos para auditoria ou investigação, entre em contato com o time Hotelly — há formas de acessar dados arquivados quando necessário.
+Não. Entradas do Log Book seguem a mesma política de retenção que dados de hospedados: **90 dias**. Após 90 dias, as entradas são automaticamente arquivadas. Isso equilibra a necessidade de manter um histórico útil com a proteção de privacidade (LGPD). Se você precisar de registros mais antigos para auditoria ou investigação, entre em contato com o time Hotelly, há formas de acessar dados arquivados quando necessário.
 
 ## Posso filtrar entradas por categoria ou por turno?
 
@@ -85,6 +85,6 @@ Isso permite que você encontre rapidamente "todas as entradas de manutenção d
 
 Se ninguém confirmar a leitura do turno anterior, o sistema **bloqueia a abertura de um novo turno**. Isso é proposital: garante que o conhecimento de um turno não seja perdido, mesmo que por preguiça ou distração.
 
-A ideia é simples: antes de começar seu turno, você **precisa** saber o que ficou aberto. Se o sistema permitisse pular essa confirmação, seria fácil perder informações críticas. Portanto, "Confirmar leitura" é um gatilho obrigatório para continuar — você não consegue abrir um novo turno sem passar por essa etapa.
+A ideia é simples: antes de começar seu turno, você **precisa** saber o que ficou aberto. Se o sistema permitisse pular essa confirmação, seria fácil perder informações críticas. Portanto, "Confirmar leitura" é um gatilho obrigatório: você não consegue abrir um novo turno sem passar por essa etapa.
 
 ---

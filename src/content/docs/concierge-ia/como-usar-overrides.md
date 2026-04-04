@@ -48,7 +48,7 @@ Os overrides servem para situações fora da rotina:
 Na lista de overrides, você pode:
 - Ver overrides ativos e agendados
 - **Override agendado (futuro):** clique no ícone de lixeira para remover (mensagem **"Override removido."**)
-- **Override ativo (em andamento):** clique no ícone X para cancelar (mensagem **"Override cancelado."**) — o Concierge volta ao comportamento normal imediatamente
+- **Override ativo (em andamento):** clique no ícone X para cancelar (mensagem **"Override cancelado."**). O Concierge volta ao comportamento normal imediatamente.
 
 Quando não há nenhum override: "Nenhum override ativo ou agendado."
 

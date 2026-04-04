@@ -14,7 +14,7 @@ revisado_por_engenharia: true
 
 ## Qual a diferença entre o Copilot e o Concierge IA?
 
-O **Copilot** é o assistente interno para a equipe — fica dentro do dashboard e ajuda com dúvidas sobre o sistema e dados da operação. O **Concierge IA** é o assistente externo para hóspedes — funciona pelo WhatsApp e ajuda com informações da hospedagem e reservas.
+O **Copilot** é o assistente interno para a equipe: fica dentro do dashboard e ajuda com dúvidas sobre o sistema e dados da operação. O **Concierge IA** é o assistente externo para hóspedes: funciona pelo WhatsApp e ajuda com informações da hospedagem e reservas.
 
 ## O Copilot pode executar ações no sistema?
 

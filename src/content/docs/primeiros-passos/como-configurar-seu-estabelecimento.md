@@ -12,7 +12,7 @@ revisado_por_engenharia: false
 
 # Como configurar seu estabelecimento
 
-Este é o primeiro passo. Você vai cadastrar as informações da sua hospedagem — endereço, contato e dados fiscais. Leva menos de 10 minutos.
+Este é o primeiro passo. Você vai cadastrar as informações da sua hospedagem: endereço, contato e dados fiscais. Leva menos de 10 minutos.
 
 ## O que você vai precisar
 
@@ -73,13 +73,13 @@ Pronto. As informações ficam registradas e você pode editá-las a qualquer mo
 Ela fica dentro de **Configurações** > **Propriedade**. Se o menu estiver recolhido, clique no ícone de três linhas (≡) para expandir.
 
 **"O sistema não aceita meu CEP / telefone / CNPJ"**
-Verifique se o formato está correto. O sistema aplica máscara automática — basta digitar os números que a formatação aparece. Se o problema persistir, abra um ticket de suporte.
+Verifique se o formato está correto. O sistema aplica máscara automática: basta digitar os números que a formatação aparece. Se o problema persistir, abra um ticket de suporte.
 
 **"Posso mudar os dados depois?"**
 Sim. Volte a **Configurações** > **Propriedade** > **Estabelecimento** e edite qualquer campo a qualquer momento.
 
 **"Preciso preencher o CNPJ agora?"**
-Não é obrigatório no início. Mas preencha antes de ativar o check-in digital — o sistema precisa do documento fiscal para enviar a FNRH.
+Não é obrigatório no início. Mas preencha antes de ativar o check-in digital: o sistema precisa do documento fiscal para enviar a FNRH.
 
 ## Próximo passo
 

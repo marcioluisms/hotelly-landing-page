@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Como configurar a base de conhecimento do Concierge
 
-> **Objetivo:** Ao final deste guia, você saberá preencher as informações que o Concierge IA usa para responder hóspedes no WhatsApp — descrição da hospedagem, comodidades e localização.
+> **Objetivo:** Ao final deste guia, você saberá preencher as informações que o Concierge IA usa para responder hóspedes no WhatsApp: descrição da hospedagem, comodidades e localização.
 
 ## Por que isso é importante
 
@@ -62,11 +62,11 @@ Se o Monitor de Avaliações estiver configurado, esta seção mostra automatica
 - **Inclua regras:** aceita pets? crianças? tem acessibilidade? estacionamento é pago?
 - **Atualize sazonalmente:** se a piscina fecha no inverno ou se há atividades só no verão, mantenha atualizado
 
-## Dica — Protocolos operacionais
+## Dica: Protocolos operacionais
 
 Você pode incluir na base de conhecimento os protocolos internos da sua hospedagem, como o procedimento de passagem de turno. Isso permite que o **Copilot** (não o Concierge) acesse informações operacionais atualizadas.
 
-O Concierge IA responde apenas a hóspedes, então consulta apenas as informações de Perfil (descrição, comodidades e localização). Mas o Copilot — o assistente para sua equipe — pode acessar dados operacionais via **Log Book**, incluindo resumos de turno, ocorrências pendentes e histórico de manutenção. Consulte [Como usar o Copilot](../04-copilot/como-usar-o-copilot.md) para mais detalhes.
+O Concierge IA responde apenas a hóspedes, então consulta apenas as informações de Perfil (descrição, comodidades e localização). Mas o Copilot, o assistente para sua equipe, pode acessar dados operacionais via **Log Book**, incluindo resumos de turno, ocorrências pendentes e histórico de manutenção. Consulte [Como usar o Copilot](../04-copilot/como-usar-o-copilot.md) para mais detalhes.
 
 ## Se algo der errado
 

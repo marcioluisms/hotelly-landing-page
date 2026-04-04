@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Como fazer a passagem de turno
 
-> **Em uma frase:** Registre o que o próximo turno precisa saber e confirme que recebeu a informação — tudo no Log Book.
+> **Em uma frase:** Registre o que o próximo turno precisa saber e confirme que recebeu a informação, tudo no Log Book.
 
 ## Por que isso importa
 
@@ -22,7 +22,7 @@ A passagem de turno é o momento crítico onde a equipe anterior passa o bastão
 
 A passagem de turno tem dois lados:
 
-1. **Turno saindo:** registra tudo que o próximo turno precisa saber — problemas abertos, hóspedes com pedidos pendentes, tarefas que foram iniciadas mas não terminadas.
+1. **Turno saindo:** registra tudo que o próximo turno precisa saber: problemas abertos, hóspedes com pedidos pendentes, tarefas que foram iniciadas mas não terminadas.
 2. **Turno chegando:** lê o que foi deixado, confirma que viu, e assim a hospedagem fica com o registro de que recebeu a informação.
 
 ## Passo a passo — TURNO SAINDO
@@ -36,7 +36,7 @@ Na barra lateral, vá para **Operação > Log Book**.
 Se houver algo que o próximo turno precisa saber, registre agora. Exemplos:
 
 - "Quarto 3: hóspede pediu wake-up call às 7h. Avisado que será feito."
-- "Manutenção: aguardando técnico para chuveiro do quarto 5 — deve chegar até meio-dia."
+- "Manutenção: aguardando técnico para chuveiro do quarto 5, deve chegar até meio-dia."
 - "Hóspede da suíte 12: chegada deverá ocorrer às 22h, lençol de seda já foi trocado conforme solicitado."
 - "Financeiro: revisão de conta da suíte 7 não foi concluída. Retomar amanhã."
 
@@ -64,7 +64,7 @@ Na barra lateral, vá para **Operação > Log Book**.
 
 ### 2. Leia as entradas do turno anterior
 
-Procure pelas entradas do turno que saiu. Elas estarão lá (filtradas por data/hora). Leia com cuidado — essas são as informações que você precisa saber para fazer seu turno bem.
+Procure pelas entradas do turno que saiu. Elas estarão lá (filtradas por data/hora). Leia com cuidado: essas são as informações que você precisa saber para fazer seu turno bem.
 
 Você verá:
 
@@ -139,7 +139,7 @@ Aguarde alguns segundos. Às vezes o sistema leva um tempo. Recarregue a página
 ## Boas práticas
 
 1. **Registre no final do seu turno, não no meio:** quanto mais perto do final, menos chances de esquecer algo.
-2. **Seja específico:** diga qual quarto, qual hóspede, qual fornecedor — não deixe ambiguidades.
+2. **Seja específico:** diga qual quarto, qual hóspede, qual fornecedor, sem deixar ambiguidades.
 3. **Confirm imediatamente ao chegar:** não espere 2 horas depois. Leia e confirme nos primeiros 15 minutos.
 4. **Se algo for urgente, comunique pessoalmente:** o Log Book é para registro, mas coisas muito urgentes devem ser comunicadas pessoalmente ou por WhatsApp também.
 

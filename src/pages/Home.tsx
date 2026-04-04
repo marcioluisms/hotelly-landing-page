@@ -246,10 +246,10 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-foreground mb-2">Passagem de Turno Digital</h3>
                 <p className="text-primary font-medium mb-6">Seu padrão não pode depender de quem está de plantão</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real — manutenção, hóspedes, operação, financeiro</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real: manutenção, hóspedes, operação, financeiro</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Passagem de turno com confirmação de leitura: o próximo funcionário lê, confirma e começa com contexto completo</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Resumo do turno consolidado: tudo que está aberto, quem registrou, o que falta resolver</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cada entrada com carimbo de data, hora e nome — trilha de auditoria automática</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cada entrada com carimbo de data, hora e nome, com trilha de auditoria automática</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Pergunte ao Copilot: "O que aconteceu no turno anterior?" e receba o resumo na hora</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
@@ -257,27 +257,10 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Pilar 6 */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
-                <div className="text-5xl mb-6">🛡️</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
-                <p className="text-primary font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Proteção de dados integrada ao sistema. Projetado para suportar conformidade com a LGPD</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações. São 6 níveis de acesso</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Os dados pessoais dos hóspedes são protegidos com criptografia e controle de acesso rigoroso</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Suas credenciais do Serpro ficam protegidas com criptografia AES-256-GCM</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Registro completo de quem fez o quê e quando. Rastreabilidade total para você e para a lei</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "A LGPD não é opcional. No Hotelly, proteção de dados faz parte da arquitetura desde o primeiro dia."
-                </div>
-              </div>
-
-              {/* Pilar 6 */}
+              {/* Pilar 6 — Motor de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">💻</div>
-                <div className="text-xl font-bold text-foreground mb-2">Motor de Reservas</div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Motor de Reservas</h3>
                 <p className="text-primary font-medium mb-6">Vendas diretas no seu próprio site</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Um botão de reservas bonito e pronto para colocar no seu site</li>
@@ -290,7 +273,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Pilar 7 */}
+              {/* Pilar 7 — Hub de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col relative">
                 <div className="text-5xl mb-6">🌐</div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Hub de Reservas</h3>
@@ -307,6 +290,23 @@ export default function Home() {
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
                   "No plano Max, o Hotelly vira a sua central de distribuição: Booking, Airbnb, site próprio e WhatsApp, todos sincronizados em tempo real, num único painel."
+                </div>
+              </div>
+
+              {/* Pilar 8 — Segurança e Proteção dos Dados */}
+              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
+                <div className="text-5xl mb-6">🛡️</div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
+                <p className="text-primary font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
+                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
+                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Proteção de dados integrada ao sistema. Projetado para suportar conformidade com a LGPD</li>
+                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações. São 6 níveis de acesso</li>
+                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Os dados pessoais dos hóspedes são protegidos com criptografia e controle de acesso rigoroso</li>
+                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Suas credenciais do Serpro ficam protegidas com criptografia AES-256-GCM</li>
+                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Registro completo de quem fez o quê e quando. Rastreabilidade total para você e para a lei</li>
+                </ul>
+                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
+                  "A LGPD não é opcional. No Hotelly, proteção de dados faz parte da arquitetura desde o primeiro dia."
                 </div>
               </div>
             </div>

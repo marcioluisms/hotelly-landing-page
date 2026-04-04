@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Entendendo a precificação no Hotelly
 
-> **Em uma frase:** O Hotelly oferece dois níveis de precificação — tarifas manuais no calendário (você define cada preço) e preço dinâmico inteligente (o motor sugere ajustes baseados na ocupação) — e você escolhe quanto controle quer ter.
+> **Em uma frase:** O Hotelly oferece dois níveis de precificação: tarifas manuais no calendário (você define cada preço) e preço dinâmico inteligente (o motor sugere ajustes baseados na ocupação). Você escolhe quanto controle quer ter.
 
 ## Por que isso importa para você
 

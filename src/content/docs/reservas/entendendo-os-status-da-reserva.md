@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Entendendo os status da reserva
 
-> **Em uma frase:** Cada reserva no Hotelly passa por um ciclo de vida com status que indicam exatamente em que ponto ela está — do momento em que é criada até o check-out final.
+> **Em uma frase:** Cada reserva no Hotelly passa por um ciclo de vida com status que indicam exatamente em que ponto ela está, do momento em que é criada até o check-out final.
 
 ## Por que isso importa para você
 

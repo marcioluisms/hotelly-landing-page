@@ -46,7 +46,7 @@ Todos os perfis têm acesso de leitura ao Log Book: Proprietário, Gerente, Rece
 
 ## Quem pode registrar entradas no Log Book?
 
-Proprietário, Gerente, Recepcionista e Governança podem registrar entradas. O perfil **Visualizador** tem acesso somente de leitura — não pode criar ou editar entradas.
+Proprietário, Gerente, Recepcionista e Governança podem registrar entradas. O perfil **Visualizador** tem acesso somente de leitura, sem permissão para criar ou editar entradas.
 
 ## A camareira tem acesso a todas as categorias do Log Book?
 

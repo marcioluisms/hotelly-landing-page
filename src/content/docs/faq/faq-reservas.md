@@ -22,7 +22,7 @@ Na lista de reservas, a coluna **Saldo** mostra o valor em cores: **vermelho** s
 
 ## Consigo alterar o valor total de uma reserva?
 
-O valor é calculado automaticamente pela tarifa. Para ajustar, use **"Alterar datas"** (que permite informar um ajuste em R$) ou adicione/remova extras. Não há campo para editar o valor total diretamente — isso garante rastreabilidade.
+O valor é calculado automaticamente pela tarifa. Para ajustar, use **"Alterar datas"** (que permite informar um ajuste em R$) ou adicione/remova extras. Não há campo para editar o valor total diretamente, o que garante rastreabilidade.
 
 ## O que acontece quando dois atendentes editam a mesma reserva?
 

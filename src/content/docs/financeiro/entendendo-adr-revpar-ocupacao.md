@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Entendendo ADR, RevPAR e Ocupação
 
-> **Em uma frase:** ADR é o preço médio que você cobra por quarto vendido, RevPAR é quanto cada quarto do seu inventário gera (mesmo os vazios), e Ocupação é o percentual de quartos ocupados — juntos, esses três indicadores contam a história completa da sua receita.
+> **Em uma frase:** ADR é o preço médio que você cobra por quarto vendido, RevPAR é quanto cada quarto do seu inventário gera (mesmo os vazios), e Ocupação é o percentual de quartos ocupados. Juntos, esses três indicadores contam a história completa da sua receita.
 
 ## Por que isso importa para você
 

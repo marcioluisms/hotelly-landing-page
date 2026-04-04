@@ -12,11 +12,11 @@ revisado_por_engenharia: true
 
 # Como usar o Hotelly Copilot
 
-> **Objetivo:** Ao final deste guia, você saberá usar o assistente de IA integrado ao painel para tirar dúvidas, consultar dados e obter ajuda rápida — sem sair do dashboard.
+> **Objetivo:** Ao final deste guia, você saberá usar o assistente de IA integrado ao painel para tirar dúvidas, consultar dados e obter ajuda rápida, sem sair do dashboard.
 
 ## O que é o Copilot
 
-O Hotelly Copilot é o assistente de IA que fica no canto inferior direito do dashboard. Diferente do Concierge IA (que atende hóspedes pelo WhatsApp), o Copilot é para **você e sua equipe** — ele responde perguntas sobre o sistema, dados da operação e ajuda no dia a dia.
+O Hotelly Copilot é o assistente de IA que fica no canto inferior direito do dashboard. Diferente do Concierge IA (que atende hóspedes pelo WhatsApp), o Copilot é para **você e sua equipe**: ele responde perguntas sobre o sistema, dados da operação e ajuda no dia a dia.
 
 ## Passo a passo
 

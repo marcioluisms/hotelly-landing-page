@@ -13,11 +13,11 @@ validacao_final: 2026-03-20
 
 # Como definir preços e tarifas
 
-Você vai definir o preço de cada tipo de quarto para cada dia do mês. É um calendário interativo — clique em um dia, preencha o preço e pronto. Leva 20 minutos.
+Você vai definir o preço de cada tipo de quarto para cada dia do mês. É um calendário interativo: clique em um dia, preencha o preço e pronto. Leva 20 minutos.
 
 ## O conceito fundamental
 
-A **precificação é por data e por tipo**. Você não tem um "preço base único" — cada dia tem sua própria tarifa. Isto permite ajustar preços para Carnaval, feriados, fins de semana e dias vazios.
+A **precificação é por data e por tipo**. Você não tem um "preço base único": cada dia tem sua própria tarifa. Isto permite ajustar preços para Carnaval, feriados, fins de semana e dias vazios.
 
 Exemplo:
 - Domingo → R$ 100 (dia vazio)

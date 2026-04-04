@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # Como registrar uma entrada no Log Book
 
-> **Em uma frase:** Registre qualquer informação importante no Log Book em segundos — o sistema captura automaticamente data, hora e seu nome.
+> **Em uma frase:** Registre qualquer informação importante no Log Book em segundos: o sistema captura automaticamente data, hora e seu nome.
 
 ## Por que você precisa fazer isso
 
@@ -42,7 +42,7 @@ Uma caixa de diálogo ou formulário abrirá. Você precisa selecionar uma das 5
 
 ### 4. Escreva a descrição
 
-No campo de texto, seja **específico**. Não escreva "problema no banheiro" — escreva "Chuveiro do quarto 5 com pressão baixa, manutenção avisada".
+No campo de texto, seja **específico**. Não escreva "problema no banheiro": escreva "Chuveiro do quarto 5 com pressão baixa, manutenção avisada".
 
 Boas descrições:
 - "Quarto 7: lâmpada da suíte queimada, peça de reposição pedida ao fornecedor para segunda."
@@ -68,7 +68,7 @@ Pronto. A entrada foi salva. O sistema registrou automaticamente:
 
 ## O que o sistema faz automaticamente
 
-Você não precisa fazer nada disso — o Hotelly faz sozinho:
+Você não precisa fazer nada disso. O Hotelly faz sozinho:
 
 - **Timestamp:** data, hora exata e segundos
 - **Seu nome:** quem registrou (vem da sua conta)
@@ -83,7 +83,7 @@ Seu perfil é **Viewer**. Viewers podem ler o Log Book, mas não podem registrar
 
 ### "Não encontro a categoria certa"
 
-Use **Geral**. Não há problema em usar a categoria geral — um gerente pode recategorizar depois se necessário. O importante é registrar a informação para que ninguém a perca.
+Use **Geral**. Não há problema em usar a categoria geral, um gerente pode recategorizar depois se necessário. O importante é registrar a informação para que ninguém a perca.
 
 ### "Digitei tudo, mas a entrada não apareceu"
 
@@ -99,7 +99,7 @@ Clique na entrada que você fez (deve estar no topo da lista). A maioria das hos
 ## Dicas
 
 1. **Seja rápido:** a entrada não precisa ser um romance. Uma frase bem escrita é melhor que um parágrafo confuso.
-2. **Seja claro:** use nomes de quartos, nomes de hóspedes, nomes de fornecedores — contexto ajuda.
+2. **Seja claro:** use nomes de quartos, nomes de hóspedes, nomes de fornecedores. Contexto ajuda.
 3. **Registre no momento:** não deixe para depois. A informação pode se perder.
 4. **Dúvidas sobre a categoria?** Errar para Geral é sempre seguro.
 

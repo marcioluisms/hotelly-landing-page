@@ -19,7 +19,7 @@ Use este checklist durante os primeiros 7 dias. Ele guia você pelas etapas esse
 Você vai criar a estrutura básica da sua hospedagem.
 
 ### Configurar Estabelecimento
-- [ ] Acesse **Configurações** > **Propriedade** > **Dados Gerais** (artigo em hold — campos em análise)
+- [ ] Acesse **Configurações** > **Propriedade** > **Dados Gerais** (artigo em hold, campos em análise)
 - [ ] Preencha os dados básicos
 - [ ] Salve
 - **Artigo relacionado:** [Como configurar seu estabelecimento](./como-configurar-seu-estabelecimento.md)
@@ -121,7 +121,7 @@ Você ativa o Concierge IA para receber reservas 24/7.
   - [ ] Configurar horário comercial
   - [ ] Ativar/desativar overrides
 - **Artigo relacionado:** [Como conectar o WhatsApp](./como-conectar-o-whatsapp.md)
-- **Resultado esperado:** WhatsApp integrado e Concierge IA ativo. Teste: envie "Oi" para seu próprio número — a IA responde.
+- **Resultado esperado:** WhatsApp integrado e Concierge IA ativo. Teste: envie "Oi" para seu próprio número e a IA responde.
 
 **Tempo estimado:** 10-15 minutos
 
@@ -217,7 +217,7 @@ Você revisa tudo e confirma que está pronto para "ir ao vivo".
 **Resultado esperado:** Você marcou "SIM" em tudo.
 
 ### Log Book Digital
-- [ ] **Log Book Digital:** Oriente sua equipe sobre o Log Book Digital — como registrar entradas e como fazer a passagem de turno. Acesse: Operação > Log Book.
+- [ ] **Log Book Digital:** Oriente sua equipe sobre o Log Book Digital: como registrar entradas e como fazer a passagem de turno. Acesse: Operação > Log Book.
 
 ### Próximos Passos
 - [ ] Compartilhe os links do Help Center com sua equipe (para dúvidas)

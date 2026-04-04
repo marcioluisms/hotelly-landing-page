@@ -47,7 +47,7 @@ Preencher fichas de papel na recepção é uma prática que está morrendo em 20
 
 A IA agora atua na digitalização total desse processo. Através de links enviados via WhatsApp antes mesmo da chegada (o "pré-check-in"), a IA coleta os dados, valida documentos através de biometria facial e integra essas informações diretamente com os órgãos competentes, como o Serpro para o envio da FNRH.
 
-Isso significa que, quando o hóspede chega, ele apenas pega a chave. Todo o trabalho administrativo foi feito pela tecnologia de forma invisível. Em 2026, a eficiência operacional será medida por quantos minutos o dono da hospedagem gasta digitando dados — e o objetivo é que esse número chegue a zero.
+Isso significa que, quando o hóspede chega, ele apenas pega a chave. Todo o trabalho administrativo foi feito pela tecnologia de forma invisível. Em 2026, a eficiência operacional será medida por quantos minutos o dono da hospedagem gasta digitando dados, e o objetivo é que esse número chegue a zero.
 
 ## 4. Personalização sem CRM complexo
 

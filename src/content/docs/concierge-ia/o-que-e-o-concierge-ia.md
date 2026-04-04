@@ -12,7 +12,7 @@ revisado_por_engenharia: true
 
 # O que é o Concierge IA
 
-> **Em uma frase:** O Concierge IA é o assistente virtual do Hotelly que atende hóspedes pelo WhatsApp 24 horas por dia, responde perguntas sobre a hospedagem, verifica disponibilidade e envia links de pagamento — tudo sem intervenção humana.
+> **Em uma frase:** O Concierge IA é o assistente virtual do Hotelly que atende hóspedes pelo WhatsApp 24 horas por dia, responde perguntas sobre a hospedagem, verifica disponibilidade e envia links de pagamento, tudo sem intervenção humana.
 
 ## Por que isso importa para você
 
@@ -30,7 +30,7 @@ O Concierge IA é um atendente virtual conectado ao WhatsApp da sua hospedagem. 
 
 **O que ele não faz:**
 - Não inventa informações. Se a resposta não está na base de conhecimento, ele informa que não sabe e sugere contato com a recepção (Hallucination Guard)
-- Não substitui o atendimento humano durante o expediente — ele complementa, assumindo quando a equipe não está
+- Não substitui o atendimento humano durante o expediente, ele complementa, assumindo quando a equipe não está
 
 **Onde você controla:**
 - **Configurações** > **Propriedade** > **Canais** > **Concierge IA**
