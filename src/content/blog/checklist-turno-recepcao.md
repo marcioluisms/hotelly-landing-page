@@ -6,7 +6,7 @@ date: "2026-04-03"
 lastUpdated: "2026-04-03"
 author:
   name: "Márcio Machado"
-  avatar: "/images/authors/marcio.jpg"
+  avatar: "/marcio.webp"
 category: "Gestão & Operação"
 tags: ["Operação", "Gestão", "Recepção", "Equipe", "Checklist"]
 coverImage: "/images/blog/checklist-turno-recepcao.webp"

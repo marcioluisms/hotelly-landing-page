@@ -6,7 +6,7 @@ date: "2026-03-21"
 lastUpdated: "2026-03-21"
 author:
   name: "Márcio Machado"
-  avatar: "/images/authors/marcio.jpg"
+  avatar: "/marcio.webp"
 category: "Comparações"
 tags: ["Tecnologia", "Gestão", "Comparações", "PMS"]
 coverImage: "/images/blog/pms-local-ou-na-nuvem.webp"

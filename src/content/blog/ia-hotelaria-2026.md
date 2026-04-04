@@ -6,7 +6,7 @@ date: "2026-03-20"
 lastUpdated: "2026-03-20"
 author:
   name: "Márcio Machado"
-  avatar: "/images/authors/marcio.jpg"
+  avatar: "/marcio.webp"
 category: "Melhores"
 tags: ["IA", "Tecnologia", "Tendências", "Gestão"]
 coverImage: "/images/blog/ia-hotelaria-2026.webp"
@@ -85,4 +85,3 @@ Este guia não é indicado para grandes resorts que possuem departamentos de TI 
 
 ---
 
-**Gostou deste conteúdo?** Continue aprendendo sobre como otimizar sua gestão lendo nosso artigo sobre [o custo real de perder uma reserva por falta de atendimento](/blog/custo-perder-reserva).
