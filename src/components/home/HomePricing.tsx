@@ -53,7 +53,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
             {/* Pro */}
             <div className="p-10 rounded-3xl bg-popover border border-border flex flex-col hover:-translate-y-2 transition-transform">
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Pro</h3>
-              <p className="text-sm text-muted-foreground mb-4">Profissionalizar e maximizar receita com IA completa</p>
+              <p className="text-sm text-muted-foreground mb-4">Gestão completa, precificação inteligente, receita previsível.</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 549</span>
                 <span className="text-muted-foreground">/mês</span>
@@ -85,7 +85,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
             <div className="p-10 rounded-3xl bg-popover border-2 border-brand-emerald relative shadow-xl shadow-brand-emerald/10 flex flex-col scale-105 z-10 transition-transform hover:scale-110">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-emerald text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Recomendado</div>
               <h3 className="text-xl font-bold mb-2 text-foreground">Hotelly Max</h3>
-              <p className="text-sm text-muted-foreground mb-4">Substitua seu channel manager e gerencie tudo em um só lugar</p>
+              <p className="text-sm text-muted-foreground mb-4">Tudo em um lugar. Sem pagar PMS e channel manager separados.</p>
               <div className="flex items-baseline gap-1 mb-6">
                 <span className="text-4xl font-headline font-extrabold text-foreground">R$ 849</span>
                 <span className="text-muted-foreground">/mês</span>
