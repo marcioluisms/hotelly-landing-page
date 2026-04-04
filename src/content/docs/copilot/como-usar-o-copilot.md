@@ -5,7 +5,7 @@ perfil: [owner, manager, front_desk, finance, housekeeper, viewer]
 nível: básico
 tipo: como-fazer
 helpArticleId: "copilot-como-usar"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Use o Copilot do Hotelly para tirar dúvidas sobre o sistema, consultar dados e agilizar sua operação."
 revisado_por_engenharia: true
 ---
@@ -33,6 +33,23 @@ O Hotelly Copilot é o assistente de IA que fica no canto inferior direito do da
 - **Operação:** "Quantos quartos estão sujos?", "Qual a produtividade de limpeza hoje?"
 - **Como fazer:** "Como eu altero o preço de um quarto?", "Como faço check-in?"
 - **Configurações:** "Como conectar o Mercado Pago?", "Como criar um extra?"
+
+## Resumo de turno com o Copilot
+
+O Copilot pode acessar o resumo do turno atual via ferramenta `get_shift_summary`. Pergunte naturalmente:
+
+- "O que aconteceu no turno anterior?"
+- "Tem alguma manutenção pendente?"
+- "Quais ocorrências estão abertas hoje?"
+
+O Copilot consolida as entradas abertas do **Log Book** e apresenta um resumo claro com:
+- Ocorrências registradas (manutenção, problemas, observações)
+- Status operacional atual
+- Itens pendentes de ação
+
+Isso é especialmente útil **no início de um turno**, antes de confirmar a assinatura da passagem de turno.
+
+**Importante:** O Copilot lê o Log Book — ele não registra entradas. O registro deve ser feito manualmente em **Operação > Log Book** por um membro da equipe.
 
 ## Diferença entre Copilot e Concierge
 

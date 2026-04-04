@@ -5,7 +5,7 @@ perfil: [owner, manager]
 nível: básico
 tipo: conceito
 helpArticleId: "faq-equipe-acessos"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Dúvidas sobre equipe e acessos no Hotelly: convites, perfis, permissões e remoção de membros."
 revisado_por_engenharia: true
 ---
@@ -39,6 +39,18 @@ Sim. O perfil **Financeiro** tem acesso a dados financeiros, pagamentos e relat�
 ## O Proprietário pode ser removido?
 
 O perfil Proprietário é atribuído automaticamente ao criador da conta e não pode ser convidado nem removido. Se precisar transferir a propriedade, entre em contato com a equipe Hotelly.
+
+## Quem pode ver o Log Book?
+
+Todos os perfis têm acesso de leitura ao Log Book: Proprietário, Gerente, Recepcionista, Governança e Visualizador. Cada um vê o histórico completo de entradas, independente de quem registrou.
+
+## Quem pode registrar entradas no Log Book?
+
+Proprietário, Gerente, Recepcionista e Governança podem registrar entradas. O perfil **Visualizador** tem acesso somente de leitura — não pode criar ou editar entradas.
+
+## A camareira tem acesso a todas as categorias do Log Book?
+
+Não. A Governança (camareira) pode registrar apenas em **Manutenção** e **Hóspede**. As categorias **Operação**, **Financeiro** e **Geral** são restritas a Recepcionista e Gerente. Porém, ela pode ler entradas de todas as categorias.
 
 ---
 

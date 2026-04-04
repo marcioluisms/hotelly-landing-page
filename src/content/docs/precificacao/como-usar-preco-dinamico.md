@@ -5,8 +5,8 @@ perfil: [owner, manager]
 nível: intermediário
 tipo: como-fazer
 helpArticleId: "precificacao-preco-dinamico"
-última_revisão: 2026-03-20
-descrição: "Ative o preço dinâmico no Hotelly para receber sugestões de tarifas baseadas na ocupação e no seu calendário de eventos."
+última_revisão: 2026-03-27
+descrição: "Ative o preço dinâmico no Hotelly para receber sugestões de tarifas com base na ocupação."
 revisado_por_engenharia: true
 ---
 

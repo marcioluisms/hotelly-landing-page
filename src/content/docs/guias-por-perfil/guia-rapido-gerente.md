@@ -5,7 +5,7 @@ perfil: [manager]
 nível: básico
 tipo: guia
 helpArticleId: "guia-gerente"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Guia rápido para gerentes: relatórios, configurações, equipe e como acompanhar a operação no Hotelly."
 revisado_por_engenharia: true
 ---
@@ -42,6 +42,19 @@ Praticamente tudo, exceto ações reservadas ao Proprietário (como dados de fat
 **Durante o dia:** Acompanhe reservas novas que chegam pelo Concierge IA e Motor de Reservas. Resolva pendências financeiras (pagamentos parciais, reembolsos). Valide divergências de check-in digital sinalizadas pelo sistema.
 
 **Semanal:** Exporte relatórios de Receita e Ocupação para acompanhar a performance. Consulte a Trilha de Auditoria para verificar ações sensíveis (cancelamentos, reembolsos). Revise tarifas no Calendário de Tarifas se houver mudanças de demanda.
+
+## Log Book — Visão do Gestor
+
+O Log Book oferece uma visão integrada de tudo que está acontecendo na operação.
+
+**Acesso:** Vá para **Operação > Log Book > Resumo do Turno** para ver um painel consolidado.
+
+**Monitoramento:**
+- Visualize todas as ocorrências abertas em cada categoria (Operação, Hóspede, Manutenção, Geral)
+- Confirme quem já leu o turno e quando (quem clicou em "Confirmar leitura")
+- Identifique padrões: manutenções recorrentes, tipos de reclamações de hóspedes, problemas operacionais
+
+**Ações:** Em casos excepcionais, você pode deletar entradas do Log Book se forem duplicadas ou registradas por erro.
 
 ## Dica
 

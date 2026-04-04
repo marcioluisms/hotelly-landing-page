@@ -5,8 +5,8 @@ perfil: [owner, manager, front_desk, finance, housekeeper, viewer]
 nível: básico
 tipo: conceito
 helpArticleId: "faq-copilot"
-última_revisão: 2026-03-20
-descrição: "Perguntas frequentes sobre o Copilot: o que ele pode fazer, como perguntar e como funciona."
+última_revisão: 2026-03-27
+descrição: "Perguntas frequentes sobre o Copilot: o que ele pode fazer e como usar."
 revisado_por_engenharia: true
 ---
 

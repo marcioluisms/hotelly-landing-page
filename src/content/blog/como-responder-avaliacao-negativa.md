@@ -10,7 +10,7 @@ author:
 category: "Experiência do Hóspede"
 tags: ["Avaliações", "Reputação", "Booking", "Airbnb", "Google", "Atendimento"]
 coverImage: "/images/blog/como-responder-avaliacao-negativa.webp"
-relatedPosts: ["checklist-turno-recepcao", "o-que-hospede-realmente-avalia"]
+relatedPosts: ["checklist-turno-recepcao", "pms-local-vs-nuvem-pousada"]
 content_type: "educational"
 ---
 
@@ -230,4 +230,4 @@ Essa pergunta é o filtro mais eficiente que existe.
 
 ---
 
-*Gostou deste artigo? Leia também: [O que o hóspede realmente avalia (e que você provavelmente está ignorando)](/blog/o-que-hospede-realmente-avalia) e [A primeira impressão: do primeiro contato ao check-in](/blog/primeira-impressao-check-in).*
+*Gostou deste artigo? Em breve no blog: "O que o hóspede realmente avalia (e que você provavelmente está ignorando)" e "A primeira impressão: do primeiro contato ao check-in".*

@@ -10,7 +10,7 @@ author:
 category: "Melhores"
 tags: ["IA", "Tecnologia", "Tendências", "Gestão"]
 coverImage: "/images/blog/ia-hotelaria-2026.webp"
-relatedPosts: ["custo-perder-reserva"]
+relatedPosts: ["checklist-turno-recepcao"]
 content_type: "educational"
 ---
 

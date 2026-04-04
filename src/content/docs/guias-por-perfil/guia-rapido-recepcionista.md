@@ -5,7 +5,7 @@ perfil: [front_desk]
 nível: básico
 tipo: guia
 helpArticleId: "guia-recepcionista"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Guia rápido para recepcionistas: o que você pode fazer no Hotelly, rotina do dia e dicas práticas."
 revisado_por_engenharia: true
 ---
@@ -43,6 +43,16 @@ Este guia resume o que você pode fazer no Hotelly como Recepcionista (Front Des
 **Durante o dia:** Registre pagamentos conforme recebidos. Adicione extras ou consumo de frigobar se solicitado. Crie novas reservas (balcão, telefone) quando necessário.
 
 **Saída de hóspede:** Confira o folio da reserva — verifique se todos os pagamentos estão registrados e se há saldo pendente. Faça o check-out — o quarto muda automaticamente para "Sujo" na fila de limpeza.
+
+## Log Book — Passagem de Turno
+
+O Log Book é seu canal de comunicação com os turnos anteriores e posteriores. Ele centraliza ocorrências operacionais, de manutenção, de hóspedes e gerais.
+
+**Início do turno:** Acesse **Operação > Log Book** e leia as entradas do turno anterior. Clique em **"Confirmar leitura do turno"** para sinalizar que você tomou conhecimento das pendências herdadas.
+
+**Durante o turno:** Registre em tempo real qualquer ocorrência: problemas de hóspede, pendência de manutenção, ajuste operacional ou informação importante para a próxima equipe. Use as categorias corretamente (Operação, Hóspede, Manutenção, Geral).
+
+**Fim do turno:** Revise o **Resumo do Turno** (seção dentro do Log Book) para confirmar que todas as ocorrências foram registradas. Deixe anotado qualquer item pendente que o próximo turno precisa saber.
 
 ## Dica
 

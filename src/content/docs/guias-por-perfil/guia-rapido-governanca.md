@@ -5,7 +5,7 @@ perfil: [housekeeper]
 nível: básico
 tipo: guia
 helpArticleId: "guia-governanca"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Guia rápido para governança: fila de limpeza, prioridades, frigobar e fluxo do dia no Hotelly."
 revisado_por_engenharia: true
 ---
@@ -40,6 +40,20 @@ Este guia resume o que você pode fazer no Hotelly como Governança (Housekeeper
 **Durante a limpeza:** Ao iniciar um quarto, marque como **"Limpando"**. Verifique o frigobar — se houver itens consumidos, registre pelo ícone de taça na tela de Limpeza. Os valores vão direto para o folio da reserva.
 
 **Ao finalizar:** Marque o quarto como **"Limpo"**. A recepção é notificada automaticamente e o quarto fica liberado para o próximo check-in.
+
+## Log Book — Registros de Governança
+
+Como Governança, você tem acesso limitado ao Log Book para registrar informações críticas sobre quartos e manutenção.
+
+**O que você pode registrar:**
+- **Manutenção:** Equipamento quebrado, vazamento, dano estrutural, itens que precisam reparo
+- **Hóspede:** Reclamações, solicitações não resolvidas, problemas de quarto relacionados ao hóspede
+
+**O que você pode ler:** Todas as entradas do Log Book de todos os turnos (histórico completo).
+
+**O que você NÃO pode registrar:** Operação, Financeiro ou Geral. Essas categorias são restritas à Recepção e Gerência.
+
+**Como registrar:** Abra **Operação > Log Book**, escolha a categoria (Manutenção ou Hóspede), adicione a descrição e salve. O próximo turno será notificado.
 
 ## Dica
 

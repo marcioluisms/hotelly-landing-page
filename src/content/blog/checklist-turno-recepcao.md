@@ -3,14 +3,14 @@ title: "Checklist de Turno na Recepção: o Guia Completo para Hospedagens"
 slug: "checklist-turno-recepcao"
 excerpt: "Checklists completos de turno (manhã, tarde e noite) para a recepção da sua hospedagem. Prontos para imprimir e usar amanhã, sem depender da memória de ninguém."
 date: "2026-04-03"
-lastUpdated: "2026-04-03"
+lastUpdated: "2026-04-05"
 author:
   name: "Márcio Machado"
   avatar: "/marcio.webp"
 category: "Gestão & Operação"
 tags: ["Operação", "Gestão", "Recepção", "Equipe", "Checklist"]
 coverImage: "/images/blog/checklist-turno-recepcao.webp"
-relatedPosts: ["como-treinar-camareira", "manual-operacoes-hospedagem"]
+relatedPosts: ["como-responder-avaliacao-negativa", "ia-hotelaria-2026"]
 content_type: "educational"
 ---
 
@@ -212,6 +212,16 @@ Se a sua hospedagem é operada por você sozinho, sem equipe, sem trocas de turn
 Se você já tem processos bem documentados e uma equipe que os segue com consistência, este guia pode ser útil para revisar se há lacunas, mas não vai mudar muito sua operação.
 
 Este guia é para quem tem equipe, tem trocas de turno, e percebe que o padrão sobe e desce conforme quem está de plantão.
+
+---
+
+## Do checklist impresso ao Log Book Digital
+
+O checklist físico resolve o problema da memória individual — mas ainda depende de papel, prancheta e alguém que lembre de preencher.
+
+O próximo passo natural é o registro digital: ao invés de anotar em papel ou mandar mensagem no grupo do WhatsApp, a equipe registra as ocorrências diretamente no sistema, com carimbo automático de data, hora e nome do responsável. O turno seguinte lê, confirma e começa com contexto completo.
+
+Se a sua hospedagem já opera com um sistema de gestão, verifique se ele oferece alguma funcionalidade de log de turno ou passagem de turno digital. O checklist físico é um ótimo ponto de partida — mas o registro digital elimina as lacunas que o papel não consegue fechar.
 
 ---
 

@@ -5,7 +5,7 @@ perfil: [owner, manager, front_desk, housekeeper, viewer]
 nível: básico
 tipo: conceito
 helpArticleId: "glossario-geral"
-última_revisão: 2026-03-19
+última_revisão: 2026-04-05
 descrição: "Termos essenciais do setor hoteleiro e da plataforma Hotelly — de ADR a Walk-in, com definições práticas para quem opera hospedagens."
 revisado_por_engenharia: false
 ---
@@ -283,6 +283,21 @@ Página web inicial do Hotelly ou da sua hospedagem. No contexto de marketing, �
 
 ---
 
+### Leitura de Turno (Confirmação)
+Ação realizada pelo funcionário que inicia o turno, confirmando que leu os registros do turno anterior no Log Book Digital. Gera um registro imutável com nome do usuário e timestamp, visível ao gestor na trilha de auditoria.
+
+---
+
+### Log Book Digital
+Registro digital de ocorrências e comunicações entre turnos da hospedagem. Substitui o caderno físico e grupos de WhatsApp. Permite que a equipe registre ocorrências (manutenção, hóspedes, operação, financeiro) com carimbo de data, hora e usuário, e que o próximo turno confirme a leitura antes de iniciar o trabalho.
+
+---
+
+### Log de Turno
+Conjunto de entradas registradas no Log Book Digital durante um único turno. O Resumo do Turno consolida os itens abertos do turno atual em tempo real.
+
+---
+
 ## M
 
 ### Manager (Gerente)
@@ -314,7 +329,7 @@ Ver Booking Engine.
 ### OMTM (One Metric That Matters)
 A métrica mais importante que você monitora para saber se está no caminho certo.
 
-**No Hotelly:** "Parceiros Fundadores ativos com NPS ≥ 7 aos 30 dias". Tudo o que o time faz está ligado a essa métrica.
+**No Hotelly:** "Clientes ativos com NPS ≥ 7 aos 30 dias". Tudo o que o time faz está ligado a essa métrica.
 
 ---
 
@@ -330,7 +345,7 @@ Quando um hóspede faz reserva, paga, mas não aparece no check-in e não cancel
 ### NPS (Net Promoter Score)
 Pergunta simples: "Em uma escala de 0-10, qual a chance de você recomendar [empresa] a um amigo?" Respostas 9-10 = promotores, 7-8 = neutros, 0-6 = detratores.
 
-**No Hotelly:** Meta de NPS ≥ 7 para os Parceiros Fundadores aos 30 dias. Indicador de satisfação e retenção.
+**No Hotelly:** Meta de NPS ≥ 7 aos 30 dias de uso. Indicador de satisfação e retenção.
 
 ---
 
@@ -482,7 +497,7 @@ Ato de mudar o preço base de um tipo de quarto. Diferente da Precificação Din
 ### SaaS (Software as a Service)
 Modelo de negócio: você paga mensalidade para usar um software na nuvem, sem instalar.
 
-**No Hotelly:** Pricing SaaS com dois planos — Essencial (R$ 249/mês) e Maestro (R$ 449/mês). Faturamento via Stripe.
+**No Hotelly:** Pricing SaaS com três planos — Start (R$ 349/mês), Pro (R$ 549/mês) e Max (R$ 849/mês). Faturamento via Stripe.
 
 ---
 
@@ -560,12 +575,6 @@ Padrão contábil para hotelaria. Separa receita em "regime caixa" e "regime com
 
 ## V
 
-### V-Zone (Valor Zone / Programa Parceiros Fundadores)
-Programa exclusivo: 10 vagas para clientes especiais que recebem preço vitalício (R$ 197/mês) em troca de feedback, case study e prova social.
-
-**No Hotelly:** Estratégia de validação de PMF. Após 10 × 30 dias + NPS ≥ 7 + 3 depoimentos + 1 case, abre lançamento público com preço normal (R$ 297/497).
-
----
 
 ### Viewer (Visualizador)
 Perfil com acesso somente leitura. Vê tudo mas não muda nada.

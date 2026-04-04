@@ -5,7 +5,7 @@ perfil: [owner]
 nível: básico
 tipo: conceito
 helpArticleId: primeiros-passos-checklist
-última_revisão: 2026-03-20
+última_revisão: 2026-04-05
 descrição: "Lista completa do que configurar antes de começar a operar com o Hotelly. Siga o checklist passo a passo."
 revisado_por_engenharia: true
 ---
@@ -215,6 +215,9 @@ Você revisa tudo e confirma que está pronto para "ir ao vivo".
 - [ ] Camareiras conseguem acessar?
 
 **Resultado esperado:** Você marcou "SIM" em tudo.
+
+### Log Book Digital
+- [ ] **Log Book Digital:** Oriente sua equipe sobre o Log Book Digital — como registrar entradas e como fazer a passagem de turno. Acesse: Operação > Log Book.
 
 ### Próximos Passos
 - [ ] Compartilhe os links do Help Center com sua equipe (para dúvidas)

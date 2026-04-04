@@ -5,7 +5,7 @@ perfil: [owner, manager]
 nível: básico
 tipo: como-fazer
 helpArticleId: "configuracoes-motor-reservas"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-04
 descrição: "Ative o Motor de Reservas para receber reservas diretas pelo site da sua hospedagem com pagamento integrado."
 revisado_por_engenharia: true
 ---
@@ -16,7 +16,15 @@ revisado_por_engenharia: true
 
 ## O que é
 
-O Motor de Reservas é a página de reservas online do Hotelly. Quando ativado, ele gera uma URL pública e um widget que você pode embutir no site da sua hospedagem. O hóspede acessa, escolhe datas, tipo de quarto e faz a reserva com pagamento.
+O Motor de Reservas é a página de reservas online do Hotelly. Quando ativado, ele gera uma URL pública e um widget que você pode embutir no site da sua hospedagem. O hóspede acessa, escolhe datas, tipo de quarto e faz a reserva com pagamento direto na sua conta do Mercado Pago — sem comissão de OTA.
+
+## Pré-requisitos
+
+Antes de ativar, confirme que os três itens abaixo estão em ordem:
+
+1. **Conta Mercado Pago conectada** — o pagamento das reservas vai direto para a sua conta. Se ainda não conectou, vá em **Configurações > Integrações > Mercado Pago** e siga o processo de autorização (OAuth, menos de 2 minutos).
+2. **Tipos de quarto cadastrados** — o motor exibe os quartos e preços disponíveis. Sem quartos ativos, a página fica vazia.
+3. **Tarifas definidas** — pelo menos uma tarifa ativa por tipo de quarto.
 
 ## Passo a passo
 
@@ -35,6 +43,7 @@ O Motor de Reservas é a página de reservas online do Hotelly. Quando ativado, 
 
 - A mensagem **"Motor de reservas atualizado."** confirma a ativação.
 - Reservas feitas pelo motor entram automaticamente no Hotelly com a fonte "Motor de Reservas" (booking_engine).
+- O hóspede recebe um email de confirmação automático.
 - O hóspede vê disponibilidade em tempo real e preços conforme configurados nas tarifas.
 
 ## Se algo der errado
@@ -42,6 +51,7 @@ O Motor de Reservas é a página de reservas online do Hotelly. Quando ativado, 
 | Problema | Solução |
 |---|---|
 | Página de reservas não mostra quartos disponíveis | Verifique se há quartos ativos, tarifas definidas e nenhum bloqueio de disponibilidade no período. |
+| Pagamento não está sendo processado | Confirme que a conta Mercado Pago está conectada em Configurações > Integrações. |
 | Toggle está desativado e não consigo ativar | Verifique se sua assinatura suporta o motor de reservas ou entre em contato com o suporte. |
 
 ---

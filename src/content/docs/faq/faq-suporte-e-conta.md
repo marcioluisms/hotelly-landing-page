@@ -5,8 +5,8 @@ perfil: [owner, manager, front_desk, finance, housekeeper, viewer]
 nível: básico
 tipo: conceito
 helpArticleId: "faq-suporte-conta"
-última_revisão: 2026-03-20
-descrição: "Perguntas sobre suporte e conta: como abrir ticket, alterar senha, planos e mais."
+última_revisão: 2026-03-27
+descrição: "Perguntas sobre suporte e conta: como abrir ticket, alterar senha, onboarding e mais."
 revisado_por_engenharia: true
 ---
 
@@ -18,7 +18,7 @@ No menu, clique em **Atendimento** > **Suporte** e depois clique em **"Novo tick
 
 ## Qual o tempo de resposta do suporte?
 
-Na fase atual (clientes VIP), o canal é direto com o fundador — o tempo de resposta costuma ser rápido, geralmente no mesmo dia. O SLA formal será definido para o lançamento público.
+O canal de suporte é direto com a equipe Hotelly — o tempo de resposta costuma ser rápido, geralmente no mesmo dia. O SLA formal varia conforme o plano contratado.
 
 ## Posso usar o Copilot em vez de abrir ticket?
 
@@ -32,9 +32,9 @@ No menu do usuário (canto superior direito), acesse **Minha Conta** e use a op�
 
 Entre em contato com o suporte. A alteração de email é feita pela equipe por questões de segurança, já que o email é usado como identificador de acesso.
 
-## Como funciona a entrada no Hotelly?
+## Como funciona o acesso ao Hotelly?
 
-O Hotelly opera por assinatura mensal direta. Você escolhe seu plano, assina pelo site e nossa equipe entra em contato em até 24h para o onboarding completo — configurando quartos, preços, políticas e a IA no WhatsApp da sua hospedagem.
+O Hotelly não tem free trial público. O acesso é feito por um processo de onboarding VIP conduzido pela própria equipe Hotelly — sem self-service automático. A equipe acompanha o cliente no cadastro de quartos, tipos, preços e políticas antes de o sistema entrar em operação.
 
 ## Posso ter mais de uma propriedade na mesma conta?
 

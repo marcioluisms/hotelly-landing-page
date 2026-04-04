@@ -240,7 +240,24 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Pilar 5 */}
+              {/* Pilar 5 — Log Book Digital */}
+              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
+                <div className="text-5xl mb-6">📒</div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Passagem de Turno Digital</h3>
+                <p className="text-primary font-medium mb-6">Seu padrão não pode depender de quem está de plantão</p>
+                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real — manutenção, hóspedes, operação, financeiro</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Passagem de turno com confirmação de leitura: o próximo funcionário lê, confirma e começa com contexto completo</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Resumo do turno consolidado: tudo que está aberto, quem registrou, o que falta resolver</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cada entrada com carimbo de data, hora e nome — trilha de auditoria automática</li>
+                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Pergunte ao Copilot: "O que aconteceu no turno anterior?" e receba o resumo na hora</li>
+                </ul>
+                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
+                  "Caderno na recepção, mensagem no WhatsApp, post-it no monitor. Tudo funciona até o dia que não funciona. O Log Book Digital garante que a informação sobrevive à troca de plantão."
+                </div>
+              </div>
+
+              {/* Pilar 6 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">🛡️</div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
