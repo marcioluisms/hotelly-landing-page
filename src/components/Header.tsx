@@ -40,7 +40,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
           <Link className="hover:text-primary transition-colors" to="/ajuda">Ajuda</Link>
         </nav>
         <div className="flex items-center gap-4">
-          <span className="text-center block border border-border bg-card/20 text-muted-foreground/50 font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-not-allowed select-none">
+          <span className="text-center block border border-border bg-card/20 text-muted-foreground font-bold py-2.5 px-4 sm:px-6 rounded-lg text-xs sm:text-sm md:text-base cursor-not-allowed select-none">
             Entrar
           </span>
           {onCtaClick ? (

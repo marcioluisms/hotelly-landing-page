@@ -98,7 +98,11 @@ export default function Home() {
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 min-h-[550px]">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
-                <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge.jpg" fetchPriority="high" width={550} height={550}/>
+                <picture>
+                  <source srcSet="/hotelly-concierge-550.avif" type="image/avif" />
+                  <source srcSet="/hotelly-concierge-550.webp" type="image/webp" />
+                  <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge-550.jpg" fetchPriority="high" width={550} height={550} decoding="async" />
+                </picture>
                 <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="material-symbols-outlined text-amber">smart_toy</span>
@@ -373,21 +377,23 @@ export default function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Checkout confirmation modal */}
-      <Suspense fallback={null}>
-        <CheckoutConfirmModal
-          isOpen={checkout.isOpen}
-          onClose={() => checkout.closeModal('backdrop')}
-        >
-          <CheckoutModalContent
-            plan={checkout.plan}
-            status={checkout.status}
-            errorMessage={checkout.errorMessage}
-            onSubmit={checkout.submitCheckout}
-            onClose={() => checkout.closeModal('button')}
-          />
-        </CheckoutConfirmModal>
-      </Suspense>
+      {/* Checkout confirmation modal — only load chunks when modal is opened */}
+      {checkout.isOpen && (
+        <Suspense fallback={null}>
+          <CheckoutConfirmModal
+            isOpen={checkout.isOpen}
+            onClose={() => checkout.closeModal('backdrop')}
+          >
+            <CheckoutModalContent
+              plan={checkout.plan}
+              status={checkout.status}
+              errorMessage={checkout.errorMessage}
+              onSubmit={checkout.submitCheckout}
+              onClose={() => checkout.closeModal('button')}
+            />
+          </CheckoutConfirmModal>
+        </Suspense>
+      )}
     </div>
   );
 }
