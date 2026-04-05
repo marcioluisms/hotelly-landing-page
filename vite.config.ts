@@ -20,7 +20,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss(), preloadCssPlugin()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(process.env.GEMINI_API_KEY || ''),
       'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(env.VITE_ENABLE_CHECKOUT_MODAL || process.env.VITE_ENABLE_CHECKOUT_MODAL || ''),
       'import.meta.env.VITE_HOTELLY_API_URL': JSON.stringify(env.VITE_HOTELLY_API_URL || process.env.VITE_HOTELLY_API_URL || ''),
       'import.meta.env.VITE_TURNSTILE_SITE_KEY': JSON.stringify(env.VITE_TURNSTILE_SITE_KEY || process.env.VITE_TURNSTILE_SITE_KEY || ''),
