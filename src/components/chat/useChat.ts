@@ -564,6 +564,7 @@ export function useChat() {
       try {
         const chat = await getOrCreateChat();
         const result = await chat.sendMessage({ message: sanitized });
+        console.log('[Hotelly Mascote] finishReason:', result.candidates?.[0]?.finishReason, '| tokens:', result.usageMetadata);
         const responseText = result.text ?? '';
 
         const assistantMsg: ChatMessage = {
