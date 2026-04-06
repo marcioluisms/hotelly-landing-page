@@ -127,28 +127,28 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Durma tranquilo</h3>
+                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Durma tranquilo</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo site, 24h. Você descansa.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">sync</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Acaba o medo de dar errado</h3>
+                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Acaba o medo de dar errado</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Zero overbooking, garantido por design. Booking, Airbnb e Expedia sincronizados. Tudo funciona mesmo quando você não está olhando.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Crescimento sem sacrifício</h3>
+                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Crescimento sem sacrifício</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Precificação dinâmica que faz seu negócio crescer sem exigir mais de você. O sistema sugere, você aprova.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">verified_user</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Seu hóspede chega e tudo já está pronto</h3>
+                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Seu hóspede chega e tudo já está pronto</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Check-in digital pelo celular, FNRH automático pro governo. Sem papel, sem fila, sem você correr.</p>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
         <section className="py-24 bg-card" id="funcionalidades">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">O que o Hotelly devolve a você</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">O que o Hotelly devolve a você</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Cada funcionalidade existe para tirar algo da sua lista de preocupações. A tecnologia é como fazemos isso. A paz é o que você leva.</p>
             </div>
             
@@ -176,7 +176,7 @@ export default function Home() {
               {/* Pilar 1 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <img src="/icon.webp" alt="" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
-                <h3 className="text-xl font-bold text-foreground mb-2">Suas noites de volta</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Suas noites de volta</h3>
                 <p className="text-primary font-medium mb-6">A IA trabalha enquanto você descansa</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Atendimento inteligente por IA no WhatsApp. Responde, tira dúvidas e encaminha a reserva</li>
@@ -193,7 +193,7 @@ export default function Home() {
               {/* Pilar 2 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📊</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Acaba o medo de dar errado</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Acaba o medo de dar errado</h3>
                 <p className="text-primary font-medium mb-6">Tudo funciona mesmo quando você não está olhando</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
@@ -210,7 +210,7 @@ export default function Home() {
               {/* Pilar 3 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">💰</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Seu negócio cresce sem pesar mais em você</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Seu negócio cresce sem pesar mais em você</h3>
                 <p className="text-primary font-medium mb-6">Receita inteligente, esforço zero</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Ajuste automático de preços conforme a procura e a ocupação</li>
@@ -227,7 +227,7 @@ export default function Home() {
               {/* Pilar 4 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📋</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Seu hóspede chega e tudo já está pronto</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Seu hóspede chega e tudo já está pronto</h3>
                 <p className="text-primary font-medium mb-6">Sem papel, sem fila, sem você correr</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
@@ -244,7 +244,7 @@ export default function Home() {
               {/* Pilar 5 — Log Book Digital */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📒</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Nada se perde entre turnos</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Nada se perde entre turnos</h3>
                 <p className="text-primary font-medium mb-6">Sua tranquilidade não pode depender de quem está de plantão</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real: manutenção, hóspedes, operação, financeiro</li>
@@ -261,7 +261,7 @@ export default function Home() {
               {/* Pilar 6 — Motor de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">💻</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Reservas diretas, sem comissão</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Reservas diretas, sem comissão</h3>
                 <p className="text-primary font-medium mb-6">100% do valor vai para você</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Um botão de reservas bonito e pronto para colocar no seu site</li>
@@ -277,7 +277,7 @@ export default function Home() {
               {/* Pilar 7 — Hub de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col relative">
                 <div className="text-5xl mb-6">🌐</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Presente em todo lugar, sem estar em lugar nenhum</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Presente em todo lugar, sem estar em lugar nenhum</h3>
                 <p className="text-primary font-medium mb-6">Booking, Airbnb e Expedia num só painel</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2">
@@ -297,7 +297,7 @@ export default function Home() {
               {/* Pilar 8 — Segurança e Proteção dos Dados */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">🛡️</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
+                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
                 <p className="text-primary font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Proteção de dados integrada ao sistema. Projetado para suportar conformidade com a LGPD</li>
@@ -364,7 +364,7 @@ export default function Home() {
         <section className="py-24 bg-card" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Sua hospedagem funciona. Você descansa.</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">Sua hospedagem funciona. Você descansa.</h2>
               <p className="text-muted-foreground text-lg">O Hotelly responde seus hóspedes, fecha reservas e processa pagamentos enquanto você dorme. Para que acordar seja bom de novo.</p>
             </div>
             

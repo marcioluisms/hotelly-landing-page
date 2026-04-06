@@ -6,7 +6,7 @@ export default function HomeFAQ() {
   return (
     <section className="py-24 bg-card border-t border-border">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Perguntas Frequentes</h2>
+        <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground text-center mb-12">Perguntas Frequentes</h2>
         <div className="space-y-4">
           <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly funciona com Booking e Airbnb?')}>
