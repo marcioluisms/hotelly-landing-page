@@ -1,9 +1,9 @@
 ---
 title: "Checklist de Turno na Recepção: o Guia Completo para Hospedagens"
 slug: "checklist-turno-recepcao"
-excerpt: "Checklists completos de turno (manhã, tarde e noite) para a recepção da sua hospedagem. Prontos para imprimir e usar amanhã, sem depender da memória de ninguém."
+excerpt: "Checklists completos de turno (manhã, tarde e noite) para a recepção da sua hospedagem. Com o processo certo, sua equipe passa o contexto em 5 minutos e o próximo turno começa sem lacunas."
 date: "2026-04-03"
-lastUpdated: "2026-04-05"
+lastUpdated: "2026-04-06"
 author:
   name: "Márcio Machado"
   avatar: "/marcio.webp"
@@ -24,7 +24,7 @@ A recepção é o sistema nervoso central de qualquer hospedagem. É onde as inf
 
 Este guia entrega três checklists completos (manhã, tarde e noite), explica o que registrar no log book e mostra como fazer a passagem de turno em 5 minutos de forma que funcione com qualquer pessoa de plantão.
 
-[📥 Baixar checklist em PDF, pronto para imprimir](/downloads/checklist-turno-recepcao.pdf)
+Se você ainda não usa um sistema de gestão com log book digital integrado, [baixe o checklist em PDF](/downloads/checklist-turno-recepcao.pdf) para começar com papel enquanto implanta o processo. O importante é ter o hábito antes de ter a ferramenta.
 
 ---
 
@@ -157,7 +157,7 @@ O turno da noite tem menos movimento com hóspedes, mas é onde acontece o fecha
 ### Ao encerrar o turno (últimos 15 minutos)
 
 - [ ] Fechar e conferir o caixa noturno
-- [ ] Imprimir ou preparar o relatório do dia para a manhã
+- [ ] Preparar o relatório do dia para a manhã (no sistema ou em arquivo compartilhado)
 - [ ] Registrar no log book: ocorrências da noite, late arrivals realizados, qualquer pendência para o turno da manhã
 - [ ] Preparar o briefing verbal para o recepcionista da manhã
 
@@ -189,19 +189,21 @@ Cinco minutos. O próximo turno começa informado.
 
 ## Como implementar os checklists na sua hospedagem
 
-### Versão simples (custo zero)
+### Versão papel (ponto de partida)
 
-Imprima os três checklists, plastifique ou coloque em um porta-papel acrílico no balcão. Use caneta de quadro branco para marcar os itens, apaga ao final do turno. O log book é um caderno dedicado.
+Imprima os três checklists e coloque em um porta-papel no balcão. Use caneta de quadro branco para marcar os itens e apague ao final do turno. O log book é um caderno dedicado. Funciona. Não é o ideal, mas funciona para começar.
 
-### Versão intermediária
+### Versão digital sem sistema
 
-Crie uma pasta compartilhada (Google Drive ou equivalente) com um arquivo por turno. O recepcionista preenche digitalmente, e o gestor pode acompanhar remotamente. O log book vira um documento compartilhado com histórico.
+Crie uma pasta compartilhada (Google Drive ou equivalente) com um arquivo por turno. O recepcionista preenche digitalmente e o gestor acompanha remotamente. Melhor que papel, mas ainda exige disciplina manual e não tem histórico estruturado.
 
-### Versão avançada
+### Versão integrada ao sistema de gestão
 
-Se a hospedagem já usa um sistema de gestão (PMS), verifique se ele tem campo de ocorrências ou log book integrado. Muitos têm, e centralizar tudo em um só lugar elimina o risco de perder o caderno.
+Se a hospedagem usa um PMS com Log Book Digital integrado, como o Hotelly, o registro acontece diretamente no sistema, com carimbo automático de data, hora e nome do responsável. O turno seguinte abre o painel, lê as ocorrências e começa informado. Sem papel, sem caderno, sem pasta no Drive.
 
-**O mais importante:** escolha o formato que sua equipe vai realmente usar, não o mais sofisticado.
+Essa é a versão que elimina as lacunas que os outros formatos não conseguem fechar: o log que some, o caderno que ninguém lembrou de atualizar, o arquivo que estava desatualizado.
+
+**O mais importante:** escolha o formato que sua equipe vai realmente usar hoje. E evolua conforme a operação cresce.
 
 ---
 
@@ -215,13 +217,13 @@ Este guia é para quem tem equipe, tem trocas de turno, e percebe que o padrão 
 
 ---
 
-## Do checklist impresso ao Log Book Digital
+## Do checklist em papel ao Log Book Digital
 
-O checklist físico resolve o problema da memória individual, mas ainda depende de papel, prancheta e alguém que lembre de preencher.
+O checklist físico resolve o problema da memória individual. Mas ainda depende de papel, prancheta e alguém que lembre de preencher. E quando o caderno some, o histórico vai junto.
 
-O próximo passo natural é o registro digital: ao invés de anotar em papel ou mandar mensagem no grupo do WhatsApp, a equipe registra as ocorrências diretamente no sistema, com carimbo automático de data, hora e nome do responsável. O turno seguinte lê, confirma e começa com contexto completo.
+O registro digital fecha esse gap: as ocorrências ficam registradas no sistema com data, hora e nome do responsável. O turno seguinte lê, confirma e começa com contexto completo. O gestor acompanha de qualquer lugar, sem precisar estar no balcão.
 
-Se a sua hospedagem já opera com um sistema de gestão, verifique se ele oferece alguma funcionalidade de log de turno ou passagem de turno digital. O checklist físico é um ótimo ponto de partida, mas o registro digital elimina as lacunas que o papel não consegue fechar.
+Se a sua hospedagem usa o Hotelly, o Log Book Digital já está disponível no painel. Não é um módulo separado, não é uma integração a configurar. Está lá. O próximo passo é treinar a equipe para usar em vez do caderno.
 
 ---
 
