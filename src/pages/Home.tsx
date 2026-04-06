@@ -158,9 +158,7 @@ export default function Home() {
         {/* Assistant CTA */}
         <section className="py-20 bg-background">
           <div className="max-w-3xl mx-auto px-8 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-info-subtle flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined text-primary text-3xl">forum</span>
-            </div>
+            <img src="/icon.webp" alt="" className="w-16 h-16 mb-6 object-contain mx-auto" width="64" height="64" />
             <h2 className="text-3xl lg:text-4xl font-headline font-bold mb-4 text-foreground">Ficou com dúvidas sobre o Hotelly?</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">Nosso assistente está no canto da tela e pode te ajudar agora mesmo. Clique no ícone e pergunte o que quiser sobre planos, funcionalidades ou como funciona a implantação.</p>
           </div>
@@ -321,7 +319,6 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">NOVO</span>
                 <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-6">
                   Seu hóspede fala qualquer idioma. Sua hospedagem também.
                 </h2>
@@ -364,7 +361,7 @@ export default function Home() {
         </section>
 
         {/* Sales Story */}
-        <section className="py-24 bg-background" id="como-funciona">
+        <section className="py-24 bg-card" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">De refém a livre</h2>
