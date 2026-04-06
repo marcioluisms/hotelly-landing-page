@@ -33,6 +33,18 @@ export default function HomeFAQ() {
           </details>
 
           <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+            <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly atende hóspedes em outros idiomas?')}>
+              <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly atende hóspedes em outros idiomas?</h3>
+              <span className="transition group-open:rotate-180 text-primary">
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></svg>
+              </span>
+            </summary>
+            <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
+              Sim, automaticamente. O Concierge IA responde no idioma do hóspede: inglês, espanhol, francês, italiano, o que for. Você não precisa configurar nada, já funciona em todos os planos. E se você é um dono de hospedagem que fala outro idioma, o assistente do painel também conversa com você no seu idioma nativo. O painel continua em português para sua equipe brasileira.
+            </div>
+          </details>
+
+          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly substitui recepcionista?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly substitui recepcionista?</h3>
               <span className="transition group-open:rotate-180 text-primary">

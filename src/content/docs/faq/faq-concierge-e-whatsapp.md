@@ -5,7 +5,7 @@ perfil: [owner, manager, front_desk]
 nível: básico
 tipo: conceito
 helpArticleId: "faq-concierge-whatsapp"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-06
 descrição: "Perguntas frequentes sobre o Concierge IA e WhatsApp: configuração, limites e resolução de problemas."
 revisado_por_engenharia: true
 ---
@@ -26,7 +26,7 @@ O Concierge informa que não tem a informação e oferece a opção de transfer�
 
 ## O Concierge funciona em outros idiomas?
 
-O Concierge opera em português. Para informações sobre suporte a outros idiomas, consulte a equipe Hotelly.
+Sim. O Concierge responde automaticamente no idioma em que o hóspede escrever. Se o hóspede escrever em inglês, a resposta vem em inglês. Se escrever em espanhol, a resposta vem em espanhol. Funciona para qualquer idioma, sem configuração extra, em todos os planos.
 
 ## Posso ver o histórico de conversas do WhatsApp?
 

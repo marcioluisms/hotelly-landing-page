@@ -316,6 +316,53 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Multilingual */}
+        <section className="py-24 bg-background" id="multilingual">
+          <div className="max-w-5xl mx-auto px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">NOVO</span>
+                <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-6">
+                  Seu hóspede fala qualquer idioma. Sua hospedagem também.
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  O Concierge IA responde automaticamente no idioma do hóspede pelo WhatsApp. Inglês, espanhol, francês, italiano, o idioma que for. Sua hospedagem recebe o mundo inteiro sem você contratar ninguém a mais.
+                </p>
+                <ul className="space-y-4 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="text-success mt-0.5">✅</span>
+                    <span>Funciona automaticamente, sem configuração</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-success mt-0.5">✅</span>
+                    <span>Disponível em todos os planos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-success mt-0.5">✅</span>
+                    <span>Nenhum PMS no Brasil oferece atendimento multilingual nativo</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Para hóspedes estrangeiros</p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Hóspede mandou mensagem em inglês às 23h? A IA responde, tira dúvidas e encaminha a reserva no idioma dele. Você acorda com a confirmação no painel.
+                    </p>
+                  </div>
+                  <div className="border-t border-border pt-6">
+                    <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Para donos estrangeiros no Brasil</p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Italiano em Búzios, francês em Trancoso, argentino em Floripa? O assistente de IA conversa com você no seu idioma nativo. O painel continua em português para sua equipe.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sales Story */}
         <section className="py-24 bg-background" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">

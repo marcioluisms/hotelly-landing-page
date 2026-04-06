@@ -5,7 +5,7 @@ perfil: [owner, manager, front_desk, viewer]
 nível: básico
 tipo: conceito
 helpArticleId: "concierge-ia-conceito"
-última_revisão: 2026-03-20
+última_revisão: 2026-04-06
 descrição: "Conheça o Concierge IA do Hotelly: atendimento automático por WhatsApp que fecha reservas 24 horas."
 revisado_por_engenharia: true
 ---
@@ -27,6 +27,7 @@ O Concierge IA é um atendente virtual conectado ao WhatsApp da sua hospedagem. 
 - Verifica disponibilidade de quartos em tempo real
 - Envia links de pagamento para o hóspede fechar a reserva
 - Funciona 24/7, sem pausas
+- Responde automaticamente no idioma do hóspede: inglês, espanhol, francês, italiano, qualquer idioma. Sem configuração extra, funciona em todos os planos
 
 **O que ele não faz:**
 - Não inventa informações. Se a resposta não está na base de conhecimento, ele informa que não sabe e sugere contato com a recepção (Hallucination Guard)
