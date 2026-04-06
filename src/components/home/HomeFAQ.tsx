@@ -28,7 +28,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Não. O Hotelly foi feito para quem administra uma hospedagem, não para técnico de informática. O onboarding é conduzido pela nossa própria equipe: configuramos seus quartos, tarifas, políticas e IA juntos, no seu ritmo. A maioria dos clientes já recebe a primeira reserva automática no Dia 1. Depois disso, o sistema trabalha por você.
+              Não. O Hotelly foi feito para quem administra uma hospedagem, não para técnico de informática. O onboarding é conduzido pela nossa própria equipe: configuramos seus quartos, tarifas, políticas e IA juntos, no seu ritmo. O tempo até a primeira reserva automática depende de algumas integrações, como a conexão com o WhatsApp, mas nossa equipe guia cada passo. A maioria dos clientes está operando em poucos dias.
             </div>
           </details>
 

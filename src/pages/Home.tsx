@@ -81,7 +81,7 @@ export default function Home() {
                     onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
                     className="w-full sm:w-auto text-center bg-primary-dark text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary-dark/90 transition-colors cursor-pointer"
                   >
-                    Começar agora →
+                    Começar →
                   </button>
                 ) : (
                   <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
