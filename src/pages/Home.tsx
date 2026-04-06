@@ -364,8 +364,8 @@ export default function Home() {
         <section className="py-24 bg-card" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">De refém a livre</h2>
-              <p className="text-muted-foreground text-lg">Você abriu uma hospedagem porque ama receber pessoas. O Hotelly existe para devolver essa liberdade.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Sua hospedagem funciona. Você descansa.</h2>
+              <p className="text-muted-foreground text-lg">O Hotelly responde seus hóspedes, fecha reservas e processa pagamentos enquanto você dorme. Para que acordar seja bom de novo.</p>
             </div>
             
             <div className="relative border-l-2 border-border ml-6 md:ml-12 space-y-16 pb-8">

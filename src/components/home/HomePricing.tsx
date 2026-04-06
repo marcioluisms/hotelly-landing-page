@@ -9,7 +9,7 @@ export default function HomePricing({ onPlanSelect }: HomePricingProps) {
   return (
     <>
       {/* Pricing Table */}
-      <section className="py-24 px-8 bg-card">
+      <section className="py-24 px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-headline font-bold mb-4 text-foreground">Quanto custa a sua paz?</h2>
