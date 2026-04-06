@@ -16,7 +16,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
               <img alt="Hotelly — Central de Reservas" className="h-12 w-auto mb-2 mx-auto md:mx-0" src="/hotelly.webp?v=3" width="219" height="70" />
             </Link>
-            <p className="text-muted-foreground max-w-sm">Vendas Diretas. Gestão Completa.</p>
+            <p className="text-muted-foreground max-w-sm">Sua hospedagem funcionando. Você vivendo.</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
             {onCtaClick ? (

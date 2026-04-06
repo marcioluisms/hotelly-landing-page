@@ -64,7 +64,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Os três planos incluem IA ilimitada, gestão de reservas, check-in digital, FNRH automático, Motor de Reservas para o seu site, financeiro e governança de limpeza. O <strong className="text-foreground">Start</strong> (R$ 349/mês) tem tudo isso para você sair do WhatsApp e planilha. O <strong className="text-foreground">Pro</strong> (R$ 549/mês) adiciona precificação dinâmica, relatórios avançados (RevPAR, ADR, CSV) e políticas sazonais para quem quer profissionalizar a receita. O <strong className="text-foreground">Max</strong> (R$ 849/mês) inclui tudo do Pro mais a sincronização com Booking, Airbnb, Expedia e outros canais, tudo num painel único.
+              Os três planos incluem IA ilimitada, gestão de reservas, check-in digital, FNRH automático, Motor de Reservas para o seu site, financeiro e governança de limpeza. O <strong className="text-foreground">Start</strong> (R$ 349/mês) organiza sua operação e devolve suas noites de sono. O <strong className="text-foreground">Pro</strong> (R$ 549/mês) profissionaliza com precificação dinâmica e relatórios avançados, para o negócio crescer sem pesar mais em você. E o <strong className="text-foreground">Max</strong> (R$ 849/mês)? Além de tudo do Pro, conecta você ao Booking, Airbnb e Expedia. O Max devolve a sua paz.
             </div>
           </details>
 
@@ -112,7 +112,7 @@ export default function HomeFAQ() {
               </span>
             </summary>
             <div className="px-6 pb-6 text-muted-foreground border-l-4 border-brand-sky ml-6 mb-6 bg-white/5 p-4 rounded-r-lg">
-              Sendo direto: o <strong className="text-foreground">Max</strong> é o melhor plano para qualquer hospedagem. Por R$ 849/mês, cerca de meio salário mínimo, você tem IA ilimitada, gestão completa, precificação dinâmica, relatórios avançados e todos os seus canais de venda, incluindo Booking, Airbnb e Expedia, sincronizados em tempo real. Nenhum cliente que chegou ao Max voltou atrás. Se você quer começar pelo <strong className="text-foreground">Start</strong> ou pelo <strong className="text-foreground">Pro</strong> para conhecer o sistema primeiro, faz todo sentido: a migração para o Max é simples e você não perde nada do que configurou. Mas o destino é o mesmo para todo mundo.
+              Sendo direto: o <strong className="text-foreground">Max</strong> é o plano que devolve a sua paz. Por R$ 849/mês, você tem IA ilimitada, gestão completa, precificação dinâmica, relatórios avançados e todos os seus canais de venda, incluindo Booking, Airbnb e Expedia, sincronizados em tempo real. Seu negócio cresce sem consumir mais de você. Se prefere começar pelo <strong className="text-foreground">Start</strong> ou <strong className="text-foreground">Pro</strong> para conhecer o sistema, faz sentido: a migração é simples e você não perde nada. Mas o destino é o mesmo para todo mundo.
             </div>
           </details>
         </div>

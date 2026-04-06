@@ -68,12 +68,12 @@ export default function Home() {
         <section className="relative px-8 pt-32 pb-32 overflow-hidden bg-background">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">INTELIGÊNCIA HOTELEIRA 24H</span>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">SUA PAZ DE VOLTA</span>
               <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-foreground leading-tight tracking-tight mb-8">
-                  Quantas reservas você perdeu dormindo esta semana?
+                  Você dorme. Sua hospedagem não.
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                  O Hotelly responde no WhatsApp às 23h, confirma a reserva, cobra o pagamento e envia o FNRH para o governo — enquanto você dorme. WhatsApp, site, Booking e Airbnb em um só lugar.
+                  O Hotelly cuida da sua operação nas horas em que você deveria estar descansando. A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo seu site, 24 horas por dia. Sem comissão, sem recepcionista de plantão.
               </p>
               <div className="flex flex-col items-start gap-3">
                 {checkout.isEnabled ? (
@@ -119,37 +119,37 @@ export default function Home() {
         <section className="py-24 bg-card" id="eficiencia">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Por que hospedagens escolhem o Hotelly</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Automatize o que é repetitivo e foque no que realmente importa: a experiência do seu hóspede.</p>
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Sua hospedagem funcionando. Você vivendo.</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">O Hotelly cuida da operação para você cuidar da sua vida. Cada funcionalidade existe para devolver algo que a rotina tirou de você.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Reservas que chegam sozinhas</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Nossa IA atende o WhatsApp, tira dúvidas e fecha vendas 24/7 sem você tocar no celular.</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Durma tranquilo</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo site, 24h. Você descansa.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">sync</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Todas as vitrines, um só controle</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Booking, Airbnb e Expedia sincronizados em tempo real. Diga adeus ao overbooking para sempre.</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Acaba o medo de dar errado</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Zero overbooking, garantido por design. Booking, Airbnb e Expedia sincronizados. Tudo funciona mesmo quando você não está olhando.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Receita que cresce no automático</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Precificação dinâmica que ajusta seus valores conforme a demanda da região e ocupação.</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Crescimento sem sacrifício</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Precificação dinâmica que faz seu negócio crescer sem exigir mais de você. O sistema sugere, você aprova.</p>
               </div>
               <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-all group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">verified_user</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Operação limpa e legal</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Check-in digital automatizado com envio direto para a FNRH. Segurança jurídica sem burocracia.</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Seu hóspede chega e tudo já está pronto</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Check-in digital pelo celular, FNRH automático pro governo. Sem papel, sem fila, sem você correr.</p>
               </div>
             </div>
           </div>
@@ -170,16 +170,16 @@ export default function Home() {
         <section className="py-24 bg-card" id="funcionalidades">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">O que o Hotelly faz por você</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Reservas, financeiro, Serpro, atendimento ao cliente: tudo automatizado!</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">O que o Hotelly devolve a você</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Cada funcionalidade existe para tirar algo da sua lista de preocupações. A tecnologia é como fazemos isso. A paz é o que você leva.</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Pilar 1 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <img src="/icon.webp" alt="" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
-                <h3 className="text-xl font-bold text-foreground mb-2">Venda Automática 24/7</h3>
-                <p className="text-primary font-medium mb-6">Sua pousada vendendo enquanto você dorme</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Suas noites de volta</h3>
+                <p className="text-primary font-medium mb-6">A IA trabalha enquanto você descansa</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Atendimento inteligente por IA no WhatsApp. Responde, tira dúvidas e encaminha a reserva</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Cotação automática com período, tipo de quarto e número de hóspedes</li>
@@ -188,15 +188,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> A IA nunca inventa informação. Só responde o que você cadastrou</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "A IA do Hotelly não é um chatbot genérico. Ela conhece seus quartos, seus preços e suas regras. E quando não sabe a resposta, avisa e chama um humano."
+                  "Você dorme. De verdade. A IA conhece seus quartos, seus preços e suas regras. E quando não sabe a resposta, avisa e chama um humano."
                 </div>
               </div>
 
               {/* Pilar 2 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📊</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Gestão Completa de Reservas</h3>
-                <p className="text-primary font-medium mb-6">Do primeiro interesse ao check-out</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Acaba o medo de dar errado</h3>
+                <p className="text-primary font-medium mb-6">Tudo funciona mesmo quando você não está olhando</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Proteção contra overbooking: o sistema trava a data na hora. Ninguém reserva o mesmo quarto duas vezes</li>
@@ -205,15 +205,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa visual que mostra os dias mais cheios e os mais vazios de cada tipo de quarto</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Overbooking? Impossível. O sistema não permite. Você gerencia de verdade, sem planilha e sem improviso."
+                  "Saia para o almoço de domingo sem checar o celular. O sistema não permite overbooking, não perde dados, não esquece nada."
                 </div>
               </div>
 
               {/* Pilar 3 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">💰</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Receita Inteligente</h3>
-                <p className="text-primary font-medium mb-6">Precificação que pensa por você</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Seu negócio cresce sem pesar mais em você</h3>
+                <p className="text-primary font-medium mb-6">Receita inteligente, esforço zero</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Ajuste automático de preços conforme a procura e a ocupação</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Calendário visual de preços para os próximos 120 dias</li>
@@ -222,15 +222,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Relatórios financeiros no padrão usado pelos melhores hotéis do mundo, com conferência automática do Mercado Pago</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Pare de cobrar o mesmo preço no Carnaval e na segunda-feira de chuva. O sistema sugere ajustes baseados em dados reais. Ocupação, temporada e demanda."
+                  "Mais receita sem mais trabalho. O sistema sugere o preço certo conforme ocupação e temporada. Você aprova de onde estiver."
                 </div>
               </div>
 
               {/* Pilar 4 */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📋</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Zero Burocracia</h3>
-                <p className="text-primary font-medium mb-6">Nunca mais preencha uma ficha de papel</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Seu hóspede chega e tudo já está pronto</h3>
+                <p className="text-primary font-medium mb-6">Sem papel, sem fila, sem você correr</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> FNRH automático integrado ao Serpro. Os dados vão direto para o governo</li>
@@ -239,15 +239,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Configuração inicial guiada, nossa equipe falará com você</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "O hóspede preenche no celular. O governo recebe automaticamente. Você não digita, não persegue, não improvisa."
+                  "O hóspede preenche no celular. O governo recebe automaticamente. Você não digita, não corre, não se preocupa."
                 </div>
               </div>
 
               {/* Pilar 5 — Log Book Digital */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">📒</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Passagem de Turno Digital</h3>
-                <p className="text-primary font-medium mb-6">Seu padrão não pode depender de quem está de plantão</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Nada se perde entre turnos</h3>
+                <p className="text-primary font-medium mb-6">Sua tranquilidade não pode depender de quem está de plantão</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real: manutenção, hóspedes, operação, financeiro</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Passagem de turno com confirmação de leitura: o próximo funcionário lê, confirma e começa com contexto completo</li>
@@ -256,15 +256,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Pergunte ao Copilot: "O que aconteceu no turno anterior?" e receba o resumo na hora</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Caderno na recepção, mensagem no WhatsApp, post-it no monitor. Tudo funciona até o dia que não funciona. O Log Book Digital garante que a informação sobrevive à troca de plantão."
+                  "Você não precisa estar lá para saber o que aconteceu. O Log Book Digital garante que a informação sobrevive à troca de plantão."
                 </div>
               </div>
 
               {/* Pilar 6 — Motor de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-all flex flex-col">
                 <div className="text-5xl mb-6">💻</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Motor de Reservas</h3>
-                <p className="text-primary font-medium mb-6">Vendas diretas no seu próprio site</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Reservas diretas, sem comissão</h3>
+                <p className="text-primary font-medium mb-6">100% do valor vai para você</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Um botão de reservas bonito e pronto para colocar no seu site</li>
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Aceite reservas diretas sem pagar comissão para ninguém</li>
@@ -272,15 +272,15 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Pagamento integrado no próprio checkout do site</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Transforme visitantes do seu site em hóspedes pagantes sem pagar 15% de comissão para as OTAs."
+                  "Cada reserva direta é dinheiro que fica com você, não com as OTAs. Um botão no seu site e pronto."
                 </div>
               </div>
 
               {/* Pilar 7 — Hub de Reservas */}
               <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-all flex flex-col relative">
                 <div className="text-5xl mb-6">🌐</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Hub de Reservas</h3>
-                <p className="text-primary font-medium mb-6">O único lugar que você precisa olhar</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Presente em todo lugar, sem estar em lugar nenhum</h3>
+                <p className="text-primary font-medium mb-6">Booking, Airbnb e Expedia num só painel</p>
                 <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-amber font-bold">★</span> 
@@ -292,7 +292,7 @@ export default function Home() {
                   <li className="flex items-start gap-2"><span className="text-success">✅</span> Uma única tela para toda a sua distribuição</li>
                 </ul>
                 <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "No plano Max, o Hotelly vira a sua central de distribuição: Booking, Airbnb, site próprio e WhatsApp, todos sincronizados em tempo real, num único painel."
+                  "Seu negócio aparece em todo lugar sem você precisar estar em lugar nenhum. No Max, Booking, Airbnb, site próprio e WhatsApp ficam sincronizados num único painel."
                 </div>
               </div>
 
@@ -320,17 +320,17 @@ export default function Home() {
         <section className="py-24 bg-background" id="como-funciona">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Do Caos ao Lucro Automático</h2>
-              <p className="text-muted-foreground text-lg">Entenda como o Hotelly liberta você das tarefas que roubam seu tempo e sua paz.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">De refém a livre</h2>
+              <p className="text-muted-foreground text-lg">Você abriu uma hospedagem porque ama receber pessoas. O Hotelly existe para devolver essa liberdade.</p>
             </div>
             
             <div className="relative border-l-2 border-border ml-6 md:ml-12 space-y-16 pb-8">
               {/* Step 1 */}
               <div className="relative pl-10 md:pl-16">
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-destructive/20 border-2 border-destructive text-destructive rounded-full flex items-center justify-center font-bold text-xl">1</div>
-                <h3 className="text-xl font-bold text-destructive mb-3 uppercase tracking-wider text-sm">O Fardo</h3>
+                <h3 className="text-xl font-bold text-destructive mb-3 uppercase tracking-wider text-sm">O Preço Invisível</h3>
                 <blockquote className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  Você se sente escravo da sua própria hospedagem? Paga por sistemas que te obrigam a digitar as fichas de hóspedes manualmente e passar horas fazendo follow-up no WhatsApp?
+                  Você acorda de madrugada para responder WhatsApp, vive com medo de overbooking e não consegue tirar um fim de semana de folga. O preço disso não está na planilha. Está na sua saúde, no seu tempo, na sua família.
                 </blockquote>
               </div>
               
@@ -339,16 +339,16 @@ export default function Home() {
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-white/10 border-2 border-border-strong text-muted-foreground rounded-full flex items-center justify-center font-bold text-xl">2</div>
                 <h3 className="text-xl font-bold text-muted-foreground mb-3 uppercase tracking-wider text-sm">O Mito</h3>
                 <blockquote className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  A maioria dos softwares hoteleiros é passiva. Eles guardam dados, mas não fazem vendas diretas. Custam caro e ainda exigem que você e sua equipe trabalhem para eles, alimentando planilhas e processos lentos.
+                  A maioria dos sistemas hoteleiros organiza a operação, mas não a assume. Custam caro e ainda exigem que você trabalhe para eles. Você troca uma planilha por outra tela, mas o peso continua nos seus ombros.
                 </blockquote>
               </div>
               
               {/* Step 3 */}
               <div className="relative pl-10 md:pl-16">
                 <div className="absolute -left-[25px] top-0 w-12 h-12 bg-success-subtle border-2 border-success text-success rounded-full flex items-center justify-center font-bold text-xl">3</div>
-                <h3 className="text-xl font-bold text-success mb-3 uppercase tracking-wider text-sm">A Inteligência</h3>
+                <h3 className="text-xl font-bold text-success mb-3 uppercase tracking-wider text-sm">A Sua Paz de Volta</h3>
                 <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed">
-                  O Hotelly é a sua Inteligência Ativa. Ele não apenas registra, ele age. Caça reservas através de follow-up automático, sincroniza com as OTAs em tempo real e entrega o FNRH pronto para o Governo. Você recupera sua liberdade, enquanto o sistema garante que o Pix caia na conta.
+                  O Hotelly não organiza a operação. Ele a assume. A IA responde hóspedes, fecha reservas e processa pagamentos, 24 horas por dia. Quando você olha o painel, está tudo no lugar. Sua hospedagem merece funcionar sem depender só de você. E você merece isso também.
                 </blockquote>
               </div>
             </div>
