@@ -8,7 +8,7 @@ export default function HomeFAQ() {
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">Perguntas Frequentes</h2>
         <div className="space-y-4">
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly funciona com Booking e Airbnb?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly funciona com Booking e Airbnb?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -20,7 +20,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Preciso saber de tecnologia para usar o Hotelly?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">Preciso saber de tecnologia para usar o Hotelly?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -32,7 +32,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly atende hóspedes em outros idiomas?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly atende hóspedes em outros idiomas?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -44,7 +44,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly substitui recepcionista?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly substitui recepcionista?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -56,7 +56,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Como funciona a precificação dinâmica?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">Como funciona a precificação dinâmica?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -68,7 +68,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Qual a diferença entre os planos Start, Pro e Max?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">Qual a diferença entre os planos Start, Pro e Max?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -80,7 +80,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O Hotelly emite o FNRH automaticamente?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O Hotelly emite o FNRH automaticamente?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -92,7 +92,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('O que é o Log Book Digital?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">O que é o Log Book Digital?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -104,7 +104,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Posso receber reservas diretas pelo meu próprio site?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">Posso receber reservas diretas pelo meu próprio site?</h3>
               <span className="transition group-open:rotate-180 text-primary">
@@ -116,7 +116,7 @@ export default function HomeFAQ() {
             </div>
           </details>
 
-          <details className="group bg-card rounded-2xl overflow-hidden border border-border">
+          <details className="group bg-popover rounded-2xl overflow-hidden border border-border">
             <summary className="flex items-center justify-between p-6 text-foreground font-bold cursor-pointer list-none" onClick={() => trackFAQExpand('Qual plano é o certo para minha hospedagem?')}>
               <h3 className="text-base font-bold text-inherit m-0 p-0">Qual plano é o certo para minha hospedagem?</h3>
               <span className="transition group-open:rotate-180 text-primary">
