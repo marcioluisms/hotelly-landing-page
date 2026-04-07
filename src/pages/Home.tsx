@@ -65,7 +65,7 @@ export default function Home() {
 
       <main>
         {/* Navbar padding offset added to Hero */}
-        <section className="relative px-8 pt-32 pb-32 overflow-hidden bg-background">
+        <section className="relative px-8 pt-32 pb-16 lg:pb-32 overflow-hidden bg-background">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
               <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">SUA PAZ DE VOLTA</span>
@@ -95,7 +95,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 min-h-[550px]">
+            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px]">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
                 <picture>
