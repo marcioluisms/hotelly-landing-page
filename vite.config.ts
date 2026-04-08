@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss(), preloadCssPlugin()],
     define: {
-      'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(env.VITE_ENABLE_CHECKOUT_MODAL || process.env.VITE_ENABLE_CHECKOUT_MODAL || ''),
+      // VITE_ENABLE_CHECKOUT_MODAL: o .env sempre vence — process.env do CI/CD é ignorado intencionalmente
+      'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(env.VITE_ENABLE_CHECKOUT_MODAL ?? ''),
       'import.meta.env.VITE_HOTELLY_API_URL': JSON.stringify(env.VITE_HOTELLY_API_URL || process.env.VITE_HOTELLY_API_URL || ''),
       'import.meta.env.VITE_TURNSTILE_SITE_KEY': JSON.stringify(env.VITE_TURNSTILE_SITE_KEY || process.env.VITE_TURNSTILE_SITE_KEY || ''),
       'import.meta.env.VITE_VAGAS_PREENCHIDAS': JSON.stringify(env.VITE_VAGAS_PREENCHIDAS || process.env.VITE_VAGAS_PREENCHIDAS || '0'),

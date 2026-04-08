@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <div className="bg-background text-foreground antialiased font-sans selection:bg-brand-sky/30">
-      <Header onCtaClick={checkout.isEnabled ? () => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' }) : undefined} />
+      <Header />
 
       <main>
         {/* Navbar padding offset added to Hero */}
@@ -76,23 +76,10 @@ export default function Home() {
                   O Hotelly cuida da sua operação nas horas em que você deveria estar descansando. A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo seu site, 24 horas por dia. Sem comissão, sem recepcionista de plantão.
               </p>
               <div className="flex flex-col items-start gap-3">
-                {checkout.isEnabled ? (
-                  <button
-                    onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="w-full sm:w-auto text-center bg-primary-dark text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary-dark/90 transition-colors cursor-pointer"
-                  >
-                    Começar →
-                  </button>
-                ) : (
-                  <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
-                    🚀 Lançamento em Breve
-                  </div>
-                )}
-                <p className="text-xs text-muted-foreground">
-                  {checkout.isEnabled
-                    ? 'Onboarding assistido pela equipe Hotelly. Sem fidelidade.'
-                    : 'Estamos finalizando os últimos detalhes. Em breve você poderá começar.'}
-                </p>
+                <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
+                  🚀 Lançamento em Breve
+                </div>
+                <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
               </div>
             </div>
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px]">
@@ -402,7 +389,7 @@ export default function Home() {
         <div id="planos" className="scroll-mt-24">
           <LazySection minHeight="50vh">
             <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
-              <HomePricing onPlanSelect={checkout.isEnabled ? (plan) => checkout.openModal(plan, 'pricing') : undefined} />
+              <HomePricing />
             </Suspense>
           </LazySection>
         </div>
@@ -417,7 +404,7 @@ export default function Home() {
 
       <LazySection minHeight="20vh">
         <Suspense fallback={<div className="h-[20vh] bg-background"></div>}>
-          <LazyFooter onCtaClick={checkout.isEnabled ? () => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' }) : undefined} />
+          <LazyFooter />
         </Suspense>
       </LazySection>
 

@@ -53,18 +53,9 @@ export default function Header({ onCtaClick }: HeaderProps) {
           <span className="text-center block border border-border bg-card/20 text-muted-foreground font-bold py-2.5 px-6 rounded-lg text-sm cursor-not-allowed select-none">
             Entrar
           </span>
-          {onCtaClick ? (
-            <button
-              onClick={onCtaClick}
-              className="text-center bg-primary-dark text-primary-foreground font-bold py-2.5 px-6 rounded-lg text-sm hover:bg-primary-dark/90 transition-colors cursor-pointer"
-            >
-              Assinar
-            </button>
-          ) : (
-            <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
-              🚀 Lançamento em Breve
-            </div>
-          )}
+          <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
+            🚀 Lançamento em Breve
+          </div>
         </div>
 
         {/* Botão hamburger mobile */}
@@ -105,18 +96,9 @@ export default function Header({ onCtaClick }: HeaderProps) {
             <span className="text-center block border border-border bg-card/20 text-muted-foreground font-bold py-3 px-6 rounded-lg text-sm cursor-not-allowed select-none">
               Entrar
             </span>
-            {onCtaClick ? (
-              <button
-                onClick={() => { setMenuOpen(false); onCtaClick(); }}
-                className="text-center bg-primary-dark text-primary-foreground font-bold py-3 px-6 rounded-lg text-sm hover:bg-primary-dark/90 transition-colors cursor-pointer"
-              >
-                Assinar
-              </button>
-            ) : (
-              <div className="text-center bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
-                🚀 Lançamento em Breve
-              </div>
-            )}
+            <div className="text-center bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
+              🚀 Lançamento em Breve
+            </div>
           </div>
         </div>
       )}
