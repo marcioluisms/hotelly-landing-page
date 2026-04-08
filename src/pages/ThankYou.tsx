@@ -60,13 +60,11 @@ export default function ThankYou() {
             </ol>
           </div>
 
-          {/* CTA to admin */}
-          <a
-            href="https://adm.hotelly.ia.br"
-            className="inline-block w-full py-4 rounded-xl bg-primary-dark text-primary-foreground font-bold text-base hover:bg-primary-dark/90 transition-colors mb-4"
-          >
-            Acessar painel administrativo
-          </a>
+          {/* CTA to admin — desativado até o lançamento oficial */}
+          {/* URL original: https://adm.hotelly.ia.br */}
+          <div className="inline-block w-full py-4 rounded-xl bg-primary/50 text-primary-foreground font-bold text-base cursor-default select-none opacity-80 mb-4">
+            🚀 Lançamento em Breve
+          </div>
 
           <Link
             to="/"
