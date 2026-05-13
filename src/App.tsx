@@ -14,6 +14,7 @@ const DocsArticle = React.lazy(() => import('./pages/DocsArticle'));
 
 const ThankYou = React.lazy(() => import('./pages/ThankYou'));
 const ChatWidget = React.lazy(() => import('./components/chat/ChatWidget'));
+const ENABLE_MASCOT = import.meta.env.VITE_ENABLE_MASCOT === 'true';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
   const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
+    if (!ENABLE_MASCOT) return;
     if (isEmbed) return;
 
     const initChat = () => {
@@ -69,7 +71,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </Router>
-      {!isEmbed && showChat && (
+      {ENABLE_MASCOT && !isEmbed && showChat && (
         <Suspense fallback={null}>
           <ChatWidget />
         </Suspense>
