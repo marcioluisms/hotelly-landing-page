@@ -1,23 +1,28 @@
 /**
  * prerender-meta.js
  *
- * Post-build script that generates per-route HTML files with correct
- * <title>, <meta>, Open Graph, Twitter Card, canonical and JSON-LD tags.
+ * Post-build script that generates per-route HTML files with:
+ *  1. Correct <title>, <meta>, Open Graph, Twitter Card, canonical and JSON-LD.
+ *  2. Server-rendered body (HTML inside <div id="root">) via the SSR bundle
+ *     produced by `vite build --ssr src/entry-server.tsx`.
  *
- * Runs after `vite build` and reads the same markdown sources the app uses.
- * Cloudflare Pages serves the static file when it exists; React hydrates on
- * the client via hydrateRoot().
+ * Runs after `vite build` + `vite build --ssr`. Cloudflare Pages serves the
+ * static file when it exists; React hydrates on the client via hydrateRoot().
+ *
+ * Pre-rendering the body is what brings FCP/LCP down on slow mobile networks:
+ * the browser paints the hero before the JS bundle is fetched.
  */
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 import fm from 'front-matter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const distDir = path.join(__dirname, '../dist');
+const ssrDir = path.join(__dirname, '../dist-ssr');
 const docsDir = path.join(__dirname, '../src/content/docs');
 const blogDir = path.join(__dirname, '../src/content/blog');
 const BASE_URL = 'https://hotelly.com.br';
@@ -42,6 +47,36 @@ const CATEGORY_LABELS = {
 // ── Read the built index.html as template ───────────────────────────────
 const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
+// ── Load SSR bundle ─────────────────────────────────────────────────────
+// vite build --ssr emits entry-server.js into dist-ssr/. We import it
+// dynamically here so the script remains pure ESM.
+const ssrEntryPath = path.join(ssrDir, 'entry-server.js');
+let ssrRender = null;
+if (fs.existsSync(ssrEntryPath)) {
+  const mod = await import(pathToFileURL(ssrEntryPath).href);
+  ssrRender = mod.render;
+} else {
+  console.warn(`⚠ SSR bundle not found at ${ssrEntryPath}. Body will not be pre-rendered.`);
+}
+
+/**
+ * Inject server-rendered HTML into <div id="root"></div>.
+ * Falls back to passing through the template if SSR is unavailable.
+ */
+function injectBody(html, url) {
+  if (!ssrRender) return html;
+  try {
+    const { html: bodyHtml } = ssrRender(url);
+    return html.replace(
+      /<div id="root"><\/div>/,
+      `<div id="root">${bodyHtml}</div>`
+    );
+  } catch (err) {
+    console.error(`✗ SSR failed for ${url}:`, err.message);
+    return html;
+  }
+}
+
 // ── Helpers ─────────────────────────────────────────────────────────────
 
 function escapeHtml(str) {
@@ -56,25 +91,21 @@ function escapeHtml(str) {
  * Replace meta tags in the template <head> with route-specific values.
  */
 function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitle, ogDescription, ogImage, twitterCard, twitterTitle, twitterDescription, twitterImage, keywords, jsonLd }) {
-  // Replace <title>
   html = html.replace(
     /<title>[^<]*<\/title>/,
     `<title>${escapeHtml(title)}</title>`
   );
 
-  // Replace meta description
   html = html.replace(
     /<meta name="description" content="[^"]*">/,
     `<meta name="description" content="${escapeHtml(description)}">`
   );
 
-  // Replace canonical
   html = html.replace(
     /<link rel="canonical" href="[^"]*">/,
     `<link rel="canonical" href="${escapeHtml(canonical)}">`
   );
 
-  // Replace OG tags
   html = html.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeHtml(ogTitle || title)}">`);
   html = html.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${escapeHtml(ogDescription || description)}">`);
   html = html.replace(/<meta property="og:type" content="[^"]*">/, `<meta property="og:type" content="${escapeHtml(ogType || 'website')}">`);
@@ -84,7 +115,6 @@ function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitl
     html = html.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${escapeHtml(ogImage)}">`);
   }
 
-  // Replace Twitter tags
   html = html.replace(/<meta name="twitter:card" content="[^"]*">/, `<meta name="twitter:card" content="${escapeHtml(twitterCard || 'summary')}">`);
   html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escapeHtml(twitterTitle || title)}">`);
   html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escapeHtml(twitterDescription || description)}">`);
@@ -93,7 +123,6 @@ function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitl
     html = html.replace(/<meta name="twitter:image" content="[^"]*">/, `<meta name="twitter:image" content="${escapeHtml(twitterImage)}">`);
   }
 
-  // Add keywords if provided (insert after description meta)
   if (keywords) {
     html = html.replace(
       /(<meta name="description" content="[^"]*">)/,
@@ -101,7 +130,6 @@ function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitl
     );
   }
 
-  // Replace JSON-LD
   if (jsonLd) {
     html = html.replace(
       /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
@@ -115,16 +143,68 @@ function injectMeta(html, { title, description, canonical, ogType, ogUrl, ogTitl
 /**
  * Write HTML to the correct path under dist/.
  * e.g. route "/ajuda/reservas/como-criar" → dist/ajuda/reservas/como-criar/index.html
+ *
+ * Injects server-rendered body for the given URL before writing.
  */
-function writePage(route, html) {
+function writePage(route, html, urlForSSR) {
+  const finalHtml = injectBody(html, urlForSSR || `/${route}`);
   const dir = path.join(distDir, route);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf-8');
+  fs.writeFileSync(path.join(dir, 'index.html'), finalHtml, 'utf-8');
 }
 
 // ── Generate pages ──────────────────────────────────────────────────────
 
 let count = 0;
+
+// ─── 0. Home: dist/index.html (overwrite with SSR body) ─────────────────
+// The root index.html is served by Cloudflare for "/". We inject the
+// server-rendered Home directly here. Meta tags are left as-is (the template
+// already carries Home's meta).
+{
+  const homeHtml = injectBody(template, '/');
+  fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml, 'utf-8');
+  count++;
+}
+
+// ─── Static legal pages ────────────────────────────────────────────────
+{
+  const title = 'Termos de Uso | Hotelly';
+  const description = 'Termos de Uso da plataforma Hotelly.';
+  const html = injectMeta(template, {
+    title,
+    description,
+    canonical: `${BASE_URL}/termos`,
+    ogType: 'website',
+    ogUrl: `${BASE_URL}/termos`,
+    ogTitle: title,
+    ogDescription: description,
+    twitterCard: 'summary',
+    twitterTitle: title,
+    twitterDescription: description,
+  });
+  writePage('termos', html, '/termos');
+  count++;
+}
+
+{
+  const title = 'Política de Privacidade | Hotelly';
+  const description = 'Como o Hotelly trata os dados pessoais de clientes e hóspedes.';
+  const html = injectMeta(template, {
+    title,
+    description,
+    canonical: `${BASE_URL}/privacidade`,
+    ogType: 'website',
+    ogUrl: `${BASE_URL}/privacidade`,
+    ogTitle: title,
+    ogDescription: description,
+    twitterCard: 'summary',
+    twitterTitle: title,
+    twitterDescription: description,
+  });
+  writePage('privacidade', html, '/privacidade');
+  count++;
+}
 
 // ─── 1. Help Center hub: /ajuda ─────────────────────────────────────────
 {
@@ -188,7 +268,6 @@ if (fs.existsSync(docsDir)) {
       const pageTitle = `${artTitle} | Ajuda Hotelly`;
       const articleUrl = `${BASE_URL}/ajuda/${cat}/${slug}`;
 
-      // JSON-LD: HowTo for "como-fazer", Article otherwise
       const jsonLd = artTipo === 'como-fazer'
         ? {
             '@context': 'https://schema.org',
@@ -311,4 +390,4 @@ if (fs.existsSync(blogDir)) {
   }
 }
 
-console.log(`✅ Pre-rendered meta tags for ${count} pages.`);
+console.log(`✅ Pre-rendered ${count} pages (meta tags + SSR body).`);
