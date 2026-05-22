@@ -88,7 +88,7 @@ export default function DocsCategory() {
                   <Link
                     key={doc.slug}
                     to={`/ajuda/${categoria}/${doc.slug}`}
-                    className="block bg-brand-slate/20 border border-white/5 rounded-xl p-5 hover:border-brand-amber/30 transition-all group"
+                    className="block bg-brand-slate/20 border border-white/5 rounded-xl p-5 hover:border-brand-amber/30 transition-[border-color] duration-300 group"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0">

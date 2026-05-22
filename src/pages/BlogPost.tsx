@@ -156,7 +156,7 @@ export default function BlogPost() {
                     <Link 
                       key={rp.slug} 
                       to={`/blog/${rp.slug}`}
-                      className="group bg-brand-slate/30 border border-white/5 rounded-xl overflow-hidden hover:border-brand-amber/50 transition-all flex flex-col"
+                      className="group bg-brand-slate/30 border border-white/5 rounded-xl overflow-hidden hover:border-brand-amber/50 transition-[transform,border-color] duration-300 flex flex-col"
                     >
                       <div className="aspect-video w-full overflow-hidden relative">
                         <img 

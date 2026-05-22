@@ -38,7 +38,7 @@ export default function Blog() {
               <Link 
                 key={post.slug} 
                 to={`/blog/${post.slug}`}
-                className="group bg-brand-slate/50 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-amber/50 transition-all hover:-translate-y-1 flex flex-col"
+                className="group bg-brand-slate/50 border border-white/10 rounded-2xl overflow-hidden hover:border-brand-amber/50 transition-colors hover:-translate-y-1 transition-[transform,border-color] duration-300 flex flex-col"
               >
                 <div className="aspect-video w-full overflow-hidden relative">
                   <img 

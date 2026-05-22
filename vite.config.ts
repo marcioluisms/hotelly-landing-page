@@ -39,6 +39,18 @@ export default defineConfig(({ mode }) => {
     envDir: path.resolve(__dirname),
     build: {
       sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('lucide-react')) return 'lucide';
+              if (id.includes('react-router') || id.includes('react-router-dom') || id.includes('@remix-run')) return 'router';
+              if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) return 'react-vendor';
+              return 'vendor';
+            }
+          }
+        }
+      }
     },
   };
 });

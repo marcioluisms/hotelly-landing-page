@@ -66,7 +66,7 @@ export default function Docs() {
                 <Link
                   key={cat.slug}
                   to={`/ajuda/${cat.slug}`}
-                  className="group bg-brand-slate/30 border border-white/5 rounded-xl p-6 hover:border-brand-amber/50 transition-all"
+                  className="group bg-brand-slate/30 border border-white/5 rounded-xl p-6 hover:border-brand-amber/50 transition-[border-color] duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <div className="bg-brand-amber/10 p-3 rounded-lg group-hover:bg-brand-amber/20 transition-colors">

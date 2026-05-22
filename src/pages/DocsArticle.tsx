@@ -176,7 +176,7 @@ export default function DocsArticle() {
                       <Link
                         key={rd.slug}
                         to={`/ajuda/${rd.categoria}/${rd.slug}`}
-                        className="block bg-brand-slate/20 border border-white/5 rounded-lg px-4 py-3 hover:border-brand-amber/30 transition-all group"
+                        className="block bg-brand-slate/20 border border-white/5 rounded-lg px-4 py-3 hover:border-brand-amber/30 transition-[border-color] duration-300 group"
                       >
                         <p className="text-white font-medium group-hover:text-brand-amber transition-colors">
                           {rd.titulo}
@@ -199,7 +199,7 @@ export default function DocsArticle() {
                   </div>
                   <button
                     onClick={handleOpenCopilot}
-                    className="bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-all text-sm shadow-lg shadow-brand-amber/20 whitespace-nowrap"
+                    className="bg-brand-amber hover:bg-amber-500 text-brand-navy font-bold py-2.5 px-6 rounded-lg transition-colors duration-300 text-sm shadow-lg shadow-brand-amber/20 whitespace-nowrap"
                   >
                     Abrir Copilot &rarr;
                   </button>
