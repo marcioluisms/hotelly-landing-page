@@ -67,7 +67,7 @@ export default function Home() {
         {/* Navbar padding offset added to Hero */}
         <section className="relative px-8 pt-32 pb-16 lg:pb-32 overflow-hidden bg-background">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="z-10">
               <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">SUA PAZ DE VOLTA</span>
               <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-foreground leading-tight tracking-tight mb-8">
                   Você dorme. Sua hospedagem não.
@@ -82,7 +82,7 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
               </div>
             </div>
-            <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px]">
+            <div className="relative mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px] animate-in fade-in duration-1000 delay-300" style={{willChange: 'opacity'}}>
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
                 <picture>
@@ -110,28 +110,28 @@ export default function Home() {
               <p className="text-muted-foreground max-w-2xl mx-auto">O Hotelly cuida da operação para você cuidar da sua vida. Cada funcionalidade existe para devolver algo que a rotina tirou de você.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-colors duration-300 group">
+              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
                 </div>
                 <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Durma tranquilo</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo site, 24h. Você descansa.</p>
               </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-colors duration-300 group">
+              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">sync</span>
                 </div>
                 <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Acaba o medo de dar errado</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Zero overbooking, garantido por design. Booking, Airbnb e Expedia sincronizados. Tudo funciona mesmo quando você não está olhando.</p>
               </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-colors duration-300 group">
+              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
                 </div>
                 <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Crescimento sem sacrifício</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Precificação dinâmica que faz seu negócio crescer sem exigir mais de você. O sistema sugere, você aprova.</p>
               </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-colors duration-300 group">
+              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-amber text-3xl">verified_user</span>
                 </div>

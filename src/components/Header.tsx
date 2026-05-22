@@ -27,7 +27,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
   }, [location.pathname]);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-[background-color,border-color,padding,backdrop-filter] duration-300 ${scrolled || !isHome ? 'bg-background/95 backdrop-blur-md border-b border-border py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${scrolled || !isHome ? 'bg-background/95 backdrop-blur-md border-b border-border py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link className="flex items-center hover:opacity-80 transition-opacity" to="/">
           <img alt="Hotelly — Central de Reservas" className="h-10 md:h-12 w-auto object-contain" src="/hotelly.webp?v=3" width="219" height="70" />
@@ -60,7 +60,7 @@ export default function Header({ onCtaClick }: HeaderProps) {
 
         {/* Botão hamburger mobile */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-muted-foreground hover:text-foreground hover:bg-card transition-colors"
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-muted-foreground hover:text-foreground hover:bg-card transition-[background-color] duration-300"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
