@@ -5,20 +5,8 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, path.resolve(__dirname), 'VITE_');
-  const preloadCssPlugin = () => {
-    return {
-      name: 'preload-css',
-      transformIndexHtml(html: string) {
-        return html.replace(
-          /<link rel="stylesheet"(.*?)href="([^"]+\.css)"(.*?)>/g,
-          `<link rel="preload" as="style" href="$2" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet"$1href="$2"$3></noscript>`
-        );
-      }
-    };
-  };
-
   return {
-    plugins: [react(), tailwindcss(), preloadCssPlugin()],
+    plugins: [react(), tailwindcss()],
     define: {
       // VITE_ENABLE_CHECKOUT_MODAL: o .env sempre vence — process.env do CI/CD é ignorado intencionalmente
       'import.meta.env.VITE_ENABLE_CHECKOUT_MODAL': JSON.stringify(env.VITE_ENABLE_CHECKOUT_MODAL ?? ''),

@@ -82,7 +82,7 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
               </div>
             </div>
-            <div className="relative mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px] animate-in fade-in duration-1000 delay-300" style={{willChange: 'opacity'}}>
+            <div className="relative mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px]">
               <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
               <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
                 <picture>
