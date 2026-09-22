@@ -10,7 +10,7 @@ interface RenderResult {
 
 /**
  * Server-side render entry point. Called by scripts/prerender-meta.js at
- * build time for each static route (/, /termos, /privacidade, /blog, etc.).
+ * build time for the Home route (/).
  *
  * Returns the HTML string for <div id="root"> plus a helmetContext object
  * populated by react-helmet-async (so per-route <title>/<meta> from inside

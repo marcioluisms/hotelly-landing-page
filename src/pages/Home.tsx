@@ -1,430 +1,517 @@
-import React, { useState, useEffect, Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {
+  ArrowDown,
+  BellRing,
+  Bot,
+  CheckCircle2,
+  ChevronRight,
+  Coins,
+  FileCheck2,
+  Globe,
+  KeyRound,
+  MessageCircle,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
+} from 'lucide-react';
 import Header from '../components/Header';
-import LazySection from '../components/LazySection';
+import Footer from '../components/Footer';
 import { useAnalytics } from '../hooks/useAnalytics';
-import { useCheckoutModal } from '../hooks/useCheckoutModal';
-const HomePricing = React.lazy(() => import('../components/home/HomePricing'));
-const CheckoutConfirmModal = React.lazy(() => import('../components/checkout/CheckoutConfirmModal'));
-const CheckoutModalContent = React.lazy(() => import('../components/checkout/CheckoutModalContent'));
-const HomeFAQ = React.lazy(() => import('../components/home/HomeFAQ'));
-const LazyFooter = React.lazy(() => import('../components/Footer'));
+import { WHATSAPP_URL } from '../lib/site';
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Conteúdo (copy v3.1, briefing de 21/set/2026)                              */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+const camadas = [
+  {
+    n: '01',
+    icon: BellRing,
+    title: 'Avisa sozinho quando algo precisa de atenção.',
+    text:
+      'O sistema acompanha dez situações e avisa assim que uma delas acontece: cadastro de hóspede com pendência, tarefa que não foi concluída, quarto que não vai ficar pronto a tempo, ocorrência urgente sem resposta, hóspede esperando atendimento humano no WhatsApp, risco de vender o mesmo quarto duas vezes, diária vendida abaixo do preço mínimo, queda nas reservas, queda na nota do Google e informação que parou de chegar. Os avisos não trazem dados pessoais e não se repetem no mesmo dia.',
+    closing: 'Se o sistema está em silêncio, é porque está tudo em ordem.',
+  },
+  {
+    n: '02',
+    icon: TrendingUp,
+    title: 'Mostra se as reservas estão acelerando ou caindo.',
+    text:
+      'Todo dia o sistema registra quantas diárias já estão vendidas para os próximos 7, 14, 30 e 60 dias e compara com a semana anterior. Isso acontece sozinho, porque um dia sem esse registro é um dia que não volta. Uma lista de reservas mostra o que já foi vendido.',
+    closing: 'O Hotelly mostra se a venda está indo mais rápido ou mais devagar do que antes, a tempo de reagir.',
+  },
+  {
+    n: '03',
+    icon: Coins,
+    title: 'Mostra quanto sobra de cada diária, não só quanto entrou.',
+    text:
+      'De cada diária vendida, o sistema desconta a comissão do canal de venda e a taxa do cartão e mostra quanto de fato fica para a hospedagem. As regras desse cálculo ficam registradas e só passam a valer depois de simuladas e aprovadas. O fechamento do mês fica guardado com todas as versões e correções.',
+    closing: 'Quando falta alguma informação, o sistema avisa que não conseguiu calcular, em vez de mostrar um zero enganoso.',
+  },
+  {
+    n: '04',
+    icon: FileCheck2,
+    title: 'Presta contas ao proprietário todo mês, automaticamente.',
+    text:
+      'Todo mês o sistema monta a página de prestação de contas do proprietário. A gestão revisa e comenta, a página é publicada e fica guardada no histórico, sem alteração depois disso. O dono abre a tela "Minha casa" (a área do proprietário) e vê como foi a operação, o que aconteceu no dia a dia e as contas do mês.',
+    closing: 'Nada é feito em planilha. Nada depende de alguém lembrar.',
+  },
+];
+
+const colunas = [
+  {
+    icon: KeyRound,
+    title: 'Recepção e hóspede',
+    items: [
+      'Situação do dia com chegadas, saídas, hóspedes na casa e pendências.',
+      'Mapa de quartos dia a dia.',
+      'Antes de mudar a data ou cancelar uma reserva, o sistema mostra o que essa mudança afeta.',
+      'Cadastro do hóspede com histórico de estadas e anotações, sem cadastros repetidos.',
+      'Check-in pelo celular, com documento e acompanhantes, que preenche a ficha do hóspede e a envia ao cadastro nacional de hóspedes (FNRH), obrigatório por lei.',
+      'Área do hóspede, sem precisar de senha, onde ele vê a conta da estada e o comprovante.',
+    ],
+  },
+  {
+    icon: Sparkles,
+    title: 'Governança',
+    subtitle: 'limpeza e arrumação dos quartos',
+    items: [
+      'Situação de cada quarto, inspeção e fila de limpeza organizada pela ordem das chegadas.',
+      'Produtividade de cada camareira e atrasos visíveis.',
+      'Bloqueio de quarto em manutenção e alerta quando o mesmo quarto apresenta o mesmo problema de novo.',
+      'Planejamento do café da manhã.',
+      'Livro de ocorrências digital, com passagem de turno e ocorrências urgentes marcadas.',
+      'Tela de problemas da hospedagem, para a recepção resolver o que antes só o administrador via.',
+    ],
+  },
+  {
+    icon: Globe,
+    title: 'Venda direta e sites de reserva',
+    items: [
+      'Página de reservas própria e um botão de reserva para colocar no site da hospedagem.',
+      'Enquanto o hóspede paga, o quarto fica segurado por 15 minutos e ninguém mais consegue vendê-lo: o mesmo quarto nunca é vendido duas vezes.',
+      'Pagamento online direto na conta da hospedagem.',
+      'Até 20 tabelas de preço, regras por data, temporadas com mínimo de noites, preços por faixa etária e itens extras.',
+      'Preço mais alto nos sites de reserva (as OTAs), para que reservar direto seja sempre mais vantajoso.',
+      'Toda reserva registra de onde veio. E dá para ver quantas pessoas visitaram a página de reservas, quantas reservaram e de qual campanha ou link vieram.',
+    ],
+  },
+];
+
+const financeiro = [
+  'Cada reserva tem sua conta (o fólio), com lançamentos, pagamentos e saldo.',
+  'Estorno passa por pedido, aprovação e execução, tudo registrado.',
+  'Relatórios de receita, financeiro, ocupação, desempenho por canal de venda e auditoria, que podem ser exportados para planilha.',
+  'Diária média (ADR), receita por quarto disponível (RevPAR) e ocupação calculados de duas formas, nunca misturadas: pelo que entrou no caixa e pelo período a que a receita se refere.',
+  'Quanto sobra de cada diária depois de comissão e taxa.',
+  'Recomendação de preço baseada na ocupação, no calendário de feriados e picos e no ritmo das reservas, dentro de um mínimo e um máximo definidos pela gestão.',
+];
+
+const indicadoresDia = [
+  { label: 'Quartos prontos', tone: 'success' },
+  { label: 'Check-ins pelo celular concluídos', tone: 'success' },
+  { label: 'Cadastros com pendência', tone: 'warning' },
+  { label: 'Ocorrências urgentes atrasadas', tone: 'destructive' },
+  { label: 'Hóspedes esperando atendimento humano', tone: 'warning' },
+  { label: 'Pagamentos pendentes na saída', tone: 'success' },
+] as const;
+
+const tiles = [
+  { value: '10.700+', label: 'testes automáticos' },
+  { value: '463', label: 'telas do sistema' },
+  { value: '90+', label: 'módulos, da recepção ao financeiro' },
+  { value: '~80', label: 'artigos de ajuda dentro do sistema, com cinco guias por perfil' },
+];
+
+const confianca = [
+  'Cada hospedagem só enxerga os próprios dados, mesmo quando várias usam o mesmo sistema.',
+  'Seis perfis de acesso (visualizador, camareira, recepção, financeiro, gerente, proprietário), cada um vendo só o que precisa, com verificação em duas etapas no login.',
+  'Proteção de dados conforme a LGPD: consentimento do hóspede registrado na reserva, exportação e apagamento dos dados a pedido, opção de não receber marketing, dados pessoais criptografados.',
+  'Registro de quem alterou o quê e quando.',
+  'Tarefas automáticas que tentam de novo quando falham, proteção contra falha de serviços externos, alertas de infraestrutura e cópias de segurança.',
+];
+
+const toneDot: Record<string, string> = {
+  success: 'bg-success',
+  warning: 'bg-warning',
+  destructive: 'bg-destructive',
+};
+
+/* ────────────────────────────────────────────────────────────────────────── */
+
+function SectionHeading({ eyebrow, title, lead, align = 'left' }: { eyebrow: string; title: string; lead?: string; align?: 'left' | 'center' }) {
+  return (
+    <div className={`max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''}`}>
+      <p className="eyebrow mb-4">{eyebrow}</p>
+      <h2 className="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.1] tracking-tight text-foreground text-balance">{title}</h2>
+      {lead && <p className="mt-5 text-lg text-muted-foreground leading-relaxed">{lead}</p>}
+    </div>
+  );
+}
+
+function HeroMock() {
+  return (
+    <div className="relative" aria-hidden="true">
+      <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full" />
+      <div className="absolute -inset-10 translate-x-1/3 translate-y-1/4 bg-brass/10 blur-3xl rounded-full" />
+
+      <div className="relative card-glow rounded-2xl p-5 sm:p-6 shadow-2xl shadow-black/40">
+        {/* Cabeçalho do painel */}
+        <div className="flex items-center justify-between gap-4 mb-5">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-semibold">Visão da Casa</p>
+            <p className="font-headline font-bold text-foreground">Hoje</p>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full bg-success-subtle text-success text-xs font-semibold px-3 py-1.5">
+            <span className="w-2 h-2 rounded-full bg-success pulse-dot" />
+            Tudo em ordem
+          </div>
+        </div>
+
+        {/* Seis indicadores */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+          {indicadoresDia.map((i) => (
+            <div key={i.label} className="rounded-xl bg-popover border border-border p-3 min-h-[74px] flex flex-col justify-between">
+              <span className={`w-2 h-2 rounded-full ${toneDot[i.tone]}`} />
+              <p className="text-[12px] leading-snug text-foreground/90">{i.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Ritmo das reservas */}
+        <div className="mt-4 rounded-xl bg-popover border border-border p-4">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xs font-semibold text-foreground">Ritmo das reservas</p>
+            <p className="text-[11px] text-muted-foreground">comparado com a semana anterior</p>
+          </div>
+          <div className="grid grid-cols-4 gap-3 items-end h-16">
+            {[
+              { d: '7d', h: 'h-8', up: true },
+              { d: '14d', h: 'h-11', up: true },
+              { d: '30d', h: 'h-9', up: false },
+              { d: '60d', h: 'h-14', up: true },
+            ].map((b) => (
+              <div key={b.d} className="flex flex-col items-center gap-1.5">
+                <div className={`w-full rounded-md ${b.h} ${b.up ? 'bg-primary/70' : 'bg-warning/60'}`} />
+                <span className="text-[11px] text-muted-foreground tabular">{b.d}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Alerta flutuante */}
+      <div className="absolute -bottom-12 left-2 sm:-left-8 glass border border-border rounded-xl px-4 py-3 shadow-xl max-w-[260px]">
+        <div className="flex items-start gap-3">
+          <div className="w-8 h-8 rounded-lg bg-brass-subtle text-brass flex items-center justify-center shrink-0">
+            <BellRing className="w-4 h-4" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-foreground">Nenhum alerta nas últimas 24h</p>
+            <p className="text-[11px] text-muted-foreground mt-0.5">Dez regras de aviso acompanhando a operação.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
-  const { trackEvent, trackConversion, trackSectionView } = useAnalytics();
-  const checkout = useCheckoutModal();
-  const [scrolled, setScrolled] = useState(false);
+  const { trackWhatsAppClick, trackSectionView, trackEvent } = useAnalytics();
 
   useEffect(() => {
-    // Scroll depth tracking
-    let scrollDepths = new Set<number>();
+    const scrollDepths = new Set<number>();
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (height <= 0) return;
       const scrolledTo = (winScroll / height) * 100;
-      
-      [25, 50, 75, 90].forEach(depth => {
+      [25, 50, 75, 90].forEach((depth) => {
         if (scrolledTo >= depth && !scrollDepths.has(depth)) {
           scrollDepths.add(depth);
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'scroll_depth', { depth_percentage: depth });
-          }
+          trackEvent('scroll_depth', { depth_percentage: depth });
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    // Section View Tracking
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.target.id) {
-          trackSectionView(entry.target.id);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    // Give components time to render
-    setTimeout(() => {
-      document.querySelectorAll('section[id]').forEach(section => {
-        observer.observe(section);
-      });
-    }, 1000);
-
-    return () => observer.disconnect();
-  }, [trackSectionView]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.id) trackSectionView(entry.target.id);
+        });
+      },
+      { threshold: 0.3 },
+    );
+    const t = setTimeout(() => {
+      document.querySelectorAll('section[id]').forEach((s) => observer.observe(s));
+    }, 800);
+    return () => {
+      clearTimeout(t);
+      observer.disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div className="bg-background text-foreground antialiased font-sans selection:bg-brand-sky/30">
+    <div className="bg-background text-foreground antialiased">
       <Header />
 
       <main>
-        {/* Navbar padding offset added to Hero */}
-        <section className="relative px-8 pt-32 pb-16 lg:pb-32 overflow-hidden bg-background">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="z-10">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-popover text-primary-hover font-label text-sm font-semibold tracking-wider mb-6">SUA PAZ DE VOLTA</span>
-              <h1 className="text-5xl lg:text-7xl font-headline font-extrabold text-foreground leading-tight tracking-tight mb-8">
-                  Você dorme. Sua hospedagem não.
+        {/* ── Bloco 1. Hero ─────────────────────────────────────────────── */}
+        <section id="hero" className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+          <div className="absolute inset-0 bg-grid mask-fade-b pointer-events-none" />
+          <div className="absolute -top-40 right-[-10%] w-[640px] h-[640px] rounded-full bg-primary/10 blur-[140px] pointer-events-none" />
+          <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+            <div className="lg:col-span-6">
+              <p className="eyebrow mb-6">Gestão inteligente de hospedagens</p>
+              <h1 className="font-headline font-extrabold text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4.25rem] tracking-tight text-foreground text-balance">
+                A hospedagem funciona.
+                <br />
+                <span className="text-brass">Você acompanha tudo.</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                  O Hotelly cuida da sua operação nas horas em que você deveria estar descansando. A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo seu site, 24 horas por dia. Sem comissão, sem recepcionista de plantão.
+              <p className="mt-7 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                O Hotelly é o sistema que a Sazão usa para operar as hospedagens que estão sob a gestão dela. Ele organiza a recepção, a limpeza dos quartos e o financeiro, avisa quando algo precisa de atenção e apresenta ao proprietário, todo mês, a prestação de contas do que aconteceu.
               </p>
-              <div className="flex flex-col items-start gap-3">
-                <div className="w-full sm:w-auto text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
-                  🚀 Lançamento em Breve
-                </div>
-                <p className="text-xs text-muted-foreground">Estamos finalizando os últimos detalhes. Em breve você poderá começar.</p>
+              <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener"
+                  onClick={() => trackWhatsAppClick('hero')}
+                  className="inline-flex items-center justify-center gap-2 bg-brass hover:bg-brass-hover text-brass-foreground font-semibold text-base rounded-xl px-7 py-4 transition-colors shadow-lg shadow-brass/20"
+                >
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                  Falar no WhatsApp
+                </a>
+                <a href="#o-que-faz" className="inline-flex items-center justify-center gap-2 text-foreground/90 hover:text-foreground font-medium px-2 py-3 transition-colors">
+                  Ver o que o sistema faz
+                  <ArrowDown className="w-4 h-4" aria-hidden="true" />
+                </a>
               </div>
+              <p className="mt-6 text-sm text-muted-foreground">Sistema construído e operado pela Sazão Gestão Hoteleira.</p>
             </div>
-            <div className="relative mt-12 lg:mt-0 pb-8 lg:pb-0 lg:min-h-[550px]">
-              <div className="absolute inset-0 bg-info-subtle blur-[120px] rounded-full"></div>
-              <div className="relative bg-card p-4 rounded-2xl shadow-2xl border border-border">
-                <picture>
-                  <source srcSet="/hotelly-concierge-550.avif" type="image/avif" />
-                  <source srcSet="/hotelly-concierge-550.webp" type="image/webp" />
-                  <img alt="Dashboard do Hotelly com mapa de quartos e reservas em tempo real" className="rounded-xl w-full shadow-lg" src="/hotelly-concierge-550.jpg" fetchPriority="high" width={550} height={550} decoding="async" />
-                </picture>
-                <div className="absolute -bottom-6 -left-6 bg-popover p-6 rounded-2xl shadow-2xl glass-card border border-border max-w-xs animate-pulse">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="material-symbols-outlined text-amber">smart_toy</span>
-                    <p className="text-sm font-semibold text-foreground">Reserva Confirmada</p>
-                  </div>
-                  <p className="text-xs text-muted-foreground">O Concierge Hotelly acaba de fechar uma reserva de 3 noites via WhatsApp.</p>
-                </div>
-              </div>
+            <div className="lg:col-span-6 lg:pl-6 pb-14">
+              <HeroMock />
             </div>
           </div>
         </section>
 
-        {/* Value Themes */}
-        <section className="py-24 bg-card" id="eficiencia">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-headline font-bold mb-4 text-foreground">Sua hospedagem funcionando. Você vivendo.</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">O Hotelly cuida da operação para você cuidar da sua vida. Cada funcionalidade existe para devolver algo que a rotina tirou de você.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
-                <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
-                </div>
-                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Durma tranquilo</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">A IA responde hóspedes, fecha reservas e processa pagamentos pelo WhatsApp e pelo site, 24h. Você descansa.</p>
-              </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
-                <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-amber text-3xl">sync</span>
-                </div>
-                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Acaba o medo de dar errado</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Zero overbooking, garantido por design. Booking, Airbnb e Expedia sincronizados. Tudo funciona mesmo quando você não está olhando.</p>
-              </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
-                <div className="w-14 h-14 rounded-xl bg-info-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-primary text-3xl">trending_up</span>
-                </div>
-                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Crescimento sem sacrifício</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Precificação dinâmica que faz seu negócio crescer sem exigir mais de você. O sistema sugere, você aprova.</p>
-              </div>
-              <div className="p-8 rounded-2xl bg-popover hover:bg-secondary transition-[background-color] duration-300 group">
-                <div className="w-14 h-14 rounded-xl bg-warning-subtle flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-amber text-3xl">verified_user</span>
-                </div>
-                <h3 className="text-xl font-headline font-bold mb-3 text-foreground">Seu hóspede chega e tudo já está pronto</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Check-in digital pelo celular, FNRH automático pro governo. Sem papel, sem fila, sem você correr.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Assistant CTA */}
-        <section className="py-20 bg-background">
-          <div className="max-w-3xl mx-auto px-8 text-center">
-            <img src="/icon.webp" alt="" className="w-16 h-16 mb-6 object-contain mx-auto" width="64" height="64" />
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold mb-4 text-foreground">Ficou com dúvidas sobre o Hotelly?</h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">Nosso assistente está no canto da tela e pode te ajudar agora mesmo. Clique no ícone e pergunte o que quiser sobre planos, funcionalidades ou como funciona a implantação.</p>
-          </div>
-        </section>
-
-        {/* Features (7 Pillars) */}
-        <section className="py-24 bg-card" id="funcionalidades">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">O que o Hotelly devolve a você</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Cada funcionalidade existe para tirar algo da sua lista de preocupações. A tecnologia é como fazemos isso. A paz é o que você leva.</p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Pilar 1 */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <img src="/icon.webp" alt="" className="w-[50px] h-[50px] mb-6 object-contain" width="105" height="105" />
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Suas noites de volta</h3>
-                <p className="text-primary font-medium mb-6">A IA trabalha enquanto você descansa</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Atendimento inteligente por IA no WhatsApp. Responde, tira dúvidas e encaminha a reserva</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cotação automática com período, tipo de quarto e número de hóspedes</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Link de pagamento do Mercado Pago enviado direto na conversa</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Follow-up persistente até o hóspede fechar a reserva</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> A IA nunca inventa informação. Só responde o que você cadastrou</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Você dorme. De verdade. A IA conhece seus quartos, seus preços e suas regras. E quando não sabe a resposta, avisa e chama um humano."
-                </div>
-              </div>
-
-              {/* Pilar 2 */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">📊</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Acaba o medo de dar errado</h3>
-                <p className="text-primary font-medium mb-6">Tudo funciona mesmo quando você não está olhando</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Acompanhe tudo: da cotação até a saída do hóspede, num só lugar</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Proteção contra overbooking: o sistema trava a data na hora. Ninguém reserva o mesmo quarto duas vezes</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa de Quartos interativo, veja 30 dias de ocupação e arraste reservas para mudar quarto ou data, com recálculo automático de preço</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cancelamento com cálculo automático de reembolso</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Mapa visual que mostra os dias mais cheios e os mais vazios de cada tipo de quarto</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Saia para o almoço de domingo sem checar o celular. O sistema não permite overbooking, não perde dados, não esquece nada."
-                </div>
-              </div>
-
-              {/* Pilar 3 */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">💰</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Seu negócio cresce sem pesar mais em você</h3>
-                <p className="text-primary font-medium mb-6">Receita inteligente, esforço zero</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Ajuste automático de preços conforme a procura e a ocupação</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Calendário visual de preços para os próximos 120 dias</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Você define o menor e o maior preço aceitável. O sistema nunca ultrapassa</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> <span>Painel financeiro com os indicadores que importam: RevPAR <span className="text-xs text-muted-foreground">(receita por quarto disponível)</span>, ADR <span className="text-xs text-muted-foreground">(diária média)</span> e taxa de ocupação</span></li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Relatórios financeiros no padrão usado pelos melhores hotéis do mundo, com conferência automática do Mercado Pago</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Mais receita sem mais trabalho. O sistema sugere o preço certo conforme ocupação e temporada. Você aprova de onde estiver."
-                </div>
-              </div>
-
-              {/* Pilar 4 */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">📋</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Seu hóspede chega e tudo já está pronto</h3>
-                <p className="text-primary font-medium mb-6">Sem papel, sem fila, sem você correr</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Check-in digital enviado por link. O hóspede preenche no celular, de qualquer lugar</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> FNRH automático integrado ao Serpro. Os dados vão direto para o governo</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Assistente inteligente dentro do painel, pergunte qualquer coisa sobre sua hospedagem e receba a resposta na hora. <span className="font-medium text-amber/80">E evolui: cada mês, novas capacidades e conhecimento são adicionados automaticamente.</span></li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Painel de governança para organizar a limpeza dos quartos com prioridade</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Configuração inicial guiada, nossa equipe falará com você</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "O hóspede preenche no celular. O governo recebe automaticamente. Você não digita, não corre, não se preocupa."
-                </div>
-              </div>
-
-              {/* Pilar 5 — Log Book Digital */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">📒</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Nada se perde entre turnos</h3>
-                <p className="text-primary font-medium mb-6">Sua tranquilidade não pode depender de quem está de plantão</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Log Book Digital para registrar ocorrências em tempo real: manutenção, hóspedes, operação, financeiro</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Passagem de turno com confirmação de leitura: o próximo funcionário lê, confirma e começa com contexto completo</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Resumo do turno consolidado: tudo que está aberto, quem registrou, o que falta resolver</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Cada entrada com carimbo de data, hora e nome, com trilha de auditoria automática</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Pergunte ao Copilot: "O que aconteceu no turno anterior?" e receba o resumo na hora</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Você não precisa estar lá para saber o que aconteceu. O Log Book Digital garante que a informação sobrevive à troca de plantão."
-                </div>
-              </div>
-
-              {/* Pilar 6 — Motor de Reservas */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">💻</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Reservas diretas, sem comissão</h3>
-                <p className="text-primary font-medium mb-6">100% do valor vai para você</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Um botão de reservas bonito e pronto para colocar no seu site</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Aceite reservas diretas sem pagar comissão para ninguém</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Disponibilidade atualizada em tempo real. Sem risco de vender o que não tem</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Pagamento integrado no próprio checkout do site</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Cada reserva direta é dinheiro que fica com você, não com as OTAs. Um botão no seu site e pronto."
-                </div>
-              </div>
-
-              {/* Pilar 7 — Hub de Reservas */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 transition-[transform,box-shadow] duration-300 flex flex-col relative">
-                <div className="text-5xl mb-6">🌐</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Presente em todo lugar, sem estar em lugar nenhum</h3>
-                <p className="text-primary font-medium mb-6">Booking, Airbnb e Expedia num só painel</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber font-bold">★</span> 
-                    <span>Exclusivo do plano <strong>Max</strong></span>
-                  </li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Conexão com Booking, Airbnb, Expedia e mais</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Atualização automática de disponibilidade em todos os canais</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Relatórios que mostram quanto cada canal vende</li>
-                  <li className="flex items-start gap-2"><span className="text-success">✅</span> Uma única tela para toda a sua distribuição</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "Seu negócio aparece em todo lugar sem você precisar estar em lugar nenhum. No Max, Booking, Airbnb, site próprio e WhatsApp ficam sincronizados num único painel."
-                </div>
-              </div>
-
-              {/* Pilar 8 — Segurança e Proteção dos Dados */}
-              <div className="bg-background border border-border rounded-2xl p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-sky/10 transition-[transform,box-shadow] duration-300 flex flex-col">
-                <div className="text-5xl mb-6">🛡️</div>
-                <h3 className="text-xl font-headline font-bold text-foreground mb-2">Segurança e Proteção dos Dados</h3>
-                <p className="text-primary font-medium mb-6">Seus dados e os dos seus hóspedes: sempre protegidos</p>
-                <ul className="space-y-3 mb-8 flex-grow text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Proteção de dados integrada ao sistema. Projetado para suportar conformidade com a LGPD</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Cada funcionário vê só o que precisa: a camareira não acessa dados financeiros, o recepcionista não mexe em configurações. São 6 níveis de acesso</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Os dados pessoais dos hóspedes são protegidos com criptografia e controle de acesso rigoroso</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Suas credenciais do Serpro ficam protegidas com criptografia AES-256-GCM</li>
-                  <li className="flex items-start gap-2"><span className="text-primary">🔒</span> Registro completo de quem fez o quê e quando. Rastreabilidade total para você e para a lei</li>
-                </ul>
-                <div className="bg-white/5 p-4 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  "A LGPD não é opcional. No Hotelly, proteção de dados faz parte da arquitetura desde o primeiro dia."
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Multilingual */}
-        <section className="py-24 bg-background" id="multilingual">
-          <div className="max-w-5xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-6">
-                  Seu hóspede fala qualquer idioma. Sua hospedagem também.
+        {/* ── Bloco 2. O problema ───────────────────────────────────────── */}
+        <section id="problema" className="py-20 lg:py-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8">
+            <div className="rounded-3xl bg-card border border-border p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
+              <div className="lg:col-span-7">
+                <p className="eyebrow mb-4">A dúvida de todo proprietário</p>
+                <h2 className="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.1] tracking-tight text-balance">
+                  Entregar a operação a alguém não pode significar ficar sem saber o que acontece.
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  O Concierge IA responde automaticamente no idioma do hóspede pelo WhatsApp. Inglês, espanhol, francês, italiano, o idioma que for. Sua hospedagem recebe o mundo inteiro sem você contratar ninguém a mais.
-                </p>
-                <ul className="space-y-4 text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <span className="text-success mt-0.5">✅</span>
-                    <span>Funciona automaticamente, sem configuração</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-success mt-0.5">✅</span>
-                    <span>Disponível em todos os planos</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-success mt-0.5">✅</span>
-                    <span>Nenhum PMS no Brasil oferece atendimento multilingual nativo</span>
-                  </li>
-                </ul>
               </div>
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Para hóspedes estrangeiros</p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Hóspede mandou mensagem em inglês às 23h? A IA responde, tira dúvidas e encaminha a reserva no idioma dele. Você acorda com a confirmação no painel.
-                    </p>
+              <div className="lg:col-span-5 lg:border-l lg:border-border lg:pl-10 text-lg text-muted-foreground leading-relaxed space-y-5">
+                <p>
+                  Quem tem uma hospedagem e pensa em deixar a operação nas mãos de outra empresa trava sempre na mesma dúvida: como vou saber o que está acontecendo lá dentro? Relatório feito à mão chega atrasado, mostra só o que quem fez quis mostrar e não responde à pergunta que importa: o que está dando errado agora?
+                </p>
+                <p className="text-foreground font-medium">
+                  O Hotelly foi feito para responder a essa pergunta todos os dias, automaticamente, sem que ninguém precise preparar nada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bloco 3. As quatro camadas ────────────────────────────────── */}
+        <section id="o-que-faz" className="py-20 lg:py-28 scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8">
+            <SectionHeading eyebrow="O que faz" title="Quatro coisas que um sistema comum de hotel não faz." />
+            <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">
+              {camadas.map((c) => (
+                <article key={c.n} className="group rounded-2xl bg-card border border-border p-7 sm:p-9 hover:border-brass/40 transition-colors">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="w-11 h-11 rounded-xl bg-brass-subtle text-brass flex items-center justify-center">
+                      <c.icon className="w-5 h-5" aria-hidden="true" />
+                    </div>
+                    <span className="font-headline font-bold text-sm text-muted-foreground tabular">{c.n}</span>
                   </div>
-                  <div className="border-t border-border pt-6">
-                    <p className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Para donos estrangeiros no Brasil</p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Italiano em Búzios, francês em Trancoso, argentino em Floripa? O assistente de IA conversa com você no seu idioma nativo. O painel continua em português para sua equipe.
-                    </p>
+                  <h3 className="font-headline font-bold text-xl sm:text-2xl leading-snug text-foreground text-balance">{c.title}</h3>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">{c.text}</p>
+                  <p className="mt-4 text-foreground font-medium border-l-2 border-brass pl-4">{c.closing}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bloco 4. Como funciona ────────────────────────────────────── */}
+        <section id="como-opera" className="py-20 lg:py-28 bg-card border-y border-border scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8">
+            <SectionHeading eyebrow="Como funciona no dia a dia" title="A hospedagem funciona seguindo o sistema, não a memória de alguém." />
+            <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-5">
+              {colunas.map((col) => (
+                <div key={col.title} className="rounded-2xl bg-background border border-border p-7">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary-subtle text-primary flex items-center justify-center shrink-0">
+                      <col.icon className="w-5 h-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="font-headline font-bold text-lg text-foreground leading-tight">{col.title}</h3>
+                      {col.subtitle && <p className="text-xs text-muted-foreground mt-0.5">{col.subtitle}</p>}
+                    </div>
                   </div>
+                  <ul className="space-y-3.5">
+                    {col.items.map((it) => (
+                      <li key={it} className="flex items-start gap-3 text-[15px] text-muted-foreground leading-relaxed">
+                        <ChevronRight className="w-4 h-4 mt-1 text-brass shrink-0" aria-hidden="true" />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Linha de apoio: Concierge e Copiloto */}
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="rounded-2xl card-glow p-7 flex gap-5">
+                <div className="w-11 h-11 rounded-xl bg-success-subtle text-success flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-headline font-bold text-lg text-foreground">Concierge no WhatsApp</h3>
+                  <p className="text-xs text-muted-foreground mb-3">atendente com inteligência artificial</p>
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">
+                    Responde ao hóspede em qualquer idioma, com base nas informações da hospedagem. Faz a cotação de diárias dentro da conversa, respeita o horário de atendimento definido e passa para a recepção quando é preciso uma pessoa.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-2xl card-glow p-7 flex gap-5">
+                <div className="w-11 h-11 rounded-xl bg-info-subtle text-info flex items-center justify-center shrink-0">
+                  <Bot className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-headline font-bold text-lg text-foreground">Copiloto no painel</h3>
+                  <p className="text-xs text-muted-foreground mb-3">assistente da equipe</p>
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">
+                    Responde às perguntas da equipe mostrando na tela a reserva, o mapa de quartos ou o resumo do dia. Cada pessoa só vê o que o seu perfil de acesso permite.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Sales Story */}
-        <section className="py-24 bg-card" id="como-funciona">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">Sua hospedagem funciona. Você descansa.</h2>
-              <p className="text-muted-foreground text-lg">O Hotelly responde seus hóspedes, fecha reservas e processa pagamentos enquanto você dorme. Para que acordar seja bom de novo.</p>
+        {/* ── Bloco 5. Dinheiro ─────────────────────────────────────────── */}
+        <section id="financeiro" className="py-20 lg:py-28 scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-5">
+              <SectionHeading
+                eyebrow="Dinheiro"
+                title="Da conta do hóspede ao fechamento do mês, com cada número no lugar certo."
+              />
+              <p className="mt-8 text-foreground font-medium border-l-2 border-brass pl-4">O sistema recomenda o preço. A gestão decide.</p>
             </div>
-            
-            <div className="relative border-l-2 border-border ml-6 md:ml-12 space-y-16 pb-8">
-              {/* Step 1 */}
-              <div className="relative pl-10 md:pl-16">
-                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-destructive/20 border-2 border-destructive text-destructive rounded-full flex items-center justify-center font-bold text-xl">1</div>
-                <h3 className="text-xl font-bold text-destructive mb-3 uppercase tracking-wider text-sm">O Preço Invisível</h3>
-                <blockquote className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  Você acorda de madrugada para responder WhatsApp, vive com medo de overbooking e não consegue tirar um fim de semana de folga. O preço disso não está na planilha. Está na sua saúde, no seu tempo, na sua família.
-                </blockquote>
-              </div>
-              
-              {/* Step 2 */}
-              <div className="relative pl-10 md:pl-16">
-                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-white/10 border-2 border-border-strong text-muted-foreground rounded-full flex items-center justify-center font-bold text-xl">2</div>
-                <h3 className="text-xl font-bold text-muted-foreground mb-3 uppercase tracking-wider text-sm">O Mito</h3>
-                <blockquote className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                  A maioria dos sistemas hoteleiros organiza a operação, mas não a assume. Custam caro e ainda exigem que você trabalhe para eles. Você troca uma planilha por outra tela, mas o peso continua nos seus ombros.
-                </blockquote>
-              </div>
-              
-              {/* Step 3 */}
-              <div className="relative pl-10 md:pl-16">
-                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-success-subtle border-2 border-success text-success rounded-full flex items-center justify-center font-bold text-xl">3</div>
-                <h3 className="text-xl font-bold text-success mb-3 uppercase tracking-wider text-sm">A Sua Paz de Volta</h3>
-                <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed">
-                  O Hotelly não organiza a operação. Ele a assume. A IA responde hóspedes, fecha reservas e processa pagamentos, 24 horas por dia. Quando você olha o painel, está tudo no lugar. Sua hospedagem merece funcionar sem depender só de você. E você merece isso também.
-                </blockquote>
+            <div className="lg:col-span-7">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {financeiro.map((f) => (
+                  <li key={f} className="rounded-2xl bg-card border border-border p-5 flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" aria-hidden="true" />
+                    <span className="text-[15px] text-muted-foreground leading-relaxed">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bloco 6. A tela da semana ─────────────────────────────────── */}
+        <section id="gestao" className="py-20 lg:py-28 bg-card border-y border-border scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-6">
+              <SectionHeading
+                eyebrow="Gestão"
+                title="Uma tela para a reunião da semana. Até cinco prioridades, cada uma com dono e prazo."
+                lead="A tela Gestão reúne, num lugar só, ocupação, diárias vendidas e ritmo das reservas para os próximos 7, 14, 30 e 60 dias, a comparação com a semana anterior, os indicadores de atendimento e a nota do Google. Ali a gestão registra até cinco prioridades da semana, cada uma com responsável, prazo e forma de medir."
+              />
+            </div>
+            <div className="lg:col-span-6">
+              <div className="rounded-2xl bg-background border border-border p-6 sm:p-8">
+                <p className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground font-semibold">Visão da Casa</p>
+                <p className="mt-1 text-foreground font-headline font-bold">Seis indicadores do dia, em verde, amarelo ou vermelho</p>
+                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {indicadoresDia.map((i) => (
+                    <li key={i.label} className="flex items-center gap-3 rounded-xl bg-popover border border-border px-4 py-3 text-sm text-foreground/90">
+                      <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${toneDot[i.tone]}`} aria-hidden="true" />
+                      {i.label}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 text-xs text-muted-foreground">Ilustração da tela. As cores mudam conforme a situação de cada indicador.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <div id="planos" className="scroll-mt-24">
-          <LazySection minHeight="50vh">
-            <Suspense fallback={<div className="h-[50vh] bg-background"></div>}>
-              <HomePricing />
-            </Suspense>
-          </LazySection>
-        </div>
-        <div id="faq" className="scroll-mt-24">
-          <LazySection minHeight="40vh">
-            <Suspense fallback={<div className="h-[40vh] bg-background"></div>}>
-              <HomeFAQ />
-            </Suspense>
-          </LazySection>
-        </div>
+        {/* ── Bloco 7. Confiança ────────────────────────────────────────── */}
+        <section id="confianca" className="py-20 lg:py-28 scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8">
+            <SectionHeading eyebrow="Confiança" title="Construído, testado e em funcionamento." />
+            <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {tiles.map((t) => (
+                <div key={t.label} className="rounded-2xl bg-card border border-border p-6">
+                  <p className="font-headline font-extrabold text-4xl lg:text-5xl text-brass tabular tracking-tight">{t.value}</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-snug">{t.label}</p>
+                </div>
+              ))}
+            </div>
+            <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {confianca.map((c) => (
+                <li key={c} className="flex items-start gap-3 rounded-2xl border border-border p-5 last:md:col-span-2">
+                  <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <span className="text-[15px] text-muted-foreground leading-relaxed">{c}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-10 text-center text-muted-foreground">
+              O Hotelly está construído, testado e em funcionamento. <span className="text-foreground">Não publicamos resultado que ainda não medimos.</span>
+            </p>
+          </div>
+        </section>
+
+        {/* ── Bloco 8. CTA final ────────────────────────────────────────── */}
+        <section id="contato" className="pb-24 lg:pb-32 scroll-mt-24">
+          <div className="max-w-5xl mx-auto px-5 sm:px-8">
+            <div className="relative overflow-hidden rounded-3xl card-glow p-9 sm:p-14 text-center">
+              <div className="absolute inset-0 bg-grid mask-fade-b opacity-60 pointer-events-none" />
+              <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[520px] h-[520px] rounded-full bg-brass/10 blur-[120px] pointer-events-none" />
+              <div className="relative">
+                <p className="eyebrow mb-5">Conversa, não cadastro</p>
+                <h2 className="font-headline font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-[1.08] tracking-tight text-balance">
+                  Quer ver como o sistema funcionaria na sua hospedagem?
+                </h2>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                  Quem usa o Hotelly são as hospedagens que adotam o modelo de gestão inteligente da Sazão. Se você tem um hotel ou uma pousada e quer entender como isso funcionaria na sua, a conversa começa no WhatsApp.
+                </p>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener"
+                  onClick={() => trackWhatsAppClick('contato')}
+                  className="mt-9 inline-flex items-center justify-center gap-2 bg-brass hover:bg-brass-hover text-brass-foreground font-semibold text-base rounded-xl px-8 py-4 transition-colors shadow-lg shadow-brass/20"
+                >
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                  Falar no WhatsApp
+                </a>
+                <p className="mt-5 text-sm text-muted-foreground">Não há demonstração automática nem cadastro. Há uma conversa.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <LazySection minHeight="20vh">
-        <Suspense fallback={<div className="h-[20vh] bg-background"></div>}>
-          <LazyFooter />
-        </Suspense>
-      </LazySection>
-
-      {/* Checkout confirmation modal — only load chunks when modal is opened */}
-      {checkout.isOpen && (
-        <Suspense fallback={null}>
-          <CheckoutConfirmModal
-            isOpen={checkout.isOpen}
-            onClose={() => checkout.closeModal('backdrop')}
-          >
-            <CheckoutModalContent
-              plan={checkout.plan}
-              status={checkout.status}
-              errorMessage={checkout.errorMessage}
-              onSubmit={checkout.submitCheckout}
-              onClose={() => checkout.closeModal('button')}
-            />
-          </CheckoutConfirmModal>
-        </Suspense>
-      )}
+      <Footer />
     </div>
   );
-}
+}

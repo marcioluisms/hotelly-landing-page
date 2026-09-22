@@ -1,104 +1,114 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
+import { WHATSAPP_URL, APP_LOGIN_URL, NAV_LINKS } from '../lib/site';
 
-interface HeaderProps {
-  onCtaClick?: () => void;
-}
-
-export default function Header({ onCtaClick }: HeaderProps) {
-  const { trackConversion } = useAnalytics();
+export default function Header() {
+  const { trackWhatsAppClick } = useAnalytics();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fecha o menu ao navegar
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  const solid = scrolled || !isHome || menuOpen;
+
   return (
-    <header className={`fixed top-0 w-full z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${scrolled || !isHome ? 'bg-background/95 backdrop-blur-md border-b border-border py-3' : 'bg-transparent py-5'}`}>
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link className="flex items-center hover:opacity-80 transition-opacity" to="/">
-          <img alt="Hotelly — Central de Reservas" className="h-10 md:h-12 w-auto object-contain" src="/hotelly.webp?v=3" width="219" height="70" />
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,padding] duration-300 ${
+        solid ? 'glass border-b border-border py-3' : 'bg-transparent py-5'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between gap-6">
+        <Link className="flex items-center shrink-0 hover:opacity-85 transition-opacity" to="/" aria-label="Hotelly, página inicial">
+          <picture>
+            <source srcSet="/hotelly-logo.webp" type="image/webp" />
+            <img alt="Hotelly" className="h-7 md:h-8 w-auto" src="/hotelly-logo.png" width="563" height="170" decoding="async" />
+          </picture>
         </Link>
 
         {/* Nav desktop */}
-        <nav className="hidden md:flex items-center space-x-8 text-muted-foreground font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground" aria-label="Seções da página">
           {isHome ? (
-            <>
-              <a className="hover:text-primary transition-colors" href="#funcionalidades">Funcionalidades</a>
-              <a className="hover:text-primary transition-colors" href="#planos">Planos</a>
-              <a className="hover:text-primary transition-colors" href="#faq">FAQ</a>
-            </>
+            NAV_LINKS.map((l) => (
+              <a key={l.href} className="hover:text-foreground transition-colors" href={l.href}>
+                {l.label}
+              </a>
+            ))
           ) : (
-            <Link className="hover:text-primary transition-colors" to="/">Voltar ao Início</Link>
+            <Link className="hover:text-foreground transition-colors" to="/">Voltar ao início</Link>
           )}
-          <Link className="hover:text-primary transition-colors" to="/blog">Blog</Link>
-          <Link className="hover:text-primary transition-colors" to="/ajuda">Ajuda</Link>
         </nav>
 
-        {/* Botões desktop */}
-        <div className="hidden md:flex items-center gap-4">
-          <span className="text-center block border border-border bg-card/20 text-muted-foreground font-bold py-2.5 px-6 rounded-lg text-sm cursor-not-allowed select-none">
+        {/* Ações desktop */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href={APP_LOGIN_URL}
+            className="text-sm font-medium text-muted-foreground hover:text-foreground border border-border-strong hover:border-primary/60 rounded-lg px-4 py-2 transition-colors"
+          >
             Entrar
-          </span>
-          <div className="text-center bg-primary/50 text-primary-foreground font-bold py-2.5 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
-            🚀 Lançamento em Breve
-          </div>
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={() => trackWhatsAppClick('header')}
+            className="inline-flex items-center gap-2 text-sm font-semibold bg-brass hover:bg-brass-hover text-brass-foreground rounded-lg px-4 py-2 transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
+            Falar no WhatsApp
+          </a>
         </div>
 
-        {/* Botão hamburger mobile */}
+        {/* Hamburger */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-muted-foreground hover:text-foreground hover:bg-card transition-[background-color] duration-300"
-          onClick={() => setMenuOpen(!menuOpen)}
+          type="button"
+          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-muted-foreground hover:text-foreground hover:bg-card transition-colors"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-expanded={menuOpen}
+          aria-controls="menu-mobile"
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
-          {menuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Menu mobile */}
       {menuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border px-4 py-6 flex flex-col gap-4">
-          <nav className="flex flex-col gap-4 text-muted-foreground font-medium text-base">
+        <div id="menu-mobile" className="md:hidden border-t border-border px-5 py-5 flex flex-col gap-4">
+          <nav className="flex flex-col gap-3 text-base font-medium text-muted-foreground">
             {isHome ? (
-              <>
-                <a className="hover:text-primary transition-colors py-1" href="#funcionalidades" onClick={() => setMenuOpen(false)}>Funcionalidades</a>
-                <a className="hover:text-primary transition-colors py-1" href="#planos" onClick={() => setMenuOpen(false)}>Planos</a>
-                <a className="hover:text-primary transition-colors py-1" href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
-              </>
+              NAV_LINKS.map((l) => (
+                <a key={l.href} className="py-1 hover:text-foreground" href={l.href} onClick={() => setMenuOpen(false)}>
+                  {l.label}
+                </a>
+              ))
             ) : (
-              <Link className="hover:text-primary transition-colors py-1" to="/" onClick={() => setMenuOpen(false)}>Voltar ao Início</Link>
+              <Link className="py-1 hover:text-foreground" to="/" onClick={() => setMenuOpen(false)}>Voltar ao início</Link>
             )}
-            <Link className="hover:text-primary transition-colors py-1" to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-            <Link className="hover:text-primary transition-colors py-1" to="/ajuda" onClick={() => setMenuOpen(false)}>Ajuda</Link>
           </nav>
-          <div className="flex flex-col gap-3 pt-2 border-t border-border">
-            <span className="text-center block border border-border bg-card/20 text-muted-foreground font-bold py-3 px-6 rounded-lg text-sm cursor-not-allowed select-none">
-              Entrar
-            </span>
-            <div className="text-center bg-primary/50 text-primary-foreground font-bold py-3 px-6 rounded-lg text-sm cursor-default select-none opacity-80">
-              🚀 Lançamento em Breve
-            </div>
+          <div className="flex flex-col gap-3 pt-3 border-t border-border">
+            <a href={APP_LOGIN_URL} className="text-center text-sm font-medium border border-border-strong rounded-lg py-3">Entrar</a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener"
+              onClick={() => trackWhatsAppClick('header_mobile')}
+              className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-brass text-brass-foreground rounded-lg py-3"
+            >
+              <MessageCircle className="w-4 h-4" aria-hidden="true" />
+              Falar no WhatsApp
+            </a>
           </div>
         </div>
       )}

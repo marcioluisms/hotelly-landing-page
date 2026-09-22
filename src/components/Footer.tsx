@@ -1,37 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { ArrowUpRight } from 'lucide-react';
+import { SITE_SAZAO, APP_LOGIN_URL, NAV_LINKS } from '../lib/site';
 
-interface FooterProps {
-  onCtaClick?: () => void;
-}
-
-export default function Footer({ onCtaClick }: FooterProps) {
-  const { trackConversion } = useAnalytics();
+export default function Footer() {
   return (
-    <footer className="bg-background text-foreground pt-20 pb-10 border-t border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 text-center md:text-left">
-          <div>
-            <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-              <img alt="Hotelly — Central de Reservas" className="h-12 w-auto mb-2 mx-auto md:mx-0" src="/hotelly.webp?v=3" width="219" height="70" />
+    <footer className="bg-background border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
+          {/* Marca */}
+          <div className="md:col-span-5">
+            <Link to="/" className="inline-block hover:opacity-85 transition-opacity" aria-label="Hotelly, página inicial">
+              <picture>
+                <source srcSet="/hotelly-logo.webp" type="image/webp" />
+                <img alt="Hotelly" className="h-8 w-auto" src="/hotelly-logo.png" width="563" height="170" loading="lazy" decoding="async" />
+              </picture>
             </Link>
-            <p className="text-muted-foreground max-w-sm">Sua hospedagem funcionando. Você vivendo.</p>
+            <p className="text-muted-foreground mt-4 max-w-sm">Sistema de gestão inteligente de hospedagens.</p>
           </div>
-          <div className="flex flex-col items-center md:items-end">
-            <div className="text-center bg-primary/50 text-primary-foreground text-lg font-bold px-8 py-4 rounded-xl cursor-default select-none opacity-80">
-              🚀 Lançamento em Breve
-            </div>
+
+          {/* Links */}
+          <div className="md:col-span-7 md:pl-8">
+            <p className="eyebrow mb-4">Página</p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {NAV_LINKS.map((l) => (
+                <li key={l.href}><a className="hover:text-foreground transition-colors" href={`/${l.href}`}>{l.label}</a></li>
+              ))}
+              <li><a className="hover:text-foreground transition-colors" href={APP_LOGIN_URL}>Entrar</a></li>
+            </ul>
           </div>
         </div>
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground gap-4">
+
+        {/* Linha da Sazão */}
+        <div className="mt-14 rounded-2xl border border-border bg-card px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-foreground">
+            O Hotelly é o sistema central da <strong className="font-semibold">Sazão Gestão Hoteleira</strong>.
+          </p>
+          <a
+            href={SITE_SAZAO}
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brass hover:text-brass-hover transition-colors"
+          >
+            Conheça o modelo de gestão
+            <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-border text-xs text-muted-foreground flex flex-col sm:flex-row sm:justify-between gap-2">
           <p>© 2026 Hotelly. Todos os direitos reservados.</p>
-          <div className="flex gap-6">
-            <Link className="hover:text-foreground transition-colors" to="/blog">Blog</Link>
-            <Link className="hover:text-foreground transition-colors" to="/ajuda">Ajuda</Link>
-            <Link className="hover:text-foreground transition-colors" to="/termos">Termos de Uso</Link>
-            <Link className="hover:text-foreground transition-colors" to="/privacidade">Privacidade</Link>
-          </div>
+          <p>Construído e operado pela Sazão Gestão Hoteleira.</p>
         </div>
       </div>
     </footer>
