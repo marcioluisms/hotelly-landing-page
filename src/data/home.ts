@@ -264,6 +264,6 @@ export const home = {
   },
   "footer": {
     "description": "Hotelly. Sistema de Gestão Inteligente de Hospedagens.",
-    "brand": "O Hotelly é um produto da Sazão Gestão Inteligente de Hospedagem."
+    "brand": "O Hotelly é um produto da Sazão - Gestão Inteligente de Hospedagens."
   }
 } as const;

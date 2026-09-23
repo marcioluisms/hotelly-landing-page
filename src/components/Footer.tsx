@@ -21,7 +21,7 @@ export default function Footer() {
           </ul>
         </nav>
       </div>
-      <p className="mt-10 pt-6 border-t border-border text-sm text-muted-foreground">O Hotelly é um produto da <a href={SITE_SAZAO} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brass underline underline-offset-4 decoration-border-strong">Sazão Gestão Inteligente de Hospedagem.</a></p>
+      <p className="mt-10 pt-6 border-t border-border text-sm text-muted-foreground">O Hotelly é um produto da <a href={SITE_SAZAO} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brass underline underline-offset-4 decoration-border-strong">Sazão - Gestão Inteligente de Hospedagens</a>.</p>
     </div>
   </footer>;
 }
