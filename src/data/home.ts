@@ -1,7 +1,7 @@
 // Copy A aprovada por Márcio em 23/09/2026.
 export const home = {
   "hero": {
-    "eyebrow": "Gestão inteligente de hospedagens",
+    "eyebrow": "Sistema de Gestão Inteligente de Hospedagens",
     "title": "Do primeiro contato à gestão da hospedagem.",
     "body": "O Hotelly é um sistema de gestão hoteleira que conecta atendimento por inteligência artificial no WhatsApp, reservas, pagamentos e rotina da equipe. Organize a operação, acompanhe o negócio e saiba quanto fica de cada reserva após os custos da venda.",
     "primary": "Falar sobre o Hotelly",
@@ -263,7 +263,7 @@ export const home = {
     "button": "Falar sobre o Hotelly"
   },
   "footer": {
-    "description": "Hotelly. Gestão inteligente de hospedagens.",
+    "description": "Hotelly. Sistema de Gestão Inteligente de Hospedagens.",
     "brand": "O Hotelly é um produto da Sazão Gestão Inteligente de Hospedagem."
   }
 } as const;
