@@ -141,3 +141,14 @@
   .pulse-dot { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* Acessibilidade da navegação, preservando os tokens da marca. */
+.skip-link { position: fixed; left: 1rem; top: 1rem; z-index: 100; padding: .75rem 1rem; border-radius: .5rem; background: var(--color-brass); color: var(--color-brass-foreground); transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+summary::-webkit-details-marker { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
+summary { scroll-margin-top: 6rem; }
+:focus-visible { outline: 2px solid var(--color-brass); outline-offset: 3px; }

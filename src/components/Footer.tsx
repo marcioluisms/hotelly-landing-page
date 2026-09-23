@@ -1,57 +1,27 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
-import { SITE_SAZAO, APP_LOGIN_URL, NAV_LINKS } from '../lib/site';
+import { home } from '../data/home';
+import { APP_LOGIN_URL, SITE_SAZAO, WHATSAPP_URL } from '../lib/site';
 
 export default function Footer() {
-  return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
-          {/* Marca */}
-          <div className="md:col-span-5">
-            <Link to="/" className="inline-block hover:opacity-85 transition-opacity" aria-label="Hotelly, página inicial">
-              <picture>
-                <source srcSet="/hotelly-logo.webp" type="image/webp" />
-                <img alt="Hotelly" className="h-8 w-auto" src="/hotelly-logo.png" width="563" height="170" loading="lazy" decoding="async" />
-              </picture>
-            </Link>
-            <p className="text-muted-foreground mt-4 max-w-sm">Sistema de gestão inteligente de hospedagens.</p>
-          </div>
-
-          {/* Links */}
-          <div className="md:col-span-7 md:pl-8">
-            <p className="eyebrow mb-4">Página</p>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {NAV_LINKS.map((l) => (
-                <li key={l.href}><a className="hover:text-foreground transition-colors" href={`/${l.href}`}>{l.label}</a></li>
-              ))}
-              <li><a className="hover:text-foreground transition-colors" href={APP_LOGIN_URL}>Entrar</a></li>
-            </ul>
-          </div>
+  return <footer className="bg-background border-t border-border">
+    <div className="max-w-7xl mx-auto px-5 sm:px-8 py-12">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+        <div>
+          <Link to="/" aria-label="Hotelly, página inicial" className="inline-block hover:opacity-85 transition-opacity">
+            <picture><source srcSet="/hotelly-logo.webp" type="image/webp" /><img src="/hotelly-logo.png" alt="Hotelly" width="563" height="170" loading="lazy" className="h-8 w-auto" /></picture>
+          </Link>
+          <p className="mt-4 text-muted-foreground">{home.footer.description}</p>
         </div>
-
-        {/* Linha da Sazão */}
-        <div className="mt-14 rounded-2xl border border-border bg-card px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-foreground">
-            O Hotelly é o sistema central da <strong className="font-semibold">Sazão Gestão Hoteleira</strong>.
-          </p>
-          <a
-            href={SITE_SAZAO}
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brass hover:text-brass-hover transition-colors"
-          >
-            Conheça o modelo de gestão
-            <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-          </a>
-        </div>
-
-        <div className="mt-8 pt-6 border-t border-border text-xs text-muted-foreground flex flex-col sm:flex-row sm:justify-between gap-2">
-          <p>© 2026 Hotelly. Todos os direitos reservados.</p>
-          <p>Construído e operado pela Sazão Gestão Hoteleira.</p>
-        </div>
+        <nav aria-label="Rodapé">
+          <ul className="flex flex-wrap gap-x-6 gap-y-4 text-sm text-muted-foreground">
+            <li><a href="#funcionalidades" className="hover:text-foreground">Funcionalidades</a></li>
+            <li><a href="#duvidas" className="hover:text-foreground">Dúvidas</a></li>
+            <li><a href={APP_LOGIN_URL} className="hover:text-foreground">Entrar</a></li>
+            <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">WhatsApp</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
-  );
+      <p className="mt-10 pt-6 border-t border-border text-sm text-muted-foreground">O Hotelly é um produto da <a href={SITE_SAZAO} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-brass underline underline-offset-4 decoration-border-strong">Sazão Gestão Inteligente de Hospedagem.</a></p>
+    </div>
+  </footer>;
 }

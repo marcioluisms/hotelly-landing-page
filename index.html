@@ -2,49 +2,9 @@
 <html lang="pt-BR" class="dark">
   <head>
     <meta charset="UTF-8">
-    <!-- Delayed Third-Party Scripts (Analytics & Tracking) -->
-    <script>
-      function injectThirdPartyScripts() {
-        if (window._scriptsInjected) return;
-        window._scriptsInjected = true;
-
-        // 1. Google Analytics (gtag)
-        var gtagScript = document.createElement('script');
-        gtagScript.async = true;
-        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-SV7EVFBEDZ";
-        document.head.appendChild(gtagScript);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-SV7EVFBEDZ');
-
-        // 2. Microsoft Clarity
-        var clarityStr = "(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i+'?ref=bwt';y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, 'clarity', 'script', 'w0vlst74ni');";
-        var clarityScript = document.createElement('script');
-        clarityScript.type = "text/javascript";
-        clarityScript.innerHTML = clarityStr;
-        document.head.appendChild(clarityScript);
-      }
-
-      function scheduleInjection() {
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(function() { setTimeout(injectThirdPartyScripts, 4000); });
-        } else {
-          setTimeout(injectThirdPartyScripts, 4000);
-        }
-      }
-
-      if (document.readyState === 'complete') {
-        scheduleInjection();
-      } else {
-        window.addEventListener('load', scheduleInjection);
-      }
-    </script>
-
     <!-- SEO Core -->
-    <title>Hotelly | Sistema de gestão inteligente de hospedagens</title>
-    <meta name="description" content="O Hotelly é o sistema que a Sazão usa para operar hospedagens: organiza recepção, governança e financeiro, avisa quando algo precisa de atenção e presta contas ao proprietário todo mês.">
+    <title>Hotelly: IA no WhatsApp e gestão de hospedagens</title>
+    <meta name="description" content="Conheça o Hotelly: IA no WhatsApp, reservas, pagamentos, operação e custos por reserva. Converse sobre o sistema para sua hospedagem.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="language" content="pt-BR">
@@ -52,22 +12,22 @@
     <link rel="canonical" href="https://hotelly.com.br">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Hotelly | A hospedagem funciona. Você acompanha tudo.">
-    <meta property="og:description" content="O sistema que opera hospedagens sob a gestão da Sazão e presta contas ao proprietário todo mês.">
-    <meta property="og:image" content="https://hotelly.com.br/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Hotelly: a hospedagem funciona. Você acompanha tudo.">
+    <meta property="og:title" content="Hotelly: IA no WhatsApp e gestão de hospedagens">
+    <meta property="og:description" content="Conheça o Hotelly: IA no WhatsApp, reservas, pagamentos, operação e custos por reserva. Converse sobre o sistema para sua hospedagem.">
+    <meta property="og:image" content="https://hotelly.com.br/icon.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Hotelly">
     <meta property="og:url" content="https://hotelly.com.br">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hotelly">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hotelly | A hospedagem funciona. Você acompanha tudo.">
-    <meta name="twitter:description" content="O sistema que opera hospedagens sob a gestão da Sazão e presta contas ao proprietário todo mês.">
-    <meta name="twitter:image" content="https://hotelly.com.br/og-image.png">
-    <meta name="twitter:image:alt" content="Hotelly: a hospedagem funciona. Você acompanha tudo.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hotelly: IA no WhatsApp e gestão de hospedagens">
+    <meta name="twitter:description" content="Conheça o Hotelly: IA no WhatsApp, reservas, pagamentos, operação e custos por reserva. Converse sobre o sistema para sua hospedagem.">
+    <meta name="twitter:image" content="https://hotelly.com.br/icon.png">
+    <meta name="twitter:image:alt" content="Hotelly">
 
     <!-- Técnico & Favicons -->
     <meta name="theme-color" content="#0f141b">
@@ -77,44 +37,20 @@
 
     <!-- Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "Hotelly",
-          "url": "https://hotelly.com.br",
-          "description": "Sistema de gestão inteligente de hospedagens. Sistema central do modelo de gestão da Sazão Gestão Hoteleira: opera recepção, governança e financeiro, avisa por exceção e presta contas ao proprietário todo mês.",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "inLanguage": "pt-BR",
-          "image": "https://hotelly.com.br/og-image.png",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Sazão Gestão Hoteleira",
-            "url": "https://sazao.com.br"
-          }
-        },
-        {
-          "@type": "Organization",
-          "name": "Hotelly",
-          "url": "https://hotelly.com.br",
-          "logo": "https://hotelly.com.br/hotelly-logo.png",
-          "parentOrganization": {
-            "@type": "Organization",
-            "name": "Sazão Gestão Hoteleira",
-            "url": "https://sazao.com.br"
-          }
-        }
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Hotelly",
+  "url": "https://hotelly.com.br",
+  "description": "Conheça o Hotelly: IA no WhatsApp, reservas, pagamentos, operação e custos por reserva. Converse sobre o sistema para sua hospedagem.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "image": "https://hotelly.com.br/icon.png"
+}
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Inter: 400, 500, 600. Manrope (headlines): 700, 800. -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap"/></noscript>
+    <link rel="stylesheet" href="/fonts/fonts.css">
   </head>
   <body>
     <div id="root"></div>
