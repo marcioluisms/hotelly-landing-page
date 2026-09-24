@@ -26,7 +26,7 @@ export default function Header() {
   }, [menuOpen]);
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,padding] duration-300 ${scrolled || menuOpen ? "glass border-b border-border py-3" : "bg-transparent py-5"}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,padding] duration-300 ${menuOpen ? "bg-background border-b border-border py-3 shadow-xl" : scrolled ? "glass border-b border-border py-3" : "bg-transparent py-5"}`}
     >
       <div className="page-container flex items-center justify-between gap-5">
         <Link
@@ -95,10 +95,10 @@ export default function Header() {
       {menuOpen && (
         <div
           id="menu-mobile"
-          className="xl:hidden border-t border-border px-5 py-5 max-h-[calc(100dvh-5rem)] overflow-y-auto"
+          className="xl:hidden bg-background border-t border-border px-5 py-5 max-h-[calc(100dvh-5rem)] overflow-y-auto"
         >
           <nav
-            className="flex flex-col gap-1 text-base font-medium text-muted-foreground"
+            className="flex flex-col gap-1 text-base font-medium text-foreground"
             aria-label="Seções da página no celular"
           >
             {NAV_LINKS.map((link) => (
