@@ -21,7 +21,8 @@ A landing page usa a ideia de uma central de inteligência conectada: composiç�
 ## Responsividade e movimento
 
 - Composição de duas colunas em telas grandes; abertura em uma coluna abaixo de 900px.
-- Seções empilhadas abaixo de 640px; margens de 20px no celular.
+- Introduções, atendimento e custos em uma coluna até 900px para acomodar a copy mais longa.
+- Cartões de operação e gestão em uma coluna até 640px; margens de 20px no celular.
 - Animação breve de entrada, sem movimento contínuo ou troca automática de conteúdo.
 - Preferência de movimento reduzido desativa animações e rolagem suave.
 - Foco visível, acesso direto ao conteúdo, controles com altura mínima de 44px e fechamento do menu por Escape.
@@ -29,3 +30,13 @@ A landing page usa a ideia de uma central de inteligência conectada: composiç�
 ## Validação
 
 Executar `npm run lint` e `npm run build`. Conferir também o HTML de produção no navegador: 320, 390, 768, 1024 e 1440px; menu móvel; seleção das quatro áreas; expansões; links internos; foco de teclado; movimento reduzido. Publicação não faz parte desta reforma local.
+
+## Ajustes após a revisão da copy — 24/09/2026
+
+- Abertura com título proporcional ao novo texto, destaque dourado em bloco e parágrafo sobre a Sazão com hierarquia secundária. Menor distância até as ações principais.
+- Introduções alinhadas pelo topo; responsabilidades de Hotelly, Sazão e equipe com numeração e separadores próprios. Condições de contratação em nota visual discreta.
+- Cartões com maior área de leitura no celular; título da composição de custos sem quebra no meio das palavras.
+- Contato organizado em ação principal, telefone e informações complementares. Numeração das dúvidas corrigida para 10 e 11.
+- Copy, identidade, ilustrações e destinos dos links preservados. Ajustes locais; sem publicação.
+
+Validação: TypeScript e build completos aprovados. HTML gerado conferido em 320, 390, 640, 768, 900, 1024, 1280 e 1440px, sem transbordamento horizontal. Quatro seletores da abertura, oito expansões de funcionalidades, onze dúvidas, âncoras, menu móvel, Escape, acesso por teclado e movimento reduzido conferidos. Comparação automatizada confirmou a preservação dos textos, exceto a numeração corrigida das dúvidas. Sem erros de execução no navegador.

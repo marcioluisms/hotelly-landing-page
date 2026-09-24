@@ -37,7 +37,7 @@ export default function Footer() {
                   href="#funcionalidades"
                   className="inline-flex items-center min-h-11 hover:text-foreground"
                 >
-                  O produto
+                  Funcionalidades
                 </a>
               </li>
               <li>
@@ -58,12 +58,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
+                  aria-label="Conversar com a equipe pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center min-h-11 hover:text-foreground"
                 >
-                  Conversar com a Sazão
+                  Conversar com a equipe
                 </a>
               </li>
             </ul>

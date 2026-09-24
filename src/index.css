@@ -249,8 +249,8 @@ summary {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 100px;
-  align-items: end;
-  margin-bottom: 62px;
+  align-items: start;
+  margin-bottom: 52px;
 }
 
 .contact-button {
@@ -325,7 +325,7 @@ summary {
 
 .hero-section {
   position: relative;
-  padding-top: 170px;
+  padding-top: 140px;
   background: radial-gradient(ellipse at 74% 30%, #7fa6e00a, transparent 50%);
 }
 
@@ -390,20 +390,22 @@ summary {
 
 .hero-copy h1 {
   max-width: 720px;
-  font: 500 clamp(3.4rem, 5.6vw, 5rem)/1.055 var(--font-headline);
+  font: 500 clamp(3rem, 4.65vw, 4.2rem)/1.1 var(--font-headline);
+  text-wrap: balance;
   letter-spacing: -0.05em;
 }
 
 .hero-copy h1 span {
+  display: block;
   color: var(--color-brass);
 }
 
 .hero-description {
   max-width: 550px;
-  margin-top: 30px;
-  color: #a9b2c0;
+  margin-top: 26px;
+  color: #bac3d0;
   font-size: 15px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 .hero-actions {
@@ -720,7 +722,7 @@ summary {
 
 .connection-strip {
   position: relative;
-  margin-top: 83px;
+  margin-top: 54px;
   display: grid;
   grid-template-columns: 1fr repeat(4, 1.15fr);
   align-items: center;
@@ -731,9 +733,10 @@ summary {
 
 .connection-label {
   color: #a1acbb;
-  font-size: 9px;
-  line-height: 1.8;
-  letter-spacing: 0.12em;
+  max-width: 180px;
+  padding-right: 20px;
+  font-size: 11px;
+  line-height: 1.7;
 }
 
 .connection-label strong {
@@ -992,6 +995,7 @@ summary {
 }
 
 .operation-card h3 {
+  text-wrap: balance;
   font: 600 19px/1.3 var(--font-headline);
   letter-spacing: -0.03em;
 }
@@ -1157,7 +1161,8 @@ summary {
 }
 
 .ledger-result h3 {
-  font: 500 37px/1.15 var(--font-headline);
+  font: 500 clamp(1.75rem, 2.6vw, 2.3rem)/1.2 var(--font-headline);
+  text-wrap: balance;
   letter-spacing: -0.045em;
   color: var(--color-brass);
   margin-top: 15px;
@@ -1652,7 +1657,7 @@ details[open] > summary > .details-chevron {
 
 @media (min-width: 1550px) {
   .hero-section {
-    padding-top: 190px;
+    padding-top: 155px;
   }
   .hero-layout {
     gap: 90px;
@@ -1668,7 +1673,7 @@ details[open] > summary > .details-chevron {
     grid-template-columns: 1fr 1fr;
   }
   .hero-copy h1 {
-    font-size: clamp(3rem, 5.6vw, 4.5rem);
+    font-size: clamp(2.8rem, 4.65vw, 3.5rem);
   }
   .hero-eyebrow {
     font-size: 8px;
@@ -1739,7 +1744,7 @@ details[open] > summary > .details-chevron {
     padding-block: 0;
   }
   .hero-copy h1 {
-    font-size: clamp(3.6rem, 8.5vw, 5rem);
+    font-size: clamp(3.2rem, 7.5vw, 4.2rem);
   }
   .hero-eyebrow {
     font-size: 10px;
@@ -1910,7 +1915,7 @@ details[open] > summary > .details-chevron {
     padding-top: 118px;
   }
   .hero-copy h1 {
-    font-size: clamp(2.8rem, 10.5vw, 4.5rem);
+    font-size: clamp(2.25rem, 9.5vw, 3.5rem);
     line-height: 1.09;
     letter-spacing: -0.045em;
   }
@@ -2119,7 +2124,7 @@ details[open] > summary > .details-chevron {
     font-size: 10px;
   }
   .ledger-result h3 {
-    font-size: 35px;
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
   }
   .management-heading {
     display: block;
@@ -2224,7 +2229,7 @@ details[open] > summary > .details-chevron {
     font-size: 7px;
   }
   .hero-copy h1 {
-    font-size: 2.7rem;
+    font-size: 2.25rem;
   }
   .orbit-node {
     font-size: 8px;
@@ -2284,20 +2289,162 @@ details[open] > summary > .details-chevron {
   }
 }
 
-/* Integrated service and visible development stage — editorial v2.1. */
-.development-note { margin-top: 24px; border-left: 2px solid var(--color-brass); padding: 16px 18px; background: #e5b45108; color: #bdc6d3; font-size: 13px; line-height: 1.8; }
-.hero-description + .hero-description { margin-top: 16px; }
-.integrated-service { border-top: 1px solid #7fa6e023; background: #121923; }
-.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
-.service-note { margin-block: 32px; max-width: 920px; }
+/* Refinements for the longer approved copy. */
+.hero-description + .hero-description {
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 1px solid #7fa6e045;
+  color: #a9b2c0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.integrated-service {
+  border-top: 1px solid #7fa6e023;
+  background: #121923;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  padding-top: 22px;
+  border-top: 1px solid #7fa6e038;
+}
+
+.service-card > span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--color-brass);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-card h3 {
+  max-width: 23ch;
+  font: 600 20px/1.4 var(--font-headline);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.service-card > p {
+  margin-top: 14px;
+  color: #a9b2c0;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.service-note {
+  margin-block: 32px;
+  max-width: 76ch;
+}
+
+.integrated-service .service-note {
+  max-width: none;
+  margin-top: 36px;
+  padding: 22px 26px;
+  border-left: 2px solid #e5b45180;
+  background: #e5b45105;
+  font-size: 13px;
+}
+
+.integrated-service .service-note p {
+  max-width: 100ch;
+}
+
 .experience-status { color: #aabbd1; }
 .intelligence-visual figcaption { line-height: 1.7; padding-inline: 16px; }
 .reservation-flow p { line-height: 1.7; }
-.contact-content > .text-link { display: inline-flex; margin-top: 12px; }
 .section-stamp { max-width: 150px; line-height: 1.7; }
-@media (max-width: 640px) { .service-grid { grid-template-columns: 1fr; gap: 28px; } .service-grid .operation-card { border-left: 0; padding: 0; } .visual-topline { font-size: 8px; } .hero-footnote { line-height: 1.7; } }
 
-/* Let long editorial headings wrap inside narrow grid tracks. */
-.costs-layout > *, .costs-bottom > *, .hero-layout > * { min-width: 0; }
-.cost-ledger, .ledger-result h3 { overflow-wrap: anywhere; }
-@media (max-width: 360px) { .cost-tags { grid-template-columns: 1fr; } .ledger-row { gap: 12px; } }
+/* Keep supporting contact information subordinate to the main action. */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-phone {
+  color: #a9b2c0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contact-support {
+  max-width: 62ch;
+  margin: 26px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid #e5b45124;
+}
+
+.contact-support .text-link {
+  color: var(--color-brass);
+  font-size: 12px;
+}
+
+.contact-support > p {
+  max-width: 54ch;
+  margin: 8px auto 0;
+  color: #a9b2c0;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contact-signature { margin-top: 30px; }
+.text-link svg, .payment-note svg, .connection-strip > a > svg { flex-shrink: 0; }
+.small-line { flex-shrink: 0; }
+
+/* Allow long copy to fit its track without cutting words. */
+.section-intro > *, .costs-layout > *, .costs-bottom > *,
+.hero-layout > *, .catalogue-layout > *, .faq-layout > * { min-width: 0; }
+
+@media (max-width: 900px) {
+  .service-grid { gap: 22px; }
+  .service-card h3 { font-size: 18px; }
+  .section-intro { grid-template-columns: 1fr; gap: 26px; }
+  .section-intro .section-heading { max-width: 600px; }
+  .section-intro .section-description { max-width: 72ch; }
+  .ai-layout { grid-template-columns: 1fr; gap: 42px; }
+  .conversation-panel { width: 100%; max-width: 540px; margin-inline: auto; }
+  .costs-layout { grid-template-columns: 1fr; }
+  .cost-ledger { width: 100%; max-width: 560px; margin-inline: auto; }
+  .journey-item p { font-size: 13px; }
+  .journey-item h3 { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .service-grid { grid-template-columns: 1fr; gap: 26px; }
+  .service-card { padding-top: 20px; }
+  .service-card > span { margin-bottom: 12px; }
+  .service-card h3 { max-width: none; }
+  .integrated-service .service-note { padding: 18px; }
+  .visual-topline { font-size: 8px; }
+  .hero-footnote { line-height: 1.7; }
+  .section-intro > .section-description { margin-top: 22px; }
+  .contact-actions { align-items: stretch; }
+  .contact-support .text-link { text-align: left; }
+  .contact-signature { font-size: 8px; line-height: 1.7; letter-spacing: 0.05em; }
+  .operation-grid { grid-template-columns: 1fr; gap: 28px; }
+  .operation-grid .operation-card { padding: 24px 0 0; border-left: 0; border-top: 1px solid #7fa6e02a; }
+  .operation-grid .operation-card:first-child { padding-top: 0; border-top: 0; }
+  .operation-art { margin-block: 16px; }
+  .operation-card h3 { font-size: 19px; text-wrap: pretty; }
+  .operation-card > p { font-size: 13px; margin-top: 10px; }
+  .management-card { display: block; }
+  .management-card h3 { margin-top: 18px; }
+  .management-card p { font-size: 13px; }
+  .payment-note { align-items: flex-start; line-height: 1.7; }
+  .payment-note svg { margin-top: 2px; }
+}
+
+@media (max-width: 360px) {
+  .cost-tags { grid-template-columns: 1fr; }
+  .ledger-row { gap: 12px; }
+  .cost-ledger { padding: 18px; }
+  .ledger-result { padding: 18px; }
+}

@@ -67,12 +67,12 @@ export default function Header() {
             Já tenho acesso
           </a>
           <a
-            aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
+            aria-label="Conversar com a equipe pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 min-h-11 text-xs font-semibold border border-brass/40 hover:bg-brass/10 text-brass rounded-md px-4 py-2.5 transition-colors"
           >
-            Conversar com a Sazão
+            Conversar com a equipe
             <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
           </a>
         </div>
@@ -120,12 +120,12 @@ export default function Header() {
               Já tenho acesso
             </a>
             <a
-              aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
+              aria-label="Conversar com a equipe pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-brass text-brass-foreground rounded-lg py-3"
             >
-              Conversar com a Sazão
+              Conversar com a equipe
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>
