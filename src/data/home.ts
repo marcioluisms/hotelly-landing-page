@@ -1,269 +1,306 @@
-// Copy A aprovada por Márcio em 23/09/2026.
+// Copy v2.1 — serviço integrado Sazão; produto em desenvolvimento.
 export const home = {
   "hero": {
-    "eyebrow": "Sistema de Gestão Inteligente de Hospedagens",
-    "title": "Do primeiro contato à gestão da hospedagem.",
-    "body": "O Hotelly é um sistema de gestão hoteleira que conecta atendimento por inteligência artificial no WhatsApp, reservas, pagamentos e rotina da equipe. Organize a operação, acompanhe o negócio e saiba quanto fica de cada reserva após os custos da venda.",
-    "primary": "Falar sobre o Hotelly",
-    "secondary": "Conhecer as funcionalidades",
-    "highlights": [
-      "IA no WhatsApp",
-      "Reservas e pagamentos",
-      "Custos por canal",
-      "Operação e gestão"
-    ]
-  },
-  "ai": {
-    "title": "Da primeira pergunta à reserva confirmada, pelo WhatsApp.",
+    "eyebrow": "Sistema de gestão de hospedagens",
+    "title": "Tecnologia a serviço da gestão da sua hospedagem.",
     "paragraphs": [
-      "O Hotelly atende o hóspede por inteligência artificial em qualquer idioma, responde com as informações da sua hospedagem, consulta disponibilidade e apresenta a cotação.",
-      "A conversa se conecta à reserva e ao envio do link de pagamento. O sistema confere o recebimento e confirma a reserva quando o sinal ou o valor exigido pela hospedagem é pago."
+      "O Hotelly é a tecnologia em desenvolvimento para integrar o acompanhamento personalizado da Sazão. Sua proposta conecta atendimento, reservas e informações da operação à rotina de análise, prioridades e acompanhamento da gestão.",
+      "Você contrata o acompanhamento da Sazão, com tecnologia integrada à entrega. Sua equipe continua responsável pela operação local e pelas ações combinadas."
+    ],
+    "primary": "Conversar com a Sazão  ",
+    "secondary": "Entenda o serviço integrado",
+    "stage": "Produto em desenvolvimento. A demonstração funcional virá após a implementação no hotel, e o lançamento depende da validação. Ainda não há data definida.",
+    "signature": "Acompanhamento na gestão. Apoio da tecnologia.",
+    "highlights": [
+      "Atendimento",
+      "Reservas",
+      "Operação",
+      "Informações de gestão"
+    ],
+    "strip": "Uma proposta que conecta informações e pessoas."
+  },
+  "service": {
+    "title": "Acompanhamento da Sazão, com Hotelly integrado.",
+    "eyebrow": "O que você contrata",
+    "paragraphs": [
+      "A proposta é acompanhar a gestão da hospedagem, incluindo as escolhas de marketing: público, proposta da casa, comunicação, canais e experiência entregue. A Sazão relaciona essas escolhas às condições da operação, discute prioridades e revê as ações com o proprietário e os responsáveis locais.",
+      "A rotina-base reúne leitura gerencial do ciclo, até cinco prioridades simultâneas, acompanhamento semanal por mensagens e registros, duas conversas mensais e fechamento do período. A proposta define as entregas e as condições para cada hospedagem."
     ],
     "items": [
       {
-        "title": "Responde e orienta",
-        "text": "Informações sobre acomodações, serviços e condições da estadia, usando a base da hospedagem."
+        "title": "Sazão: análise e acompanhamento",
+        "text": "Organiza a leitura, orienta prioridades, registra encaminhamentos e acompanha o que foi combinado."
       },
       {
-        "title": "Cota e encaminha a reserva",
-        "text": "Disponibilidade, valores e condições conectados ao registro da reserva."
+        "title": "Hotelly: tecnologia integrada à entrega",
+        "text": "Seu desenho apoia registros e percursos da hospedagem. Os recursos incluídos precisam estar confirmados para o escopo e a implantação."
       },
       {
-        "title": "Envia a cobrança e acompanha o pagamento",
-        "text": "Link de pagamento, lembretes e confirmação conforme a política definida pela hospedagem."
-      },
-      {
-        "title": "Mantém o contato ao longo da estadia",
-        "text": "Mensagens antes da chegada, durante a hospedagem e após a saída, incluindo pedido de avaliação e convite para voltar."
-      },
-      {
-        "title": "A equipe participa quando precisa",
-        "text": "A recepção pode assumir a conversa com acesso ao seu histórico. O atendimento segue os horários e as regras configurados."
+        "title": "Hospedagem: decisões e execução local",
+        "text": "O proprietário aprova escolhas e recursos. A equipe mantém a operação, confere as informações e executa as ações sob sua responsabilidade."
       }
+    ],
+    "tail": [
+      "O acompanhamento foi pensado para hotéis e pousadas independentes em operação, com um decisor envolvido e responsáveis locais. O Hotelly não é comercializado como licença avulsa."
     ]
   },
-  "operation": {
-    "title": "Da reserva ao quarto pronto, uma rotina conectada.",
+  "ai": {
+    "title": "Da pergunta do hóspede aos próximos passos da reserva.",
+    "eyebrow": "A proposta de atendimento",
     "paragraphs": [
-      "A recepção acompanha chegadas, saídas e pendências. A equipe de limpeza vê os quartos que precisam de atenção. Ocorrências e pagamentos ficam registrados para as pessoas responsáveis darem continuidade ao trabalho."
+      "O desenho do Hotelly prevê atendimento por inteligência artificial no WhatsApp, usando informações da hospedagem para orientar a conversa, consultar disponibilidade e preparar a cotação.",
+      "Também prevê o encaminhamento da reserva e do pagamento conforme as regras da casa, com participação da recepção quando uma pessoa precisar assumir. O percurso completo precisa ser conferido antes da entrada em uso."
+    ],
+    "items": [
+      {
+        "title": "Informação da própria hospedagem",
+        "text": "A base de atendimento reúne acomodações, serviços e condições da estadia. Ela precisa ser preparada e revisada pelos responsáveis."
+      },
+      {
+        "title": "Disponibilidade e cotação",
+        "text": "O percurso previsto relaciona datas, pessoas, acomodação e condições comerciais. Os valores apresentados na conversa precisam corresponder aos da reserva."
+      },
+      {
+        "title": "Pagamento conforme a regra da casa",
+        "text": "O envio de um link inicia a etapa de pagamento. No fluxo previsto, a confirmação depende do recebimento do sinal ou valor exigido, e não do simples envio da cobrança."
+      },
+      {
+        "title": "Continuidade do contato",
+        "text": "Mensagens ligadas à estadia fazem parte do desenho de relacionamento. Conteúdo, momentos de envio e condições de contato precisam ser definidos e conferidos para cada uso."
+      },
+      {
+        "title": "Participação da equipe",
+        "text": "A recepção tem um papel no tratamento de exceções e na continuidade das conversas. A automação precisa de regras e responsáveis definidos."
+      }
+    ],
+    "tail": []
+  },
+  "operation": {
+    "title": "Informações para quem precisa dar o próximo passo.",
+    "eyebrow": "A proposta de organização da rotina",
+    "paragraphs": [
+      "O Hotelly está sendo desenvolvido para apoiar a continuidade entre reserva, recepção e tarefas da hospedagem. O objetivo é relacionar registros e pendências às pessoas responsáveis por agir."
     ],
     "items": [
       {
         "title": "Recepção",
-        "text": "Reservas, mapa de quartos, check-in, check-out e histórico dos hóspedes."
+        "text": "O desenho reúne reservas, chegadas, saídas e informações da estadia para apoiar o trabalho de quem atende."
       },
       {
         "title": "Equipe e quartos",
-        "text": "Limpeza, inspeção, manutenção, prioridades e passagem de turno."
+        "text": "Situação dos quartos, limpeza, manutenção e passagem de informações fazem parte do escopo previsto de organização da operação."
       },
       {
         "title": "Contas e pagamentos",
-        "text": "Lançamentos da estadia, consumo, pagamentos, saldos e estornos com aprovação."
+        "text": "Lançamentos, recebimentos e pendências da estadia precisam ter origem e conferência claras. Os percursos financeiros serão definidos e validados para o uso contratado."
       },
       {
         "title": "Hóspede",
-        "text": "Check-in digital e acesso à conta e ao comprovante da estadia."
+        "text": "A proposta contempla etapas digitais para preparar a chegada e consultar informações da estadia, conforme os recursos confirmados na implantação."
       }
+    ],
+    "tail": [
+      "A tecnologia organiza informação. O atendimento, a preparação dos quartos e a solução de situações locais continuam dependendo da equipe da hospedagem."
     ]
   },
   "costs": {
-    "title": "Saiba quanto fica de cada reserva após os custos da venda.",
+    "title": "O que resta da reserva após os custos comerciais considerados?",
+    "eyebrow": "Uma leitura mais clara das vendas",
     "paragraphs": [
-      "O Hotelly reúne os dados da reserva, do canal, dos pagamentos e das campanhas para calcular os custos comerciais associados à venda.",
-      "Entram nessa conta, quando aplicáveis, as taxas de cartão de crédito ou débito, o custo do parcelamento quando houver, a comissão do canal de reserva e os custos de campanhas do Google Ads ou Meta Ads atribuídos à reserva.",
-      "Você acompanha os componentes desse cálculo e compara o que fica das reservas de cada canal. Assim, tem informação para avaliar onde investir e quais vendas contribuem mais para o negócio.",
-      "Esse valor ajuda a pagar despesas como café da manhã, lavanderia e limpeza. Essas despesas ficam fora do cálculo apresentado aqui."
+      "Essa é uma das perguntas que orientam o desenho do Hotelly. A proposta é relacionar o valor da reserva aos custos comerciais identificados, para apoiar a análise dos canais e das condições de venda.",
+      "Entram nessa leitura, quando aplicáveis e com dados disponíveis, taxas de cartão, custos de parcelamento, comissões dos canais e custos de campanhas atribuídos às reservas. As fontes, os períodos e as regras do cálculo precisam estar claros.",
+      "Essa contribuição ajuda a pagar outras despesas da hospedagem, como café da manhã, lavanderia, limpeza e estrutura. Ela não é o lucro do hotel nem o saldo disponível no banco. O momento dos recebimentos também precisa de análise própria.",
+      "Atribuir uma reserva a uma campanha ajuda a organizar a informação, mas não comprova que a campanha causou aquela venda. Comparações precisam considerar os limites das fontes e do método utilizado."
     ],
-    "formula": "Valor da reserva − custos da venda = valor que contribui para pagar as demais despesas da hospedagem.",
+    "formula": "Contribuição após esses custos comerciais",
     "labels": [
-      "origem da reserva",
-      "taxas e comissões",
-      "custo de campanha atribuído",
-      "valor restante"
+      "Origem da reserva",
+      "Custos identificados",
+      "Regra de atribuição",
+      "Contribuição comercial"
     ]
   },
   "management": {
-    "title": "Enxergue o que precisa de atenção e acompanhe as decisões.",
+    "title": "Os registros ajudam a formular as perguntas. A gestão dá continuidade.",
+    "eyebrow": "Informação ligada ao acompanhamento",
+    "paragraphs": [
+      "O desenho do Hotelly contempla informações para acompanhar reservas, pendências e prioridades. No serviço da Sazão, essas informações entram na leitura da hospedagem e na discussão do que merece atenção."
+    ],
     "items": [
       {
-        "title": "Alertas da operação",
-        "text": "Situações previstas nas regras do sistema são sinalizadas conforme as informações disponíveis, ajudando a equipe a identificar pendências e agir."
+        "title": "Pendências e alertas",
+        "text": "As situações a sinalizar precisam de regras, dados e destinatários definidos. Um alerta orienta a atenção; o encaminhamento cabe às pessoas responsáveis."
       },
       {
         "title": "Ritmo das reservas",
-        "text": "Acompanhe o que já está vendido para os próximos períodos e como as reservas evoluíram em relação à semana anterior."
+        "text": "O que já está reservado e como essa posição muda ao longo do tempo são referências previstas para discutir os próximos períodos."
       },
       {
         "title": "Prioridades com responsáveis",
-        "text": "Registre as prioridades da semana, quem vai cuidar de cada uma e o prazo combinado."
+        "text": "O acompanhamento registra o que fazer, quem assume e quando rever. A equipe local executa as ações que lhe cabem."
       },
       {
-        "title": "Informações para o proprietário",
-        "text": "Reúna dados da operação e do mês para acompanhar a hospedagem. As pessoas responsáveis conferem as informações, comentam os resultados e definem os próximos passos."
+        "title": "Leitura para o proprietário",
+        "text": "Informações da operação e das vendas precisam ser conferidas e interpretadas. O fechamento distingue entregas realizadas, ações executadas e efeitos observados."
       }
-    ]
+    ],
+    "tail": []
   },
   "catalogue": {
-    "title": "Conheça as soluções do Hotelly para cada área da hospedagem.",
+    "title": "As áreas que orientam o desenho do Hotelly.",
+    "eyebrow": "Escopo previsto de desenvolvimento",
+    "paragraphs": [
+      "Esta visão apresenta o produto em desenvolvimento. Ela não significa que todos os recursos estejam prontos ou incluídos em qualquer contratação. O escopo de uso depende da validação e da implantação definida com a Sazão."
+    ],
+    "tail": [],
     "groups": [
       {
         "title": "Atendimento e relacionamento",
         "items": [
-          "Atendimento por IA no WhatsApp em qualquer idioma.",
-          "Respostas com as informações da hospedagem.",
-          "Consulta de disponibilidade, cotação e fluxo de reserva.",
-          "Link de cobrança e lembretes de pagamento.",
-          "Histórico das conversas e identificação do hóspede.",
-          "Caixa de atendimento para a equipe assumir e responder.",
-          "Horários e regras de atendimento configuráveis.",
-          "Mensagens antes, durante e depois da estadia.",
-          "Pedido de avaliação e convite para voltar."
+          "Informações da hospedagem como base para o atendimento por IA.",
+          "Consulta de disponibilidade, cotação e encaminhamento da reserva.",
+          "Histórico da conversa e participação da recepção.",
+          "Horários, regras e mensagens vinculadas às etapas da estadia."
         ]
       },
       {
         "title": "Reservas diretas e canais",
         "items": [
-          "Página própria de reservas.",
-          "Botão ou área de reservas para o site da hospedagem.",
-          "Busca de disponibilidade, escolha da acomodação e pagamento.",
-          "Bloqueio temporário da acomodação durante o pagamento.",
-          "Confirmação por e-mail.",
-          "Registro do canal de origem de cada reserva.",
-          "Integração com canais de reserva, conforme as conexões configuradas."
+          "Percurso de consulta, escolha da acomodação e reserva direta.",
+          "Identificação da origem das reservas.",
+          "Tratamento da disponibilidade ao longo do pagamento.",
+          "Conexões com canais conforme compatibilidade e escopo confirmados."
         ]
       },
       {
-        "title": "Tarifas e condições comerciais",
+        "title": "Tarifas e condições da hospedagem",
         "items": [
-          "Preços por acomodação, data e número de pessoas.",
-          "Planos de tarifas e regras por canal.",
-          "Mínimo e máximo de noites e restrições de chegada e saída.",
-          "Temporadas e pacotes.",
-          "Valores por faixa etária de crianças.",
-          "Extras e regras de sinal.",
-          "Recomendação de preços dentro dos limites definidos pela gestão."
+          "Regras por acomodação, período e composição de hóspedes.",
+          "Condições de estadia, temporadas e restrições.",
+          "Sinal e condições de pagamento definidos pela hospedagem.",
+          "Apoio à análise de preços, respeitando a autonomia da gestão."
         ]
       },
       {
         "title": "Recepção e hóspede",
         "items": [
-          "Painel de chegadas, saídas e pendências.",
-          "Mapa de quartos e ocupação.",
-          "Criação e alteração de reservas.",
-          "Prévia dos efeitos de mudanças e cancelamentos.",
-          "Check-in e check-out.",
-          "Cadastro e histórico de estadas.",
-          "Check-in digital, documentos e acompanhantes.",
-          "Cadastro de balcão e fluxo de registro de hóspedes.",
-          "Portal do hóspede com conta e comprovante."
+          "Reservas, chegadas, saídas e situação das acomodações.",
+          "Cadastro e informações da estadia.",
+          "Preparação digital da chegada.",
+          "Consulta de informações e registros pertinentes ao hóspede."
         ]
       },
       {
-        "title": "Limpeza, equipe e manutenção",
+        "title": "Equipe, limpeza e manutenção",
         "items": [
-          "Situação e inspeção dos quartos.",
-          "Fila de limpeza por prioridade.",
-          "Acompanhamento de tarefas e atrasos.",
-          "Bloqueios por manutenção e histórico de problemas.",
-          "Planejamento do café da manhã.",
-          "Livro de ocorrências e passagem de turno.",
-          "Notificações e acompanhamento de falhas.",
-          "Registro de consumo de frigobar."
+          "Situação dos quartos e prioridades de preparação.",
+          "Registro de tarefas, ocorrências e pendências.",
+          "Passagem de informações entre responsáveis.",
+          "Encaminhamento das necessidades de manutenção."
         ]
       },
       {
-        "title": "Financeiro e custos de venda",
+        "title": "Contas e custos comerciais",
         "items": [
-          "Conta da estadia com lançamentos, pagamentos e saldo.",
-          "Pagamento por link e confirmação integrada.",
-          "Estornos com solicitação, aprovação e registro.",
-          "Taxas de cartão e custos de parcelamento.",
-          "Comissões dos canais de reserva.",
-          "Custos de campanhas atribuídos às reservas.",
-          "Valor restante por reserva após os custos comerciais.",
-          "Fechamento mensal com histórico de correções.",
-          "Relatórios exportáveis."
+          "Lançamentos, pagamentos e saldos da estadia.",
+          "Regras de conferência e tratamento das exceções de pagamento.",
+          "Identificação de taxas, comissões e outros custos comerciais considerados.",
+          "Leitura da contribuição após esses custos, com fontes e limites explícitos."
         ]
       },
       {
-        "title": "Marketing e informações de gestão",
+        "title": "Informações para a gestão",
         "items": [
-          "Origem e acompanhamento do percurso das reservas diretas.",
-          "Dados de campanhas do Google Ads e Meta Ads.",
-          "Comparação dos custos e da contribuição das reservas por canal.",
-          "Acompanhamento das avaliações do Google.",
-          "Ocupação, diária média e receita por quarto disponível.",
-          "Ritmo das reservas e histórico do que já estava vendido.",
-          "Alertas de situações configuradas.",
-          "Prioridades com responsável e prazo.",
-          "Informações da operação e prestação de contas ao proprietário."
+          "Origem e evolução das reservas.",
+          "Informações de vendas e ocupação.",
+          "Pendências e prioridades com responsáveis.",
+          "Registros para a leitura do ciclo e o acompanhamento da Sazão."
         ]
       },
       {
-        "title": "Apoio, acesso e histórico",
+        "title": "Acesso e apoio ao uso",
         "items": [
-          "Copiloto para ajudar a equipe a consultar informações.",
-          "Central de ajuda dentro do sistema.",
-          "Permissões de acesso por função.",
-          "Autenticação em duas etapas.",
-          "Separação dos dados de cada hospedagem.",
-          "Histórico de alterações.",
-          "Recursos de proteção e tratamento dos dados.",
-          "Portal de solicitações de suporte e cópias de segurança."
+          "Permissões compatíveis com as funções de cada pessoa.",
+          "Histórico de alterações pertinentes.",
+          "Orientação para o uso e encaminhamento de solicitações.",
+          "Preparação dos procedimentos de continuidade da operação."
         ]
       }
     ]
   },
   "trust": {
-    "title": "Cada pessoa com o acesso de que precisa.",
+    "title": "Pessoas, informações e responsabilidades precisam estar prontas.",
+    "eyebrow": "Preparação para o uso",
     "paragraphs": [
-      "Os perfis de acesso organizam o que cada pessoa pode consultar e fazer. O histórico permite acompanhar alterações, e a central de ajuda e o copiloto apoiam a equipe no uso do sistema.",
-      "Configuração, importação de dados, treinamento e suporte são definidos conforme o escopo contratado."
+      "A implantação prevista começa pela definição do trabalho, dos dados necessários e das pessoas envolvidas. Recursos, acessos e rotinas precisam ser conferidos para o contexto da hospedagem.",
+      "A proposta da Sazão define preparação da equipe, orientação e encaminhamento de suporte dentro do escopo contratado. Horários e responsabilidades de atendimento precisam ser combinados antes do início.",
+      "Automação do atendimento, acompanhamento gerencial e suporte técnico são atividades diferentes. A existência de um sistema não significa suporte humano permanente ou operação local dispensada."
+    ],
+    "items": [],
+    "tail": [],
+    "labels": [
+      "Responsabilidades claras",
+      "Preparação das pessoas",
+      "Continuidade combinada"
     ]
+  },
+  "contact": {
+    "title": "Sua hospedagem precisa de acompanhamento na gestão?",
+    "eyebrow": "O próximo passo é uma conversa.",
+    "paragraphs": [
+      "Conte o que exige atenção e como sua equipe participa da operação. A Sazão pode apresentar a proposta de acompanhamento e explicar o papel do Hotelly nessa entrega."
+    ],
+    "items": [],
+    "tail": [],
+    "support": "Uma conversa sobre a proposta e as condições para sua hospedagem, sem promessa de demonstração ou início imediato."
   },
   "faq": [
     {
-      "title": "Posso contratar apenas o sistema?",
-      "text": "Sim. Você pode usar o Hotelly com sua própria equipe, mantendo a gestão da hospedagem."
+      "title": "Posso contratar apenas o Hotelly?",
+      "text": "Não. O Hotelly integra a proposta de acompanhamento personalizado da Sazão. Não é comercializado como licença avulsa."
     },
     {
-      "title": "A equipe pode assumir o atendimento no WhatsApp?",
-      "text": "Sim. A recepção pode assumir a conversa e consultar seu histórico quando for necessária a participação de uma pessoa."
+      "title": "O que a Sazão acrescenta ao uso da tecnologia?",
+      "text": "Leitura gerencial, orientação de prioridades de gestão e marketing, acompanhamento das ações, conversas de gestão e fechamento do período. A tecnologia apoia esse trabalho; o acompanhamento humano é prestado pela Sazão."
     },
     {
-      "title": "A reserva é confirmada assim que o link de pagamento é enviado?",
-      "text": "A confirmação ocorre após o recebimento do sinal ou valor exigido pela política da hospedagem. O envio do link inicia a etapa de pagamento."
+      "title": "Minha equipe continua responsável pela operação?",
+      "text": "Sim. A hospedagem mantém os responsáveis pela recepção, pelas tarefas locais e pela execução das ações combinadas. O proprietário ou gestor autorizado participa das decisões e da definição de recursos."
     },
     {
-      "title": "Quais custos entram no cálculo de cada reserva?",
-      "text": "Os custos comerciais associados à venda, como taxas de cartão, parcelamento, comissão do canal e custos de campanha atribuídos. Despesas de operação, como café da manhã, lavanderia e limpeza, ficam fora dessa conta."
+      "title": "O Hotelly já está disponível? Posso ver uma demonstração agora?",
+      "text": "O produto está em desenvolvimento. A demonstração funcional será preparada após a implementação no hotel, e o lançamento depende da validação. As ilustrações desta página apresentam a proposta; não são demonstrações de um sistema em operação."
     },
     {
-      "title": "O valor que fica depois desses custos é o lucro do hotel?",
-      "text": "Esse valor contribui para pagar as demais despesas da hospedagem. O lucro depende também dessas despesas e dos outros componentes do resultado do negócio."
+      "title": "A equipe poderá assumir uma conversa no WhatsApp?",
+      "text": "Essa participação está prevista no desenho do atendimento. A transferência, o histórico e as regras de atuação precisam ser conferidos no percurso de implantação."
+    },
+    {
+      "title": "Quais idiomas e integrações estarão disponíveis?",
+      "text": "Idiomas e conexões serão informados conforme o que estiver confirmado para a implantação. Não há uma lista universal de compatibilidade a prometer nesta etapa."
+    },
+    {
+      "title": "Enviar o link de pagamento significa que a reserva foi confirmada?",
+      "text": "Não. No fluxo previsto, a confirmação depende do recebimento do sinal ou valor exigido pelas regras da hospedagem. O envio do link inicia a etapa de pagamento."
+    },
+    {
+      "title": "O valor após os custos comerciais é o lucro do hotel?",
+      "text": "Não. É a contribuição após os custos considerados nessa conta. Outras despesas e componentes do resultado ainda precisam ser analisados. Esse valor também não equivale ao caixa disponível."
     },
     {
       "title": "Posso trazer dados do sistema que uso hoje?",
-      "text": "A importação de dados pode fazer parte do escopo contratado, conforme as informações disponíveis no sistema de origem."
+      "text": "A viabilidade depende das informações de origem, dos formatos e do escopo de implantação. Migração e compatibilidade serão avaliadas; não há promessa de transferência automática de qualquer sistema."
     },
     {
-      "title": "O Hotelly inclui treinamento e suporte?",
-      "text": "Configuração, treinamento e suporte podem compor a contratação. O escopo define o que será oferecido à sua hospedagem."
+      "title": "Como funcionam treinamento e suporte?",
+      "text": "A preparação para o uso e o tratamento das solicitações serão definidos na proposta da Sazão. Canal, horários, responsáveis e encaminhamentos precisam estar claros antes do início."
     },
     {
-      "title": "Como conheço as condições para contratar?",
-      "text": "Fale pelo WhatsApp sobre seu interesse no Hotelly e as necessidades da sua hospedagem."
+      "title": "Como conheço o investimento e as condições?",
+      "text": "Converse com a Sazão sobre a situação da sua hospedagem. Apresentamos o investimento na conversa inicial e registramos na proposta as entregas, responsabilidades e condições de início."
     }
   ],
-  "contact": {
-    "title": "Quer conhecer o Hotelly para sua hospedagem?",
-    "paragraphs": [
-      "Conte pelo WhatsApp o que você procura em um sistema para atender seus hóspedes, organizar a operação e acompanhar o negócio."
-    ],
-    "button": "Falar sobre o Hotelly"
-  },
   "footer": {
-    "description": "Hotelly. Sistema de Gestão Inteligente de Hospedagens.",
-    "brand": "O Hotelly é um produto da Sazão - Gestão Inteligente de Hospedagens."
+    "description": "Sistema de gestão de hospedagens."
   }
 } as const;

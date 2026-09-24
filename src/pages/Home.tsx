@@ -4,7 +4,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BellRing,
-  Check,
+  Circle,
   ChevronDown,
   Coins,
   CreditCard,
@@ -17,13 +17,12 @@ import {
   TrendingUp,
   Users,
   Workflow,
-  LockKeyhole,
   Command,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { home } from "../data/home";
-import { WHATSAPP_URL } from "../lib/site";
+import { WHATSAPP_URL, SITE_SAZAO } from "../lib/site";
 
 const aiIcons = [MessageCircle, KeyRound, CreditCard, Sparkles, Users];
 const operationIcons = [KeyRound, Sparkles, CreditCard, Users];
@@ -38,44 +37,7 @@ const catalogueIcons = [
   TrendingUp,
   ShieldCheck,
 ];
-const stages = [
-  {
-    name: "Atendimento",
-    icon: MessageCircle,
-    label: "IA no WhatsApp",
-    title: "Cada conversa, um começo.",
-    text: "Informações da hospedagem, disponibilidade e cotação na mesma conversa.",
-    status: "Conversa conectada à reserva",
-    tags: ["Informações", "Disponibilidade", "Cotação"],
-  },
-  {
-    name: "Reservas",
-    icon: KeyRound,
-    label: "Reservas e pagamentos",
-    title: "Da intenção à confirmação.",
-    text: "A reserva é confirmada após o recebimento do valor exigido pela hospedagem.",
-    status: "Pagamento conforme suas regras",
-    tags: ["Reserva", "Link de pagamento", "Confirmação"],
-  },
-  {
-    name: "Operação",
-    icon: Workflow,
-    label: "Equipe e hospedagem",
-    title: "O próximo passo está claro.",
-    text: "Chegadas, saídas, quartos e pendências organizados para a equipe.",
-    status: "Pessoas e rotinas conectadas",
-    tags: ["Recepção", "Quartos", "Equipe"],
-  },
-  {
-    name: "Gestão",
-    icon: TrendingUp,
-    label: "Informações do negócio",
-    title: "Mais contexto para decidir.",
-    text: "Reservas, custos por canal e prioridades para acompanhar a hospedagem.",
-    status: "Uma visão do seu negócio",
-    tags: ["Custos por canal", "Reservas", "Prioridades"],
-  },
-];
+const stages = [{name:"Atendimento",icon:MessageCircle,label:"Atendimento",title:"Cada conversa tem um contexto.",text:"Informações da hospedagem e participação da equipe orientam o desenho do atendimento.",tags:["Informações", "Regras", "Equipe"],status:"Percurso previsto de atendimento"},{name:"Reservas",icon:KeyRound,label:"Reservas",title:"Da intenção aos passos da reserva.",text:"Cotação, recebimento e confirmação precisam seguir regras conferidas.",tags:["Cotação", "Pagamento", "Conferência"],status:"Percurso previsto de reserva"},{name:"Operação",icon:Workflow,label:"Operação",title:"Informações para dar continuidade.",text:"Registros e pendências apoiam quem responde pelas tarefas da hospedagem.",tags:["Registros", "Tarefas", "Responsáveis"],status:"Organização prevista da rotina"},{name:"Gestão",icon:TrendingUp,label:"Gestão",title:"Informações para discutir decisões.",text:"A Sazão relaciona a leitura do negócio às prioridades e ao acompanhamento.",tags:["Leitura", "Prioridades", "Revisão"],status:"Tecnologia integrada ao serviço"}];
 
 function Heading({
   title,
@@ -102,7 +64,7 @@ function Heading({
 function ContactButton({ className = "" }: { className?: string }) {
   return (
     <a
-      href={WHATSAPP_URL}
+      aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       className={`contact-button ${className}`}
@@ -120,12 +82,12 @@ function IntelligenceVisual() {
   return (
     <figure
       className="intelligence-visual"
-      aria-label="Exemplo interativo das conexões do Hotelly"
+      aria-label="A proposta do Hotelly"
     >
       <div className="visual-topline">
         <span>
           <span className="status-dot" />
-          INTELIGÊNCIA CONECTADA
+          Hotelly · Produto em desenvolvimento
         </span>
         <Command size={15} aria-hidden="true" />
       </div>
@@ -156,7 +118,7 @@ function IntelligenceVisual() {
         </svg>
         <div className="intelligence-core">
           <img src="/icon.webp" alt="" width="512" height="512" />
-          <span>HOTELLY AI</span>
+          <span>HOTELLY</span>
         </div>
         {stages.map((item, i) => {
           const NodeIcon = item.icon;
@@ -173,7 +135,7 @@ function IntelligenceVisual() {
         })}
         <span className="orbit-coordinate coordinate-left">H / 01</span>
         <span className="orbit-coordinate coordinate-right">
-          SISTEMA INTEGRADO
+          PROPOSTA INTEGRADA
         </span>
       </div>
       <div className="experience-panel">
@@ -192,14 +154,14 @@ function IntelligenceVisual() {
           </div>
         </div>
         <p className="experience-status">
-          <Check size={13} aria-hidden="true" />
+          <Circle size={13} aria-hidden="true" />
           {stage.status}
         </p>
       </div>
       <div
         className="experience-controls"
         role="group"
-        aria-label="Explore as áreas do Hotelly"
+        aria-label="Explorar a proposta do Hotelly"
       >
         {stages.map((item, i) => (
           <button
@@ -214,7 +176,7 @@ function IntelligenceVisual() {
         ))}
       </div>
       <figcaption>
-        Demonstração ilustrativa · Selecione uma área para explorar
+        Ilustração conceitual. Selecione uma área para conhecer a proposta. Não é demonstração funcional.
       </figcaption>
     </figure>
   );
@@ -228,8 +190,8 @@ function ConversationIllustration() {
           <MessageCircle size={21} aria-hidden="true" />
         </span>
         <div>
-          <strong>Uma conversa. Novas possibilidades.</strong>
-          <span>Atendimento por IA no WhatsApp</span>
+          <strong>Uma conversa começa com informações.</strong>
+          <span>Atendimento previsto por IA no WhatsApp</span>
         </div>
         <span className="status-dot" aria-hidden="true" />
       </div>
@@ -242,7 +204,7 @@ function ConversationIllustration() {
             <Sparkles size={12} aria-hidden="true" /> HOTELLY
           </span>
           <p>Olá! Para quais datas você está planejando sua estadia?</p>
-          <span>Com as informações da sua hospedagem</span>
+          <span>Exemplo do atendimento previsto, usando informações preparadas pela hospedagem.</span>
         </div>
         <div className="conversation-connector" aria-hidden="true">
           <span />
@@ -254,19 +216,18 @@ function ConversationIllustration() {
             <KeyRound size={19} aria-hidden="true" />
           </span>
           <div>
-            <strong>A conversa continua na reserva.</strong>
+            <strong>Sequência conceitual da reserva.</strong>
             <p>
-              Cotação <ArrowRight size={12} aria-hidden="true" /> Reserva{" "}
-              <ArrowRight size={12} aria-hidden="true" /> Pagamento
+              Consulta → Cotação → Etapa de pagamento → Conferência para confirmação
             </p>
           </div>
         </div>
         <p className="payment-note">
           <ShieldCheck size={15} aria-hidden="true" />
-          Confirmação após o pagamento exigido.
+          O envio de um link não confirma o recebimento.
         </p>
       </div>
-      <figcaption>Exemplo ilustrativo do funcionamento do Hotelly.</figcaption>
+      <figcaption>Conversa fictícia para apresentar a proposta. Não comprova funcionamento ou disponibilidade.</figcaption>
     </figure>
   );
 }
@@ -288,20 +249,19 @@ export default function Home() {
                 <span />
                 {home.hero.eyebrow}
               </p>
-              <h1>
-                Do primeiro contato <span>à gestão da hospedagem.</span>
-              </h1>
-              <p className="hero-description">{home.hero.body}</p>
+              <h1>Tecnologia a serviço <span>da gestão da sua hospedagem.</span></h1>
+              {home.hero.paragraphs.map(p => <p key={p} className="hero-description">{p}</p>)}
               <div className="hero-actions">
                 <ContactButton />
-                <a className="text-link" href="#funcionalidades">
+                <a className="text-link" href="#servico">
                   {home.hero.secondary}
                   <ArrowDown size={16} aria-hidden="true" />
                 </a>
               </div>
+              <p className="development-note">{home.hero.stage}</p>
               <p className="hero-footnote">
                 <span className="small-line" />
-                Tecnologia que conecta. Hospitalidade que aproxima.
+                {home.hero.signature}
               </p>
             </div>
             <IntelligenceVisual />
@@ -309,9 +269,7 @@ export default function Home() {
           <div className="page-container">
             <div className="connection-strip">
               <span className="connection-label">
-                UMA OPERAÇÃO.
-                <br />
-                <strong>TUDO CONECTADO.</strong>
+                {home.hero.strip}
               </span>
               {home.hero.highlights.map((label, i) => {
                 const Icon = [MessageCircle, CreditCard, Coins, Workflow][i];
@@ -319,7 +277,7 @@ export default function Home() {
                   <a
                     key={label}
                     href={
-                      ["#atendimento", "#operacao", "#custos", "#gestao"][i]
+                      ["#atendimento", "#atendimento", "#operacao", "#gestao"][i]
                     }
                   >
                     <Icon size={19} aria-hidden="true" />
@@ -336,12 +294,18 @@ export default function Home() {
           </div>
         </section>
 
+<section id="servico" className="section-space integrated-service"><div className="page-container">
+<div className="section-intro"><Heading title={home.service.title} eyebrow={home.service.eyebrow} /><div className="section-description">{home.service.paragraphs.map(p => <p key={p}>{p}</p>)}</div></div>
+<div className="service-grid">{home.service.items.map((item,i)=><article className="operation-card" key={item.title}><div className="operation-card-top"><span>0{i+1}</span></div><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
+<div className="section-description service-note">{home.service.tail.map(p => <p key={p}>{p}</p>)}</div><div className="hero-actions"><ContactButton /><a className="text-link" href={`${SITE_SAZAO}/como-atuamos`} target="_blank" rel="noopener noreferrer" aria-label="Conheça o acompanhamento Sazão — abrir em nova aba">Conheça o acompanhamento Sazão <ArrowUpRight size={16} aria-hidden="true" /></a></div>
+</div></section>
+
         <section id="atendimento" className="section-space ai-section">
           <div className="page-container">
             <div className="section-intro">
               <Heading
                 title={home.ai.title}
-                eyebrow="Atendimento por IA"
+                eyebrow={home.ai.eyebrow}
                 number="01"
               />
               <div className="section-description">
@@ -380,7 +344,7 @@ export default function Home() {
             <div className="section-intro">
               <Heading
                 title={home.operation.title}
-                eyebrow="Operação"
+                eyebrow={home.operation.eyebrow}
                 number="02"
               />
               <div className="section-description">
@@ -412,6 +376,7 @@ export default function Home() {
                 );
               })}
             </div>
+            <div className="section-description service-note">{home.operation.tail.map(p => <p key={p}>{p}</p>)}</div>
           </div>
         </section>
 
@@ -420,7 +385,7 @@ export default function Home() {
             <div>
               <Heading
                 title={home.costs.title}
-                eyebrow="Custos por reserva"
+                eyebrow={home.costs.eyebrow}
                 number="03"
               />
               <div className="section-description costs-description">
@@ -432,7 +397,7 @@ export default function Home() {
             <div className="cost-ledger">
               <div className="ledger-header">
                 <Coins size={18} aria-hidden="true" />
-                <span>A COMPOSIÇÃO DE CADA VENDA</span>
+                <span>COMPOSIÇÃO CONCEITUAL DA VENDA</span>
                 <span className="ledger-mark">H /</span>
               </div>
               <div className="ledger-row ledger-total">
@@ -441,30 +406,28 @@ export default function Home() {
               </div>
               <div className="ledger-deductions">
                 <div className="ledger-row">
-                  <span>Taxas de cartão e parcelamento</span>
+                  <span>Taxas de pagamento consideradas</span>
                   <span>−</span>
                 </div>
                 <div className="ledger-row">
-                  <span>Comissões do canal</span>
+                  <span>Comissões do canal consideradas</span>
                   <span>−</span>
                 </div>
                 <div className="ledger-row">
-                  <span>Campanhas atribuídas à reserva</span>
+                  <span>Custos de campanha atribuídos e considerados</span>
                   <span>−</span>
                 </div>
               </div>
               <div className="ledger-result">
-                <span className="eyebrow">CLAREZA PARA DECIDIR</span>
+                <span className="eyebrow">CÁLCULO CONCEITUAL</span>
                 <h3>
-                  O que fica
-                  <br />
-                  de cada reserva.
+                  Contribuição após custos comerciais considerados
                 </h3>
                 <div className="ledger-rule" aria-hidden="true" />
                 <p>{home.costs.formula}</p>
               </div>
               <p className="ledger-note">
-                Custos considerados quando aplicáveis.
+                Ilustração do conceito de cálculo. Sem dados reais ou valores de serviço. Fontes, períodos e regras precisam ser conferidos.
               </p>
             </div>
             <div className="costs-bottom">
@@ -490,16 +453,15 @@ export default function Home() {
             <div className="management-heading">
               <Heading
                 title={home.management.title}
-                eyebrow="Acompanhamento do negócio"
+                eyebrow={home.management.eyebrow}
                 number="04"
               />
               <span className="section-stamp" aria-hidden="true">
                 <TrendingUp size={23} />
-                INFORMAÇÃO
-                <br />
-                QUE ORIENTA.
+                Informações para analisar e acompanhar.
               </span>
             </div>
+            <div className="section-description service-note">{home.management.paragraphs.map(p => <p key={p}>{p}</p>)}</div>
             <div className="management-grid">
               {home.management.items.map((item, i) => {
                 const Icon = managementIcons[i];
@@ -536,20 +498,19 @@ export default function Home() {
               <div className="catalogue-intro">
                 <Heading
                   title={home.catalogue.title}
-                  eyebrow="O sistema em detalhe"
+                  eyebrow={home.catalogue.eyebrow}
                   number="05"
                 />
                 <p className="section-description">
-                  Explore cada área e veja como o Hotelly faz parte da sua
-                  rotina.
+                  {home.catalogue.paragraphs[0]}
                 </p>
                 <a href="#contato" className="text-link">
-                  Vamos conversar
+                  Converse sobre o acompanhamento da sua hospedagem
                   <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
                 <div className="catalogue-emblem" aria-hidden="true">
                   <img src="/icon.webp" alt="" width="512" height="512" />
-                  <span>HOTELLY / ECOSSISTEMA</span>
+                  <span>HOTELLY / PRODUTO EM DESENVOLVIMENTO</span>
                 </div>
               </div>
               <div className="catalogue-list">
@@ -574,7 +535,7 @@ export default function Home() {
                       <ul>
                         {group.items.map((item) => (
                           <li key={item}>
-                            <Check size={14} aria-hidden="true" />
+                            <Circle size={14} aria-hidden="true" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -592,28 +553,19 @@ export default function Home() {
             <div className="trust-symbol" aria-hidden="true">
               <div />
               <ShieldCheck size={48} strokeWidth={1} />
-              <span>ACESSO · CONTROLE · HISTÓRICO</span>
+              <span>PREPARAÇÃO · PESSOAS · RESPONSABILIDADES</span>
             </div>
             <div>
               <Heading
                 title={home.trust.title}
-                eyebrow="Tecnologia com responsabilidade"
+                eyebrow={home.trust.eyebrow}
               />
               <div className="section-description">
                 {home.trust.paragraphs.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
               </div>
-              <div className="trust-tags">
-                <span>
-                  <LockKeyhole size={14} aria-hidden="true" />
-                  Permissões por função
-                </span>
-                <span>
-                  <FileCheck2 size={14} aria-hidden="true" />
-                  Histórico de alterações
-                </span>
-              </div>
+              <div className="trust-tags">{home.trust.labels.map(label => <span key={label}>{label}</span>)}</div>
             </div>
           </div>
         </section>
@@ -623,18 +575,18 @@ export default function Home() {
             <div>
               <Heading
                 title="Perguntas frequentes"
-                eyebrow="Mais clareza, desde o início"
+                eyebrow="Clareza antes do próximo passo"
               />
               <p className="section-description">
-                O próximo passo começa com as informações certas.
+                Entenda a proposta antes de avançar.
               </p>
               <a
-                href={WHATSAPP_URL}
+                aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-link"
               >
-                Fale com a gente
+                Conversar com a Sazão
                 <ArrowUpRight size={16} aria-hidden="true" />
               </a>
             </div>
@@ -676,8 +628,11 @@ export default function Home() {
                   </p>
                 ))}
                 <ContactButton />
+                <p className="contact-description">Contato comercial: (24) 99318-3300</p>
+                <a className="text-link" href={`${SITE_SAZAO}/como-atuamos`} target="_blank" rel="noopener noreferrer" aria-label="Conheça o acompanhamento Sazão — abrir em nova aba">Conheça o acompanhamento Sazão <ArrowUpRight size={16} aria-hidden="true" /></a>
+                <p className="contact-description">{home.contact.support}</p>
                 <span className="contact-signature">
-                  INTELIGÊNCIA PARA GERIR. LIBERDADE PARA RECEBER.
+                  {home.hero.signature}
                 </span>
               </div>
             </div>

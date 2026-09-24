@@ -2283,3 +2283,21 @@ details[open] > summary > .details-chevron {
     border: 2px solid Highlight;
   }
 }
+
+/* Integrated service and visible development stage — editorial v2.1. */
+.development-note { margin-top: 24px; border-left: 2px solid var(--color-brass); padding: 16px 18px; background: #e5b45108; color: #bdc6d3; font-size: 13px; line-height: 1.8; }
+.hero-description + .hero-description { margin-top: 16px; }
+.integrated-service { border-top: 1px solid #7fa6e023; background: #121923; }
+.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
+.service-note { margin-block: 32px; max-width: 920px; }
+.experience-status { color: #aabbd1; }
+.intelligence-visual figcaption { line-height: 1.7; padding-inline: 16px; }
+.reservation-flow p { line-height: 1.7; }
+.contact-content > .text-link { display: inline-flex; margin-top: 12px; }
+.section-stamp { max-width: 150px; line-height: 1.7; }
+@media (max-width: 640px) { .service-grid { grid-template-columns: 1fr; gap: 28px; } .service-grid .operation-card { border-left: 0; padding: 0; } .visual-topline { font-size: 8px; } .hero-footnote { line-height: 1.7; } }
+
+/* Let long editorial headings wrap inside narrow grid tracks. */
+.costs-layout > *, .costs-bottom > *, .hero-layout > * { min-width: 0; }
+.cost-ledger, .ledger-result h3 { overflow-wrap: anywhere; }
+@media (max-width: 360px) { .cost-tags { grid-template-columns: 1fr; } .ledger-row { gap: 12px; } }

@@ -31,12 +31,13 @@ export default function Footer() {
           </div>
           <nav aria-label="Rodapé">
             <ul className="flex flex-wrap gap-x-6 gap-y-4 text-xs text-muted-foreground">
+              <li><a className="inline-flex items-center min-h-11 hover:text-foreground" href="#servico">Serviço integrado</a></li>
               <li>
                 <a
                   href="#funcionalidades"
                   className="inline-flex items-center min-h-11 hover:text-foreground"
                 >
-                  Funcionalidades
+                  O produto
                 </a>
               </li>
               <li>
@@ -49,20 +50,20 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={APP_LOGIN_URL}
+                  title="Acesso para quem já recebeu credenciais." href={APP_LOGIN_URL}
                   className="inline-flex items-center min-h-11 hover:text-foreground"
                 >
-                  Entrar
+                  Já tenho acesso
                 </a>
               </li>
               <li>
                 <a
-                  href={WHATSAPP_URL}
+                  aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center min-h-11 hover:text-foreground"
                 >
-                  WhatsApp
+                  Conversar com a Sazão
                 </a>
               </li>
             </ul>
@@ -76,9 +77,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-foreground hover:text-brass underline underline-offset-4 decoration-border-strong"
           >
-            Sazão - Gestão Inteligente de Hospedagens
+            Sazão — Gestão e marketing para hospedagens
           </a>
-          .
+          {" "}e integra sua proposta de acompanhamento personalizado da gestão. Não há contratação de licença avulsa.
         </p>
       </div>
     </footer>

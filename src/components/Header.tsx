@@ -46,7 +46,7 @@ export default function Header() {
           </picture>
         </Link>
         <nav
-          className="hidden xl:flex items-center gap-6 text-sm font-medium text-muted-foreground"
+          className="hidden xl:flex items-center gap-4 text-xs font-medium text-muted-foreground"
           aria-label="Seções da página"
         >
           {NAV_LINKS.map((link) => (
@@ -61,18 +61,18 @@ export default function Header() {
         </nav>
         <div className="hidden xl:flex items-center gap-3">
           <a
-            href={APP_LOGIN_URL}
+            title="Acesso para quem já recebeu credenciais." href={APP_LOGIN_URL}
             className="inline-flex items-center min-h-11 text-xs text-muted-foreground hover:text-foreground rounded-lg px-4 py-2 transition-colors"
           >
-            Entrar
+            Já tenho acesso
           </a>
           <a
-            href={WHATSAPP_URL}
+            aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 min-h-11 text-xs font-semibold border border-brass/40 hover:bg-brass/10 text-brass rounded-md px-4 py-2.5 transition-colors"
           >
-            Falar sobre o Hotelly
+            Conversar com a Sazão
             <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
           </a>
         </div>
@@ -114,18 +114,18 @@ export default function Header() {
           </nav>
           <div className="flex flex-col gap-3 pt-4 mt-3 border-t border-border">
             <a
-              href={APP_LOGIN_URL}
+              title="Acesso para quem já recebeu credenciais." href={APP_LOGIN_URL}
               className="text-center text-sm font-medium border border-border-strong rounded-lg py-3"
             >
-              Entrar
+              Já tenho acesso
             </a>
             <a
-              href={WHATSAPP_URL}
+              aria-label="Conversar com a Sazão pelo WhatsApp — abrir em nova aba" href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-brass text-brass-foreground rounded-lg py-3"
             >
-              Falar sobre o Hotelly
+              Conversar com a Sazão
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>
